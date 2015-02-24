@@ -69,3 +69,9 @@ section h2 {
     background-color: #008CBA;
     color: #fff;
 }
+
+.talk {
+    width: 50%;
+    float: left;
+    height: 155px;
+}
