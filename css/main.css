@@ -1,0 +1,71 @@
+body {
+    background: url(../img/noise.jpg)
+}
+
+body,
+h1, h2 {
+    color: #666;
+    line-height: 1.5rem;
+}
+
+section {
+    clear: both;
+}
+
+section h3 {
+    text-align: right;
+    border-bottom: 1px solid #666;
+}
+
+h1.name {
+    color: #000;
+    border-bottom: 0.1rem solid #999;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: -0.15rem;
+}
+
+#page-wrapper {
+    width: 200mm;
+    margin: 40px auto 60px;
+}
+
+main h2,
+section h2 {
+    padding: .7rem 5rem .5rem 2rem;
+    background-color: #eaeaea;
+    display: inline-block;
+
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    border: 1px solid #ccc;
+}
+
+.xp {
+    margin: 0 0 3rem 0;
+    clear: both;
+}
+
+.xp aside {
+    float: left;
+    padding: 0 2rem 0 0;
+    border-right: 1px solid #000;
+    margin: 0 2rem 0 0;
+    width: 288px;
+}
+
+.keyword {
+    border-radius: 1000px;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    margin-bottom: auto;
+    padding: 0.22222rem 0.44444rem 0.22222rem;
+    font-size: 0.61111rem;
+    background-color: #008CBA;
+    color: #fff;
+}
