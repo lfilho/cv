@@ -8,6 +8,7 @@ h1, h2 {
     line-height: 1.5rem;
 }
 
+h3,
 section {
     clear: both;
 }
@@ -71,6 +72,7 @@ section h2 {
 }
 
 ul.courses li,
+ul.events li,
 .course,
 .talk {
     width: 50%;
