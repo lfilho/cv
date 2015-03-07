@@ -16,10 +16,15 @@ module.exports = function (grunt) {
         },
         watch: {
             all: {
-                files: ['css/**/*.css', '**/*.html', 'img/**/*.*']
-            },
-            options: {
-                livereload: true
+                files: ['css/**/*.css', 'index.html', 'img/**/*.*'],
+                options: {
+                    livereload: true
+                }
+            }
+        },
+        open: {
+            all: {
+                path: 'http://localhost:8080/index.html'
             }
         },
         jshint: {
@@ -27,11 +32,10 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc',
                 reporter: require('jshint-stylish')
             },
-            files: ['lib/**/*.js', '*.js']
+            files: ['*.js']
         }
     });
 
-    grunt.registerTask('dev', ['jshint', 'concurrent:dev']);
-    grunt.registerTask('test');
+    grunt.registerTask('dev', ['jshint', 'express', 'open', 'watch']);
     grunt.registerTask('default', ['dev']);
 };
