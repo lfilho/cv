@@ -70,8 +70,13 @@ section h2 {
     color: #fff;
 }
 
+ul.courses li,
+.course,
 .talk {
     width: 50%;
     float: left;
+}
+
+.talk {
     height: 155px;
 }
