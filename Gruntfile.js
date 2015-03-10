@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         express: {
             all: {
                 options: {
-                    bases: ['/Users/marelo/Dropbox/Documents/CV/luiz-filho-cv'],
+                    bases: ['.'],
                     port: 8080,
                     hostname: "0.0.0.0",
                     livereload: true
