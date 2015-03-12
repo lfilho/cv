@@ -10,48 +10,53 @@
 </head>
 <body>
     <div id='page-wrapper'>
-        <header>
-            <h1 class='name'>Luiz Gonzaga dos Santos Filho</h1>
+        <!-- vCard / hCard Microformat: -->
+        <header id='hcard-Luiz-Gonzaga-dos-Santos-Filho' class='vcard'>
+            <h1 class='fn n'>
+                <span class='given-name'>Luiz</span>
+                <span class='additional-name'>Gonzaga</span>
+                <span class='family-name'>dos Santos Filho</span>
+            </h1>
             <h2>This is a work in progress. For a finished version of my CV, please visit: <a href='http://luiz.in/c/Curriculum_Vitae_-_Luiz_Gonzaga_dos_Santos_Filho_-_English.pdf'>the PDF version</a></h2>
 
             <aside>
-                <!-- TODO: Create vcard with microformats -->
                 <section class='contacts'>
                     <div class='website'>
                         <i class='fa fa-fw fa-home'></i>
                         <span>
-                            <a href='http://luiz.in'>www.luiz.in</a>
+                            <a class='url' href='http://luiz.in'>www.luiz.in</a>
                         </span>
                     </div>
-                    <div class='email'>
+                    <div class='mail'>
                         <i class='fa fa-fw fa-envelope-o'></i>
                         <span>
-                            <a href='mailto:lfilho@gmail.com'>lfilho@gmail.com</a>
+                            <a class='email' href='mailto:lfilho@gmail.com'>lfilho@gmail.com</a>
                         </span>
                     </div>
-                    <div class='location'>
+                    <div class='adr'>
                         <i class='fa fa-fw fa-map-marker'></i>
-                        <span>Goiânia, Brazil</span>
+                        <span class='locality'>Goiânia</span>,
+                        <span class='contry-name'>Brazil</span>
                     </div>
                     <div class='phone'>
                         <i class='fa fa-fw fa-mobile'></i>
                         <span>
-                            <a href='tel:+556299281310'>+55 (62) 9928-1310</a>
+                            <a class='tel' href='tel:+556299281310'>+55 (62) 9928-1310</a>
                         </span>
                     </div>
                 </section>
                 <section class='contacts'>
                     <div class='linkedin'>
                         <i class='fa fa-fw fa-linkedin'></i>
-                        <a href='http://linkedin.com/in/luizgonzaga'>/luizgonzaga</a>
+                        <a class='url' href='http://linkedin.com/in/luizgonzaga'>/luizgonzaga</a>
                     </div>
                     <div class='xing'>
                         <i class='fa fa-fw fa-xing'></i>
-                        <a href='https://www.xing.com/profile/Luiz_Filho'>/Luiz_Filho</a>
+                        <a class='url' href='https://www.xing.com/profile/Luiz_Filho'>/Luiz_Filho</a>
                     </div>
                     <div class='github'>
                         <i class='fa fa-fw fa-github'></i>
-                        <a href='http://github.com/lfilho'>/lfilho</a>
+                        <a class='url' href='http://github.com/lfilho'>/lfilho</a>
                     </div>
                 </section>
             </aside>
@@ -77,7 +82,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Freelancer</span>
+                        <span class='org'>Freelancer</span>
                     </div>
                     <div class='position'>
                         <i class='fa fa-fw fa-user'></i>
@@ -117,7 +122,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>DataEasy</span>
+                        <span class='org'>DataEasy</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -186,7 +191,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Brandwatch</span>
+                        <span class='org'>Brandwatch</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -237,7 +242,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Content Fleet</span>
+                        <span class='org'>Content Fleet</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -301,7 +306,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Goiás State Government</span>
+                        <span class='org'>Goiás State Government</span>
                     </div>
                     <div class='position'>
                         <i class='fa fa-fw fa-user'></i>
@@ -340,7 +345,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>DR Sistemas</span>
+                        <span class='org'>DR Sistemas</span>
                     </div>
                     <div class='position'>
                         <i class='fa fa-fw fa-user'></i>
@@ -375,7 +380,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Interagi Tecnologia</span>
+                        <span class='org'>Interagi Tecnologia</span>
                     </div>
                     <div class='position'>
                         <i class='fa fa-fw fa-user'></i>
@@ -608,7 +613,7 @@
                 <aside>
                     <div class='company'>
                         <i class='fa fa-fw fa-github'></i>
-                        <span>GitHub</span>
+                        <span class='org'>GitHub</span>
                     </div>
                     <div class='keywords'>
                         <i class='fa fa-fw fa-key'></i>
@@ -619,7 +624,7 @@
                 <article>
                     <div class='description'>
                         <p>
-                            You can check my profile at <a href="https://github.com/lfilho">https://github.com/lfilho</a>.
+                            You can check my profile at <a href='https://github.com/lfilho'>https://github.com/lfilho</a>.
                         </p>
                         <p>
                             There you can find varieties from VIM plugins, translations, code playgrounds, some slides from my talks, to this very résumé.
@@ -635,7 +640,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Join Community</span>
+                        <span class='org'>Join Community</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -670,7 +675,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Grupo Arte Nascente (GAN)</span>
+                        <span class='org'>Grupo Arte Nascente (GAN)</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -715,7 +720,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Zapt Arteatral</span>
+                        <span class='org'>Zapt Arteatral</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -767,7 +772,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>AIESEC Brazil / GO</span>
+                        <span class='org'>AIESEC Brazil / GO</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -808,7 +813,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>Mocidade Espírita André Luiz</span>
+                        <span class='org'>Mocidade Espírita André Luiz</span>
                     </div>
                     <div class='location'>
                         <i class='fa fa-fw fa-map-marker'></i>
@@ -846,7 +851,7 @@
                     </div>
                     <div class='company'>
                         <i class='fa fa-fw fa-building-o'></i>
-                        <span>GRAMPS</span>
+                        <span class='org'>GRAMPS</span>
                     </div>
                     <div class='position'>
                         <i class='fa fa-fw fa-user'></i>
@@ -1260,7 +1265,7 @@
             </small>
         </footer>
 
-        <script src="//localhost:35729/livereload.js"></script>
+        <script src='//localhost:35729/livereload.js'></script>
     </div>
 </body>
 </html>
