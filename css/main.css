@@ -2,6 +2,10 @@ body {
     background: url(../img/noise.jpg)
 }
 
+main {
+    clear: both;
+}
+
 body,
 h1, h2 {
     color: #666;
@@ -71,11 +75,13 @@ section h2 {
     color: #fff;
 }
 
-ul.courses li,
-ul.events li,
-ul.languages li,
+.contacts,
+.courses li,
+.events li,
+.languages li,
 .course,
 .talk {
+    clear: none;
     width: 50%;
     float: left;
 }
