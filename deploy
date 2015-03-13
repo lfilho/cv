@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ssh luiz@luiz.in "cd www/cv; git pull"
+
+exit 0
