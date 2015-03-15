@@ -1,10 +1,16 @@
 body {
     background: url(../img/noise.jpg)
+    line-height: 1.5rem;
 }
 
-main {
-    clear: both;
+footer {
+    margin-top: 1rem;
+    text-align: center;
 }
+
+p { margin: 0.5rem 0; }
+p:first-child { margin-top: 0; }
+p:last-child { margin-bottom: 0; }
 
 body,
 h1, h2 {
@@ -12,14 +18,10 @@ h1, h2 {
     line-height: 1.5rem;
 }
 
-h3,
-section {
-    clear: both;
-}
-
 section h3 {
     text-align: right;
     border-bottom: 1px solid #666;
+    margin: 1rem 0;
 }
 
 h1.name {
@@ -44,19 +46,30 @@ section h2 {
     border-top-right-radius: 10rem;
     border-bottom-right-radius: 10rem;
     border: 1px solid #ccc;
+    border-left: none;
+    margin: 1rem 0;
 }
 
 .xp {
     margin: 0 0 3rem 0;
-    clear: both;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .xp aside {
-    float: left;
     padding: 0 2rem 0 0;
     border-right: 1px solid #000;
     margin: 0 2rem 0 0;
     width: 288px;
+    min-height: 120px;
+    min-width: 288px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+}
+
+.job-data {
+    flex: 1;
 }
 
 .keyword {
@@ -75,17 +88,35 @@ section h2 {
     color: #fff;
 }
 
-.contacts,
-.courses li,
-.events li,
-.languages li,
-.course,
-.talk {
-    clear: none;
-    width: 50%;
-    float: left;
+.vcard aside,
+.languages,
+.courses,
+.academy-courses,
+.events,
+.talks {
+    display: flex;
+    flex-flow: row wrap;
 }
 
+.contacts,
+.languages li,
+.courses li,
+.events li,
+.academy-course,
 .talk {
-    height: 155px;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.summary,
+.contacts,
+.talk {
+    margin: 1rem 0;
+}
+
+.languages li,
+.courses li,
+.achievements li,
+.events li {
+    margin: 0.5rem 0;
 }
