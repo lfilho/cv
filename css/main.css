@@ -93,6 +93,7 @@ section h2 {
 .courses,
 .academy-courses,
 .events,
+.books,
 .talks {
     display: flex;
     flex-flow: row wrap;
@@ -102,12 +103,14 @@ section h2 {
 .languages li,
 .courses li,
 .events li,
+.books li,
 .academy-course,
 .talk {
     min-width: 50%;
     max-width: 50%;
 }
 
+h4,
 .summary,
 .contacts,
 .talk {
