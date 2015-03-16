@@ -8,8 +8,14 @@ footer {
     text-align: center;
 }
 
-p { margin: 0.5rem 0; }
-p:first-child { margin-top: 0; }
+p {
+    margin: 0.5rem 0;
+    text-indent: 3rem;
+}
+p:first-child {
+    margin-top: 0;
+    text-indent: 0;
+}
 p:last-child { margin-bottom: 0; }
 
 body,
