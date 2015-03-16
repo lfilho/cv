@@ -1,0 +1,16 @@
+.show-for-print {
+    display: none;
+}
+
+@media print {
+    *:not(body) {
+        -webkit-print-color-adjust: exact;
+    }
+    .show-for-print {
+        display: block;
+    }
+    .hide-for-print {
+        display: none !important;
+    }
+}
+
