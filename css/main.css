@@ -1,6 +1,8 @@
 body {
     background: url(../img/noise.jpg);
     line-height: 1.5rem;
+    font-size: 14px/1;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 footer {
@@ -30,12 +32,13 @@ section h3 {
     margin: 1rem 0;
 }
 
-h1.name {
+h1 {
     color: #000;
     border-bottom: 0.1rem solid #999;
     padding-bottom: 1rem;
     font-weight: bold;
     letter-spacing: -0.15rem;
+    font-variant-ligatures: common-ligatures;
 }
 
 #page-wrapper {
@@ -106,7 +109,6 @@ section h2 {
 }
 
 .contacts,
-.languages li,
 .courses li,
 .events li,
 .books li,
@@ -114,6 +116,11 @@ section h2 {
 .talk {
     min-width: 50%;
     max-width: 50%;
+}
+
+.languages li {
+    min-width: 32%;
+    max-width: 32%;
 }
 
 h4,

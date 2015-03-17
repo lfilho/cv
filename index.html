@@ -10,9 +10,13 @@
     <link rel='stylesheet' href='css/print.css' />
 </head>
 <!-- TODO:
-* Move MasterMind auxiliary work to "volunteer" work section
 * Mais destaque às capacidades e experiências técnicas na Engenharia de Software
-*
+* Fix overlapping <li> items
+    * Fix "first" <p> that are not firsts (not the first in a container)
+* Tweak flexbos for mobile (not working right now - maybe width issue?)
+* Apply zebra styles
+* Remove fixed 50% and figure a way to let it fit block by block nicely
+===== test changing fonts on css and layout changing
 -->
 <body>
     <div id='page-wrapper'>
@@ -24,7 +28,7 @@
                 <span class='family-name'>dos Santos Filho</span>
             </h1>
 
-            <h2>This CV is a work in progress. For a finished version of my CV, please visit: <a href='http://luiz.in/c/Curriculum_Vitae_-_Luiz_Gonzaga_dos_Santos_Filho_-_English.pdf'>the PDF version</a></h2>
+            <h2>This CV is a work in progress. For a finished version of my CV, please visit <a href='http://luiz.in/c/Curriculum_Vitae_-_Luiz_Gonzaga_dos_Santos_Filho_-_English.pdf'>the PDF version</a>.</h2>
 
             <aside>
                 <section class='contacts'>
@@ -72,22 +76,21 @@
         <main>
             <h2>Profile</h2>
             <p>
-                My current goal is to dive deep into agile and BPM certifications and my grand wish is to work in a social or purpose-driven company.
+                10+ years of experience in software engineering in Brazil, Canada and Germany. Having been both a manager and a developer and worked with companies big and small, process oriented or not, I can evaluate what would best leverage your company towards its goals.
             </p>
             <p>
-                10+ years of experience in different aspects of software engineering. Having been both a manager and a developer and worked with companies big and small, waterfall or agile, process oriented or not. Hence I can evaluate and adapt what would best leverage your company towards its goals.
-            </p>
-            <p>
-                Alongside my technical education, I have always made sure I would not forget about the soft skills, my personal growth and my humanitarian side. So from software developer, to team leader or software development manager, you can expect me to wholly understand a team's mindset, needs and expectations in order to accomplish their best results possible.
+                Alongside my technical education, I have always made sure I would not forget about the soft skills, my ability to lead, my personal growth and my humanitarian side. So from software developer, to team leader or software development manager, you can expect me to wholly understand a team's mindset, needs and expectations in order to accomplish their best results possible.
             </p>
             <p>
                 I am always investing in my continuous improvement by reading books and articles, taking courses, doing side projects and attending and speaking at conferences.
+                As a communication aficionado, I'm constantly challenging myself for a more effective communication, better interpersonal relationship and a more trusthworthy leadership.
             </p>
             <p>
-                As a communication aficionado, I'm constantly challenging myself for a more effective communication, better interpersonal relationship and a trusthworthy leadership.
+                International professional experiences in Brazil, Canada and Germany.
             </p>
             <p>
-                International professional experiences in Brazil, Canada and Germany. I am open to rellocations.
+                My current goal is to dive deep into agile and BPM certifications and my grand wish is to work in a social or purpose-driven company.
+                I am open to discuss rellocations.
             </p>
         </main>
 
@@ -171,8 +174,8 @@
                         <span class='keyword'>MPT.BR</span>
                         <span class='keyword'>TMMI</span>
                         <span class='keyword'>Testlink</span>
-                        <span class='keyword'>Continuous Integration</span>
                         <span class='keyword'>Jenkins</span>
+                        <span class='keyword'>Continuous Integration</span>
                         <span class='keyword'>Shell Scripting</span>
                         <span class='keyword'>Java EE</span>
                         <span class='keyword'>Maven</span>
@@ -181,9 +184,10 @@
                         <span class='keyword'>GitHub</span>
                         <span class='keyword'>Axosoft</span>
                         <span class='keyword'>New Relic</span>
-                        <span class='keyword'>Business Process Management (BPM)</span>
                         <span class='keyword'>Node.js</span>
                         <span class='keyword'>Docker</span>
+                        <span class='keyword'>BPM</span>
+                        <span class='keyword'>Business Process Management</span>
                     </div>
                 </aside>
                 <article>
@@ -718,6 +722,48 @@
                     <div class='job-data'>
                         <div class='period'>
                             <i class='fa fa-fw fa-clock-o'></i>
+                            <span>2012; 2014</span>
+                        </div>
+                        <div class='company'>
+                            <i class='fa fa-fw fa-building-o'></i>
+                            <span class='org'>Napoleon Hill Institute's Master Mind</span>
+                        </div>
+                        <div class='location'>
+                            <i class='fa fa-fw fa-map-marker'></i>
+                            <span>Goiânia, Brazil</span>
+                        </div>
+                        <div class='position'>
+                            <i class='fa fa-fw fa-user'></i>
+                            <span>Auxiliary instructor</span>
+                        </div>
+                        <div class='position'>
+                            <i class='fa fa-fw fa-user'></i>
+                            <span>Lead auxiliary instructor</span>
+                        </div>
+                    </div>
+                    <div class='job-keywords'>
+                        <i class='fa fa-fw fa-key'></i>
+                        <span class='keyword'>Leadership</span>
+                        <span class='keyword'>Public Speaking</span>
+                        <span class='keyword'>Effective Communication</span>
+                        <span class='keyword'>Time managing</span>
+                        <span class='keyword'>Coaching</span>
+                    </div>
+                </aside>
+                <article>
+                    <div class='description'>
+                        <p>
+                            After taking the course, the class ellects the most likely people to make a good auxiliary instructor.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class='xp'>
+                <aside>
+                    <div class='job-data'>
+                        <div class='period'>
+                            <i class='fa fa-fw fa-clock-o'></i>
                             <span>2008 &ndash; 2011</span>
                         </div>
                         <div class='company'>
@@ -1237,47 +1283,27 @@
             <ul class='fa-ul achievements'>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    Napoleon Hill's MasterMind lead auxiliary instructor; 2014
+                    Awarded the "MasterMind Commender and Class Name" title on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    MasterMind auxiliary instructor; 2012
+                    Awarded the "Best presentation" prize on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    "MasterMind Commender and Class Name" award on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011
+                    Awarded the "Self Overcoming" prize on Empretec Seminar; 2011
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    "Best presentation" award on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011
+                    Accepted for ELAP (Emerging Leaders of America Program), Canada’s Government Program; 2009
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    Studies certificate on Software Engineering upon Computer Engineering graduation; 2011
+                    Accepted for Saint Mary’s University (Halifax, Nova Scotia, Canada); 2009
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    "Self Overcoming" award on Empretec Seminar; 2011
-                </li>
-                <li>
-                    <i class='fa-li fa fa-caret-right'></i>
-                    Trumped competition (first round, www.trumped.ca); 2010
-                </li>
-                <li>
-                    <i class='fa-li fa fa-caret-right'></i>
-                    ELAP (Emerging Leaders of America Program), Canada’s Government Program; 2009
-                </li>
-                <li>
-                    <i class='fa-li fa fa-caret-right'></i>
-                    Saint Mary’s University (Halifax, Nova Scotia, Canada) accepted exchange student; 2009
-                </li>
-                <li>
-                    <i class='fa-li fa fa-caret-right'></i>
-                    TOEFL (Test of English as a Foreign Language), 108 points; 2011
-                </li>
-                <li>
-                    <i class='fa-li fa fa-caret-right'></i>
-                    TOEFL (Test of English as a Foreign Language), 103 points; 2009
+                    TOEFL (Test of English as a Foreign Language), 108 points in 2011; 103 points in 2009
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
@@ -1285,7 +1311,7 @@
                 </li>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
-                    Public competition for the Goiás Government at AGANP (Goiás's Agency of Public Business and Administration); 2006
+                    Approved in the Goiás State Government public competition; 2006
                 </li>
             </ul>
         </section>
@@ -1296,7 +1322,7 @@
             <ul class='languages fa-ul'>
                 <li>
                     <i class='fa-li fa fa-language'></i>
-                    Brazilian Portuguese &mdash; Native
+                    Portuguese &mdash; Native
                 </li>
                 <li>
                     <i class='fa-li fa fa-language'></i>
@@ -1304,11 +1330,7 @@
                 </li>
                 <li>
                     <i class='fa-li fa fa-language'></i>
-                    German &mdash; Basic
-                </li>
-                <li>
-                    <i class='fa-li fa fa-language'></i>
-                    Spanish &mdash; Basic
+                    German &amp; Spanish &mdash; Basic
                 </li>
             </ul>
         </section>
