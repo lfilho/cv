@@ -49,6 +49,14 @@ h1 {
     margin: 40px auto 60px;
 }
 
+.fa-ul li {
+    padding-left: 1.5rem;
+}
+.fa-li {
+    left: 0;
+    width: 0;
+}
+
 main h2,
 section h2 {
     padding: .7rem 5rem .5rem 2rem;
