@@ -139,6 +139,7 @@ h4,
 .contacts,
 .talk {
     margin: 1rem 0;
+    text-indent: 0;
 }
 
 .languages li,
