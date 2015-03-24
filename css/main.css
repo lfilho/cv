@@ -49,11 +49,14 @@ h1 {
     margin: 40px auto 60px;
 }
 
+.fa-ul {
+    margin: 0;
+}
 .fa-ul li {
     padding-left: 1.5rem;
 }
 .fa-li {
-    left: 0;
+    left: 0rem;
     width: 0;
 }
 
