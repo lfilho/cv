@@ -3,9 +3,14 @@
 }
 body {
     background: url(../img/noise.jpg);
-    line-height: 1.5rem;
-    font-size: 14px/1;
+    font-size: 14px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.vcard aside {
+    float: left;
+    width: 200px;
+    margin: 0 1rem 2rem 0;
 }
 
 footer {
@@ -26,7 +31,7 @@ p:last-child { margin-bottom: 0; }
 body,
 h1, h2 {
     color: #666;
-    line-height: 1.5rem;
+    line-height: 1.4rem;
 }
 
 section h3 {
@@ -111,7 +116,6 @@ section h2 {
     color: #fff;
 }
 
-.vcard aside,
 .languages,
 .courses,
 .academy-courses,
@@ -131,7 +135,6 @@ section h2 {
     max-width: 50%;
 }
 
-.contacts,
 .languages li {
     min-width: 32%;
     max-width: 32%;
@@ -139,7 +142,6 @@ section h2 {
 
 h4,
 .summary,
-.contacts,
 .talk {
     margin: 1rem 0;
     text-indent: 0;

@@ -14,6 +14,7 @@
 * Tweak flexbox for mobile (not working right now - maybe width issue?)
 * Apply zebra styles
 * Remove fixed 50% and figure a way to let it fit block by block nicely
+* Remove px in favor of rem
 ===== test changing fonts on css and layout changing
 -->
 <body>
@@ -28,70 +29,65 @@
 
             <!-- <h2>This CV is a work in progress. For a finished version of my CV, please visit <a href='http://luiz.in/c/Curriculum_Vitae_&#45;_Luiz_Gonzaga_dos_Santos_Filho_&#45;_English.pdf'>the PDF version</a>.</h2> -->
 
-            <aside>
-                <section class='contacts'>
-                    <div class='contact adr'>
-                        <i class='fa fa-fw fa-map-marker'></i>
-                        <span class='locality'>Goiânia</span>,
-                        <span class='contry-name'>Brazil</span>
-                    </div>
-                    <div class='contact phone'>
-                        <i class='fa fa-fw fa-mobile'></i>
-                        <span>
-                            <a class='tel' href='tel:+556299281310'>+55 (62) 9928-1310</a>
-                        </span>
-                    </div>
-                </section>
-                <section class='contacts'>
-                    <div class='contact website'>
-                        <i class='fa fa-fw fa-home'></i>
-                        <span>
-                            <a class='url' href='http://luiz.in'>www.luiz.in</a>
-                        </span>
-                    </div>
-                    <div class='contact mail'>
-                        <i class='fa fa-fw fa-envelope-o'></i>
-                        <span>
-                            <a class='email' href='mailto:lfilho@gmail.com'>lfilho@gmail.com</a>
-                        </span>
-                    </div>
-                </section>
-                <section class='contacts'>
-                    <div class='linkedin'>
-                        <i class='fa fa-fw fa-linkedin'></i>
-                        <a class='url' href='http://linkedin.com/in/luizgonzaga'>/luizgonzaga</a>
-                    </div>
-                    <div class='xing'>
-                        <i class='fa fa-fw fa-xing'></i>
-                        <a class='url' href='https://www.xing.com/profile/Luiz_Filho'>/Luiz_Filho</a>
-                    </div>
-                    <div class='github'>
-                        <i class='fa fa-fw fa-github'></i>
-                        <a class='url' href='http://github.com/lfilho'>/lfilho</a>
-                    </div>
-                </section>
-            </aside>
+            <main>
+                <aside>
+                    <section class='contacts'>
+                        <div class='contact adr'>
+                            <i class='fa fa-fw fa-map-marker'></i>
+                            <span class='locality'>Goiânia</span>,
+                            <span class='contry-name'>Brazil</span>
+                        </div>
+                        <div class='contact phone'>
+                            <i class='fa fa-fw fa-mobile'></i>
+                            <span>
+                                <a class='tel' href='tel:+556299281310'>+55 (62) 9928-1310</a>
+                            </span>
+                        </div>
+                        <div class='contact website'>
+                            <i class='fa fa-fw fa-home'></i>
+                            <span>
+                                <a class='url' href='http://luiz.in'>www.luiz.in</a>
+                            </span>
+                        </div>
+                        <div class='contact mail'>
+                            <i class='fa fa-fw fa-envelope-o'></i>
+                            <span>
+                                <a class='email' href='mailto:lfilho@gmail.com'>lfilho@gmail.com</a>
+                            </span>
+                        </div>
+                        <div class='linkedin'>
+                            <i class='fa fa-fw fa-linkedin'></i>
+                            <a class='url' href='http://linkedin.com/in/luizgonzaga'>/luizgonzaga</a>
+                        </div>
+                        <div class='xing'>
+                            <i class='fa fa-fw fa-xing'></i>
+                            <a class='url' href='https://www.xing.com/profile/Luiz_Filho'>/Luiz_Filho</a>
+                        </div>
+                        <div class='github'>
+                            <i class='fa fa-fw fa-github'></i>
+                            <a class='url' href='http://github.com/lfilho'>/lfilho</a>
+                        </div>
+                    </section>
+                </aside>
+                <p>
+                    With 10+ years of experience in agile software engineering in Brazil, Canada, Germany and Australia.
+                </p>
+                <p>
+                    Alongside my technical education, I have always made sure I would not forget about the soft skills, my ability to lead, my personal growth and my humanitarian side. So from software developer, to team leader or software development manager, you can expect me to wholly understand a team's mindset, needs and expectations.
+                </p>
+                <p>
+                    I am always investing in my continuous improvement by reading books and articles, taking courses, doing side projects, attending and speaking at conferences.
+                    I am constantly challenging myself for a more effective communication, better interpersonal relationship and a more trusthworthy leadership.
+                </p>
+                <p>
+                    My current goal is to dive deep into agile and BPM certifications and my grand wish is to work in a social or purpose-driven company, where I can contribute more directly to people and society with my work.
+                </p>
+                <p>
+                    Open to travel and discuss rellocations.
+                </p>
+            </main>
         </header>
 
-        <main>
-            <h2>Profile</h2>
-            <p>
-                With 10+ years of experience in agile software engineering in Brazil, Canada, Germany and Australia.
-            </p>
-            <p>
-                Alongside my technical education, I have always made sure I would not forget about the soft skills, my ability to lead, my personal growth and my humanitarian side. So from software developer, to team leader or software development manager, you can expect me to wholly understand a team's mindset, needs and expectations.
-            </p>
-            <p>
-                I am always investing in my continuous improvement by reading books and articles, taking courses, doing side projects, attending and speaking at conferences.
-                I am constantly challenging myself for a more effective communication, better interpersonal relationship and a more trusthworthy leadership.
-            </p>
-            <p>
-                My current goal is to dive deep into agile and BPM certifications and my grand wish is to work in a social or purpose-driven company, where I can contribute more directly to people and society with my work.
-            </p>
-            <p>
-                Open to travel and discuss rellocations.
-            </p>
-        </main>
 
         <section>
             <h2>Experiences</h2>
