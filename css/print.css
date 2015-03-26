@@ -12,5 +12,9 @@
     .hide-for-print {
         display: none !important;
     }
+
+    #page-wrapper {
+        margin: 0;
+    }
 }
 

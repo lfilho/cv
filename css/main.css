@@ -9,8 +9,7 @@ body {
 
 .vcard aside {
     float: left;
-    width: 200px;
-    margin: 0 1rem 2rem 0;
+    margin: 0 2rem 2rem 0;
 }
 
 footer {
@@ -53,7 +52,7 @@ h1 {
 
 #page-wrapper {
     width: 200mm;
-    margin: 40px auto 60px;
+    margin: 2rem auto;
 }
 
 .fa-ul {
@@ -87,12 +86,12 @@ section h2 {
 }
 
 .xp aside {
-    padding: 0 2rem 0 0;
+    padding: 0 1rem 0 0;
     border-right: 1px solid #000;
-    margin: 0 2rem 0 0;
-    width: 288px;
-    min-height: 120px;
-    min-width: 288px;
+    margin: 0 1.5rem 0 0;
+    width: 15rem;
+    min-width: 15rem;
+    min-height: 6rem;
     display: flex;
     flex-flow: column wrap;
     align-content: flex-start;
@@ -103,7 +102,7 @@ section h2 {
 }
 
 .keyword {
-    border-radius: 1000px;
+    border-radius: 1000rem;
     font-weight: normal;
     text-align: center;
     text-decoration: none;
