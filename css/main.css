@@ -122,7 +122,6 @@ section h2 {
     flex-flow: row wrap;
 }
 
-.contacts,
 .courses li,
 .events li,
 .books li,
@@ -132,6 +131,7 @@ section h2 {
     max-width: 50%;
 }
 
+.contacts,
 .languages li {
     min-width: 32%;
     max-width: 32%;
