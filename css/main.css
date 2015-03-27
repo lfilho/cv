@@ -40,6 +40,15 @@ h1, h2 {
     line-height: 1.4rem;
 }
 
+h1 {
+    color: #333;
+    border-bottom: 0.2rem solid #999;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: -0.15rem;
+    font-variant-ligatures: common-ligatures;
+}
+
 main h2,
 section h2 {
     border-bottom: 0.15rem solid #999;
@@ -53,13 +62,8 @@ section h3 {
     padding: 0 0 0.5rem 0
 }
 
-h1 {
-    color: #333;
-    border-bottom: 0.2rem solid #999;
-    padding-bottom: 1rem;
-    font-weight: bold;
-    letter-spacing: -0.15rem;
-    font-variant-ligatures: common-ligatures;
+h2 span {
+    font-weight: normal;
 }
 
 #page-wrapper {
