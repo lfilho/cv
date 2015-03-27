@@ -59,10 +59,11 @@ h1 {
     margin: 0;
 }
 .fa-ul li {
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 .fa-li {
     left: 0rem;
+    top: 0.3em;
     width: 0;
 }
 
@@ -129,13 +130,13 @@ section h2 {
 
 .courses li,
 .events li,
-.books li,
 .academy-course,
 .talk {
     min-width: 50%;
     max-width: 50%;
 }
 
+.books li,
 .languages li {
     min-width: 32%;
     max-width: 32%;
@@ -150,12 +151,16 @@ h4,
 
 .languages li,
 .courses li,
+.books li,
 .achievements li,
 .events li {
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 
-.books li small {
+.books em {
+    font-size: 80%;
+}
+.books small {
     display: block;
 }
 .books li small:before {
