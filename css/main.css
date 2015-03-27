@@ -19,7 +19,7 @@ footer {
 
 p {
     margin: 0.5rem 0;
-    text-indent: 3rem;
+    text-indent: 2rem;
 }
 
 p.first,
@@ -144,7 +144,7 @@ section h2 {
 h4,
 .summary,
 .talk {
-    margin: 1rem 0;
+    margin: .8rem 0;
     text-indent: 0;
 }
 
@@ -153,4 +153,11 @@ h4,
 .achievements li,
 .events li {
     margin: 0.5rem 0;
+}
+
+.books li small {
+    display: block;
+}
+.books li small:before {
+    content: '/ ';
 }
