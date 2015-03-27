@@ -3,14 +3,15 @@
 }
 
 @media print {
-    *:not(body) {
-        /* -webkit-print-color-adjust: exact; */
+    * {
+        -webkit-print-color-adjust: exact;
     }
-    .show-for-print {
-        display: block;
-    }
-    .hide-for-print {
-        display: none !important;
+
+    .show-for-print { display: block; }
+    .hide-for-print { display: none !important; }
+
+    body {
+        background: none;
     }
 
     a {
