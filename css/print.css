@@ -13,11 +13,11 @@
         display: none !important;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     #page-wrapper {
         margin: 0;
     }
-    .vcard aside a {
-        text-decoration: none;
-    }
 }
-
