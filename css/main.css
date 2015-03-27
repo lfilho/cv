@@ -59,7 +59,7 @@ h1 {
     margin: 0;
 }
 .fa-ul li {
-    padding-left: 1rem;
+    padding: 0 0.5rem 0 1rem;
 }
 .fa-li {
     left: 0rem;
@@ -161,7 +161,7 @@ h4,
     font-size: 80%;
 }
 .books small {
-    display: block;
+    /* display: block; */
 }
 .books li small:before {
     content: '/ ';
