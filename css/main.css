@@ -70,6 +70,12 @@ h2 span {
     font-weight: normal;
 }
 
+h2 small {
+    font-size: 60%;
+    font-weight: normal;
+    float: right;
+}
+
 #page-wrapper {
     width: 200mm;
     margin: 2rem auto;
@@ -168,8 +174,9 @@ h4,
     font-size: 80%;
 }
 .books small {
-    /* display: block; */
+    display: block;
 }
 .books li small:before {
-    content: '/ ';
+    content: '/';
 }
+
