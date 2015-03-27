@@ -40,15 +40,22 @@ h1, h2 {
     line-height: 1.4rem;
 }
 
+main h2,
+section h2 {
+    border-bottom: 0.15rem solid #999;
+    margin: 2rem 0;
+    padding: 0 0 0.5rem 0
+}
+
 section h3 {
-    text-align: right;
-    border-bottom: 1px solid #666;
+    border-bottom: 0.1rem solid #ccc;
     margin: 1rem 0;
+    padding: 0 0 0.5rem 0
 }
 
 h1 {
     color: #333;
-    border-bottom: 0.1rem solid #999;
+    border-bottom: 0.2rem solid #999;
     padding-bottom: 1rem;
     font-weight: bold;
     letter-spacing: -0.15rem;
@@ -72,19 +79,6 @@ h1 {
     width: 0;
 }
 
-main h2,
-section h2 {
-    padding: .7rem 5rem .5rem 2rem;
-    background-color: #eaeaea;
-    display: inline-block;
-
-    border-top-right-radius: 10rem;
-    border-bottom-right-radius: 10rem;
-    border: 1px solid #ccc;
-    border-left: none;
-    margin: 1rem 0;
-}
-
 .xp {
     margin: 0 0 2rem 0;
     display: flex;
@@ -93,7 +87,7 @@ section h2 {
 
 .xp aside {
     padding: 0 1rem 0 0;
-    border-right: 1px solid #000;
+    border-right: 1px solid #ccc;
     margin: 0 1.5rem 0 0;
     width: 15rem;
     min-width: 15rem;
