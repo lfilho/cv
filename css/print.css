@@ -16,5 +16,8 @@
     #page-wrapper {
         margin: 0;
     }
+    .vcard aside a {
+        text-decoration: none;
+    }
 }
 

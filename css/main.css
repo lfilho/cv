@@ -10,6 +10,11 @@ body {
 .vcard aside {
     float: left;
     margin: 0 2rem 2rem 0;
+    color: #333;
+}
+
+.vcard aside a {
+    color: inherit;
 }
 
 footer {
@@ -42,7 +47,7 @@ section h3 {
 }
 
 h1 {
-    color: #000;
+    color: #333;
     border-bottom: 0.1rem solid #999;
     padding-bottom: 1rem;
     font-weight: bold;
