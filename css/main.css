@@ -99,8 +99,9 @@ h2 small {
     flex-flow: row nowrap;
 }
 
-.xp:last-child { margin: 0; }
-.volunteer.xp:last-child { margin: 0 0 2rem 0; }
+.volunteer.xp {
+    margin: 1rem 0 0 0;
+}
 
 .xp aside {
     border-right: 0.1rem solid #ccc;
