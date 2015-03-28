@@ -144,12 +144,12 @@ h2 small {
 
 .courses li,
 .events li,
-.academy-course,
-.talk {
+.academy-course {
     min-width: 50%;
     max-width: 50%;
 }
 
+.talk,
 .volunteer.xp,
 .books li,
 .languages li {
