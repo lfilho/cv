@@ -142,12 +142,12 @@ h2 small {
     flex-flow: row wrap;
 }
 
-.courses li,
 .academy-course {
     min-width: 50%;
     max-width: 50%;
 }
 
+.courses li,
 .events li,
 .talk,
 .volunteer.xp,
