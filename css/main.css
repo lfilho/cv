@@ -99,6 +99,10 @@ h2 small {
     flex-flow: row nowrap;
 }
 
+.xp:last-child {
+    margin: 0;
+}
+
 .xp aside {
     border-right: 0.1rem solid #ccc;
     margin: 0 1.5rem 0 0;
