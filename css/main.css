@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-    border-bottom: 0.15rem solid #999;
+    border-bottom: 0.15rem solid #008CBA;
     margin: 2rem 0 1rem 0;
 }
 
@@ -63,7 +63,7 @@ h3 {
 h2,
 h3,
 h4 {
-    padding: 0 0 0.5rem 0
+    padding: 0 0 0.5rem 0;
 }
 
 h2 span {
@@ -125,8 +125,8 @@ h2 small {
     display: inline-block;
     position: relative;
     margin-bottom: auto;
-    padding: 0.22222rem 0.44444rem 0.22222rem;
-    font-size: 0.61111rem;
+    padding: 0.2rem 0.4rem 0.2rem;
+    font-size: 0.6rem;
     background-color: #008CBA;
     color: #fff;
 }
