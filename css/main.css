@@ -136,6 +136,7 @@ h2 small {
 .academy-courses,
 .events,
 .books,
+.volunteer-xps,
 .talks {
     display: flex;
     flex-flow: row wrap;
@@ -149,10 +150,16 @@ h2 small {
     max-width: 50%;
 }
 
+.volunteer.xp,
 .books li,
 .languages li {
-    min-width: 32%;
-    max-width: 32%;
+    min-width: 33%;
+    max-width: 33%;
+}
+
+
+.volunteer.xp aside {
+    border: none;
 }
 
 h4,
@@ -179,4 +186,3 @@ h4,
 .books li small:before {
     content: '/';
 }
-
