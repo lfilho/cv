@@ -1,6 +1,7 @@
 * {
     -webkit-font-smoothing: antialiased;
 }
+
 body {
     background: url(../img/noise.jpg);
     font-size: 12px;
@@ -13,9 +14,7 @@ body {
     color: #333;
 }
 
-a {
-    color: inherit;
-}
+a { color: inherit; }
 
 footer {
     margin-top: 1rem;
@@ -62,13 +61,9 @@ h3 {
 
 h2,
 h3,
-h4 {
-    padding: 0 0 0.5rem 0;
-}
+h4 { padding: 0 0 0.5rem 0; }
 
-h2 span {
-    font-weight: normal;
-}
+h2 span { font-weight: normal; }
 
 h2 small { font-size: 60%; }
 h4 small { font-size: 90%; }
@@ -85,12 +80,8 @@ h4 small {
     margin: 2rem auto;
 }
 
-.fa-ul {
-    margin: 0;
-}
-.fa-ul li {
-    padding: 0 0.5rem 0 1rem;
-}
+.fa-ul { margin: 0; }
+.fa-ul li { padding: 0 0.5rem 0 1rem; }
 .fa-li {
     left: 0rem;
     top: 0.3em;
@@ -103,9 +94,7 @@ h4 small {
     flex-flow: row nowrap;
 }
 
-.volunteer.xp {
-    margin: 1rem 0 0 0;
-}
+.volunteer.xp { margin: 1rem 0 0 0; }
 
 .xp aside {
     border-right: 0.1rem solid #ccc;
@@ -118,9 +107,7 @@ h4 small {
     align-content: flex-start;
 }
 
-.job-data {
-    flex: 1;
-}
+.job-data { flex: 1; }
 
 .keyword {
     border-radius: 1000rem;
@@ -164,10 +151,7 @@ h4 small {
     max-width: 33%;
 }
 
-
-.volunteer.xp aside {
-    border: none;
-}
+.volunteer.xp aside { border: none; }
 
 h4,
 .summary,
@@ -181,16 +165,8 @@ h4,
 .courses li,
 .books li,
 .achievements li,
-.events li {
-    margin: 0.3rem 0;
-}
+.events li { margin: 0.3rem 0; }
 
-.books em {
-    font-size: 80%;
-}
-.books small {
-    display: block;
-}
-.books li small:before {
-    content: '/';
-}
+.books em { font-size: 80%; }
+.books small { display: block; }
+.books li small:before { content: '/'; }

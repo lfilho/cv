@@ -5,20 +5,14 @@
 
     #page-wrapper { margin: 0; }
 
-    * {
-        /* -webkit-print-color-adjust: exact; */
-    }
+    * { -webkit-print-color-adjust: exact; }
 
     .show-for-print { display: block; }
     .hide-for-print { display: none !important; }
 
-    body {
-        background: none;
-    }
+    body { background: none; }
 
-    a {
-        text-decoration: none;
-    }
+    a { text-decoration: none; }
 
     h1, h2, h3, h4 {
         page-break-before: avoid;
@@ -32,9 +26,11 @@
         page-break-after: avoid;
         page-break-inside: avoid;
 
+        /*
         color: #666;
         background-color: transparent;
         border: 0.1rem solid #ccc;
         padding: 0.1rem 0.3rem 0.1rem;
+        */
     }
 }
