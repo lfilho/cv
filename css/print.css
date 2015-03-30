@@ -1,9 +1,9 @@
-.show-for-print {
-    display: none;
-}
+.show-for-print { display: none; }
 
 @media print {
     @page { margin: 0.5cm; }
+
+    #page-wrapper { margin: 0; }
 
     * {
         /* -webkit-print-color-adjust: exact; */
@@ -21,20 +21,20 @@
     }
 
     h1, h2, h3, h4 {
+        page-break-before: avoid;
         page-break-after: avoid;
+        page-break-inside: avoid;
         orphans: 3; widows: 3;
     }
 
     .keyword {
+        page-break-before: avoid;
+        page-break-after: avoid;
         page-break-inside: avoid;
 
         color: #666;
-        background-color: #ccc;
+        background-color: transparent;
         border: 0.1rem solid #ccc;
         padding: 0.1rem 0.3rem 0.1rem;
-    }
-
-    #page-wrapper {
-        margin: 0;
     }
 }
