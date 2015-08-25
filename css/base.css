@@ -119,7 +119,7 @@ h2, h3, h4, h5, h6 {
 .volunteer.xp {
     padding: 0;
     margin: 1rem 0 0 0;
-    border-bottom: none;
+    border: none;
     text-indent: 0;
 }
 
