@@ -24,6 +24,7 @@
         orphans: 3; widows: 3;
     }
 
+    .xp,
     .keyword {
         page-break-before: avoid;
         page-break-after: avoid;
