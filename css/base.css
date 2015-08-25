@@ -122,14 +122,8 @@ h2, h3, h4, h5, h6 {
     justify-content: none;
 }
 
-.job-data {
-    width: 17em;
-    font-size: 1
-}
-
-.job-keywords {
-    width: 36em;
-}
+.job-data { width: 21em; }
+.job-keywords { width: 36em; }
 
 .keyword {
     border-radius: 1000rem;
