@@ -112,7 +112,12 @@ h2, h3, h4, h5, h6 {
     border-bottom: 1px solid #ccc;
 }
 
-.volunteer.xp { margin: 1rem 0 0 0; }
+.volunteer.xp {
+    padding: 0;
+    margin: 1rem 0 0 0;
+    border-bottom: none;
+    text-indent: 0;
+}
 
 .xp aside {
     min-width: 15em;
@@ -185,7 +190,6 @@ h2, h3, h4, h5, h6 {
 
 h4,
 .summary,
-.volunteer.xp,
 .talk {
     margin: .8rem 0;
     text-indent: 0;
