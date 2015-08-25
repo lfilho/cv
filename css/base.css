@@ -103,25 +103,33 @@ h2, h3, h4, h5, h6 {
 }
 
 .xp {
-    margin: 0 0 2rem 0;
+    padding: 1em 0 1em 0;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
 }
 
 .volunteer.xp { margin: 1rem 0 0 0; }
 
 .xp aside {
-    border-right: 0.1rem solid #ccc;
-    margin: 0 1.5rem 0 0;
-    width: 15rem;
-    min-width: 15rem;
-    min-height: 6rem;
+    min-width: 15em;
+    margin-bottom: 1em;
+    /* TODO remove flex-flox: row wrap and etc repetitions */
     display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: none;
 }
 
-.job-data { flex: 1; }
+.job-data {
+    width: 17em;
+    font-size: 1
+}
+
+.job-keywords {
+    width: 36em;
+}
 
 .keyword {
     border-radius: 1000rem;
@@ -139,6 +147,7 @@ h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+/* TODO make all these class merely ".flex-container" */
 .languages,
 .courses,
 .academy-courses,
