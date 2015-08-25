@@ -109,7 +109,11 @@ h2, h3, h4, h5, h6 {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.xp:first-child {
+    border-top: none;
 }
 
 .volunteer.xp {
