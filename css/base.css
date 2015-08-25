@@ -4,8 +4,21 @@
 
 body {
     background: url(../img/noise.jpg);
-    font-size: 12px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a { color: inherit; }
+
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
+}
+
+#page-wrapper {
+    margin: 2rem 10%;
 }
 
 .vcard aside {
@@ -13,8 +26,6 @@ body {
     margin: 0 2rem 2rem 0;
     color: #333;
 }
-
-a { color: inherit; }
 
 p {
     margin: 0.5rem 0;
@@ -36,6 +47,7 @@ h2 {
 }
 
 h1 {
+    font-size: 2rem;
     color: #333;
     border-bottom: 0.2rem solid #008CBA;
     padding-bottom: 1rem;
@@ -63,7 +75,8 @@ h4 small { font-size: 90%; }
 
 h2 small, h3 small, h4 small {
     font-weight: normal;
-    float: right;
+    display: block;
+    margin-top: 0.3em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -79,19 +92,6 @@ h2, h3, h4, h5, h6 {
   -webkit-transition: opacity 0.2s ease-in-out 0.1s;
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
   -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}
-
-h2:hover .header-link,
-h3:hover .header-link,
-h4:hover .header-link,
-h5:hover .header-link,
-h6:hover .header-link {
-  opacity: 1;
-}
-
-#page-wrapper {
-    width: 200mm;
-    margin: 2rem auto;
 }
 
 .fa-ul { margin: 0; }
@@ -134,7 +134,7 @@ h6:hover .header-link {
     position: relative;
     margin-bottom: auto;
     padding: 0.2rem 0.4rem 0.2rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     background-color: #008CBA;
     color: #fff;
 }
@@ -148,11 +148,17 @@ h6:hover .header-link {
 .talks {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .academy-course {
-    min-width: 50%;
+    min-width: 23em;
     max-width: 50%;
+    margin-right: 2em;
+}
+.academy-course:first-child {
+    margin-bottom: 1em;
 }
 
 .courses li,
@@ -161,8 +167,7 @@ h6:hover .header-link {
 .volunteer.xp,
 .books li,
 .languages li {
-    min-width: 33%;
-    max-width: 33%;
+    width: 19em;
 }
 
 .volunteer.xp aside { border: none; }
@@ -175,11 +180,10 @@ h4,
     text-indent: 0;
 }
 
-.languages li,
-.courses li,
-.books li,
-.achievements li,
-.events li { margin: 0.3rem 0; }
+.fa-ul li {
+    margin: 0.3rem 0;
+    font-size: 90%;
+}
 
 .books em { font-size: 80%; }
 .books small { display: block; }

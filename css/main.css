@@ -1,3 +1,6 @@
-@import url('./viewports/huge.css');
+@import url('./base.css');
+@import url('./viewports/huge.css') screen and (min-width: 1025px);
+@import url('./viewports/320px.css') screen and (max-width: 320px);
 @import url('./viewports/800px.css') screen and (max-width: 800px);
+@import url('./viewports/1024px.css') screen and (max-width: 1024px);
 @import url('./print.css');

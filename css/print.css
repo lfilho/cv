@@ -3,13 +3,16 @@
 @media print {
     @page { margin: 0.5cm; }
 
-    #page-wrapper { margin: 0; }
+    #page-wrapper {
+        margin: 0;
+    }
 
     * { -webkit-print-color-adjust: exact; }
 
     .show-for-print { display: block; }
     .hide-for-print { display: none !important; }
 
+    html { font-size: 12px; }
     body { background: none; }
 
     a { text-decoration: none; }
