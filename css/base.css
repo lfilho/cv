@@ -129,8 +129,6 @@ h2, h3, h4, h5, h6 {
 .xp aside {
     min-width: 15em;
     margin-bottom: 1em;
-    -webkit-justify-content: none;
-    justify-content: none;
 }
 
 .job-data { width: 21em; }
@@ -152,18 +150,8 @@ h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-.flex-spaced-around-items {
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-}
-
-.academy-course {
-    min-width: 23em;
-    max-width: 50%;
-    margin-right: 2em;
-}
 .academy-course:first-child {
-    margin-bottom: 1em;
+    margin: 0 3em 2em 0;
 }
 
 .courses li,
