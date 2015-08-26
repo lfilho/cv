@@ -1,3 +1,7 @@
 .academy-course:first-child {
     margin: 0 0 2em 0;
 }
+
+p.first {
+    clear: both;
+}
