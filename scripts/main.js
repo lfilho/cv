@@ -35,7 +35,7 @@ var linkifyAnchors = function () {
     }
 };
 
-var autoCountListItems = function () {
+var countListItems = function () {
     var $countSpans = document.getElementsByClassName('auto-count');
     var countSpansLength = $countSpans.length;
 
@@ -48,9 +48,18 @@ var autoCountListItems = function () {
     }
 }
 
+var countYearsOfXp = function () {
+    var BASE_YEAR = 2003;
+    var currentYear = new Date().getFullYear();
+    var yearsOfXp = currentYear - BASE_YEAR;
+
+    document.getElementById('years-of-xp').innerHTML = yearsOfXp;
+}
+
 document.onreadystatechange = function () {
     if (this.readyState === 'complete') {
         linkifyAnchors();
-        autoCountListItems();
+        countListItems();
+        countYearsOfXp();
     }
 };
