@@ -59,7 +59,24 @@
                     linkifyAnchors(level);
                 }
             }
+
+            // Count elements:
+
+            var $countSpans = document.getElementsByClassName('auto-count');
+            var countSpansLength = $countSpans.length;
+            for (var i = 0; i < countSpansLength; i++) {
+                var $currentSpan = $countSpans[i];
+                var countQuery = $currentSpan.dataset.countQuery;
+                var targetElements = document.querySelectorAll(countQuery);
+                var targetElementsLength = targetElements.length;
+                $currentSpan.innerHTML = targetElementsLength;
+            }
         };
+
+        ////////////////////////
+        // Auto count list items
+        ////////////////////////
+
     </script>
 </head>
 <!-- TODO:
@@ -1077,7 +1094,7 @@
                 Relevant courses taken
                 <small>
                     <i class='fa fa-commenting-o fa-flip-horizontal'></i>
-                    22+ courses on software, entrepreneurship and self development with a total of ~850 hours
+                    <span class='auto-count' data-count-query='.courses li'></span> courses on software, entrepreneurship and self development with a total of ~850 hours
                 </small>
             </h3>
 
@@ -1264,10 +1281,9 @@
                 Relevant events attended
                 <small>
                     <i class='fa fa-commenting-o fa-flip-horizontal'></i>
-                    21+ events on technology and entrepreneurship in different cities, states and countries
+                    <span class='auto-count' data-count-query='.events li'></span> events on technology and entrepreneurship in different cities, states and countries
                 </small>
             </h3>
-
 
             <ul class='events fa-ul flex-container'>
                 <li>
@@ -1526,11 +1542,11 @@
                 Software Development
                 <small>
                     <i class='fa fa-commenting-o fa-flip-horizontal'></i>
-                    17+ books on programming languages, techniques and tools
+                    <span class='auto-count' data-count-query='.software.books li'></span> books on programming languages, techniques and tools
                 </small>
             </h4>
 
-            <ul class='books fa-ul flex-container'>
+            <ul class='software books fa-ul flex-container'>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
                     Getting Started with Meteor.js
@@ -1650,11 +1666,11 @@
                 Soft Skills
                 <small>
                     <i class='fa fa-commenting-o fa-flip-horizontal'></i>
-                    23+ books on leadership, productivity, entrepreneurship and management
+                    <span class='auto-count' data-count-query='.soft-skills.books li'></span> books on leadership, productivity, entrepreneurship and management
                 </small>
             </h4>
 
-            <ul class='books fa-ul flex-container'>
+            <ul class='soft-skills books fa-ul flex-container'>
                 <li>
                     <i class='fa-li fa fa-caret-right'></i>
                     Managing Humans
