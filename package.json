@@ -1,14 +1,10 @@
 {
   "name": "luiz-gonzaga-filho-html-cv-resume",
   "version": "0.0.1",
-  "description": "Resumé written in HTML + CSS",
-  "main": "index.js",
+  "description": "My resumé written in React",
   "repository": {
     "type": "git",
     "url": "https://github.com/lfilho/luiz-filho-cv"
-  },
-  "scripts": {
-    "start": "open index.html"
   },
   "keywords": [
     "resumé",
@@ -21,16 +17,16 @@
     "url": "https://github.com/lfilho/luiz-filho-cv/issues"
   },
   "homepage": "http://luiz.in/cv",
-  "engines": {
-    "node": "0.10.x"
-  },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-express": "^1.4.1",
-    "grunt-open": "^0.2.3",
-    "jshint-stylish": "^1.0.0",
-    "matchdep": "^0.3.0"
+    "react-scripts": "0.1.0"
+  },
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   }
 }
