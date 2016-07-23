@@ -35,31 +35,8 @@ var linkifyAnchors = function () {
     }
 };
 
-var countListItems = function () {
-    var $countSpans = document.getElementsByClassName('auto-count');
-    var countSpansLength = $countSpans.length;
-
-    for (var i = 0; i < countSpansLength; i++) {
-        var $currentSpan = $countSpans[i];
-        var countQuery = $currentSpan.dataset.countQuery;
-        var targetElements = document.querySelectorAll(countQuery);
-        var targetElementsLength = targetElements.length;
-        $currentSpan.innerHTML = targetElementsLength;
-    }
-}
-
-var countYearsOfXp = function () {
-    var BASE_YEAR = 2003;
-    var currentYear = new Date().getFullYear();
-    var yearsOfXp = currentYear - BASE_YEAR;
-
-    document.getElementById('years-of-xp').innerHTML = yearsOfXp;
-}
-
 document.onreadystatechange = function () {
     if (this.readyState === 'complete') {
         linkifyAnchors();
-        countListItems();
-        countYearsOfXp();
     }
 };
