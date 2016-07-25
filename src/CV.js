@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-import Header from './Header'
-import Experiences from './Experiences'
-import Education from './Education'
-import Noteworthy from './Noteworthy'
-import Languages from './Languages'
-import OffTopic from './OffTopic'
+import Header from './sections/header'
+import Experiences from './sections/experiences'
+import Education from './sections/education'
+import Noteworthy from './sections/noteworthy'
+import Languages from './sections/languages'
+import OffTopic from './sections/offtopic'
 
 import CVData from './cv-data'
 
