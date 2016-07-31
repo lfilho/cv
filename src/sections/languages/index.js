@@ -5,7 +5,7 @@ class Languages extends Component {
         const languages = this.props.data.map((entry, i) => (
             <li key={i}>
                 <i className='fa-li fa fa-language'></i>
-                &nbsp;{entry.name} &mdash; {entry.level}
+                &nbsp;{entry.name} — {entry.level}
             </li>
         ))
 

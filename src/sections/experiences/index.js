@@ -12,7 +12,7 @@ class Experiences extends Component {
                         <div className='job-data'>
                             <div className='period'>
                                 <i className='fa fa-fw fa-clock-o'></i>
-                                <span>{entry.startDate} &ndash; {entry.endDate}</span>
+                                <span>{entry.startDate} – {entry.endDate}</span>
                             </div>
                             <div className='company'>
                                 <i className='fa fa-fw fa-building-o'></i>
@@ -50,7 +50,7 @@ class Experiences extends Component {
                     <article>
                         <div className='period'>
                             <i className='fa fa-fw fa-calendar'></i>
-                            <span>{entry.date} &ndash; {entry.location}</span>
+                            <span>{entry.date} – {entry.location}</span>
                         </div>
                         <div className='event'>
                             <i className='fa fa-fw fa-ticket'></i>
@@ -71,7 +71,7 @@ class Experiences extends Component {
                         <div className='job-data'>
                             <div className='period'>
                                 <i className='fa fa-fw fa-clock-o'></i>
-                                <span>{entry.date} &ndash; {entry.location}</span>
+                                <span>{entry.date} – {entry.location}</span>
                             </div>
                             <div className='company'>
                                 <i className='fa fa-fw fa-building-o'></i>

@@ -15,11 +15,11 @@ class Education extends Component {
                 <div className='academy-course' key={i}>
                     <div className='title'>
                         <i className='fa fa-fw fa-graduation-cap'></i>
-                        <span>{entry.title} &ndash; {entry.date}</span>
+                        <span>{entry.title} – {entry.date}</span>
                     </div>
                     <div className='instituion'>
                         <i className='fa fa-fw fa-university'></i>
-                        <span>{entry.school} &ndash; {entry.location}</span>
+                        <span>{entry.school} – {entry.location}</span>
                     </div>
                     {infos}
                 </div>
@@ -32,7 +32,7 @@ class Education extends Component {
                 {entry.title}
                 <br/>
                 <small>
-                    {entry.school}; {entry.duration}h &mdash; {entry.date}
+                    {entry.school}; {entry.duration}h — {entry.date}
                 </small>
             </li>
         ))

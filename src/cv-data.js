@@ -30,7 +30,7 @@ export default {
             {
                 startDate: 'Jan 2003', endDate: 'present',
                 company: 'Freelancer',
-                position: 'Software Developer &amp; Consultant',
+                position: 'Software Developer & Consultant',
                 keywords: [
                     '12 Factor Apps',
                     'Web Development',
@@ -46,9 +46,9 @@ export default {
                 ],
                 description: [
                     'Some companies I have consulted for:',
-                    'Vega Sistemas, Goiânia, Brazil &mdash; Consultancy on migrating a desktop application to web platform. Tech, tools and paradigms shift.',
-                    'SENAC Goiás, Goiânia, Brazil &mdash; Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
-                    'Federal University of Goiás &mdash; Development of the Public contest (Vestibular) system and website.',
+                    'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to web platform. Tech, tools and paradigms shift.',
+                    'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
+                    'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
                 ]
             },
             {
@@ -140,7 +140,7 @@ export default {
             {
                 startDate: 'Apr 2012', endDate: 'Mar 2013',
                 company: 'Content Fleet',
-                position: 'Team Leader &amp; Senior Developer',
+                position: 'Team Leader & Senior Developer',
                 keywords: [
                     'Node',
                     'MongoDB',
@@ -292,7 +292,7 @@ export default {
                 venue: 'DataEasy Brown Bag Sessions',
                 title: [
                     '"Introduction to Agile Methodologies"',
-                    '"Git &amp; GitHub basics"'
+                    '"Git & GitHub basics"'
                 ]
             },
             {
@@ -337,7 +337,7 @@ export default {
                 date: '2014; 2015',
                 location: 'Goiânia, Brazil',
                 organization: 'Join Community',
-                position: 'Co-organizer &amp; speaker',
+                position: 'Co-organizer & speaker',
                 keywords: [
                     'Javascript',
                     'Node',
@@ -361,10 +361,10 @@ export default {
                 ]
             },
             {
-                date: '2008 &ndash; 2011',
+                date: '2008 – 2011',
                 location: 'Goiânia, Brazil',
                 organization: 'Grupo Arte Nascente (GAN)',
-                position: 'Actor &amp; Web Developer',
+                position: 'Actor & Web Developer',
                 keywords: [
                     'PHP',
                     'NGO',
@@ -375,10 +375,10 @@ export default {
                 ]
             },
             {
-                date: '2006 &ndash; present',
+                date: '2006 – present',
                 location: 'Goiânia, Brazil',
                 organization: 'Zapt Arteatral',
-                position: 'Actor, Web Developer, President, Artistic Director &amp; Communication Coordinator',
+                position: 'Actor, Web Developer, President, Artistic Director & Communication Coordinator',
                 keywords: [
                     'PHP',
                     'Art',
@@ -388,10 +388,10 @@ export default {
                 ]
             },
             {
-                date: '2007 &ndash; 2009',
+                date: '2007 – 2009',
                 location: 'Goiânia, Brazil',
                 organization: 'AIESEC Brazil / GO',
-                position: 'Marketing, Communication &amp; Information Management teams',
+                position: 'Marketing, Communication & Information Management teams',
                 keywords: [
                     'Marketing',
                     'Public Relations',
@@ -400,10 +400,10 @@ export default {
                 ]
             },
             {
-                date: '2000 &ndash; 2008',
+                date: '2000 – 2008',
                 location: 'Goiânia, Brazil',
                 organization: 'Mocidade Espírita André Luiz',
-                position: 'Coordinator, Speaker &amp; Member',
+                position: 'Coordinator, Speaker & Member',
                 keywords: [
                     'Spiritualism',
                     'Leadership',
@@ -696,7 +696,7 @@ export default {
     languages: [
         { name: 'Portuguese', level: 'Native'},
         { name: 'English', level: 'Fluent'},
-        { name: 'German &amp; Spanish', level: 'Basic'},
+        { name: 'German & Spanish', level: 'Basic'},
     ],
     noteworthy: [
         '"MasterMind Commender and Class\' Name" title on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
@@ -722,7 +722,7 @@ export default {
                 { title: 'Rework', author: 'Jason Fried, David Heinemeier Hanson' },
                 { title: 'Rails for Java Developers', author: 'Stuart Halloway, Justin Gehtlan' },
                 { title: 'Getting Real', author: '37 Signals' },
-                { title: 'Head First: Servlets &amp; JSP', author: 'Kathy Sierra, Bryan Basham, Bert Bates' },
+                { title: 'Head First: Servlets & JSP', author: 'Kathy Sierra, Bryan Basham, Bert Bates' },
                 { title: 'Head First: Design Patterns', author: 'E. Freeman, E. Robson, B. Bates, K. Sierra' },
                 { title: 'Regular Expressions', author: 'Aurélio Marinho Vargas' },
                 { title: 'Java: How to Program', author: 'Deitel' },
