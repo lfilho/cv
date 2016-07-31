@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
-const createBookEntry = (entry, index) => (
-    <li key={index}>
+const createBookEntry = (entry, i) => (
+    <li key={i}>
         <i className='fa-li fa fa-caret-right'></i>
         {entry.title}
+        <em>{entry.subtitle}</em>
         <small>
             {entry.author}
         </small>
@@ -15,8 +16,8 @@ class OffTopic extends Component {
         const books = this.props.data.books
         const softwareBooks = books.software.map(createBookEntry)
         const softSkillsBooks = books.softSkills.map(createBookEntry)
-        const freeTime = this.props.data.freeTime.map((entry, index) => (
-            <p key={index} className='first'>
+        const freeTime = this.props.data.freeTime.map((entry, i) => (
+            <p key={i} className='first'>
                 {entry}
             </p>
         ))

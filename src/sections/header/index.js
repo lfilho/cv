@@ -17,8 +17,8 @@ class Header extends Component {
         return (
             <header id='hcard-Luiz-Gonzaga-dos-Santos-Filho' className='vcard'>
                 <h1 className='fn n'>
-                    <span className='given-name'>{name.first}</span>&nbsp;
-                    <span className='additional-name'>{name.middle}</span>&nbsp;
+                    <span className='given-name'>{name.first} </span>
+                    <span className='additional-name'>{name.middle} </span>
                     <span className='family-name'>{name.last}</span>
                 </h1>
 
@@ -27,7 +27,8 @@ class Header extends Component {
                         <section className='contacts'>
                             <div className='contact adr'>
                                 <i className='fa fa-fw fa-map-marker'></i>
-                                <span className='locality'>{location.city}</span>,
+                                <span className='locality'>{location.city}</span>
+                                <span>, </span>
                                 <span className='contry-name'>{location.country}</span>
                             </div>
                             {/*

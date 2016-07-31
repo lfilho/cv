@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 class Noteworthy extends Component {
     render() {
-        const entries = this.props.data.map((entry, index) => (
-            <li key={index}>
+        const entries = this.props.data.map((entry, i) => (
+            <li key={i}>
                 <i className='fa-li fa fa-caret-right'></i>
                 {entry}
             </li>
