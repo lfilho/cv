@@ -9,6 +9,10 @@ body {
 
 a { color: inherit; }
 
+.fa {
+    margin-right: 0.3rem;
+}
+
 h2:hover .header-link,
 h3:hover .header-link,
 h4:hover .header-link,
@@ -23,13 +27,13 @@ h6:hover .header-link {
 
 .vcard aside {
     float: left;
-    margin: 0 2rem 2rem 0;
+    margin: 0 2rem 1.5rem 0;
     color: #333;
 }
 
 p {
     margin: 0.5rem 0;
-    text-indent: 1rem;
+    /* text-indent: 1rem; */
 }
 
 p.first,
@@ -145,6 +149,7 @@ h2, h3, h4, h5, h6 {
     display: inline-block;
     position: relative;
     margin-bottom: auto;
+    margin-right: 1px;
     padding: 0.2rem 0.4rem 0.2rem;
     font-size: 0.7rem;
     background-color: #008CBA;
