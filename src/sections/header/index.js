@@ -30,12 +30,13 @@ class Header extends Component {
                                 <span className='locality'>{location.city}</span>,
                                 <span className='contry-name'>{location.country}</span>
                             </div>
-                            {/* <div className='contact phone'>
-                                    <i className='fa fa-fw fa-mobile'></i>
-                                    <span>
-                                        <a className='tel' href={'tel:+' + phone.raw}>{phone.formatted}</a>
-                                    </span>
-                                </div>
+                            {/*
+                            <div className='contact phone'>
+                                <i className='fa fa-fw fa-mobile'></i>
+                                <span>
+                                    <a className='tel' href={'tel:+' + phone.raw}>{phone.formatted}</a>
+                                </span>
+                            </div>
                             */}
                             <div className='contact website'>
                                 <i className='fa fa-fw fa-home'></i>
