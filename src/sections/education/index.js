@@ -64,7 +64,7 @@ class Education extends Component {
                     Relevant courses taken
                     <small>
                         <i className='fa fa-commenting-o fa-flip-horizontal'></i>
-                        {relevantCourses.length} courses on software, entrepreneurship and self development with a total of ~{relevantCoursesTotalDuration} hours
+                        {relevantCourses.length} courses on software, entrepreneurship, leadership and self development with a total of ~{relevantCoursesTotalDuration} hours
                     </small>
                 </h3>
 

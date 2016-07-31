@@ -437,6 +437,12 @@ export default {
         ],
         relevantCourses: [
             {
+                title: `Search Inside Yourself Leadership Program`,
+                school: `SYILI, LEAD & Google`,
+                date: 'Sep 2016',
+                duration: 15
+            },
+            {
                 title: 'React.js with Flux',
                 school: 'FrontendMasters',
                 date: 'Jun 2016',
