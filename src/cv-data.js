@@ -415,7 +415,16 @@ export default {
     education: {
         academyCourses: [
             {
-                title: 'Computer Engineering',
+                title: 'MBA in Business Process Management',
+                date: '2017',
+                school: 'IT Management Institute (IGTI)',
+                location: 'Brazil / Online',
+                info: [
+                    'Graduation estimated to 2017',
+                ]
+            },
+            {
+                title: 'Bachelor in Computer Engineering',
                 date: 'Jun 2011',
                 school: 'Federal University of Goiás',
                 location: 'Goiânia, Brazil',
@@ -425,7 +434,7 @@ export default {
                 ]
             },
             {
-                title: 'Computer Science',
+                title: 'Visiting student in Computer Science',
                 date: '2010/1',
                 school: `Saint Mary's University`,
                 location: 'Halifax, Canada',
