@@ -724,6 +724,7 @@ export default {
     offTopic: {
         books: {
             software: [
+                { title: 'Webpack from apprentice to master', author: 'Juno Vepsäläinen' },
                 { title: 'Clean Code', author: 'Robert C. Martin' },
                 { title: 'Getting Started with Meteor.js', author: 'Isaac Strack' },
                 { title: 'Practical VIM', author: 'Drew Neil' },
