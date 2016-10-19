@@ -592,6 +592,16 @@ export default {
         ],
         relevantEvents: [
             {
+                title: 'Web Summit',
+                location: 'Lisbon, Portugal',
+                date: '7-10 Nov 2016'
+            },
+            {
+                title: 'CodeMotion Conf',
+                location: 'Berlin, Germany',
+                date: '24-25 Oct 2016'
+            },
+            {
                 title: 'TEDx Goiânia',
                 location: 'Goiânia, Brazil',
                 date: '21 Oct 2015'
