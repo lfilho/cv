@@ -775,8 +775,7 @@ export default {
             ]
         },
         freeTime: [
-            `On my free time I'm studying for PMI ACP and ABPMP CBPP, and studying areas of organizational culture and leadership.`,
-            `I'm also creating a "toy" startup with a friend in order to learn new technologies (Meteor.js) and studying and practice business canvas, business model and etc.`,
+            `I'm launching a nonprofit & open source initiative with a friend: https://konsilos.com`,
         ]
     }
 }

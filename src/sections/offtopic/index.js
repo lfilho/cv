@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactAutoLink from 'react-autolink'
 
 const createBookEntry = (entry, i) => (
     <li key={i}>
@@ -18,7 +19,7 @@ class OffTopic extends Component {
         const softSkillsBooks = books.softSkills.map(createBookEntry)
         const freeTime = this.props.data.freeTime.map((entry, i) => (
             <p key={i} className='first'>
-                {entry}
+                { ReactAutoLink.autolink(entry, { target: '_blank', key: `link${i}`}) }
             </p>
         ))
 
