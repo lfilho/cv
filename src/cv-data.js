@@ -415,23 +415,32 @@ export default {
     education: {
         academyCourses: [
             {
-                title: 'Computer Engineering',
+                title: 'Business Process Management, MBA',
+                date: '2017',
+                school: 'IT Management Institute (IGTI)',
+                location: 'Brazil',
+                info: [
+                    'Graduation estimated to 2017'
+                ]
+            },
+            {
+                title: 'Computer Engineering, Bachelor',
                 date: 'Jun 2011',
                 school: 'Federal University of Goiás',
-                location: 'Goiânia, Brazil',
+                location: 'Brazil',
                 info: [
-                    'Studies certificate on Software Engineering',
+                    'Extra studies on Software Engineering',
                     'Relative average grade: 85%',
                 ]
             },
             {
-                title: 'Computer Science',
+                title: 'Computer Science, Visiting Student',
                 date: '2010/1',
                 school: `Saint Mary's University`,
-                location: 'Halifax, Canada',
+                location: 'Canada',
                 info: [
-                    '2nd round on the Trumped Competition (Entrepreneurship)',
-                    'ELAP (Emerging Leaders of America Program)',
+                    '2nd round on Trumped Competition',
+                    'Emerging Leaders of America Scholarship',
                 ]
             }
         ],

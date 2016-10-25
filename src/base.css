@@ -156,10 +156,11 @@ h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-.academy-course:first-child {
-    margin: 0 3em 2em 0;
+.academy-course {
+    margin: 0 0 2em 0;
 }
 
+.academy-course,
 .courses li,
 .events li,
 .talk,
@@ -186,3 +187,9 @@ h4,
 .books em { font-size: 80%; }
 .books small { display: block; }
 .books li small:before { content: '/'; }
+
+@media (max-width:1000px) {
+    p.first {
+        clear: both;
+    }
+}
