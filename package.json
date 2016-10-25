@@ -18,11 +18,11 @@
   },
   "homepage": "http://luiz.in/cv",
   "devDependencies": {
-    "react-scripts": "0.1.0"
+    "react-scripts": "0.7.0"
   },
   "dependencies": {
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
