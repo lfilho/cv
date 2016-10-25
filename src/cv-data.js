@@ -375,7 +375,7 @@ export default {
                 ]
             },
             {
-                date: '2006 – present',
+                date: '2006 – 2015',
                 location: 'Goiânia, Brazil',
                 organization: 'Zapt Arteatral',
                 position: 'Actor, Web Developer, President, Artistic Director & Communication Coordinator',
