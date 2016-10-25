@@ -13,9 +13,9 @@ export default {
             phone: { raw: '', formatted: ''},
             url: { href: 'http://luiz.in', display: 'www.luiz.in'},
             email: 'lfilho@gmail.com',
-            linkedin: { href: 'http://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
+            linkedin: { href: 'https://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
             xing: { href: 'https://www.xing.com/profile/Luiz_Filho', display: '/Luiz_Filho'},
-            github: { href: 'http://github.com/lfilho', display: '/lfilho'}
+            github: { href: 'https://github.com/lfilho', display: '/lfilho'}
 
         },
         introduction: [
