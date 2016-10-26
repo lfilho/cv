@@ -53,15 +53,15 @@ class Header extends Component {
                             </div>
                             <div className='linkedin'>
                                 <i className='fa fa-fw fa-linkedin'></i>
-                                <a className='url' href='{contact.linkedin.href}'>{contact.linkedin.display}</a>
+                                <a className='url' href={contact.linkedin.href}>{contact.linkedin.display}</a>
                             </div>
                             <div className='xing'>
                                 <i className='fa fa-fw fa-xing'></i>
-                                <a className='url' href='{contact.xing.href}'>{contact.xing.display}</a>
+                                <a className='url' href={contact.xing.href}>{contact.xing.display}</a>
                             </div>
                             <div className='github'>
                                 <i className='fa fa-fw fa-github'></i>
-                                <a className='url' href='{contact.github.href}'>{contact.github.display}</a>
+                                <a className='url' href={contact.github.href}>{contact.github.display}</a>
                             </div>
                         </section>
                     </aside>

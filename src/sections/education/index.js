@@ -15,8 +15,14 @@ class Education extends Component {
                 <div className='academy-course' key={i}>
                     <div className='title'>
                         <i className='fa fa-fw fa-graduation-cap'></i>
-                        <span>{entry.title} – {entry.date}</span>
+                        <span>{entry.title}</span>
                     </div>
+
+                    <div className='instituion'>
+                        <i className='fa fa-fw fa-calendar'></i>
+                        <span>{entry.date}</span>
+                    </div>
+
                     <div className='instituion'>
                         <i className='fa fa-fw fa-university'></i>
                         <span>{entry.school} – {entry.location}</span>

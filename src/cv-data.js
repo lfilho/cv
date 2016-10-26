@@ -13,9 +13,9 @@ export default {
             phone: { raw: '', formatted: ''},
             url: { href: 'http://luiz.in', display: 'www.luiz.in'},
             email: 'lfilho@gmail.com',
-            linkedin: { href: 'http://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
+            linkedin: { href: 'https://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
             xing: { href: 'https://www.xing.com/profile/Luiz_Filho', display: '/Luiz_Filho'},
-            github: { href: 'http://github.com/lfilho', display: '/lfilho'}
+            github: { href: 'https://github.com/lfilho', display: '/lfilho'}
 
         },
         introduction: [
@@ -375,7 +375,7 @@ export default {
                 ]
             },
             {
-                date: '2006 – present',
+                date: '2006 – 2015',
                 location: 'Goiânia, Brazil',
                 organization: 'Zapt Arteatral',
                 position: 'Actor, Web Developer, President, Artistic Director & Communication Coordinator',
@@ -415,32 +415,32 @@ export default {
     education: {
         academyCourses: [
             {
-                title: 'MBA in Business Process Management',
+                title: 'Business Process Management, MBA',
                 date: '2017',
                 school: 'IT Management Institute (IGTI)',
-                location: 'Brazil / Online',
+                location: 'Brazil',
                 info: [
-                    'Graduation estimated to 2017',
+                    'Graduation estimated to 2017'
                 ]
             },
             {
-                title: 'Bachelor in Computer Engineering',
+                title: 'Computer Engineering, Bachelor',
                 date: 'Jun 2011',
                 school: 'Federal University of Goiás',
-                location: 'Goiânia, Brazil',
+                location: 'Brazil',
                 info: [
-                    'Studies certificate on Software Engineering',
+                    'Extra studies on Software Engineering',
                     'Relative average grade: 85%',
                 ]
             },
             {
-                title: 'Visiting student in Computer Science',
+                title: 'Computer Science, Visiting Student',
                 date: '2010/1',
                 school: `Saint Mary's University`,
-                location: 'Halifax, Canada',
+                location: 'Canada',
                 info: [
-                    '2nd round on the Trumped Competition (Entrepreneurship)',
-                    'ELAP (Emerging Leaders of America Program)',
+                    '2nd round on Trumped Competition',
+                    'Emerging Leaders of America Scholarship',
                 ]
             }
         ],
