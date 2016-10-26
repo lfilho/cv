@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactAutoLink from 'react-autolink'
+import './style.css'
 
 const createBookEntry = (entry, i) => (
     <li key={i}>
@@ -44,7 +45,7 @@ class OffTopic extends Component {
                     </small>
                 </h4>
 
-                <ul className='software books fa-ul flex-container'>
+                <ul className='books fa-ul flex-container'>
                     {softwareBooks}
                 </ul>
 
@@ -57,7 +58,7 @@ class OffTopic extends Component {
                     </small>
                 </h4>
 
-                <ul className='soft-skills books fa-ul flex-container'>
+                <ul className='books fa-ul flex-container'>
                     {softSkillsBooks}
                 </ul>
 

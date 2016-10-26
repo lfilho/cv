@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import './style.css'
 
 class Education extends Component {
     render() {
         const education = this.props.data
         const academyCourses = education.academyCourses.map((entry, i) => {
             const infos = entry.info.map((entry, i) => (
-                <div className='info' key={i}>
+                <div key={i}>
                     <i className='fa fa-fw fa-info'></i>
                     <span>{entry}</span>
                 </div>
@@ -13,17 +14,17 @@ class Education extends Component {
 
             return (
                 <div className='academy-course' key={i}>
-                    <div className='title'>
+                    <div>
                         <i className='fa fa-fw fa-graduation-cap'></i>
                         <span>{entry.title}</span>
                     </div>
 
-                    <div className='instituion'>
+                    <div>
                         <i className='fa fa-fw fa-calendar'></i>
                         <span>{entry.date}</span>
                     </div>
 
-                    <div className='instituion'>
+                    <div>
                         <i className='fa fa-fw fa-university'></i>
                         <span>{entry.school} – {entry.location}</span>
                     </div>

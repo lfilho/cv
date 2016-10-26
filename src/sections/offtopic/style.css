@@ -1,0 +1,14 @@
+.books em { font-size: 80%; }
+.books small { display: block; }
+.books li small:before { content: '/'; }
+
+p.first {
+    margin-top: 0;
+    text-indent: 0;
+}
+
+@media (max-width:1000px) {
+    p.first {
+        clear: both;
+    }
+}

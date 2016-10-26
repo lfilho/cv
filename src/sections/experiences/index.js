@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './style.css'
 
 class Experiences extends Component {
     render() {
@@ -97,24 +98,26 @@ class Experiences extends Component {
 
                 <h3 id='software-engineering'>Software Engineering</h3>
 
-                <div className='xps'>
+                <div>
                     {softwareEngineeringXps}
 
                     <h3 id='speaking-or-teaching'>As a speaker or teacher</h3>
 
-                    <div className='talks flex-container'>
+                    <div className='flex-container'>
                         {teacherOrSpeakerXps}
                     </div>
 
-                   <h3 id='volunteer-work'>Volunteer Work</h3>
+                    <h3 id='volunteer-work'>Volunteer Work</h3>
 
-                   <p className='summary'>
-                       Volunteer work ignited in me the caring for people: be them the ones we are the doing the work for, or my colleagues. It also taught me to value and dedicate my time for something else than money, for something that would do (or be) good for someone besides myself.
+                    <p className='summary'>
+                        Volunteer work ignited in me the caring for people: be them the ones we are the doing the work for, or my colleagues. It also taught me to value and dedicate my time for something else than money, for something that would do (or be) good for someone besides myself.
                    </p>
+
                    <p className='summary'>
                        You can check my open source contributions at <span className='org'><a href="https://github.com/lfilho">github.com/lfilho</a></span>.
                    </p>
-                   <div className='volunteer-xps flex-container'>
+
+                   <div className='flex-container'>
                        {volunteerXps}
                    </div>
                </div>
