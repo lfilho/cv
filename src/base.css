@@ -25,18 +25,11 @@ h6:hover .header-link {
     margin: 2rem 10%;
 }
 
-.vcard aside {
-    float: left;
-    margin: 0 2rem 1.5rem 0;
-    color: #333;
-}
-
 p {
     margin: 0.5rem 0;
     /* text-indent: 1rem; */
 }
 
-p.first,
 p:first-child {
     margin-top: 0;
     text-indent: 0;
@@ -115,51 +108,6 @@ h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-.xp {
-    padding: 1em 0 1em 0;
-    border-top: 1px solid #ccc;
-}
-
-.xp:first-child {
-    border-top: none;
-}
-
-.volunteer.xp {
-    padding: 0;
-    margin: 1rem 0 0 0;
-    border: none;
-    text-indent: 0;
-}
-
-.xp aside {
-    min-width: 15em;
-    margin-bottom: 1em;
-}
-
-.job-data { width: 21em; }
-.job-keywords { width: 36em; }
-
-.keyword {
-    border-radius: 1000rem;
-    font-weight: normal;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    margin-bottom: auto;
-    margin-right: 1px;
-    padding: 0.2rem 0.4rem 0.2rem;
-    font-size: 0.7rem;
-    background-color: #008CBA;
-    color: #fff;
-}
-
-.academy-course {
-    margin: 0 0 2em 0;
-}
-
 .academy-course,
 .courses li,
 .events li,
@@ -170,26 +118,9 @@ h2, h3, h4, h5, h6 {
     width: 19em;
 }
 
-.volunteer.xp aside { border: none; }
-
 h4,
 .summary,
-.talk {
-    margin: .8rem 0;
-    text-indent: 0;
-}
-
 .fa-ul li {
     margin: 0.3rem 0;
     font-size: 90%;
-}
-
-.books em { font-size: 80%; }
-.books small { display: block; }
-.books li small:before { content: '/'; }
-
-@media (max-width:1000px) {
-    p.first {
-        clear: both;
-    }
 }

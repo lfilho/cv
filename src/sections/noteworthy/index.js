@@ -13,7 +13,7 @@ class Noteworthy extends Component {
             <section>
                 <h2 id='certifications-and-achievements'>Certifications and Noteworthy achievements</h2>
 
-                <ul className='fa-ul achievements'>
+                <ul className='fa-ul'>
                     {entries}
                 </ul>
             </section>

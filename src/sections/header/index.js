@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './style.css'
 
 const BASE_YEAR = 2003
 const CURRENT_YEAR = new Date().getFullYear()
@@ -29,7 +30,7 @@ class Header extends Component {
                                 <i className='fa fa-fw fa-map-marker'></i>
                                 <span className='locality'>{location.city}</span>
                                 <span>, </span>
-                                <span className='contry-name'>{location.country}</span>
+                                <span className='country-name'>{location.country}</span>
                             </div>
                             {/*
                             <div className='contact phone'>

@@ -1,0 +1,47 @@
+.xp {
+    padding: 1em 0;
+    border-top: 1px solid #ccc;
+}
+
+.xp:first-child {
+    border-top: none;
+}
+
+.volunteer.xp {
+    padding: 0;
+    margin: 1rem 0 0 0;
+    border: none;
+    text-indent: 0;
+}
+
+.xp aside {
+    min-width: 15em;
+    margin-bottom: 1em;
+}
+
+.volunteer.xp aside { border: none; }
+
+.job-data { width: 21em; }
+.job-keywords { width: 36em; }
+
+.keyword {
+    border-radius: 1000rem;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    margin-bottom: auto;
+    margin-right: 1px;
+    padding: 0.2rem 0.4rem 0.2rem;
+    font-size: 0.7rem;
+    background-color: #008CBA;
+    color: #fff;
+}
+
+.talk {
+    margin: .8rem 0;
+    text-indent: 0;
+}
