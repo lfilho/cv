@@ -734,6 +734,7 @@ export default {
     offTopic: {
         books: {
             software: [
+                { title: 'Getting Started with InnerSource: Keys to collaboration and productivity inside your company', author: 'Andy Oram' },
                 { title: 'Webpack from apprentice to master', author: 'Juno Vepsäläinen' },
                 { title: 'Clean Code', author: 'Robert C. Martin' },
                 { title: 'Getting Started with Meteor.js', author: 'Isaac Strack' },
