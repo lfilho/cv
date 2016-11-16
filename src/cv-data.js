@@ -75,7 +75,7 @@ export default {
                     'JIRA',
                 ],
                 description: [
-                    'After a great experience back in Brazil, I return to Brandwatch Berlin to bigger office, bigger team and bigger responsibilities. Looking forward this new experience. Stay tuned :-)',
+                    'After a great experience back in Brazil, I return to Brandwatch Berlin to a bigger office, bigger team and bigger responsibilities. Looking forward this new experience. Stay tuned :-)',
                 ]
             },
             {
