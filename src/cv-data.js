@@ -734,6 +734,7 @@ export default {
     offTopic: {
         books: {
             software: [
+                { title: 'Getting Started with InnerSource: Keys to collaboration and productivity inside your company', author: 'Andy Oram' },
                 { title: 'Webpack from apprentice to master', author: 'Juno Vepsäläinen' },
                 { title: 'Clean Code', author: 'Robert C. Martin' },
                 { title: 'Getting Started with Meteor.js', author: 'Isaac Strack' },
@@ -757,6 +758,7 @@ export default {
                 { title: 'Drive: the surprising truth about what motivates us', author: 'Daniel H. Pink' },
                 { title: 'The Power of Habit', author: 'Charles Duhigg' },
                 { title: 'Difficult Conversations', author: 'Douglas Stone, Sheila Heen, Bruce Patton' },
+                { title: 'Leading Snowflakes: The Engineering Manager Handbook', author: 'Oren Ellenbogen'},
                 { title: 'Managing Oneself', author: 'Peter Drucker' },
                 { title: 'The soul of leadership', author: 'Deepak Chopra' },
                 { title: 'Managing Humans', author: 'Michael Lopp' },
