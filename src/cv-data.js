@@ -140,7 +140,7 @@ export default {
             {
                 startDate: 'Apr 2012', endDate: 'Mar 2013',
                 company: 'Content Fleet',
-                position: 'Team Leader & Senior Developer',
+                position: 'Team Lead & Senior Developer',
                 keywords: [
                     'Node',
                     'MongoDB',
@@ -160,7 +160,7 @@ export default {
                 ],
                 description: [
                     `I'm grateful for CF taking me all the way from Brazil to Germany. I payed the investment with hard work, features shipped in record time and some innovations to their development process.`,
-                    'After 4 months I was trusted with the position of Frontend Team Leader and Senior Developer.',
+                    'After 4 months I was trusted with the position of Frontend Team Lead and Senior Developer.',
                 ]
             },
             {
