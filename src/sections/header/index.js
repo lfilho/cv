@@ -11,7 +11,7 @@ class Header extends Component {
         const location = this.props.data.location
         const contact = this.props.data.contact
         let introduction = this.props.data.introduction
-        introduction[0] = CAREER_TIME + introduction[0]
+        introduction[0] = introduction[0].replace(`{{CAREER_TIME}}`, CAREER_TIME)
         introduction = introduction.map((entry, i) => <p key={i}>{entry}</p>)
 
         // vCard / hCard Microformat:

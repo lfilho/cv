@@ -19,7 +19,7 @@ export default {
 
         },
         introduction: [
-            `+ years of experience in building software and leading teams in different countries and company sizes.`,
+            `{{CAREER_TIME}}+ years of experience in building software and leading teams in different countries and company sizes.`,
             `Alongside my technical education, I always make sure not forget about the more qualitative skills such as a better and more effective communication, my ability to lead, to teach and my personal growth. Whether as a developer, team leader or manager, one can expect me to wholly understand a team's mindset, needs and expectations.`,
             `I am always investing in my continuous improvement with books, articles, podcasts, courses, side projects, attending and speaking at conferences...`,
             `My perennial goal is to imbue purpose in everything I do, contributing more directly to our society and helping people in any way I can.`,
