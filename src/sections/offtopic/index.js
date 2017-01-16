@@ -54,7 +54,7 @@ class OffTopic extends Component {
                     Soft Skills
                     <small>
                         <i className='fa fa-commenting-o fa-flip-horizontal'></i>
-                        {softSkillsBooks.length} books on leadership, productivity, entrepreneurship and management
+                        {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
                     </small>
                 </h4>
 
