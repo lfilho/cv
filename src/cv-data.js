@@ -19,9 +19,9 @@ export default {
 
         },
         introduction: [
-            `{{CAREER_TIME}}+ years of experience in building software and leading teams in different countries and company sizes.`,
-            `Alongside my technical education, I always make sure not forget about the more qualitative skills such as a better and more effective communication, my ability to lead, to teach and my personal growth. Whether as a developer, team leader or manager, one can expect me to wholly understand a team's mindset, needs and expectations.`,
-            `I am always investing in my continuous improvement with books, articles, podcasts, courses, side projects, attending and speaking at conferences...`,
+            `A people first geek with {{CAREER_TIME}}+ years of building software and leading teams in different countries and company sizes.`,
+            `Alongside my technical education, I make sure not forget about the softer skills such as a better and more effective communication, my ability to lead and to mentor. Whether as a developer, team leader or manager, one can expect me to wholly understand a team's mindset, needs and expectations.`,
+            `I constantly invest in my improvement with books, articles, podcasts, courses, side projects, attending and also speaking at conferences...`,
             `My perennial goal is to imbue purpose in everything I do, contributing more directly to our society and helping people in any way I can.`,
         ]
     },
