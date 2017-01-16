@@ -54,7 +54,7 @@ export default {
             {
                 startDate: 'Apr 2016', endDate: 'present',
                 company: 'Brandwatch',
-                position: 'Senior Developer',
+                position: 'Team Lead & Senior Developer',
                 keywords: [
                     'Node',
                     'Javascript',
@@ -75,7 +75,7 @@ export default {
                     'JIRA',
                 ],
                 description: [
-                    'After a great experience back in Brazil, I return to Brandwatch Berlin to a bigger office, bigger team and bigger responsibilities. Looking forward this new experience. Stay tuned :-)',
+                    'After a great experience back in Brazil, I return to Brandwatch Berlin to a bigger office, bigger team and bigger responsibilities. Big refactorings, legacy codebase evolution and maintainability improvment where my main focus besides regular feature development and bug fixing. After 8 months in the job I was trusted to be the team lead and help the team continue to move forward.',
                 ]
             },
             {
