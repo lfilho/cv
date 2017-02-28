@@ -209,6 +209,12 @@ export default {
         ],
         teacherOrSpeaker: [
             {
+                date: '03 Mar 2017',
+                location: 'Berlin, Germany',
+                venue: 'EuroStaff Group',
+                title: 'Debugging Oneself'
+            },
+            {
                 date: '18 Feb 2016',
                 location: 'Goiânia, Brazil',
                 venue: 'DataEasy Ltda',
