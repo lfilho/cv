@@ -733,7 +733,8 @@ export default {
         '"MasterMind Commender and Class\' Name" title on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
         '"Best presentation" prize on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
         '"Self Overcoming" prize on Empretec Entrepreneurship Seminar; 2011',
-        'KITE English Proficiency Assessment, C2 Level - Proficient (564 points) in 2015',
+        'IELTS (International English Language Testing System), 8 points in 2017 (89%)',
+        'KITE (Kaplan International Tools for English), C2 Level - Proficient (564 points) in 2015',
         'TOEFL (Test of English as a Foreign Language), 108 points in 2011 (90%); 103 points in 2009 (86%)',
         'Sun Certified Java Programmer (SCJP) for the Java 5 Platform; 2008'
     ],
