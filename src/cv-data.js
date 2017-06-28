@@ -742,7 +742,7 @@ export default {
         books: {
             software: [
                 { title: 'The Tao of Tmux and Terminal Tricks', author: 'Tony Narlock' },
-                { title: 'Getting Started with InnerSource: ', subtitle: 'Keys to collaboration and productivity inside your company', author: 'Andy Oram' },
+                { title: 'InnerSource: ', subtitle: 'Keys to collaboration and productivity inside your company', author: 'Andy Oram' },
                 { title: 'Webpack from apprentice to master', author: 'Juno Vepsäläinen' },
                 { title: 'Clean Code', author: 'Robert C. Martin' },
                 { title: 'Getting Started with Meteor.js', author: 'Isaac Strack' },
