@@ -763,6 +763,7 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                { title: 'Start With Why', subtitle: 'How great leaders inspire everyone to take action', author: 'Simon Sinek' },
                 { title: 'Moral Tribes: ', subtitle: 'Emotion, reason and the gap between us and them', author: 'Joshua Greene' },
                 { title: 'Drive: ', subtitle: 'The surprising truth about what motivates us', author: 'Daniel H. Pink' },
                 { title: 'The Power of Habit', author: 'Charles Duhigg' },
