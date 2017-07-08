@@ -7,9 +7,7 @@ const createBookEntry = (entry, i) => (
         <i className='fa-li fa fa-caret-right'></i>
         {entry.title}
         <em>{entry.subtitle}</em>
-        <small>
-            {entry.author}
-        </small>
+        <small>{entry.author}</small>
     </li>
 )
 
@@ -20,7 +18,7 @@ class OffTopic extends Component {
         const softSkillsBooks = books.softSkills.map(createBookEntry)
         const freeTime = this.props.data.freeTime.map((entry, i) => (
             <p key={i} className='first'>
-                { ReactAutoLink.autolink(entry, { target: '_blank', key: `link${i}`}) }
+                { ReactAutoLink.autolink(entry, { target: '_blank', key: `link${i}` }) }
             </p>
         ))
 

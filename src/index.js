@@ -15,6 +15,6 @@ ReactDOM.render(
     <CV />,
     document.getElementById('root'),
     linkifyAnchors
-);
+)
 
 trackPageView()
