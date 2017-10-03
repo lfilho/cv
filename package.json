@@ -22,7 +22,7 @@
     "react-scripts": "1.0.13"
   },
   "dependencies": {
-    "react": "^15.4.2",
+    "react": "^16.0.0",
     "react-autolink": "^0.2.1",
     "react-dom": "^15.4.2"
   },
