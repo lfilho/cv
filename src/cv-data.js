@@ -28,30 +28,6 @@ export default {
     experiences: {
         softwareEngineering: [
             {
-                startDate: 'Jan 2003', endDate: 'Dez 2014',
-                company: 'Freelancer',
-                position: 'Software Developer & Consultant',
-                keywords: [
-                    '12 Factor Apps',
-                    'Web Development',
-                    'Team Coaching',
-                    'Individual Coaching',
-                    'Agile Methodologies',
-                    'Web Languages',
-                    'Web Services',
-                    'REST',
-                    'Software Testing',
-                    'Software Quality',
-                    'Continuous Integration',
-                ],
-                description: [
-                    'Some companies I have consulted for:',
-                    'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to web platform. Tech, tools and paradigms shift.',
-                    'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
-                    'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
-                ]
-            },
-            {
                 startDate: 'Sep 2017', endDate: 'present',
                 company: 'Amazon',
                 position: 'Software Development Manager',
@@ -218,6 +194,30 @@ export default {
                     'Interagi and DR were where I had my internships - 6 months each.',
                     'At Interagi I put my initial, self-learned PHP knowledge to test and improved it. I learned from great people how to work in a team and care for customer satisfaction.',
                     'DR Sistemas was an important software factory where I learned about the enterprise world and well-modularized code.',
+                ]
+            },
+            {
+                startDate: 'Jan 2003', endDate: 'Dez 2014',
+                company: 'Freelancer',
+                position: 'Software Developer & Consultant',
+                keywords: [
+                    '12 Factor Apps',
+                    'Web Development',
+                    'Team Coaching',
+                    'Individual Coaching',
+                    'Agile Methodologies',
+                    'Web Languages',
+                    'Web Services',
+                    'REST',
+                    'Software Testing',
+                    'Software Quality',
+                    'Continuous Integration',
+                ],
+                description: [
+                    'Some companies I have consulted for:',
+                    'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to web platform. Tech, tools and paradigms shift.',
+                    'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
+                    'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
                 ]
             },
         ],
