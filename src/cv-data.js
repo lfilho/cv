@@ -6,8 +6,8 @@ export default {
             last: 'dos Santos Filho'
         },
         location: {
-            city: 'Berlin',
-            country: 'Germany'
+            city: 'Vancouver',
+            country: 'Canada'
         },
         contact: {
             phone: { raw: '', formatted: ''},
@@ -28,7 +28,7 @@ export default {
     experiences: {
         softwareEngineering: [
             {
-                startDate: 'Jan 2003', endDate: 'present',
+                startDate: 'Jan 2003', endDate: 'Dez 2014',
                 company: 'Freelancer',
                 position: 'Software Developer & Consultant',
                 keywords: [
@@ -52,7 +52,22 @@ export default {
                 ]
             },
             {
-                startDate: 'Apr 2016', endDate: 'present',
+                startDate: 'Sep 2017', endDate: 'present',
+                company: 'Amazon',
+                position: 'Software Development Manager',
+                keywords: [
+                    'Payments Services',
+                    'Agile',
+                    'People Management',
+                    'Delivery Management',
+                    'Risk Management',
+                ],
+                description: [
+                    'I am honored to have been sought after for this management role at Amazon and am stoked to be in this high scalability, fast paced environment. I sure am learning a lot.',
+                ]
+            },
+            {
+                startDate: 'Apr 2016', endDate: 'Feb 2017',
                 company: 'Brandwatch',
                 position: 'Team Lead & Senior Developer',
                 keywords: [
@@ -98,7 +113,6 @@ export default {
                     'Java EE',
                     'Maven',
                     'GitHub',
-                    'Axosoft',
                     'New Relic',
                     'Node',
                     'Docker',
@@ -422,12 +436,10 @@ export default {
         academyCourses: [
             {
                 title: 'Business Process Management, MBA',
-                date: '2017',
+                date: 'Dez 2017',
                 school: 'IT Management Institute (IGTI)',
                 location: 'Brazil',
-                info: [
-                    'Graduation estimated to 2017'
-                ]
+                info: []
             },
             {
                 title: 'Computer Engineering, Bachelor',
