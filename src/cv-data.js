@@ -775,6 +775,9 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                { title: 'The First 90 Days', subtitle: 'Critical Success Strategies for New Leaders at All Levels', author: 'Michael D. Watkins' },
+                { title: 'Collective Intelligence', subtitle: `Mankind's Emerging World in Cyberspace`, author: 'Pierre Lévy' },
+                { title: 'The Checklist Manifesto', subtitle: 'How to get things right', author: 'Atul Gawande' },
                 { title: 'Start With Why', subtitle: 'How great leaders inspire everyone to take action', author: 'Simon Sinek' },
                 { title: 'Moral Tribes: ', subtitle: 'Emotion, reason and the gap between us and them', author: 'Joshua Greene' },
                 { title: 'Drive: ', subtitle: 'The surprising truth about what motivates us', author: 'Daniel H. Pink' },
