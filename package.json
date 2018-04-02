@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.2"
   },
   "dependencies": {
     "react": "^16.0.0",
