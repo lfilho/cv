@@ -3,12 +3,15 @@ import ReactAutoLink from 'react-autolink'
 import './style.css'
 
 const createBookEntry = (entry, i) => (
-    <li key={i}>
-        <i className='fa-li fa fa-caret-right'></i>
-        {entry.title}
-        <em>{entry.subtitle}</em>
+    <div className='icon-grid-container' key={i}>
+        <i className='fa fa-caret-right'></i>
+        <span>
+            {entry.title}
+            <em>{entry.subtitle}</em>
+        </span>
+        <br/>
         <small>{entry.author}</small>
-    </li>
+    </div>
 )
 
 class OffTopic extends Component {
@@ -43,9 +46,9 @@ class OffTopic extends Component {
                     </small>
                 </h4>
 
-                <ul className='books fa-ul flex-container'>
+                <div className='books grid-container'>
                     {softwareBooks}
-                </ul>
+                </div>
 
                 <h4 id='relevant-content-entrepreneurship'>
                     <i className='fa fa-book'></i>
@@ -56,9 +59,9 @@ class OffTopic extends Component {
                     </small>
                 </h4>
 
-                <ul className='books fa-ul flex-container'>
+                <div className='books grid-container'>
                     {softSkillsBooks}
-                </ul>
+                </div>
 
                 <h3 id='my-free-time'>Free time</h3>
 

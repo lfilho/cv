@@ -4,44 +4,37 @@ import './style.css'
 class Education extends Component {
     render() {
         const education = this.props.data
-        const academyCourses = education.academyCourses.map((entry, i) => {
-            const infos = entry.info.map((entry, i) => (
-                <div key={i}>
-                    <i className='fa fa-fw fa-info'></i>
-                    <span>{entry}</span>
-                </div>
-            ))
+        const academyCourses = education.academyCourses.map((entry, i) => (
+            <div className='academy-course icon-grid-container' key={i}>
+                <i className='fa fa-fw fa-graduation-cap'></i>
+                <span>{entry.title}</span>
 
-            return (
-                <div className='academy-course' key={i}>
-                    <div>
-                        <i className='fa fa-fw fa-graduation-cap'></i>
-                        <span>{entry.title}</span>
-                    </div>
+                <i className='fa fa-fw fa-calendar'></i>
+                <span>{entry.date}</span>
 
-                    <div>
-                        <i className='fa fa-fw fa-calendar'></i>
-                        <span>{entry.date}</span>
-                    </div>
+                <i className='fa fa-fw fa-university'></i>
+                <span>{entry.school} – {entry.location}</span>
 
-                    <div>
-                        <i className='fa fa-fw fa-university'></i>
-                        <span>{entry.school} – {entry.location}</span>
-                    </div>
-                    {infos}
-                </div>
-            )
-        })
+                {entry.info.map((info, i) => (
+                    <React.Fragment>
+                        <i className='fa fa-fw fa-info'></i>
+                        <span>{info}</span>
+                    </React.Fragment>
+                ))}
+            </div>
+        ))
 
         const relevantCourses = education.relevantCourses.map((entry, i) => (
-            <li key={i}>
-                <i className='fa-li fa fa-caret-right'></i>
-                {entry.title}
+            <div className='course icon-grid-container' key={i}>
+                <i className='fa fa-caret-right'></i>
+                <span>
+                    {entry.title}
+                </span>
                 <br/>
                 <small>
                     {entry.school}; {entry.duration}h — {entry.date}
                 </small>
-            </li>
+            </div>
         ))
 
         const relevantCoursesTotalDuration = Math.round(
@@ -49,21 +42,23 @@ class Education extends Component {
         )
 
         const relevantEvents = education.relevantEvents.map((entry, i) => (
-            <li key={i}>
-                <i className='fa-li fa fa-caret-right'></i>
-                {entry.title}
+            <div className='event icon-grid-container' key={i}>
+                <i className='fa fa-caret-right'></i>
+                <span>
+                    {entry.title}
+                </span>
                 <br />
                 <small>
                     {entry.location}; {entry.date}
                 </small>
-            </li>
+            </div>
         ))
 
         return (
             <section>
                 <h2 id='education'>Education</h2>
 
-                <div className='academy-courses flex-container'>
+                <div className='academy-courses grid-container'>
                     {academyCourses}
                 </div>
 
@@ -75,9 +70,9 @@ class Education extends Component {
                     </small>
                 </h3>
 
-                <ul className='courses fa-ul flex-container'>
+                <div className='courses grid-container'>
                     {relevantCourses}
-                </ul>
+                </div>
 
                 <h3 id='relevant-events'>
                     Relevant events attended
@@ -87,9 +82,9 @@ class Education extends Component {
                     </small>
                 </h3>
 
-                <ul className='events fa-ul flex-container'>
+                <div className='events grid-container'>
                     {relevantEvents}
-                </ul>
+                </div>
             </section>
         )
     }

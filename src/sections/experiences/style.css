@@ -9,20 +9,9 @@
 
 .volunteer.xp {
     padding: 0;
-    margin: 1rem 0 0 0;
     border: none;
     text-indent: 0;
 }
-
-.xp aside {
-    min-width: 15em;
-    margin-bottom: 1em;
-}
-
-.volunteer.xp aside { border: none; }
-
-.job-data { width: 21em; }
-.job-keywords { width: 36em; }
 
 .keyword {
     border-radius: 1000rem;
@@ -39,9 +28,4 @@
     font-size: 0.7rem;
     background-color: #008CBA;
     color: #fff;
-}
-
-.talk {
-    margin: .8rem 0;
-    text-indent: 0;
 }

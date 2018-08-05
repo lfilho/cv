@@ -1,6 +1,5 @@
 .books em { font-size: 80%; }
 .books small { display: block; }
-.books li small:before { content: '/'; }
 
 p.first {
     margin-top: 0;

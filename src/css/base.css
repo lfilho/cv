@@ -27,7 +27,6 @@ h6:hover .header-link {
 
 p {
     margin: 0.5rem 0;
-    /* text-indent: 1rem; */
 }
 
 p:first-child {
@@ -87,40 +86,33 @@ h2, h3, h4, h5, h6 {
     opacity: 0;
     font-size: 0.8em;
 
-    -webkit-transition: opacity 0.2s ease-in-out 0.1s;
-    -moz-transition: opacity 0.2s ease-in-out 0.1s;
-    -ms-transition: opacity 0.2s ease-in-out 0.1s;
+    transition: opacity 0.2s ease-in-out 0.1s;
 }
 
-.fa-ul { margin: 0; }
-.fa-ul li { padding: 0 0.5rem 0 1rem; }
-.fa-li {
-    left: 0rem;
-    top: 0.3em;
-    width: 0;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-gap: 1.5rem;
 }
 
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    width: 100%;
+.courses.grid-container,
+.events.grid-container,
+.books.grid-container {
+    grid-gap: 1rem;
 }
 
-.academy-course,
-.courses li,
-.events li,
-.talk,
-.volunteer.xp,
-.books li,
-.languages li {
-    width: 19em;
+.icon-grid-container {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    align-items: baseline;
+    align-content: start;
+    font-size: 90%;
 }
+
+.icon-grid-container small:before { content: '/ '; }
 
 h4,
-.summary,
-.fa-ul li {
+.summary {
     margin: 0.3rem 0;
     font-size: 90%;
 }
