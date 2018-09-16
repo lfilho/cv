@@ -775,7 +775,8 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
-                { title: 'The First 90 Days:', subtitle: 'Critical Success Strategies for New Leaders at All Levels', author: 'Michael D. Watkins' },
+                { title: 'The Coaching Habit: ', subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever', author: 'Michael Bungay Stanier' },
+                { title: 'The First 90 Days: ', subtitle: 'Critical Success Strategies for New Leaders at All Levels', author: 'Michael D. Watkins' },
                 { title: 'Collective Intelligence: ', subtitle: `Mankind's Emerging World in Cyberspace`, author: 'Pierre Lévy' },
                 { title: 'The Checklist Manifesto: ', subtitle: 'How to get things right', author: 'Atul Gawande' },
                 { title: 'Start With Why: ', subtitle: 'How great leaders inspire everyone to take action', author: 'Simon Sinek' },
