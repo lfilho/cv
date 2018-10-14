@@ -1,9 +1,23 @@
 import React, { Component } from 'react'
+import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt, faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 import './style.css'
 
 const BASE_YEAR = 2003
 const CURRENT_YEAR = new Date().getFullYear()
 const CAREER_TIME = CURRENT_YEAR - BASE_YEAR
+
+fontAwesomeLibrary.add(
+    faMapMarkerAlt,
+    faHome,
+    faGithub,
+    faXing,
+    faLinkedin,
+    faEnvelope
+)
 
 class Header extends Component {
     render() {
@@ -27,7 +41,7 @@ class Header extends Component {
                     <aside>
                         <section className='contacts'>
                             <div className='contact adr'>
-                                <i className='fa fa-fw fa-map-marker'></i>
+                                <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
                                 <span className='locality'>{location.city}</span>
                                 <span>, </span>
                                 <span className='country-name'>{location.country}</span>
@@ -41,27 +55,27 @@ class Header extends Component {
                             </div>
                             */}
                             <div className='contact website'>
-                                <i className='fa fa-fw fa-home'></i>
+                                <FontAwesomeIcon icon={faHome} fixedWidth />
                                 <span>
                                     <a className='url' href={contact.url.href}>{contact.url.display}</a>
                                 </span>
                             </div>
                             <div className='contact mail'>
-                                <i className='fa fa-fw fa-envelope-o'></i>
+                                <FontAwesomeIcon icon={faEnvelope} fixedWidth />
                                 <span>
                                     <a className='email' href={'mailto:' + contact.email}>{contact.email}</a>
                                 </span>
                             </div>
                             <div className='linkedin'>
-                                <i className='fa fa-fw fa-linkedin'></i>
+                                <FontAwesomeIcon icon={faLinkedin} fixedWidth />
                                 <a className='url' href={contact.linkedin.href}>{contact.linkedin.display}</a>
                             </div>
                             <div className='xing'>
-                                <i className='fa fa-fw fa-xing'></i>
+                                <FontAwesomeIcon icon={faXing} fixedWidth />
                                 <a className='url' href={contact.xing.href}>{contact.xing.display}</a>
                             </div>
                             <div className='github'>
-                                <i className='fa fa-fw fa-github'></i>
+                                <FontAwesomeIcon icon={faGithub} fixedWidth />
                                 <a className='url' href={contact.github.href}>{contact.github.display}</a>
                             </div>
                         </section>

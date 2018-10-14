@@ -1,5 +1,33 @@
 import React, { Component } from 'react'
+
+import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import {
+    faTags,
+    faUsers,
+    faUser,
+    faTicketAlt,
+    faMicrophone
+} from '@fortawesome/free-solid-svg-icons'
+import {
+    faCalendarAlt as faCalendar,
+    faClock,
+    faBuilding
+} from '@fortawesome/free-regular-svg-icons'
+
 import './style.css'
+
+fontAwesomeLibrary.add(
+    faTags,
+    faUsers,
+    faUser,
+    faBuilding,
+    faClock,
+    faTicketAlt,
+    faCalendar,
+    faMicrophone
+)
 
 class Experiences extends Component {
     render() {
@@ -11,15 +39,15 @@ class Experiences extends Component {
                 <div className='xp' key={i}>
                     <aside className='grid-container'>
                         <div className='job-data icon-grid-container'>
-                            <i className='fa fa-fw fa-clock-o'></i>
+                            <FontAwesomeIcon icon={faClock} fixedWidth />
                             <span>{entry.startDate} – {entry.endDate}</span>
-                            <i className='fa fa-fw fa-building-o'></i>
+                            <FontAwesomeIcon icon={faBuilding} fixedWidth />
                             <span className='org'>{entry.company}</span>
-                            <i className='fa fa-fw fa-users'></i>
+                            <FontAwesomeIcon icon={faUsers} fixedWidth />
                             <span>{entry.position}</span>
                         </div>
                         <div className='job-keywords icon-grid-container'>
-                            <i className='fa fa-fw fa-tags'></i>
+                            <FontAwesomeIcon icon={faTags} fixedWidth />
                             <span>{keywords}</span>
                         </div>
                     </aside>
@@ -35,7 +63,7 @@ class Experiences extends Component {
         const teacherOrSpeakerXps = this.props.data.teacherOrSpeaker.map((entry, i) => {
             let titles = [].concat(entry.title).map((entry, i) => (
                 <div className='title icon-grid-container' key={i}>
-                    <i className='fa fa-fw fa-microphone'></i>
+                    <FontAwesomeIcon icon={faMicrophone} fixedWidth />
                     <span>{entry}</span>
                 </div>
             ))
@@ -43,11 +71,11 @@ class Experiences extends Component {
             return (
                 <article className='talk' key={i}>
                     <div className='period icon-grid-container'>
-                        <i className='fa fa-fw fa-calendar'></i>
+                        <FontAwesomeIcon icon={faCalendar} fixedWidth />
                         <span>{entry.date} – {entry.location}</span>
                     </div>
                     <div className='event icon-grid-container'>
-                        <i className='fa fa-fw fa-ticket'></i>
+                        <FontAwesomeIcon icon={faTicketAlt} fixedWidth />
                         <span>{entry.venue}</span>
                     </div>
                     {titles}
@@ -62,20 +90,20 @@ class Experiences extends Component {
                 <div className='volunteer xp' key={i}>
                     <div className='job-data'>
                         <div className='period icon-grid-container'>
-                            <i className='fa fa-fw fa-clock-o'></i>
+                            <FontAwesomeIcon icon={faClock} fixedWidth />
                             <span>{entry.date} – {entry.location}</span>
                         </div>
                         <div className='company icon-grid-container'>
-                            <i className='fa fa-fw fa-building-o'></i>
+                            <FontAwesomeIcon icon={faBuilding} fixedWidth />
                             <span className='org'>{entry.organization}</span>
                         </div>
                         <div className='position icon-grid-container'>
-                            <i className='fa fa-fw fa-user'></i>
+                            <FontAwesomeIcon icon={faUser} fixedWidth />
                             <span>{entry.position}</span>
                         </div>
                     </div>
                     <div className='job-keywords icon-grid-container'>
-                        <i className='fa fa-fw fa-tags'></i>
+                        <FontAwesomeIcon icon={faTags} fixedWidth />
                         <div>
                             {keywords}
                         </div>

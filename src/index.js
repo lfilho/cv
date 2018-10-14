@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom'
 import './css/normalize.css'
 import './css/base.css'
 import './css/print.css'
-import './fonts/font-awesome.min.css'
 
 import CV from './CV'
 

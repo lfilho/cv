@@ -1,10 +1,19 @@
 import React, { Component } from 'react'
 import ReactAutoLink from 'react-autolink'
+
+import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faCaretRight, faBook } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
+
 import './style.css'
+
+fontAwesomeLibrary.add(faCaretRight, faBook, faCommentDots)
 
 const createBookEntry = (entry, i) => (
     <div className='icon-grid-container' key={i}>
-        <i className='fa fa-caret-right'></i>
+        <FontAwesomeIcon icon={faCaretRight} />
         <span>
             {entry.title}
             <em>{entry.subtitle}</em>
@@ -30,7 +39,7 @@ class OffTopic extends Component {
                 <h2 id='off-topics'>
                     <span>(The not so)</span> Off topics
                     <small>
-                        <i className='fa fa-commenting-o fa-flip-horizontal'></i>
+                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         Some other things that help shaping the professional I am
                     </small>
                 </h2>
@@ -38,10 +47,10 @@ class OffTopic extends Component {
                 <h3 id='relevant-content'>Relevant content</h3>
 
                 <h4 id='relevant-content-software-development'>
-                    <i className='fa fa-book'></i>
+                    <FontAwesomeIcon icon={faBook} />
                     Software Development
                     <small>
-                        <i className='fa fa-commenting-o fa-flip-horizontal'></i>
+                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {softwareBooks.length} books on programming languages, techniques and tools
                     </small>
                 </h4>
@@ -51,10 +60,10 @@ class OffTopic extends Component {
                 </div>
 
                 <h4 id='relevant-content-entrepreneurship'>
-                    <i className='fa fa-book'></i>
+                    <FontAwesomeIcon icon={faBook} />
                     Soft Skills
                     <small>
-                        <i className='fa fa-commenting-o fa-flip-horizontal'></i>
+                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
                     </small>
                 </h4>

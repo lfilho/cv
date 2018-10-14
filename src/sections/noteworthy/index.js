@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 
+import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+
+fontAwesomeLibrary.add(faCaretRight)
+
 class Noteworthy extends Component {
     render() {
         const entries = this.props.data.map((entry, i) => (
             <React.Fragment>
-                <i className='fa fa-caret-right'></i>
+                <FontAwesomeIcon icon={faCaretRight} />
                 <span>{entry}</span>
             </React.Fragment>
         ))
