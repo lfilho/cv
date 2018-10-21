@@ -775,6 +775,7 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                { title: 'Dare to Lead: ', subtitle: 'Brave work. Tough conversations. Whole hearts.', author: 'Brené Brown' },
                 { title: 'The Coaching Habit: ', subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever', author: 'Michael Bungay Stanier' },
                 { title: 'The First 90 Days: ', subtitle: 'Critical Success Strategies for New Leaders at All Levels', author: 'Michael D. Watkins' },
                 { title: 'Collective Intelligence: ', subtitle: `Mankind's Emerging World in Cyberspace`, author: 'Pierre Lévy' },
