@@ -742,6 +742,7 @@ export default {
         { name: 'German & Spanish', level: 'Basic'},
     ],
     noteworthy: [
+        'AWS Certified Cloud Practioner; Nov 2018',
         '"MasterMind Commender and Class\' Name" title on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
         '"Best presentation" prize on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
         '"Self Overcoming" prize on Empretec Entrepreneurship Seminar; 2011',
