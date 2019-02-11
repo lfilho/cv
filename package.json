@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.0",
-    "react-scripts": "2.1.4"
+    "react-scripts": "2.1.5"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.6",
