@@ -32,14 +32,17 @@ export default {
                 company: 'Amazon',
                 position: 'Software Development Manager',
                 keywords: [
-                    'Payments Services',
+                    'Payment Services',
+                    'AWS',
+                    'Route 53',
                     'Agile',
                     'People Management',
                     'Delivery Management',
                     'Risk Management',
                 ],
                 description: [
-                    'I am honored to have been sought after for this management role at Amazon and am stoked to be in this high scalability, fast paced environment. I sure am learning a lot.',
+                    `In my first 15 months in Amazon I was part of Payment Services. I managed a team of 8-10 people and we timely delivered amazon.com.tr (Amazon Turkey) as the highlight of year, along other smaller projects.`,
+                    `On my 16th month, I've changed to AWS Route 53, where I'm building a new team and delivering the new generation of Route53's User Experience.`
                 ]
             },
             {
