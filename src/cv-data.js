@@ -754,6 +754,7 @@ export default {
     offTopic: {
         books: {
             software: [
+                { title: 'The End of Privacy', author: 'B.J. Mendelson' },
                 { title: 'The Tao of Tmux and Terminal Tricks', author: 'Tony Narlock' },
                 { title: 'InnerSource: ', subtitle: 'Keys to collaboration and productivity inside your company', author: 'Andy Oram' },
                 { title: 'Webpack from apprentice to master', author: 'Juno Vepsäläinen' },
@@ -776,6 +777,9 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
+                { title: 'The Subtle Art of Not Giving a F*ck: ', subtitle: 'A Counterintuitive Approach to Living a Good Life', author: 'Mark Manson' },
+                { title: 'It Doesn\'t have to be Crazy at Work', author: 'Jason Fried, David Heinemeier Hansson' },
                 { title: 'Dare to Lead: ', subtitle: 'Brave work. Tough conversations. Whole hearts.', author: 'Brené Brown' },
                 { title: 'The Coaching Habit: ', subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever', author: 'Michael Bungay Stanier' },
                 { title: 'The First 90 Days: ', subtitle: 'Critical Success Strategies for New Leaders at All Levels', author: 'Michael D. Watkins' },
