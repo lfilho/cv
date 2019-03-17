@@ -41,7 +41,8 @@ export default {
                     'Risk Management',
                 ],
                 description: [
-                    `In my first 15 months in Amazon I was part of Payment Services. I managed a team of 8-10 people and we timely delivered amazon.com.tr (Amazon Turkey) as the highlight of year, along other smaller projects.`,
+                    `In my first 15 months in Amazon I was part of Payment Services. I managed a team of 8-10 people and we timely delivered amazon.com.tr (Amazon Turkey) as the highlight of year, along other projects.`,
+                    `I've also become a certified Cultural Competences for Teams instructor, increasing inclusiveness and diversity awareness to the many teams that took the training.`,
                     `On my 16th month, I've changed to AWS Route 53, where I'm building a new team and delivering the new generation of Route53's User Experience.`
                 ]
             },
