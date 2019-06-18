@@ -11,7 +11,7 @@ export default {
         },
         contact: {
             phone: { raw: '', formatted: ''},
-            url: { href: 'https://luiz.in', display: 'www.luiz.in'},
+            url: { href: 'https://luiz.dev', display: 'www.luiz.dev'},
             email: 'lfilho@gmail.com',
             linkedin: { href: 'https://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
             xing: { href: 'https://www.xing.com/profile/Luiz_Filho', display: '/Luiz_Filho'},
