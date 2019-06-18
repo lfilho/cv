@@ -781,6 +781,7 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                { title: `Man's Search for Meaning`, author: 'Viktor E. Frankl' },
                 { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
                 { title: 'The Subtle Art of Not Giving a F*ck: ', subtitle: 'A Counterintuitive Approach to Living a Good Life', author: 'Mark Manson' },
                 { title: 'It Doesn\'t have to be Crazy at Work', author: 'Jason Fried, David Heinemeier Hansson' },
