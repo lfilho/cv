@@ -43,7 +43,7 @@ export default {
                 description: [
                     `In my first 15 months in Amazon I was part of Payment Services. I managed a team of 8-10 people and we timely delivered amazon.com.tr (Amazon Turkey) as the highlight of year, along other projects.`,
                     `I've also become a certified Cultural Competences for Teams instructor, increasing inclusiveness and diversity awareness to the many teams that took the training.`,
-                    `On my 16th month, I've changed to AWS Route 53. I hired the entire team and we're building the new generation of Route53's User Experience with measurable operational, acessibility and usability improvements. While hiring the team I also measurably improved AWS' sourcing process, making our hiring pipeline more efficient.`
+                    `On my 16th month, I've changed to AWS Route 53. I hired the entire team and we're building the new generation of Route53's User Experience with measurable operational, accessibility and usability improvements. While hiring the team I also measurably improved AWS' sourcing process, making our hiring pipeline more efficient.`
                 ]
             },
             {
@@ -70,7 +70,7 @@ export default {
                     'JIRA',
                 ],
                 description: [
-                    'After a great experience back in Brazil, I return to Brandwatch Berlin to a bigger office, bigger team and bigger responsibilities. Big refactorings, legacy codebase evolution and maintainability improvment where my main focus besides regular feature development and bug fixing. After 8 months in the job I was trusted to be the team lead and help the team continue to move forward.',
+                    'After a great experience back in Brazil, I return to Brandwatch Berlin to a bigger office, bigger team and bigger responsibilities. Big refactorings, legacy codebase evolution and maintainability improvements where my main focus besides regular feature development and bug fixing. After 8 months in the job I was trusted to be the team lead and help the team continue to move forward.',
                 ]
             },
             {
@@ -201,7 +201,7 @@ export default {
                 ]
             },
             {
-                startDate: 'Jan 2003', endDate: 'Dez 2014',
+                startDate: 'Jan 2003', endDate: 'Dec 2014',
                 company: 'Freelancer',
                 position: 'Software Developer & Consultant',
                 keywords: [
@@ -236,7 +236,7 @@ export default {
                 date: '18 Feb 2016',
                 location: 'Goiânia, Brazil',
                 venue: 'DataEasy Ltda',
-                title: '"Areas of Responsability Model"'
+                title: '"Areas of Responsibility Model"'
             },
             {
                 date: '05 Feb 2016',
@@ -440,7 +440,7 @@ export default {
         academyCourses: [
             {
                 title: 'Business Process Management, MBA',
-                date: 'Dez 2017',
+                date: 'Dec 2017',
                 school: 'IT Management Institute (IGTI)',
                 location: 'Brazil',
                 info: []
@@ -746,7 +746,7 @@ export default {
         { name: 'German & Spanish', level: 'Basic'},
     ],
     noteworthy: [
-        'AWS Certified Cloud Practioner; Nov 2018',
+        'AWS Certified Cloud Practitioner; Nov 2018',
         '"MasterMind Commender and Class\' Name" title on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
         '"Best presentation" prize on MasterMind training in Leadership, Interpersonal Intelligence and Effective Communication; 2011',
         '"Self Overcoming" prize on Empretec Entrepreneurship Seminar; 2011',
