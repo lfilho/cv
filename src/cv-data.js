@@ -758,6 +758,7 @@ export default {
     offTopic: {
         books: {
             software: [
+                { title: 'Shape Up', author: 'Ryan Singer' },
                 { title: 'The End of Privacy', author: 'B.J. Mendelson' },
                 { title: 'The Tao of Tmux and Terminal Tricks', author: 'Tony Narlock' },
                 { title: 'InnerSource: ', subtitle: 'Keys to collaboration and productivity inside your company', author: 'Andy Oram' },
@@ -781,6 +782,7 @@ export default {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                { title: 'Find Your Why', author: 'Simon Sinek, David Mead & Peter Docker' },
                 { title: 'The Infinite Game', author: 'Simon Sinek' },
                 { title: `Man's Search for Meaning`, author: 'Viktor E. Frankl' },
                 { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
