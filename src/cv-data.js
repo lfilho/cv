@@ -614,6 +614,16 @@ export default {
         ],
         relevantEvents: [
             {
+                title: 'WebDevCon',
+                location: 'Seattle, USA',
+                date: '16-19 Apr 2019'
+            },
+            {
+                title: 'AWS Console Unconf',
+                location: 'Seattle, USA',
+                date: '29-30 Jan 2019'
+            },
+            {
                 title: 'Web Summit',
                 location: 'Lisbon, Portugal',
                 date: '7-10 Nov 2016'
