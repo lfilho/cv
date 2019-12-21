@@ -768,6 +768,7 @@ export default {
     offTopic: {
         books: {
             software: [
+                { title: 'Mastering Vim', author: 'Jovica Ilic' },
                 { title: 'Shape Up', author: 'Ryan Singer' },
                 { title: 'The End of Privacy', author: 'B.J. Mendelson' },
                 { title: 'The Tao of Tmux and Terminal Tricks', author: 'Tony Narlock' },
