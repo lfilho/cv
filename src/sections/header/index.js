@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faXing, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faXing, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import './style.css'
 
@@ -16,6 +16,7 @@ fontAwesomeLibrary.add(
     faGithub,
     faXing,
     faLinkedin,
+    faTwitter,
     faEnvelope
 )
 
@@ -69,6 +70,10 @@ class Header extends Component {
                             <div className='linkedin'>
                                 <FontAwesomeIcon icon={faLinkedin} fixedWidth />
                                 <a className='url' href={contact.linkedin.href}>{contact.linkedin.display}</a>
+                            </div>
+                            <div className='twitter'>
+                                <FontAwesomeIcon icon={faTwitter} fixedWidth />
+                                <a className='url' href={contact.twitter.href}>{contact.twitter.display}</a>
                             </div>
                             <div className='xing'>
                                 <FontAwesomeIcon icon={faXing} fixedWidth />

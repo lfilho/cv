@@ -14,6 +14,7 @@ export default {
             url: { href: 'https://luiz.dev', display: 'www.luiz.dev'},
             email: 'lfilho@gmail.com',
             linkedin: { href: 'https://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
+            twitter: { href: 'https://twitter.com/luizmarelo', display: '/luizmarelo'},
             xing: { href: 'https://www.xing.com/profile/Luiz_Filho', display: '/Luiz_Filho'},
             github: { href: 'https://github.com/lfilho', display: '/lfilho'}
 
