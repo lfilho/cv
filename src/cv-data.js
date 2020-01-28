@@ -58,7 +58,7 @@ export default {
                     'Underscore',
                     'HTML 5',
                     'CSS 3',
-                    'Hightcharts',
+                    'Highcharts',
                     'jQuery',
                     'Mustache',
                     'BDD',
@@ -71,6 +71,25 @@ export default {
                 ],
                 description: [
                     'After a great experience back in Brazil, I return to Brandwatch Berlin to a bigger office, bigger team and bigger responsibilities. Big refactorings, legacy codebase evolution and maintainability improvements where my main focus besides regular feature development and bug fixing. After 8 months in the job I was trusted to be the team lead and help the team continue to move forward.',
+                ]
+            },
+            {
+                startDate: 'Apr 2015', endDate: 'Apr 2015',
+                company: 'X-Team (Remote)',
+                position: 'Full stack developer',
+                keywords: [
+                    'Node',
+                    'Javascript',
+                    'React',
+                    'Flux',
+                    'LevelDB',
+                    'Tape',
+                    'Highcharts',
+                    'jQuery',
+                    'BPM',
+                ],
+                description: [
+                    'Hired by the awesome remote company X-Team to help researching, planning and developing the next phase of X-Labs (open source community) and other internal projects. Great team, expert people, cool tech and tools.',
                 ]
             },
             {
@@ -115,7 +134,7 @@ export default {
                     'Underscore',
                     'HTML 5',
                     'CSS 3',
-                    'Hightcharts',
+                    'Highcharts',
                     'jQuery',
                     'Mustache',
                     'BDD',
@@ -144,7 +163,7 @@ export default {
                     'Underscore',
                     'HTML 5',
                     'CSS 3',
-                    'Hightcharts',
+                    'Highcharts',
                     'jQuery',
                     'REST',
                     'Scrum',
