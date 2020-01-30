@@ -36,7 +36,7 @@ class OffTopic extends Component {
 
         return (
             <section>
-                <h2 id='off-topics'>
+                <h2 id='not-so-off-topics'>
                     <span>(The not so)</span> Off topics
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
