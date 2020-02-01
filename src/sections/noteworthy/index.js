@@ -4,9 +4,11 @@ import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
+import AnchoredHeader from '../../lib/anchored-header.js'
+
 fontAwesomeLibrary.add(faCaretRight)
 
-class Noteworthy extends Component {
+export default class Noteworthy extends Component {
     render() {
         const entries = this.props.data.map((entry, i) => (
             <React.Fragment>
@@ -17,7 +19,7 @@ class Noteworthy extends Component {
 
         return (
             <section>
-                <h2 id='certifications-and-achievements'>Certifications and Noteworthy achievements</h2>
+                <AnchoredHeader level='2'>Certifications and Noteworthy achievements</AnchoredHeader>
 
                 <div className='icon-grid-container'>
                     {entries}
@@ -26,5 +28,3 @@ class Noteworthy extends Component {
         )
     }
 }
-
-export default Noteworthy

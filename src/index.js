@@ -7,13 +7,11 @@ import './css/print.css'
 
 import CV from './CV'
 
-import linkifyAnchors from './util/linkify-anchors'
 import trackPageView from './util/google-analytics'
 
 ReactDOM.render(
     <CV />,
-    document.getElementById('root'),
-    linkifyAnchors
+    document.getElementById('root')
 )
 
 trackPageView()

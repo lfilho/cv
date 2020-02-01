@@ -10,6 +10,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt as faCalendar, faCommentDots } from '@fortawesome/free-regular-svg-icons'
 
+import AnchoredHeader from '../../lib/anchored-header.js'
+
 import './style.css'
 
 fontAwesomeLibrary.add(
@@ -21,7 +23,7 @@ fontAwesomeLibrary.add(
     faCommentDots
 )
 
-class Education extends Component {
+export default class Education extends Component {
     render() {
         const education = this.props.data
         const academyCourses = education.academyCourses.map((entry, i) => (
@@ -75,30 +77,30 @@ class Education extends Component {
 
         return (
             <section>
-                <h2 id='education'>Education</h2>
+                <AnchoredHeader level='2'>Education</AnchoredHeader>
 
                 <div className='academy-courses grid-container'>
                     {academyCourses}
                 </div>
-                <h3 id='relevant-courses'>
+                <AnchoredHeader level='3' id='relevant-courses'>
                     Relevant courses taken
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {relevantCourses.length} courses on software, entrepreneurship, leadership and self development with a total of ~{relevantCoursesTotalDuration} hours
                     </small>
-                </h3>
+                </AnchoredHeader>
 
                 <div className='courses grid-container'>
                     {relevantCourses}
                 </div>
 
-                <h3 id='relevant-events'>
+                <AnchoredHeader level='3' id='relevant-events'>
                     Relevant events attended
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {relevantEvents.length} events on technology and entrepreneurship in different cities and countries
                     </small>
-                </h3>
+                </AnchoredHeader>
 
                 <div className='events grid-container'>
                     {relevantEvents}
@@ -107,5 +109,3 @@ class Education extends Component {
         )
     }
 }
-
-export default Education

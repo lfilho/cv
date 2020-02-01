@@ -16,6 +16,8 @@ import {
     faBuilding
 } from '@fortawesome/free-regular-svg-icons'
 
+import AnchoredHeader from '../../lib/anchored-header'
+
 import './style.css'
 
 fontAwesomeLibrary.add(
@@ -29,7 +31,7 @@ fontAwesomeLibrary.add(
     faMicrophone
 )
 
-class Experiences extends Component {
+export default class Experiences extends Component {
     render() {
         const softwareEngineeringXps = this.props.data.softwareEngineering.map((entry, i) => {
             const keywords = entry.keywords.map((entry, i) => <span className='keyword' key={i}>{entry}</span>)
@@ -114,20 +116,20 @@ class Experiences extends Component {
 
         return (
             <section>
-                <h2 id='experiences'>Experiences</h2>
+                <AnchoredHeader level='2'>Experiences</AnchoredHeader>
 
-                <h3 id='software-engineering'>Software Engineering</h3>
+                <AnchoredHeader level='3'>Software Engineering</AnchoredHeader>
 
                 <div>
                     {softwareEngineeringXps}
 
-                    <h3 id='speaking-or-teaching'>As a speaker or teacher</h3>
+                    <AnchoredHeader level='3' id='speaking-or-teaching'>As a speaker or teacher</AnchoredHeader>
 
                     <div className='grid-container'>
                         {teacherOrSpeakerXps}
                     </div>
 
-                    <h3 id='volunteer-work'>Volunteer Work</h3>
+                    <AnchoredHeader level='3'>Volunteer Work</AnchoredHeader>
 
                     <p className='summary'>
                         Volunteer work ignited in me the caring for people: be them the ones we are the doing the work for, or my colleagues. It also taught me to value and dedicate my time for something else than money, for something that would do (or be) good for someone besides myself.
@@ -145,5 +147,3 @@ class Experiences extends Component {
         )
     }
 }
-
-export default Experiences

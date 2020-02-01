@@ -20,7 +20,7 @@ fontAwesomeLibrary.add(
     faEnvelope
 )
 
-class Header extends Component {
+export default class Header extends Component {
     render() {
         const name = this.props.data.name
         const location = this.props.data.location
@@ -91,5 +91,3 @@ class Header extends Component {
         )
     }
 }
-
-export default Header

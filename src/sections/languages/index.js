@@ -4,9 +4,11 @@ import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 
+import AnchoredHeader from '../../lib/anchored-header.js'
+
 fontAwesomeLibrary.add(faLanguage)
 
-class Languages extends Component {
+export default class Languages extends Component {
     render() {
         const languages = this.props.data.map((entry, i) => (
             <div key={i}>
@@ -17,7 +19,7 @@ class Languages extends Component {
 
         return (
             <section>
-                <h2 id='languages'>Languages</h2>
+                <AnchoredHeader level='2'>Languages</AnchoredHeader>
 
                 <div className='languages grid-container'>
                     {languages}
@@ -26,5 +28,3 @@ class Languages extends Component {
         )
     }
 }
-
-export default Languages

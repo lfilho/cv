@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight, faBook } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 
+import AnchoredHeader from '../../lib/anchored-header.js'
+
 import './style.css'
 
 fontAwesomeLibrary.add(faCaretRight, faBook, faCommentDots)
@@ -23,7 +25,7 @@ const createBookEntry = (entry, i) => (
     </div>
 )
 
-class OffTopic extends Component {
+export default class OffTopic extends Component {
     render() {
         const books = this.props.data.books
         const softwareBooks = books.software.map(createBookEntry)
@@ -36,48 +38,47 @@ class OffTopic extends Component {
 
         return (
             <section>
-                <h2 id='not-so-off-topics'>
+
+                <AnchoredHeader level='2' id='not-so-off-topics'>
                     <span>(The not so)</span> Off topics
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         Some other things that help shaping the professional I am
                     </small>
-                </h2>
+                </AnchoredHeader>
 
-                <h3 id='relevant-content'>Relevant content</h3>
+                <AnchoredHeader level='3'>Relevant content</AnchoredHeader>
 
-                <h4 id='relevant-content-software-development'>
+                <AnchoredHeader level='4' id='relevant-content-software-development'>
                     <FontAwesomeIcon icon={faBook} />
                     Software Development
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {softwareBooks.length} books on programming languages, techniques and tools
                     </small>
-                </h4>
+                </AnchoredHeader>
 
                 <div className='books grid-container'>
                     {softwareBooks}
                 </div>
 
-                <h4 id='relevant-content-entrepreneurship'>
+                <AnchoredHeader level='4' id='relevant-content-entrepreneurship'>
                     <FontAwesomeIcon icon={faBook} />
                     Soft Skills
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
                     </small>
-                </h4>
+                </AnchoredHeader>
 
                 <div className='books grid-container'>
                     {softSkillsBooks}
                 </div>
 
-                <h3 id='my-free-time'>Free time</h3>
+                <AnchoredHeader level='3'>Free time</AnchoredHeader>
 
                 {freeTime}
             </section>
         )
     }
 }
-
-export default OffTopic
