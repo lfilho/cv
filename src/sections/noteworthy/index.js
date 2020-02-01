@@ -21,7 +21,7 @@ export default class Noteworthy extends Component {
             <section>
                 <AnchoredHeader level='2'>Certifications and Noteworthy achievements</AnchoredHeader>
 
-                <div className='icon-grid-container'>
+                <div className='noteworthy icon-grid-container'>
                     {entries}
                 </div>
             </section>

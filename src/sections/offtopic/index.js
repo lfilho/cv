@@ -14,7 +14,7 @@ import './style.css'
 fontAwesomeLibrary.add(faCaretRight, faBook, faCommentDots)
 
 const createBookEntry = (entry, i) => (
-    <div className='icon-grid-container' key={i}>
+    <div className='book icon-grid-container' key={i}>
         <FontAwesomeIcon icon={faCaretRight} />
         <span>
             {entry.title}
