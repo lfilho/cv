@@ -247,10 +247,22 @@ export default {
         ],
         teacherOrSpeaker: [
             {
+                date: '26 Oct 2018',
+                location: 'Berlin, Germany',
+                venue: 'Amazon',
+                title: 'Debugging Complex Things'
+            },
+            {
                 date: '03 Mar 2017',
                 location: 'Berlin, Germany',
                 venue: 'EuroStaff Group',
-                title: 'Debugging Oneself'
+                title: 'Debugging Complex Things'
+            },
+            {
+                date: '08 Nov 2016',
+                location: 'Berlin, Germany',
+                venue: 'Brandwatch',
+                title: 'Debugging Complex Things'
             },
             {
                 date: '18 Feb 2016',
