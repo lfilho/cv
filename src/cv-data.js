@@ -15,7 +15,7 @@ export default {
             email: 'lfilho@gmail.com',
             linkedin: { href: 'https://linkedin.com/in/luizgonzaga', display: '/luizgonzaga'},
             twitter: { href: 'https://twitter.com/luizmarelo', display: '/luizmarelo'},
-            xing: { href: 'https://www.xing.com/profile/Luiz_Filho', display: '/Luiz_Filho'},
+            speakerdeck: { href: 'https://speakerdeck.com/lfilho', display: '/lfilho'},
             github: { href: 'https://github.com/lfilho', display: '/lfilho'}
 
         },

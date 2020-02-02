@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt, faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faXing, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faMapMarkerAlt, faChalkboardTeacher, faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import './style.css'
 
@@ -14,9 +14,9 @@ fontAwesomeLibrary.add(
     faMapMarkerAlt,
     faHome,
     faGithub,
-    faXing,
     faLinkedin,
     faTwitter,
+    faChalkboardTeacher,
     faEnvelope
 )
 
@@ -75,9 +75,9 @@ export default class Header extends Component {
                                 <FontAwesomeIcon icon={faTwitter} fixedWidth />
                                 <a className='url' href={contact.twitter.href}>{contact.twitter.display}</a>
                             </div>
-                            <div className='xing'>
-                                <FontAwesomeIcon icon={faXing} fixedWidth />
-                                <a className='url' href={contact.xing.href}>{contact.xing.display}</a>
+                            <div className='speakerdeck'>
+                                <FontAwesomeIcon icon={faChalkboardTeacher} fixedWidth />
+                                <a className='url' href={contact.speakerdeck.href}>{contact.speakerdeck.display}</a>
                             </div>
                             <div className='github'>
                                 <FontAwesomeIcon icon={faGithub} fixedWidth />
