@@ -180,7 +180,7 @@ export default {
             {
                 startDate: 'Fev 2007', endDate: 'Mar 2012',
                 company: 'Goiás State Government',
-                position: 'Full Developer',
+                position: 'Full Stack Developer',
                 keywords: [
                     'Java EE',
                     'Velocity',
@@ -199,7 +199,7 @@ export default {
             },
             {
                 startDate: '2004', endDate: '2005',
-                company: 'DR Sistemas',
+                company: 'DR Sistemas & Interagi',
                 position: 'Trainee Developer',
                 keywords: [
                     'Java EE',
