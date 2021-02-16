@@ -37,8 +37,18 @@ export default {
   experiences: {
     softwareEngineering: [
       {
-        startDate: "Sep 2017",
+        startDate: "Feb 2021",
         endDate: "present",
+        company: "Coursera",
+        position: "Software Development Manager",
+        keywords: ["e-Learning", "education", "aws"],
+        description: [
+          `After a good run in AWS, I'm honored to work for a B-Corporation, focused in education. I'm leading development in their Enterprise front and am sure I'll have a great time here.`,
+        ],
+      },
+      {
+        startDate: "Sep 2017",
+        endDate: "Dec 2020",
         company: "Amazon / AWS",
         position: "Software Development Manager III",
         keywords: [
