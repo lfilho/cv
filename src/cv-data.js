@@ -37,10 +37,20 @@ export default {
   experiences: {
     softwareEngineering: [
       {
-        startDate: "Sep 2017",
+        startDate: "Feb 2021",
         endDate: "present",
-        company: "Amazon / AWS",
+        company: "Coursera",
         position: "Software Development Manager",
+        keywords: ["e-Learning", "education", "aws"],
+        description: [
+          `After a good run in AWS, I'm honored to work for a B-Corporation, focused in education. I'm leading development in their Enterprise front and am sure I'll have a great time here.`,
+        ],
+      },
+      {
+        startDate: "Sep 2017",
+        endDate: "Dec 2020",
+        company: "Amazon / AWS",
+        position: "Software Development Manager III",
         keywords: [
           "Payment Services",
           "AWS",
@@ -51,10 +61,10 @@ export default {
           "Risk Management",
         ],
         description: [
-          `I've managed two teams of 6-10 people. I was responsible for hiring, long term roadmap planning, people allocation, performance management, team process and the general software lifecycle.`,
-          `While in Amazon Payments Services we delivered amazon.com.tr (Amazon Turkey) payments integration. The project involved collaboration and coordination with different teams, partners and vendors in different countries.`,
-          `While in AWS Route53, I've hired my entire team and built the new generation of Route53's User Experience with measurable operational, accessibility and usability improvements. I have launched two world-wide projects and expanded our Consoles to multiple new partitions and regions.`,
-          `As a hiring manager I have improved Route53's sourcing process: our pipeline had 20x more througput and the diversity of our candidate pool increased by ~11%.`,
+          `I've managed two teams of 6-10 people and got promoted to Software Development Manager III. I was responsible for hiring, long term roadmap planning, people allocation, performance management, team process and the general software life cycle.`,
+          `I've delivered amazon.com.tr (Amazon Turkey) payments integration. The project involved collaboration and coordination with different teams, partners and vendors in different countries.`,
+          `While in AWS, I have started a team from ground up, hiring 7 engineers. Responsible for building the new generation of Route53's User Experience with measurable operational, accessibility and usability improvements. I have launched two world-wide projects and expanded our presence to multiple new partitions and regions.`,
+          `As a hiring manager I have improved Route53's sourcing efficiency by ~32% and the diversity of our candidate pool increased by ~11%.`,
           `I've also become a certified Cultural Competences for Teams instructor, increasing inclusiveness and diversity awareness to the many teams that took the training.`,
         ],
       },
