@@ -1,0 +1,21 @@
+---
+import CVLayout from "../../layouts/CV.astro";
+
+import Header from "../../components/cv/sections/header";
+import Experiences from "../../components/cv/sections/experiences";
+import Education from "../../components/cv/sections/education";
+import Noteworthy from "../../components/cv/sections/noteworthy";
+import Languages from "../../components/cv/sections/languages";
+import OffTopic from "../../components/cv/sections/offtopic"; 
+
+import CVData from '../../components/cv/cv-data'
+---
+
+<CVLayout title="Luiz Gonzaga dos Santos Filho — Resumé / CV">
+    <Header data={CVData.header} />
+    <Experiences data={CVData.experiences} />
+    <Education data={CVData.education} />
+    <Noteworthy data={CVData.noteworthy} />
+    <Languages data={CVData.languages} />
+    <OffTopic data={CVData.offTopic} /> 
+</CVLayout>
