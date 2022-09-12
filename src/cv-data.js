@@ -40,10 +40,12 @@ export default {
         startDate: "Feb 2021",
         endDate: "present",
         company: "Coursera",
-        position: "Software Development Manager",
-        keywords: ["e-Learning", "education", "aws"],
+        position: "Senior Software Engineering Manager",
+        keywords: ["ed-tech", "e-learning", "education", "aws"],
         description: [
-          `After a good run in AWS, I'm honored to work for a B-Corporation, focused in education. I'm leading development in their Enterprise front and am sure I'll have a great time here.`,
+          `Managing a few teams and charters in the Enterprise org owning key company projects like Skills, SkillSets, LevelSets, and Career Academy. I have increased the Enteprise org's operational excellence and its services' availability. Improved team's processes for better remote-first practices and better writing quality and culture. I helped with interviewing, coaching engineers into transitioning to management, and wrote blogs. Revamped and automated several steps of the Postmortem process, reducing high touch-points, enabling better accountability, metrics and easier knowledge sharing within the company. I have reduced context switching, improved documentation and efficiency for cross functional collaboration in Enterprise org's biggest cross-functional internal forum.`,
+          `I have proposed and implemented a engineering-wide policy, increasing inclusiveness and belonging. I have volunteered in the DE&I squad and lead one of its pods, helping come up and drive many of the org-wide goals taken in the area, including updating the levelling rubric used across Engineering to contain DEI aspects and behaviors`,
+          `I have helped with interviewing and sourcing, measurably increasing the pipeline's diversity and efficiency.`,
         ],
       },
       {
