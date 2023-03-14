@@ -18,9 +18,6 @@
   "bugs": {
     "url": "https://github.com/lfilho/cv/issues"
   },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
