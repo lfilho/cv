@@ -5,6 +5,5 @@ import react from '@astrojs/react';
 export default defineConfig({
 	// Enable React to support React JSX components.
 	integrations: [react()],
-	site: 'http://lfilho.github.io/cv',
-	// base: '/cv',
+	site: 'http://luiz.dev',
 });
