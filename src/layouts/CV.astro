@@ -1,9 +1,12 @@
 ---
 interface Props {
 	title: string;
+	description: string;
+	image: string;
+	url: string;
 }
 
-const { title } = Astro.props;
+const { title, image, url } = Astro.props;
 
 import '../components/cv/css/normalize.css'
 import '../components/cv/css/base.css'
@@ -15,10 +18,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 <!doctype html>
 <html lang="en">
 	<head>
+		<title>{title}</title>
 		<meta charset="UTF-8" />
-		<meta name="description" content="{title}" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={title} />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta http-equiv="cache-control" content="max-age=0" />
 		<meta http-equiv="cache-control" content="no-cache" />
 		<meta http-equiv="expires" content="0" />
@@ -26,9 +29,14 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 		<meta http-equiv="pragma" content="no-cache" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style is:global>{fontAwesomeStyles}</style>
+		
+		<meta property="og:title" content={title} />
+		<!-- <meta property="og:description" content={description} /> -->
+		<!-- <meta property="og:image" content={image} /> -->
+		<meta property="og:url" content={url} />
+		<meta property="og:type" content="website" />
 
-		<title>{title}</title>
+		<style is:global>{fontAwesomeStyles}</style>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -36,4 +44,3 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 		</div>
 	</body>
 </html>
-
