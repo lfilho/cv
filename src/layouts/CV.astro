@@ -1,12 +1,12 @@
 ---
 interface Props {
-	title: string;
-	description: string;
+	author: string;
 	image: string;
 	url: string;
 }
 
-const { title, image, url } = Astro.props;
+const { author, image, url } = Astro.props;
+const title = `${author} - Software Engineering Resume`;
 
 import '../components/cv/css/normalize.css'
 import '../components/cv/css/base.css'
@@ -20,7 +20,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 	<head>
 		<title>{title}</title>
 		<meta charset="UTF-8" />
+		<meta name="author" content={author} />
 		<meta name="description" content={title} />
+		<meta name="keywords" content="Agile Methodologies, Business Process Management, Candidate Sourcing, Career Growth, Coaching and Mentoring, Continuous Integration, Cross-Functional Collaboration, CV, Curriculum Vitae, DE&I (Diversity, Equity & Inclusion), DevOps, Documentation, Leadership, Monitoring, Operational Efficiency, Organizational Strategy, Performance Metrics, Policy Development, Postmortem Process, Process Improvement, Product Development, Product Launch, Project Management, Public Speaking, Resume, Revenue Growth, Remote Collaboration, Software Development, Software Development Lifecycle, Software Engineering, Stakeholder Engagement, Team Management, User Experience (UX), Vendor Relationships">
 		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta http-equiv="cache-control" content="max-age=0" />
 		<meta http-equiv="cache-control" content="no-cache" />
@@ -29,12 +31,18 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 		<meta http-equiv="pragma" content="no-cache" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
 		
+		<meta property="og:site_name" content={author} />
 		<meta property="og:title" content={title} />
-		<!-- <meta property="og:description" content={description} /> -->
+		<meta property="og:description" content={title} />
 		<!-- <meta property="og:image" content={image} /> -->
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={title} />
+		<meta property="twitter:url" content={url} />
+		<!-- <meta property="twitter:image" content={image} /> -->
 
 		<style is:global>{fontAwesomeStyles}</style>
 	</head>
