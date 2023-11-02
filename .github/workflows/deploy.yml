@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
-          git remote set-url origin https://${{}}${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
           git add public/cv/pdf/*.pdf
           git commit -m "chore: update PDF from CI" || exit 0
           git push
