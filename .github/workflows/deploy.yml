@@ -33,6 +33,8 @@ jobs:
           git add public/cv/pdf/*.pdf
           git commit -m "chore: update PDF from CI" || exit 0
           git push
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
   deploy:
     needs: build
