@@ -27,13 +27,15 @@ jobs:
           # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
       - name: Commit and push changes
-        uses: actions/checkout@v4
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
+          git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
           git add public/cv/pdf/*.pdf
           git commit -m "chore: update PDF from CI" || exit 0
           git push
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
   deploy:
     needs: build
