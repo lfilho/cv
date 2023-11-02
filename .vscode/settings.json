@@ -1,0 +1,17 @@
+{
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "vim.joinspaces": false,
+    "vim.leader": ",",
+    "vim.matchpairs": "(:),{:},[:],<:>",
+    "vim.showMarksInGutter": true,
+    "vim.smartRelativeLine": true,
+    "vim.statusBarColorControl": false,
+    "vim.targets.enable": true,
+    "vim.textwidth": 120,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "workbench.colorTheme": "Night Owl"
+}
