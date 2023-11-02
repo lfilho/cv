@@ -19,6 +19,7 @@
     "url": "https://github.com/lfilho/cv/issues"
   },
   "scripts": {
+    "postinstall": "npx playwright install",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
