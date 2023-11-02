@@ -26,6 +26,13 @@ jobs:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+          git add public/cv/pdf/*.pdf
+          git commit -m "chore: update PDF from CI" || exit 0
+          git push
 
   deploy:
     needs: build

@@ -1,18 +1,22 @@
+// This script is meant to be run after `npm run build` to generate the PDF version of the CV.
 import http from 'http';
 import path from 'path';
 import express from 'express';
 import { promisify } from 'util';
 import { chromium } from 'playwright';
 
-const app = express();
 
 const currentModuleUrl = new URL(import.meta.url);
 const currentModuleDirname = path.dirname(currentModuleUrl.pathname);
+const rootDir = path.join(currentModuleDirname, '..', '..');
+const buildDir = path.join(rootDir, 'dist');
+const publicDir = path.join(rootDir, 'public');
+const pdfOutDir = path.join(publicDir, 'cv', 'pdf');
+const pdfOutName = 'Luiz_Gonzaga_dos_Santos_Filho_-_Software_Engineering_Resume.pdf';
+const pdfOutPath = path.join(pdfOutDir, pdfOutName);
 
-const staticDir = path.join(currentModuleDirname, '..', '..', 'dist');
-
-app.use(express.static(staticDir));
-
+const app = express();
+app.use(express.static(buildDir));
 const server = http.createServer(app);
 const listen = promisify(server.listen.bind(server));
 await listen(0);
@@ -25,11 +29,11 @@ const page = await browser.newPage();
 await page.goto(`http://localhost:${port}/cv`);
 console.log(`Generating PDF from http://localhost:${port}/cv`);
 await page.waitForLoadState('networkidle');
-const pageTitle = await page.title();
-const pdfFileName = pageTitle.replace(/\s+/g, '_') + '.pdf';
-const pdfOutputPath = path.join(staticDir, 'cv', 'pdf', pdfFileName);
-console.log(`Saving PDF to ${pdfOutputPath}`);
-await page.pdf({ path: pdfOutputPath });
-console.log(`PDF generated at ${pdfOutputPath}`);
+console.log(`Exporting PDF`);
+await page.pdf({ path: pdfOutPath });
+console.log(`PDF exported to ${pdfOutPath}`);
 await browser.close();
 server.close();
+
+const pdfOutPathRelative = path.relative(buildDir, pdfOutPath).replace('public/', '');
+export default pdfOutPathRelative;
