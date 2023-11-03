@@ -11,7 +11,7 @@ const currentModuleDirname = path.dirname(currentModuleUrl.pathname);
 const rootDir = path.join(currentModuleDirname, '..', '..');
 const buildDir = path.join(rootDir, 'dist');
 const publicDir = path.join(rootDir, 'public');
-const pdfOutDir = path.join(publicDir, 'cv', 'pdf');
+const pdfOutDir = path.join(publicDir, 'pdf');
 const pdfOutName = 'Luiz_Gonzaga_dos_Santos_Filho_-_Software_Engineering_Resume.pdf';
 const pdfOutPath = path.join(pdfOutDir, pdfOutName);
 
