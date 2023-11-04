@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import cvPdfPathRelative from '/src/lib/pdf-generator.js';
+import { pdfOutPathRelative } from '/src/lib/pdf-details.js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,6 +8,6 @@ export default defineConfig({
 	site: 'http://luiz.dev',
 	redirects: {
 		'/': '/cv',
-		'/cv/pdf': cvPdfPathRelative,
+		'/cv/pdf': pdfOutPathRelative,
 	  }
 });
