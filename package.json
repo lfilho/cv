@@ -1,49 +1,57 @@
 {
-  "type": "module",
-  "name": "luiz-gonzaga-filho-html-cv-resume",
-  "version": "0.0.1",
-  "description": "My resumé written in React",
-  "homepage": "http://luiz.dev",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lfilho/cv"
-  },
-  "keywords": [
-    "resumé",
-    "cv",
-    "curriculum"
-  ],
-  "author": "Luiz Gonzaga dos Santos Filho",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lfilho/cv/issues"
-  },
-  "scripts": {
-    "postinstall": "npx playwright install",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "postbuild": "node src/lib/pdf-generator.js",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/react": "^3.0.4",
-    "@astrojs/ts-plugin": "^1.3.1",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "astro": "^3.4.3",
-    "express": "^4.18.2",
-    "playwright": "^1.39.0",
-    "react": "^18.2.0",
-    "react-autolink": "^0.2.1",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.10",
-    "typescript": "^5.2.2"
-  }
+    "type": "module",
+    "name": "luiz-gonzaga-filho-html-cv-resume",
+    "version": "0.0.1",
+    "description": "My resumé written in React",
+    "homepage": "http://luiz.dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lfilho/cv"
+    },
+    "keywords": [
+        "resumé",
+        "cv",
+        "curriculum"
+    ],
+    "author": "Luiz Gonzaga dos Santos Filho",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lfilho/cv/issues"
+    },
+    "scripts": {
+        "postinstall": "npx playwright install",
+        "dev": "astro dev",
+        "lint": "prettier --write  \"**/*.{js,mjs,cjs,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,mjs,cjs,ts,jsx,tsx,astro}\"",
+        "start": "astro dev",
+        "build": "astro build",
+        "postbuild": "node src/lib/pdf-generator.js",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/react": "^3.0.4",
+        "@astrojs/ts-plugin": "^1.3.1",
+        "@fortawesome/fontawesome-svg-core": "^6.4.2",
+        "@fortawesome/free-brands-svg-icons": "^6.4.2",
+        "@fortawesome/free-regular-svg-icons": "^6.4.2",
+        "@fortawesome/free-solid-svg-icons": "^6.4.2",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "astro": "^3.4.3",
+        "express": "^4.18.2",
+        "playwright": "^1.39.0",
+        "react": "^18.2.0",
+        "react-autolink": "^0.2.1",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.8.10",
+        "@typescript-eslint/parser": "^6.9.1",
+        "eslint": "^8.53.0",
+        "eslint-plugin-astro": "^0.29.1",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "prettier": "^3.0.3",
+        "prettier-config-standard": "^7.0.0",
+        "prettier-plugin-astro": "^0.12.1",
+        "typescript": "^5.2.2"
+    }
 }
