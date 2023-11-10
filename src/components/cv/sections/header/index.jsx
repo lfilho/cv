@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faMapMarkerAlt,
-    faChalkboardTeacher,
-    faHome,
-    faEnvelope,
-} from '@fortawesome/free-solid-svg-icons';
 import {
     faGithub,
     faLinkedin,
     faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import {
+    faChalkboardTeacher,
+    faEnvelope,
+    faHome,
+    faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Component } from 'react';
 
 import './style.css';
 
@@ -43,9 +43,10 @@ export default class Header extends Component {
         return (
             <header id="hcard-Luiz-Gonzaga-dos-Santos-Filho" className="vcard">
                 <h1 className="fn n">
-                    <span className="given-name">{name.first} </span>
-                    <span className="additional-name">{name.middle} </span>
-                    <span className="family-name">{name.last}</span>
+                    <span className="p-given-name">{name.first} </span>
+                    <span className="p-additional-name">{name.middle} </span>
+                    <span className="p-family-name">{name.last}</span>
+                    <span className="p-honorific-suffix">, {name.title}</span>
                 </h1>
 
                 <main>
@@ -56,11 +57,11 @@ export default class Header extends Component {
                                     icon={faMapMarkerAlt}
                                     fixedWidth
                                 />
-                                <span className="locality">
+                                <span className="p-locality">
                                     {location.city}
                                 </span>
                                 <span>, </span>
-                                <span className="country-name">
+                                <span className="p-country-name">
                                     {location.country}
                                 </span>
                             </div>
@@ -68,14 +69,17 @@ export default class Header extends Component {
                             <div className='contact phone'>
                                 <i className='fa fa-fw fa-mobile'></i>
                                 <span>
-                                    <a className='tel' href={'tel:+' + phone.raw}>{phone.formatted}</a>
+                                    <a className='p-tel' href={'tel:+' + phone.raw}>{phone.formatted}</a>
                                 </span>
                             </div>
                             */}
                             <div className="contact website">
                                 <FontAwesomeIcon icon={faHome} fixedWidth />
                                 <span>
-                                    <a className="url" href={contact.url.href}>
+                                    <a
+                                        className="u-url"
+                                        href={contact.url.href}
+                                    >
                                         {contact.url.display}
                                     </a>
                                 </span>
@@ -84,7 +88,7 @@ export default class Header extends Component {
                                 <FontAwesomeIcon icon={faEnvelope} fixedWidth />
                                 <span>
                                     <a
-                                        className="email"
+                                        className="u-email"
                                         href={'mailto:' + contact.email}
                                     >
                                         {contact.email}
@@ -123,6 +127,10 @@ export default class Header extends Component {
                             </div>
                         </section>
                     </aside>
+                    <p>
+                        Welcome to my admittedly verbose resume! For a more
+                        concise one please visit my LinkedIn profile.
+                    </p>
                     {introduction}
                 </main>
             </header>

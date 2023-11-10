@@ -4,6 +4,7 @@ const data = {
             first: 'Luiz',
             middle: 'Gonzaga',
             last: 'dos Santos Filho',
+            title: 'MBA',
         },
         location: {
             city: 'Vancouver',
@@ -29,7 +30,8 @@ const data = {
         },
         introduction: [
             `A people first geek with {{CAREER_TIME}}+ years of building software and teams in different countries and company sizes.`,
-            `My mission as an engineering leader is to create a high performing, calm, inclusive, work-life balanced environment for my teams.`,
+            `With a strong focus on people, I have a proven track record of delivering high quality software, building and growing happy teams, and improving processes.`,
+            `I love sharing what I know and my decades of experience combined with my MBA, hundreds of courses taken, books read and events attended put me in a good position to do so.`,
         ],
     },
     experiences: {

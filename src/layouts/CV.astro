@@ -9,18 +9,22 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../components/cv/css/base.css';
 import '../components/cv/css/normalize.css';
 import '../components/cv/css/print.css';
+import cvData from '../components/cv/cv-data.js';
 
-const { author, image, url } = Astro.props;
-const title = `${author} - Software Engineering Resume`;
+const { image, url } = Astro.props;
+const name = cvData.header.name;
+const author = `${name.first} ${name.middle} ${name.last}, ${name.title}`;
+const pageTitle = `${author} - Software Engineering Resume`;
+const description = cvData.header.introduction.join(' ');
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
-        <title>{title}</title>
+        <title>{pageTitle}</title>
         <meta charset="UTF-8" />
         <meta name="author" content={author} />
-        <meta name="description" content={title} />
+        <meta name="description" content={description} />
         <meta
             name="keywords"
             content="Agile Methodologies, Business Process Management, Candidate Sourcing, Career Growth, Coaching and Mentoring, Continuous Integration, Cross-Functional Collaboration, CV, Curriculum Vitae, DE&I (Diversity, Equity & Inclusion), DevOps, Documentation, Leadership, Monitoring, Operational Efficiency, Organizational Strategy, Performance Metrics, Policy Development, Postmortem Process, Process Improvement, Product Development, Product Launch, Project Management, Public Speaking, Resume, Revenue Growth, Remote Collaboration, Software Development, Software Development Lifecycle, Software Engineering, Stakeholder Engagement, Team Management, User Experience (UX), Vendor Relationships"
@@ -39,13 +43,13 @@ const title = `${author} - Software Engineering Resume`;
         />
 
         <meta property="og:site_name" content={author} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={title} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={description} />
         <!-- <meta property="og:image" content={image} /> -->
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={title} />
+        <meta property="twitter:title" content={pageTitle} />
+        <meta property="twitter:description" content={description} />
         <meta property="twitter:url" content={url} />
         <!-- <meta property="twitter:image" content={image} /> -->
     </head>
