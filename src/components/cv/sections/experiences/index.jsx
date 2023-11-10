@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
-    faTags,
-    faUsers,
-    faUser,
-    faTicketAlt,
-    faMicrophone,
-} from '@fortawesome/free-solid-svg-icons';
-import {
+    faBuilding,
     faCalendarAlt as faCalendar,
     faClock,
-    faBuilding,
 } from '@fortawesome/free-regular-svg-icons';
+import {
+    faMicrophone,
+    faTags,
+    faTicketAlt,
+    faUser,
+    faUsers,
+} from '@fortawesome/free-solid-svg-icons';
 
 import AnchoredHeader from '../../../../lib/anchored-header.jsx';
 import parseExperienceDescription from '../../../../lib/array-to-html-list';
@@ -71,7 +71,7 @@ export default class Experiences extends Component {
             },
         );
 
-        const teacherOrSpeakerXps = this.props.data.teacherOrSpeaker.map(
+        const instructorOrSpeakerXps = this.props.data.instructorOrSpeaker.map(
             (entry, i) => {
                 let titles = [].concat(entry.title).map((entry, i) => (
                     <div className="title icon-grid-container" key={i}>
@@ -141,10 +141,12 @@ export default class Experiences extends Component {
                     {softwareEngineeringXps}
 
                     <AnchoredHeader level="3" id="speaking-or-teaching">
-                        As a speaker or teacher
+                        As a speaker or instructor
                     </AnchoredHeader>
 
-                    <div className="grid-container">{teacherOrSpeakerXps}</div>
+                    <div className="grid-container">
+                        {instructorOrSpeakerXps}
+                    </div>
 
                     <AnchoredHeader level="3">Volunteer Work</AnchoredHeader>
 

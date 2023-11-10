@@ -371,7 +371,7 @@ const data = {
                 ],
             },
         ],
-        teacherOrSpeaker: [
+        instructorOrSpeaker: [
             {
                 date: '26 Oct 2018',
                 location: 'Berlin, Germany',
