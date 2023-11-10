@@ -16,7 +16,7 @@ export default class AnchoredHeader extends Component {
         const id = this.props.id || sanitizeAnchors(this.props.children);
         const href = `#${id}`;
         const anchor = (
-            <a className="header-link" href={href}>
+            <a className='header-link' href={href}>
                 <FontAwesomeIcon icon={faLink} fixedWidth />
             </a>
         );

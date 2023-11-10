@@ -22,9 +22,9 @@ export default class Languages extends Component {
 
         return (
             <section>
-                <AnchoredHeader level="2">Languages</AnchoredHeader>
+                <AnchoredHeader level='2'>Languages</AnchoredHeader>
 
-                <div className="languages grid-container">{languages}</div>
+                <div className='languages grid-container'>{languages}</div>
             </section>
         );
     }

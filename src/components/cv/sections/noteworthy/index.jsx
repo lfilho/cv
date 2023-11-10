@@ -19,11 +19,9 @@ export default class Noteworthy extends Component {
 
         return (
             <section>
-                <AnchoredHeader level="2">
-                    Certifications and Noteworthy achievements
-                </AnchoredHeader>
+                <AnchoredHeader level='2'>Certifications and Noteworthy achievements</AnchoredHeader>
 
-                <div className="noteworthy icon-grid-container">{entries}</div>
+                <div className='noteworthy icon-grid-container'>{entries}</div>
             </section>
         );
     }

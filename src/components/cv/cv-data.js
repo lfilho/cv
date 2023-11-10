@@ -140,17 +140,7 @@ const data = {
                 endDate: 'Apr 2015',
                 company: 'X-Team (Remote)',
                 position: 'Full stack developer',
-                keywords: [
-                    'Node',
-                    'Javascript',
-                    'React',
-                    'Flux',
-                    'LevelDB',
-                    'Tape',
-                    'Highcharts',
-                    'jQuery',
-                    'BPM',
-                ],
+                keywords: ['Node', 'Javascript', 'React', 'Flux', 'LevelDB', 'Tape', 'Highcharts', 'jQuery', 'BPM'],
                 description: [
                     'Hired by the awesome remote company X-Team to help researching, planning and developing the next phase of X-Labs (their open source initiative) and other internal projects involving IndexedDB. Great team, expert people, cool tech and tools.',
                 ],
@@ -300,17 +290,7 @@ const data = {
                 endDate: 'Mar 2012',
                 company: 'Goiás State Government',
                 position: 'Full Stack Developer',
-                keywords: [
-                    'Java EE',
-                    'Velocity',
-                    'SQL',
-                    'HTML',
-                    'Javascript',
-                    'jQuery',
-                    'CSS 3',
-                    'SVN',
-                    'UX',
-                ],
+                keywords: ['Java EE', 'Velocity', 'SQL', 'HTML', 'Javascript', 'jQuery', 'CSS 3', 'SVN', 'UX'],
                 description: [
                     [
                         `Worked as full stack engineer on "HR Net": the State's human resources web application responsible for payments, vacations, contracts, leaves, etc`,
@@ -324,19 +304,7 @@ const data = {
                 endDate: '2005',
                 company: 'DR Sistemas & Interagi',
                 position: 'Trainee Developer',
-                keywords: [
-                    'Java EE',
-                    'Struts',
-                    'Hibernate',
-                    'SQL',
-                    'JSP',
-                    'PHP',
-                    'MySQL',
-                    'HTML',
-                    'CSS',
-                    'SVN',
-                    'CVS',
-                ],
+                keywords: ['Java EE', 'Struts', 'Hibernate', 'SQL', 'JSP', 'PHP', 'MySQL', 'HTML', 'CSS', 'SVN', 'CVS'],
                 description: [
                     'Interagi and DR were where I had my internships - 6 months each.',
                     [
@@ -472,10 +440,7 @@ const data = {
                 date: 'Jul 2014',
                 location: 'Goiânia, Brazil',
                 venue: 'DataEasy Brown Bag Sessions',
-                title: [
-                    '"Introduction to Agile Methodologies"',
-                    '"Git & GitHub basics"',
-                ],
+                title: ['"Introduction to Agile Methodologies"', '"Git & GitHub basics"'],
             },
             {
                 date: '14 Nov 2013',
@@ -520,68 +485,35 @@ const data = {
                 location: 'Goiânia, Brazil',
                 organization: 'Join Community',
                 position: 'Co-organizer & speaker',
-                keywords: [
-                    'Javascript',
-                    'Node',
-                    'Talks',
-                    'Community events',
-                    'Leadership',
-                    'Career',
-                ],
+                keywords: ['Javascript', 'Node', 'Talks', 'Community events', 'Leadership', 'Career'],
             },
             {
                 date: '2012; 2014',
                 location: 'Goiânia, Brazil',
                 organization: `Napoleon Hill Institute's Master Mind`,
                 position: 'Lead auxiliary instructor',
-                keywords: [
-                    'Leadership',
-                    'Public Speaking',
-                    'Coaching',
-                    'Effective Communication',
-                    'Time managing',
-                ],
+                keywords: ['Leadership', 'Public Speaking', 'Coaching', 'Effective Communication', 'Time managing'],
             },
             {
                 date: '2008 – 2011',
                 location: 'Goiânia, Brazil',
                 organization: 'Grupo Arte Nascente (GAN)',
                 position: 'Actor & Web Developer',
-                keywords: [
-                    'PHP',
-                    'NGO',
-                    'Art',
-                    'Theater',
-                    'Communication',
-                    'Non-for profit',
-                ],
+                keywords: ['PHP', 'NGO', 'Art', 'Theater', 'Communication', 'Non-for profit'],
             },
             {
                 date: '2006 – 2015',
                 location: 'Goiânia, Brazil',
                 organization: 'Zapt Arteatral',
-                position:
-                    'Actor, Web Developer, President, Artistic Director & Communication Coordinator',
-                keywords: [
-                    'PHP',
-                    'Art',
-                    'Theater',
-                    'Communication',
-                    'Non-for profit',
-                ],
+                position: 'Actor, Web Developer, President, Artistic Director & Communication Coordinator',
+                keywords: ['PHP', 'Art', 'Theater', 'Communication', 'Non-for profit'],
             },
             {
                 date: '2007 – 2009',
                 location: 'Goiânia, Brazil',
                 organization: 'AIESEC Brazil / GO',
-                position:
-                    'Marketing, Communication & Information Management teams',
-                keywords: [
-                    'Marketing',
-                    'Public Relations',
-                    'External Communication',
-                    'Internal Communication',
-                ],
+                position: 'Marketing, Communication & Information Management teams',
+                keywords: ['Marketing', 'Public Relations', 'External Communication', 'Internal Communication'],
             },
             {
                 date: '2000 – 2008',
@@ -606,20 +538,14 @@ const data = {
                 date: 'Jun 2011',
                 school: 'Federal University of Goiás',
                 location: 'Brazil',
-                info: [
-                    'Extra studies on Software Engineering',
-                    'Relative average grade: 85%',
-                ],
+                info: ['Extra studies on Software Engineering', 'Relative average grade: 85%'],
             },
             {
                 title: 'Computer Science, Visiting Student',
                 date: '2010/1',
                 school: `Saint Mary's University`,
                 location: 'Canada',
-                info: [
-                    '2nd round on Trumped Competition',
-                    'Emerging Leaders of America Scholarship',
-                ],
+                info: ['2nd round on Trumped Competition', 'Emerging Leaders of America Scholarship'],
             },
         ],
         relevantCourses: [
@@ -963,8 +889,7 @@ const data = {
                 },
                 {
                     title: 'InnerSource: ',
-                    subtitle:
-                        'Keys to collaboration and productivity inside your company',
+                    subtitle: 'Keys to collaboration and productivity inside your company',
                     author: 'Andy Oram',
                 },
                 {
@@ -1029,8 +954,7 @@ const data = {
                 { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
                 {
                     title: 'The Subtle Art of Not Giving a F*ck: ',
-                    subtitle:
-                        'A Counterintuitive Approach to Living a Good Life',
+                    subtitle: 'A Counterintuitive Approach to Living a Good Life',
                     author: 'Mark Manson',
                 },
                 {
@@ -1044,14 +968,12 @@ const data = {
                 },
                 {
                     title: 'The Coaching Habit: ',
-                    subtitle:
-                        'Say Less, Ask More & Change the Way Your Lead Forever',
+                    subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever',
                     author: 'Michael Bungay Stanier',
                 },
                 {
                     title: 'The First 90 Days: ',
-                    subtitle:
-                        'Critical Success Strategies for New Leaders at All Levels',
+                    subtitle: 'Critical Success Strategies for New Leaders at All Levels',
                     author: 'Michael D. Watkins',
                 },
                 {
@@ -1066,8 +988,7 @@ const data = {
                 },
                 {
                     title: 'Start With Why: ',
-                    subtitle:
-                        'How great leaders inspire everyone to take action',
+                    subtitle: 'How great leaders inspire everyone to take action',
                     author: 'Simon Sinek',
                 },
                 {
@@ -1134,8 +1055,7 @@ const data = {
                 { title: 'Anything You Want', author: 'Derek Sivers' },
                 {
                     title: 'What is Your Legacy? ',
-                    subtitle:
-                        'Provocative Thoughts About Ethics, Leadership and Management',
+                    subtitle: 'Provocative Thoughts About Ethics, Leadership and Management',
                     author: 'Mario Sergio Cortella',
                 },
                 {
@@ -1158,9 +1078,7 @@ const data = {
                 { title: 'Getting Things Done', author: 'David Allen' },
             ],
         },
-        freeTime: [
-            `I'm launching a nonprofit & open source initiative with a friend: https://konsilos.com`,
-        ],
+        freeTime: [`I'm launching a nonprofit & open source initiative with a friend: https://konsilos.com`],
     },
 };
 export default data;

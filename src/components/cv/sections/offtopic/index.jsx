@@ -14,7 +14,7 @@ import './style.css';
 fontAwesomeLibrary.add(faCaretRight, faBook, faCommentDots);
 
 const createBookEntry = (entry, i) => (
-    <div className="book icon-grid-container" key={i}>
+    <div className='book icon-grid-container' key={i}>
         <FontAwesomeIcon icon={faCaretRight} />
         <span>
             {entry.title}
@@ -31,7 +31,7 @@ export default class OffTopic extends Component {
         const softwareBooks = books.software.map(createBookEntry);
         const softSkillsBooks = books.softSkills.map(createBookEntry);
         const freeTime = this.props.data.freeTime.map((entry, i) => (
-            <p key={i} className="first">
+            <p key={i} className='first'>
                 {ReactAutoLink.autolink(entry, {
                     target: '_blank',
                     key: `link${i}`,
@@ -41,55 +41,37 @@ export default class OffTopic extends Component {
 
         return (
             <section>
-                <AnchoredHeader level="2" id="not-so-off-topics">
+                <AnchoredHeader level='2' id='not-so-off-topics'>
                     <span>(The not so)</span> Off topics
                     <small>
-                        <FontAwesomeIcon
-                            icon={faCommentDots}
-                            flip="horizontal"
-                        />
-                        Some other things that help shaping the professional I
-                        am
+                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+                        Some other things that help shaping the professional I am
                     </small>
                 </AnchoredHeader>
 
-                <AnchoredHeader level="3">Relevant content</AnchoredHeader>
+                <AnchoredHeader level='3'>Relevant content</AnchoredHeader>
 
-                <AnchoredHeader
-                    level="4"
-                    id="relevant-content-software-development"
-                >
+                <AnchoredHeader level='4' id='relevant-content-software-development'>
                     <FontAwesomeIcon icon={faBook} />
                     Software Development
                     <small>
-                        <FontAwesomeIcon
-                            icon={faCommentDots}
-                            flip="horizontal"
-                        />
-                        {softwareBooks.length} books on programming languages,
-                        techniques and tools
+                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+                        {softwareBooks.length} books on programming languages, techniques and tools
                     </small>
                 </AnchoredHeader>
 
-                <div className="books grid-container">{softwareBooks}</div>
+                <div className='books grid-container'>{softwareBooks}</div>
 
-                <AnchoredHeader
-                    level="4"
-                    id="relevant-content-entrepreneurship"
-                >
+                <AnchoredHeader level='4' id='relevant-content-entrepreneurship'>
                     <FontAwesomeIcon icon={faBook} />
                     Soft Skills
                     <small>
-                        <FontAwesomeIcon
-                            icon={faCommentDots}
-                            flip="horizontal"
-                        />
-                        {softSkillsBooks.length} books on leadership, culture,
-                        productivity, entrepreneurship and management
+                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+                        {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
                     </small>
                 </AnchoredHeader>
 
-                <div className="books grid-container">{softSkillsBooks}</div>
+                <div className='books grid-container'>{softSkillsBooks}</div>
 
                 {/* <AnchoredHeader level='3'>Free time</AnchoredHeader> */}
 
