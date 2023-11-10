@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faGraduationCap,
-    faUniversity,
-    faInfo,
-    faCaretRight,
-} from '@fortawesome/free-solid-svg-icons';
 import {
     faCalendarAlt as faCalendar,
     faCommentDots,
 } from '@fortawesome/free-regular-svg-icons';
+import {
+    faCaretRight,
+    faGraduationCap,
+    faInfo,
+    faUniversity,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import AnchoredHeader from '../../../../lib/anchored-header.jsx';
 
@@ -87,7 +87,7 @@ export default class Education extends Component {
                     {academyCourses}
                 </div>
                 <AnchoredHeader level="3" id="relevant-courses">
-                    Relevant courses taken
+                    Relevant courses or specializations taken
                     <small>
                         <FontAwesomeIcon
                             icon={faCommentDots}
