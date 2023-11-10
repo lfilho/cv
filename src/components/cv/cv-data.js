@@ -622,6 +622,12 @@ const data = {
         ],
         relevantCourses: [
             {
+                title: 'Machine Learning Specialization',
+                school: 'Stanford University',
+                date: 'Nov 2023',
+                duration: 80,
+            },
+            {
                 title: 'Inclusive Leadership: The Power of Workplace Diversity',
                 school: 'University of Colorado',
                 date: 'Oct 2021',
