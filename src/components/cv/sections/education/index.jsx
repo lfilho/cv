@@ -5,7 +5,7 @@ import { faCalendarAlt as faCalendar, faCommentDots } from '@fortawesome/free-re
 import { faCaretRight, faGraduationCap, faInfo, faUniversity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import AnchoredHeader from '../../../../lib/anchored-header.jsx';
+import AnchoredHeader from '@lib/anchored-header.jsx';
 
 import './style.css';
 

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ReactAutoLink from 'react-autolink';
 
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faCaretRight, faBook } from '@fortawesome/free-solid-svg-icons';
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons';
+import { faBook, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
-import AnchoredHeader from '../../../../lib/anchored-header.jsx';
+import AnchoredHeader from '@lib/anchored-header.jsx';
 
 import './style.css';
 

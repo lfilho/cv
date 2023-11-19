@@ -6,7 +6,6 @@ export default {
     singleQuote: true,
     jsxSingleQuote: true,
     htmlWhitespaceSensitivity: 'ignore',
-
     arrowParens: 'avoid',
     plugins: ['prettier-plugin-astro'],
     overrides: [

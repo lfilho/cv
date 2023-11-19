@@ -1,4 +1,6 @@
-const data = {
+import type CVData from './cvData.d';
+
+export const cvData: CVData = {
     header: {
         name: {
             first: 'Luiz',
@@ -1081,4 +1083,54 @@ const data = {
         freeTime: [`I'm launching a nonprofit & open source initiative with a friend: https://konsilos.com`],
     },
 };
-export default data;
+
+function getKeywords(obj: any): string[] {
+    let keywords: string[] = [];
+    for (let key in obj) {
+        if (key === 'keywords') {
+            keywords = keywords.concat(obj[key] as string[]);
+        } else if (typeof obj[key] === 'object') {
+            keywords = keywords.concat(getKeywords(obj[key] as object));
+        }
+    }
+    return keywords;
+}
+
+const aiKeywords: string[] = [
+    'Agile Methodologies',
+    'Business Process Management',
+    'Candidate Sourcing',
+    'Career Growth',
+    'Coaching and Mentoring',
+    'Continuous Integration',
+    'Cross-Functional Collaboration',
+    'CV',
+    'Curriculum Vitae',
+    'DE&I (Diversity, Equity & Inclusion)',
+    'DevOps',
+    'Documentation',
+    'Leadership',
+    'Monitoring',
+    'Operational Efficiency',
+    'Organizational Strategy',
+    'Performance Metrics',
+    'Policy Development',
+    'Postmortem Process',
+    'Process Improvement',
+    'Product Development',
+    'Product Launch',
+    'Project Management',
+    'Public Speaking',
+    'Resume',
+    'Revenue Growth',
+    'Remote Collaboration',
+    'Software Development',
+    'Software Development Lifecycle',
+    'Software Engineering',
+    'Stakeholder Engagement',
+    'Team Management',
+    'User Experience (UX)',
+    'Vendor Relationships',
+];
+const myKeywords = getKeywords(cvData);
+export const cvKeywords: string[] = [...new Set([...aiKeywords, ...myKeywords].map(s => s.toLowerCase()))].sort();

@@ -1,3 +1,4 @@
+import type CVData from '@components/cv/cvData.d';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faChalkboardTeacher, faEnvelope, faHome, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -6,18 +7,18 @@ import { Component } from 'react';
 
 import './style.css';
 
-const BASE_YEAR = 2003;
-const CURRENT_YEAR = new Date().getFullYear();
-const CAREER_TIME = CURRENT_YEAR - BASE_YEAR;
+const BASE_YEAR: 2003 = 2003;
+const CURRENT_YEAR: number = new Date().getFullYear();
+const CAREER_TIME: number = CURRENT_YEAR - BASE_YEAR;
 
 fontAwesomeLibrary.add(faMapMarkerAlt, faHome, faGithub, faLinkedin, faTwitter, faChalkboardTeacher, faEnvelope);
 
-export default class Header extends Component {
+export default class Header extends Component<{ data: CVData['header'] }> {
     render() {
         const { name, location, contact } = this.props.data;
-        let introduction = this.props.data.introduction;
-        introduction[0] = introduction[0].replace(`{{CAREER_TIME}}`, CAREER_TIME);
-        introduction = introduction.map((entry, i) => <p key={i}>{entry}</p>);
+        const introduction: string[] = this.props.data.introduction;
+        introduction[0] = introduction[0].replace(`{{CAREER_TIME}}`, CAREER_TIME.toString());
+        const introParagraphs: JSX.Element[] = introduction.map((entry, i) => <p key={i}>{entry}</p>);
 
         // vCard / hCard Microformat:
         return (
@@ -89,7 +90,7 @@ export default class Header extends Component {
                         </section>
                     </aside>
                     <p>Welcome to my admittedly verbose resume! For a more concise one please visit my LinkedIn profile.</p>
-                    {introduction}
+                    {introParagraphs}
                 </main>
             </header>
         );

@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faCalendarAlt as faCalendar, faClock } from '@fortawesome/free-regular-svg-icons';
 import { faMicrophone, faTags, faTicketAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
 
-import AnchoredHeader from '../../../../lib/anchored-header.jsx';
-import parseExperienceDescription from '../../../../lib/array-to-html-list';
+import AnchoredHeader from '@lib/anchored-header.jsx';
+import parseExperienceDescription from '@lib/array-to-html-list';
 
 import './style.css';
 
