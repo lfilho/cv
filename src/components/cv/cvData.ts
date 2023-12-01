@@ -552,6 +552,12 @@ export const cvData: CVData = {
         ],
         relevantCourses: [
             {
+                title: 'Prompt Engineering Specialization',
+                school: 'Vanderbilt University',
+                date: 'Dec 2023',
+                duration: 80,
+            },
+            {
                 title: 'Machine Learning Specialization',
                 school: 'Stanford University',
                 date: 'Nov 2023',
