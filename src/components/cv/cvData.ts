@@ -888,8 +888,8 @@ export const cvData: CVData = {
     offTopic: {
         books: {
             software: [
+                { title: 'Shape Up', subtitle: 'Stop Running in Circles and Ship Work that Matters', author: 'Ryan Singer' },
                 { title: 'Mastering Vim', author: 'Jovica Ilic' },
-                { title: 'Shape Up', author: 'Ryan Singer' },
                 { title: 'The End of Privacy', author: 'B.J. Mendelson' },
                 {
                     title: 'The Tao of Tmux and Terminal Tricks',
@@ -951,7 +951,18 @@ export const cvData: CVData = {
             ],
             softSkills: [
                 {
+                    title: 'Team Topologies',
+                    subtitle: 'Organizing Business and Technology Teams for Fast Flow',
+                    author: 'Matthew Skelton, Manuel Pais',
+                },
+                {
+                    title: 'Atomic Habits',
+                    subtitle: 'An Easy & Proven Way to Build Good Habits & Break Bad Ones',
+                    author: 'James Clear',
+                },
+                {
                     title: 'Find Your Why',
+                    subtitle: 'A Practical Guide to Discovering Purpose for You and Your Team',
                     author: 'Simon Sinek, David Mead & Peter Docker',
                 },
                 { title: 'The Infinite Game', author: 'Simon Sinek' },
@@ -968,6 +979,11 @@ export const cvData: CVData = {
                 {
                     title: "It Doesn't have to be Crazy at Work",
                     author: 'Jason Fried, David Heinemeier Hansson',
+                },
+                {
+                    title: 'The First 90 Days',
+                    subtitle: 'Critical Success Strategies for New Leaders at All Levels',
+                    author: 'Michael D. Watkins',
                 },
                 {
                     title: 'Dare to Lead: ',
