@@ -1,6 +1,7 @@
 import type CVData from '@components/cv/cvData.d';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faHandshake } from '@fortawesome/free-regular-svg-icons';
 import { faChalkboardTeacher, faEnvelope, faHome, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Component } from 'react';
@@ -11,7 +12,7 @@ const BASE_YEAR: 2003 = 2003;
 const CURRENT_YEAR: number = new Date().getFullYear();
 const CAREER_TIME: number = CURRENT_YEAR - BASE_YEAR;
 
-fontAwesomeLibrary.add(faMapMarkerAlt, faHome, faGithub, faLinkedin, faTwitter, faChalkboardTeacher, faEnvelope);
+fontAwesomeLibrary.add(faMapMarkerAlt, faHome, faGithub, faLinkedin, faTwitter, faHandshake, faEnvelope);
 
 export default class Header extends Component<{ data: CVData['header'] }> {
     render() {
@@ -69,12 +70,19 @@ export default class Header extends Component<{ data: CVData['header'] }> {
                                     {contact.linkedin.display}
                                 </a>
                             </div>
-                            <div className='twitter'>
+                            <div className='topmate'>
+                                <FontAwesomeIcon icon={faHandshake} fixedWidth />
+                                <a className='url' href={contact.topmate.href}>
+                                    {contact.topmate.display}
+                                </a>
+                            </div>
+
+                            {/* <div className='twitter'>
                                 <FontAwesomeIcon icon={faTwitter} fixedWidth />
                                 <a className='url' href={contact.twitter.href}>
                                     {contact.twitter.display}
                                 </a>
-                            </div>
+                            </div> */}
                             <div className='speakerdeck'>
                                 <FontAwesomeIcon icon={faChalkboardTeacher} fixedWidth />
                                 <a className='url' href={contact.speakerdeck.href}>

@@ -20,7 +20,8 @@ interface Contact {
     url: URL;
     email: string;
     linkedin: URL;
-    twitter: URL;
+    twitter?: URL;
+    topmate: URL;
     speakerdeck: URL;
     github: URL;
 }

@@ -20,10 +20,14 @@ export const cvData: CVData = {
                 href: 'https://linkedin.com/in/luizgonzaga',
                 display: '/luizgonzaga',
             },
-            twitter: {
-                href: 'https://twitter.com/luizmarelo',
-                display: '/luizmarelo',
+            topmate: {
+                href: 'https://topmate.io/luizgonzaga',
+                display: '/luizgonzaga',
             },
+            // twitter: {
+            //     href: 'https://twitter.com/luizmarelo',
+            //     display: '/luizmarelo',
+            // },
             speakerdeck: {
                 href: 'https://speakerdeck.com/lfilho',
                 display: '/lfilho',
@@ -31,9 +35,9 @@ export const cvData: CVData = {
             github: { href: 'https://github.com/lfilho', display: '/lfilho' },
         },
         introduction: [
-            `A people first geek with {{CAREER_TIME}}+ years of building software and teams in different countries and company sizes.`,
-            `With a strong focus on people, I have a proven track record of delivering high quality software, building and growing happy teams, and improving processes.`,
-            `I love sharing what I know and my decades of experience combined with my MBA, hundreds of courses taken, books read and events attended put me in a good position to do so.`,
+            `A people first geek with {{CAREER_TIME}}+ years of building quality software and engaged teams in different countries and company sizes.`,
+            `I focus on scaling organizations with efficient and low touch processes.`,
+            `I'm continually adding to my thousands of hours of learning, and I love sharing what I know. Feel free to check some of my testimonials and recommendations on my LinkedIn and Topmate profiles.`,
         ],
     },
     experiences: {
@@ -551,6 +555,18 @@ export const cvData: CVData = {
             },
         ],
         relevantCourses: [
+            {
+                title: 'Foundations of Cybersecurity',
+                school: 'Google',
+                date: 'Feb 2024',
+                duration: 80,
+            },
+            {
+                title: 'Generative AI for Leaders',
+                school: 'Vanderbilt University',
+                date: 'Jan 2024',
+                duration: 15,
+            },
             {
                 title: 'Prompt Engineering Specialization',
                 school: 'Vanderbilt University',
