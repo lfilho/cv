@@ -51,17 +51,17 @@ export const cvData: CVData = {
                 description: [
                     `Managed several teams and charters in the Enterprise org:`,
                     [
-                        `Responsible for key Enterprise metrics and projects, unlocking millions of dollar in revenue`,
+                        `Responsible for key Enterprise metrics and projects, unlocking millions of dollars in revenue`,
                         `Responsible for key products like SkillSets, Employability and Admin experience`,
-                        `Created a new operational process for the org, increasing operational health metrics`,
-                        `Measurably improved "bus factor" in the team (knowledge distribution and component ownership)`,
+                        `Highest retention rate in the org`,
                         `Improved team's processes for better remote-first practices and more efficient collaboration with other teams and stakeholders`,
                     ],
                     `Organizational contributions:`,
                     [
+                        `Created and owned several org-wide process, increasing key metrics, reducing touchpoints, increasing accountability and better equipping high leadership on critical decision making`,
+                        `Created an org-wide policy, increasing inclusiveness and belonging`,
                         `Above average interview count`,
-                        `Mentored a Senior Engineer towards becoming an Engineering Manager`,
-                        `Created an engineering-wide policy, increasing inclusiveness and belonging`,
+                        `Transitioned a Senior Engineer towards becoming an Engineering Manager`,
                         `Volunteered in the DE&I squad, helping come up and drive many of the org-wide goals taken in the area`,
                         `Improved our Postmortem process, automating and reducing high touch-points, enabling better accountability, metrics and easier knowledge sharing within the company`,
                         `Reduced context switching, improved documentation and efficiency for cross functional collaboration in Enterprise org's biggest cross-functional internal forum`,
