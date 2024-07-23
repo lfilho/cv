@@ -1,0 +1,47 @@
+---
+/* 
+  This layout is used in 
+  - pages/index.astro
+  - pages/blog.astro
+  - pages/projects.astro
+*/
+
+// Import the global.css file here so that it is included on
+import '../styles/global.css';
+
+import Favicon from './Favicon.astro';
+---
+
+<!doctype html>
+<html class='theme-sleek' lang='en'>
+    <head>
+        <!-- Global Metadata -->
+        <meta charset='utf-8' />
+        <meta name='generator' content={Astro.generator} />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large' />
+        <Favicon />
+        <slot name='meta' />
+    </head>
+
+    <body class='text-text-body bg-bg-body max-w-3xl mx-auto px-4 sm:px-8'>
+        <main id='main'>
+            <slot name='main' />
+        </main>
+        <style>
+            body {
+                display: grid;
+                min-height: 100vh;
+                grid-template-areas:
+                    'header'
+                    'main'
+                    'footer';
+                grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+                grid-template-columns: minmax(0, 1fr);
+            }
+            main {
+                grid-area: main;
+            }
+        </style>
+    </body>
+</html>

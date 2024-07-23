@@ -19,7 +19,7 @@
         "url": "https://github.com/lfilho/cv/issues"
     },
     "scripts": {
-        "postinstall": "npx playwright install",
+        "postinstall": "npx playwright install && node post-install.js",
         "dev": "astro dev",
         "lint": "prettier --write  \"**/*.{js,mjs,cjs,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,mjs,cjs,ts,jsx,tsx,astro}\"",
         "start": "astro dev",
@@ -29,29 +29,38 @@
         "astro": "astro"
     },
     "dependencies": {
+        "@astrojs/prism": "^3.0.0",
         "@astrojs/react": "^3.0.9",
+        "@astrojs/rss": "^4.0.2",
+        "@astrojs/sitemap": "^3.0.5",
         "@astrojs/ts-plugin": "^1.4.0",
-        "@fortawesome/fontawesome-svg-core": "^6.4.2",
-        "@fortawesome/free-brands-svg-icons": "^6.4.2",
-        "@fortawesome/free-regular-svg-icons": "^6.4.2",
-        "@fortawesome/free-solid-svg-icons": "^6.4.2",
+        "@fortawesome/fontawesome-svg-core": "^6.5.1",
+        "@fortawesome/free-brands-svg-icons": "^6.5.1",
+        "@fortawesome/free-regular-svg-icons": "^6.5.1",
+        "@fortawesome/free-solid-svg-icons": "^6.5.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
+        "@markdoc/markdoc": "^0.4.0",
         "astro": "^4.2.1",
+        "astro-markdoc-renderer": "^0.0.1-alpha.1",
         "express": "^4.18.2",
-        "playwright": "^1.39.0",
+        "globby": "^14.0.0",
+        "gray-matter": "^4.0.3",
+        "playwright": "^1.41.1",
         "react": "^18.2.0",
         "react-autolink": "^0.2.1",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "slugify": "^1.6.6",
+        "zod": "^3.22.4"
     },
     "devDependencies": {
-        "@types/node": "^20.8.10",
-        "@typescript-eslint/parser": "^6.9.1",
-        "eslint": "^8.53.0",
-        "eslint-plugin-astro": "^0.29.1",
+        "@types/node": "^20.11.5",
+        "@typescript-eslint/parser": "^6.19.0",
+        "eslint": "^8.56.0",
+        "eslint-plugin-astro": "^0.31.3",
         "eslint-plugin-jsx-a11y": "^6.8.0",
-        "prettier": "^3.0.3",
+        "prettier": "^3.2.4",
         "prettier-config-standard": "^7.0.0",
-        "prettier-plugin-astro": "^0.12.1",
-        "typescript": "^5.2.2"
+        "prettier-plugin-astro": "^0.13.0",
+        "typescript": "^5.3.3"
     }
 }
