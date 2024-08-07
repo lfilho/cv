@@ -47,7 +47,7 @@ interface VolunteerXp {
     keywords: string[];
 }
 
-interface Experiences {}
+interface Experience { }
 
 interface Degree extends Event {
     school: string;
@@ -86,7 +86,7 @@ export default interface CVData {
         contact: Contact;
         introduction: string[];
     };
-    experiences: {
+    experience: {
         softwareEngineering: ProfessionalXp[];
         instructorOrSpeaker: SpeakingXp[];
         volunteer: VolunteerXp[];

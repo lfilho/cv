@@ -13,7 +13,7 @@ import './style.css';
 
 fontAwesomeLibrary.add(faTags, faUsers, faUser, faBuilding, faClock, faTicketAlt, faCalendar, faMicrophone);
 
-export default class Experiences extends Component {
+export default class Experience extends Component {
     render() {
         const softwareEngineeringXps = this.props.data.softwareEngineering.map((entry, i) => {
             const keywords = entry.keywords.map((entry, i) => (
@@ -108,9 +108,7 @@ export default class Experiences extends Component {
 
         return (
             <section>
-                <AnchoredHeader level='2'>Experiences</AnchoredHeader>
-
-                <AnchoredHeader level='3'>Software Engineering</AnchoredHeader>
+                <AnchoredHeader level='2'>Experience</AnchoredHeader>
 
                 <div>
                     {softwareEngineeringXps}

@@ -40,7 +40,7 @@ export const cvData: CVData = {
             `I'm continually adding to my thousands of hours of learning, and I love sharing what I know. Feel free to check some of my testimonials and recommendations on my LinkedIn and Topmate profiles.`,
         ],
     },
-    experiences: {
+    experience: {
         softwareEngineering: [
             {
                 startDate: 'Feb 2021',
