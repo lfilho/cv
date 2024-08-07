@@ -2,7 +2,7 @@
 import CVLayout from '@layouts/CV.astro';
 
 import Education from '@components/cv/sections/education';
-import Experiences from '@components/cv/sections/experiences';
+import Experience from '@components/cv/sections/experience';
 import Header from '@components/cv/sections/header';
 import Languages from '@components/cv/sections/languages';
 import Noteworthy from '@components/cv/sections/noteworthy';
@@ -13,7 +13,7 @@ import { cvData } from '@components/cv/cvData';
 
 <CVLayout>
     <Header data={cvData.header} />
-    <Experiences data={cvData.experiences} />
+    <Experience data={cvData.experience} />
     <Education data={cvData.education} />
     <Noteworthy data={cvData.noteworthy} />
     <Languages data={cvData.languages} />

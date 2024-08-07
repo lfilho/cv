@@ -5,6 +5,7 @@
 
 .xp:first-child {
     border-top: none;
+    padding: 0 0 1em 0;
 }
 
 .volunteer.xp {
@@ -26,6 +27,6 @@
     margin-right: 1px;
     padding: 0.2rem 0.4rem 0.2rem;
     font-size: 0.7rem;
-    background-color: #008CBA;
-    color: #fff;
+    color: var(--primary-black);
+    border: 1px solid var(--primary-black);
 }
