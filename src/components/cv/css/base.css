@@ -18,6 +18,9 @@ a {
     margin-right: 0.3rem;
     color: var(--primary-blue);
 }
+li::marker {
+    color: var(--primary-blue);
+}
 
 h2:hover .header-link,
 h3:hover .header-link,

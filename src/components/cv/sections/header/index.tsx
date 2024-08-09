@@ -1,4 +1,3 @@
-import type CVData from '@components/cv/cvData.d';
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faHandshake } from '@fortawesome/free-regular-svg-icons';
@@ -8,25 +7,40 @@ import { Component } from 'react';
 
 import './style.css';
 
-const BASE_YEAR: 2003 = 2003;
-const CURRENT_YEAR: number = new Date().getFullYear();
-const CAREER_TIME: number = CURRENT_YEAR - BASE_YEAR;
+const CAREER_START_YEAR: 2003 = 2003;
+const today: Date = new Date();
+const currentYear: number = today.getFullYear();
+const currentMonth: number = today.getMonth() + 1;
+const fractionalYear: number = currentMonth > 6 ? 0.5 : 0;
+
+const CAREER_TENURE: number = currentYear + fractionalYear - CAREER_START_YEAR;
 
 fontAwesomeLibrary.add(faMapMarkerAlt, faHome, faGithub, faLinkedin, faTwitter, faHandshake, faEnvelope);
 
-export default class Header extends Component<{ data: CVData['header'] }> {
+export default class Header extends Component {
     render() {
+        const isVerbose = this.props.isVerbose;
         const { name, location, contact } = this.props.data;
-        const introduction: string[] = this.props.data.introduction;
-        introduction[0] = introduction[0].replace(`{{CAREER_TIME}}`, CAREER_TIME.toString());
-        const introParagraphs: JSX.Element[] = introduction.map((entry, i) => <p key={i}>{entry}</p>);
+        const introduction = this.props.data.introduction;
+        introduction[0] = introduction[0].replace(`{{CAREER_TENURE}}`, `${CAREER_TENURE}`);
+        const introParagraphs: JSX.Element[] = introduction.map((entry: string, i: number) => (
+            <p key={i} dangerouslySetInnerHTML={{ __html: entry }} />
+        ));
+        const linkToAlternateVersion = isVerbose ? (
+            <p>
+                You're looking at the verbose version of my resumé, for the regular version, visit <a href='/cv'>luiz.dev/cv</a>.
+            </p>
+        ) : (
+            <p>
+                For a more verbose version of my resumé, visit <a href='/cv/verbose'>luiz.dev/cv/verbose</a>.
+            </p>
+        );
 
         // vCard / hCard Microformat:
         return (
             <header id='hcard-Luiz-Gonzaga-dos-Santos-Filho' className='vcard'>
                 <h1 className='fn n'>
                     <span className='p-given-name'>{name.first} </span>
-                    <span className='p-additional-name'>{name.middle} </span>
                     <span className='p-family-name'>{name.last}</span>
                     <span className='p-honorific-suffix'>, {name.title}</span>
                 </h1>
@@ -97,8 +111,8 @@ export default class Header extends Component<{ data: CVData['header'] }> {
                             </div>
                         </section>
                     </aside>
-                    <p>Welcome to my admittedly verbose resume! For a more concise one please visit my LinkedIn profile.</p>
                     {introParagraphs}
+                    {linkToAlternateVersion}
                 </main>
             </header>
         );

@@ -15,13 +15,21 @@ fontAwesomeLibrary.add(faTags, faUsers, faUser, faBuilding, faClock, faTicketAlt
 
 export default class Experience extends Component {
     render() {
+        const isVerbose = this.props.isVerbose;
         const softwareEngineeringXps = this.props.data.softwareEngineering.map((entry, i) => {
             const keywords = entry.keywords.map((entry, i) => (
                 <span className='keyword' key={i}>
                     {entry}
                 </span>
             ));
-            const description = entry.description.map(parseExperienceDescription);
+
+            const positions = entry.positions.join('<span class="promotion-signal"> ➜ </span>');
+            let description = isVerbose
+                ? entry.description
+                : entry.shortDescription.length > 0
+                    ? entry.shortDescription
+                    : entry.description;
+            description = parseExperienceDescription(description);
 
             return (
                 <div className='xp' key={i}>
@@ -34,7 +42,7 @@ export default class Experience extends Component {
                             <FontAwesomeIcon icon={faBuilding} fixedWidth />
                             <span className='org'>{entry.company}</span>
                             <FontAwesomeIcon icon={faUsers} fixedWidth />
-                            <span>{entry.position}</span>
+                            <span dangerouslySetInnerHTML={{ __html: positions }} />
                         </div>
                         <div className='job-keywords icon-grid-container'>
                             <FontAwesomeIcon icon={faTags} fixedWidth />

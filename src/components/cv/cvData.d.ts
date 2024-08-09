@@ -1,6 +1,5 @@
 interface Name {
     first: string;
-    middle: string;
     last: string;
     title: string;
 }
@@ -34,8 +33,9 @@ interface ProfessionalXp {
     startDate: string;
     endDate: string;
     company: string;
-    position: string;
+    positions: string[];
     keywords: string[];
+    shortDescription: (string | string[])[];
     description: (string | string[])[];
 }
 
@@ -47,7 +47,7 @@ interface VolunteerXp {
     keywords: string[];
 }
 
-interface Experience { }
+interface Experience {}
 
 interface Degree extends Event {
     school: string;

@@ -8,10 +8,19 @@
     padding: 0 0 1em 0;
 }
 
+.xp .description strong {
+    color: #111;
+    font-weight: normal;
+}
+
 .volunteer.xp {
     padding: 0;
     border: none;
     text-indent: 0;
+}
+
+.promotion-signal {
+    color: var(--primary-blue);
 }
 
 .keyword {

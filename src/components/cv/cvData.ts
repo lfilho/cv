@@ -3,8 +3,7 @@ import type CVData from './cvData.d';
 export const cvData: CVData = {
     header: {
         name: {
-            first: 'Luiz',
-            middle: 'Gonzaga',
+            first: 'Luiz Gonzaga',
             last: 'dos Santos Filho',
             title: 'MBA',
         },
@@ -35,9 +34,10 @@ export const cvData: CVData = {
             github: { href: 'https://github.com/lfilho', display: '/lfilho' },
         },
         introduction: [
-            `A people first geek with {{CAREER_TIME}}+ years of building quality software and engaged teams in different countries and company sizes.`,
-            `I focus on scaling organizations with efficient and low touch processes.`,
-            `I'm continually adding to my thousands of hours of learning, and I love sharing what I know. Feel free to check some of my testimonials and recommendations on my LinkedIn and Topmate profiles.`,
+            `A people first geek building impactful products and high performing, engaged teams for ~{{CAREER_TENURE}} years.`,
+            `I grow organizations of all sizes with efficient and low touch processes.`,
+            `I grow people with empathy, trust, mentorship and accountability.`,
+            `I'm continually <a href='#education'>upskilling myself</a> and love <a href='#speaking-or-teaching'>sharing what I know</a>. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga' target='_blank'>Topmate</a> profiles.`,
         ],
     },
     experience: {
@@ -46,8 +46,14 @@ export const cvData: CVData = {
                 startDate: 'Feb 2021',
                 endDate: 'present',
                 company: 'Coursera',
-                position: 'Senior Software Development Manager',
+                positions: ['Software Engineering Manager', 'Senior Software Engineering Manager'],
                 keywords: ['edTech', 'education', 'aws'],
+                shortDescription: [
+                    `<strong>Cultivated talent</strong>: managed several teams and charters, promoted engineers to Senior, Staff and Manager`,
+                    `<strong>Drove Enterprise growth</strong>: led key Enterprise initiatives and products, unlocking several millions of dollars in revenue yearly`,
+                    `<strong>Enhanced organizational efficiency</strong>: conceptualized, implemented and improved several team and org-wide processes, resulting in improved metrics and accountability, reduced touchpoints and better-informed leadership decision-making`,
+                    `<strong>Championed DE&I and well-being</strong>: authored and drove different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
+                ],
                 description: [
                     `Managed several teams and charters in the Enterprise org:`,
                     [
@@ -73,7 +79,7 @@ export const cvData: CVData = {
                 startDate: 'Sep 2017',
                 endDate: 'Dec 2020',
                 company: 'Amazon / AWS',
-                position: 'Software Development Manager III',
+                positions: ['Software Engineering Manager II', 'Software Engineering Manager III'],
                 keywords: [
                     'Payment Services',
                     'AWS',
@@ -86,31 +92,37 @@ export const cvData: CVData = {
                 description: [
                     [
                         `Proposed and implemented an engineering-wide "Going off-call" policy, increasing inclusiveness and belonging`,
-                        `Became a certified Cultural Competences for Teams instructor, increasing inclusiveness and diversity awareness to the many hundreds of employees that took the training.`,
-                        `Part of the Software Development Manager Peer Advisory board, helping new managers onboard and be successful in the company`,
-                        `Promoted to Software Development Manager III`,
+                        `As a certified Cultural Competences for Teams instructor, increased inclusiveness and diversity awareness to the many hundreds of employees that took the training`,
+                        `Part of the Software Engineering Manager Peer Advisory board, helping new managers onboard and be successful in the company`,
+                        `Promoted to Software Engineering Manager III`,
                     ],
                     `Amazon Payments`,
                     [
                         `Team owning 2 charters (International Expansion integrations and Payment on Delivery)`,
-                        `Delivered amazon.com.tr (Amazon Turkey) payments integration. This multi-year project involved weekly collaboration and coordination with different teams, roles, partners, vendors in different countries.`,
+                        `Delivered amazon.com.tr (Amazon Turkey) payments integration. This multi-year project involved weekly collaboration and coordination with different teams, roles, partners, vendors in different countries`,
                         `First team to start PSD2 work that enabled Amazon to stay complaint in Europe (SEPA DD)`,
                     ],
                     `AWS Route53`,
                     [
                         `Started a team from scratch, hiring 7 engineers`,
-                        `Responsible for maintaining existing and building new generations of different Route53's User Experience (Consoles) with measurable operational, accessibility and usability improvements.`,
-                        `Owned 5 different products in 2 different tech stacks, serving different sub- orgs with different stakeholders.`,
-                        `Launched two world-wide projects and expanded our presence to multiple new partitions and regions.`,
-                        `Improved Route53 org's sourcing efficiency by ~32% and our candidate diversity by ~11%.`,
+                        `Responsible for maintaining existing and building new generations of different Route53's User Experience (Consoles) with measurable operational, accessibility and usability improvements`,
+                        `Owned 5 different products in 2 different tech stacks, serving different sub- orgs with different stakeholders`,
+                        `Launched two world-wide projects and expanded our presence to multiple new partitions and regions`,
+                        `Improved Route53 org's sourcing efficiency by ~32% and our candidate diversity by ~11%`,
                     ],
+                ],
+                shortDescription: [
+                    `<strong>At Amazon Payments</strong>: led a multi-year payments integrations effort involving international and cross-department collaboration to launch Amazon in Turkey; drove early adoption of PSD2 regulations, ensuring European market compliance ahead of competitors; owned Payment on Delivery for the Indian market`,
+                    `<strong>At AWS Route53</strong>: hired and grew a team from scratch; measurabely improved operational efficiency, accessibility, and usability across five different products; owned multiple product roadmaps and delivered two global product launches, expanding AWS Route53's presence into new markets and regions`,
+                    `<strong>Drove organizational change and fostered inclusion:</strong> improved our sourcing effiency by ~32% and our pipeline's diversity by ~11%; championed an engineering-wide policy to promote inclusion and belonging; as a certified Cultural Competences for Teams instructor, trained hundreds of leaders and engineers around diversity and inclusion`,
+                    `<strong>Mentored and supported other managers:</strong> served on the Software Engineering Manager Peer Advisory board, providing guidance and support to peers`,
                 ],
             },
             {
                 startDate: 'Apr 2016',
                 endDate: 'Feb 2017',
                 company: 'Brandwatch',
-                position: 'Team Lead & Senior Developer',
+                positions: ['Senior Frontend Engineer', 'Frontend Team Lead'],
                 keywords: [
                     'Node',
                     'Javascript',
@@ -140,22 +152,27 @@ export const cvData: CVData = {
                         `Having local, more frequent 1-1s with the team`,
                     ],
                 ],
+                shortDescription: [
+                    `<strong>As the Frontend team lead:</strong> helped the PM with agile ceremonies and backlog prioritization; liason with the team manager in the UK headquarters`,
+                    `<strong>As a Senior Frontend Engineer</strong>: worked existing and new feature development on Brandwatch's main product (Analytics); refactored thousands of files o0 a 5-year-old jQuery codebase, improving bundle size, patching security vulnerabilities, and enabling new features to be used`,
+                ],
             },
             {
                 startDate: 'Apr 2015',
                 endDate: 'Apr 2015',
-                company: 'X-Team (Remote)',
-                position: 'Full stack developer',
+                company: 'X-Team',
+                positions: ['Full-stack engineer'],
                 keywords: ['Node', 'Javascript', 'React', 'Flux', 'LevelDB', 'Tape', 'Highcharts', 'jQuery', 'BPM'],
                 description: [
-                    'Hired by the awesome remote company X-Team to help researching, planning and developing the next phase of X-Labs (their open source initiative) and other internal projects involving IndexedDB. Great team, expert people, cool tech and tools.',
+                    `Short collaboration with X-Team's CTO researching, planning and developing the next phase of X-Labs (their open source initiative) and other internal projects involving IndexedDB`,
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Jun 2014',
                 endDate: 'Mar 2016',
                 company: 'DataEasy',
-                position: 'Software Development Manager',
+                positions: ['Software Engineering Manager'],
                 keywords: [
                     'Scrum',
                     'XP',
@@ -199,38 +216,18 @@ export const cvData: CVData = {
                         `Helped choose a new ticketing system for the company`,
                     ],
                 ],
-            },
-            {
-                startDate: 'Nov 2013',
-                endDate: 'Jan 2016',
-                company: 'GOJS User Group',
-                position: 'Cofounder / Volunteer',
-                keywords: ['Node', 'Javascript'],
-                description: [
-                    `Founded and ran the first Javascript user group of the state.`,
-                    [
-                        `Workshops planning and organizing`,
-                        `Presenting talks`,
-                        `Community moderation`,
-                        `Website creation and maintenance,`,
-                    ],
-                ],
-            },
-            {
-                startDate: 'May 2014',
-                endDate: 'Jan 2017',
-                company: 'SENAC Goiás',
-                position: 'Consultant',
-                keywords: ['Node', 'Javascript'],
-                description: [
-                    `SENAC is the largest agency for professional education in Brazil, present in more than 1800 cities. This was a short job as a consultant on new web technologies and architectures to aid their team and organization towards a more robust and modern system architecture, developer happiness and productivity.`,
+                shortDescription: [
+                    `<strong>Led Engineering Transformation:</strong> directed a company-wide shift to modern DevOps and ChatOps practices, including Git, SemVer, CI pipelines, live application monitoring, automated release management, enabling higher quality and faster releases and allowing the IT department to stay leaner`,
+                    `<strong>Championed Process Improvement:</strong> mapped all engineering processes, reduced touchpoints and staffing needs`,
+                    `<strong>Fostered growth and upskilling:</strong> partnered with a local university to provide automated testing courses for senior engineers, streamlining testing cycles and reducing release bottlenecks`,
+                    `<strong>Cultivated Innovation and Learning:</strong> created a bi-weekly program fostering innovation and knowledge sharing through tech talks and experimentation with new technologies`,
                 ],
             },
             {
                 startDate: 'Apr 2013',
                 endDate: 'Nov 2013',
                 company: 'Brandwatch',
-                position: 'Senior Developer',
+                positions: ['Senior Frontend Engineer'],
                 keywords: [
                     'Node',
                     'Javascript',
@@ -251,14 +248,19 @@ export const cvData: CVData = {
                     'JIRA',
                 ],
                 description: [
-                    `Worked on existing and new features on their main product (Analytics). Wrote a simple codemod to organize and format files, reducing future diff sizes and improving readability of the entire codebase.`,
+                    `Developed their main product line: brand Analytics`,
+                    `Wrote codemods to refactor thousands of files, defining conventions for several teams, reducing future diff sizes and improving code reviewing times`,
+                ],
+                shortDescription: [
+                    `Developed their main product line: brand Analytics`,
+                    `Wrote codemods to refactor thousands of files, defining conventions for all frontend, reducing code review length and improving time to merge`,
                 ],
             },
             {
                 startDate: 'Apr 2012',
                 endDate: 'Mar 2013',
                 company: 'Content Fleet',
-                position: 'Team Lead & Senior Developer',
+                positions: ['Senior Frontend Engineer', 'Frontend Team Lead'],
                 keywords: [
                     'Node',
                     'MongoDB',
@@ -277,53 +279,64 @@ export const cvData: CVData = {
                     'Pivotal Tracker',
                 ],
                 description: [
-                    `Worked as frontend-focused full stack engineer.`,
+                    `Worked as frontend-focused full-stack engineer.`,
                     [
-                        `Developed RESTful APIs, and their main MVC application.`,
-                        `Created the company's first automated deploy script.`,
-                        `Sped up the app's performance by minimizing the amount of network calls, introducing tools to minimize source code, removing dead code, downsampling raster images, etc.`,
-                        `Improved the app's UX and performance in high resolution displays by drawing icons in pure CSS, converting images to vectors (SVG), etc.`,
+                        `Developed RESTful APIs, and their main MVC application`,
+                        `Created the company's first automated deploy script`,
+                        `Sped up the app's performance by minimizing the amount of network calls, introducing tools to minimize source code, removing dead code, downsampling raster images, etc`,
+                        `Improved the app's UX and performance in high resolution displays by drawing icons in pure CSS, converting images to vectors (SVG), etc`,
                     ],
                     `Became the Frontend Team Lead. Additional responsibilities:`,
                     [
-                        `Responsible for the team's conventions, refactorings, architectural decisions and app performance improvements.`,
-                        `Responsible for training team members and new hires.`,
+                        `Responsible for the team's conventions, refactorings, architectural decisions and app performance improvements`,
+                        `Responsible for training team members and new hires`,
                     ],
+                ],
+                shortDescription: [
+                    `<strong>Full-stack Development:</strong> developed REST APIs and core MVC applications. Led mobile responsiveness efforts and performance optimization initiatives, significantly reducing network calls and minimizing source code for a faster UX`,
+                    `<strong>Team Leadership:</strong> Responsible for the frontend strategy, conventions, quality, performance improvements and training new team members`,
                 ],
             },
             {
                 startDate: 'Fev 2007',
                 endDate: 'Mar 2012',
                 company: 'Goiás State Government',
-                position: 'Full Stack Developer',
+                positions: ['Full-stack Engineer'],
                 keywords: ['Java EE', 'Velocity', 'SQL', 'HTML', 'Javascript', 'jQuery', 'CSS 3', 'SVN', 'UX'],
                 description: [
                     [
-                        `Worked as full stack engineer on "HR Net": the State's human resources web application responsible for payments, vacations, contracts, leaves, etc`,
-                        `Proposed and added several performance, usability and accessibility improvements, impacting hundreds of thousands of daily users`,
-                        `Became a Certified Java Programmer`,
+                        `Worked as a full-stack engineer on the Government's Human Capital Management (HCM) system, supporting payroll and other features for over 200k people`,
+                        `Led several performance, usability and accessibility improvements`,
                     ],
+                ],
+                shortDescription: [
+                    `Worked as a full-stack engineer on the Government's Human Capital Management (HCM) system, supporting payroll and other features for over 200k people`,
+                    `Led several performance, usability and accessibility improvements`,
                 ],
             },
             {
                 startDate: '2004',
                 endDate: '2005',
                 company: 'DR Sistemas & Interagi',
-                position: 'Trainee Developer',
+                positions: ['Junior Full-stack Engineer'],
                 keywords: ['Java EE', 'Struts', 'Hibernate', 'SQL', 'JSP', 'PHP', 'MySQL', 'HTML', 'CSS', 'SVN', 'CVS'],
                 description: [
-                    'Interagi and DR were where I had my internships - 6 months each.',
+                    'Interagi and DR were where I had my full-time internships - 6 months each.',
                     [
                         'At Interagi, I developed CRUD applications in PHP, MySQL and HTML and some image processing via PHP',
-                        'At DR Sistemas, I developed an application for the public law sector. Responsible for collecting specs from Business and implementing them in Java',
+                        'At DR Sistemas, I developed a Backend application for the public law sector. Responsible for collecting specs from Business and implementing them in Java',
                     ],
+                ],
+                shortDescription: [
+                    'At Interagi, I developed CRUD applications and did some programatic image processing',
+                    'At DR Sistemas, I developed a Backend application for the public law sector',
                 ],
             },
             {
                 startDate: 'Jan 2003',
                 endDate: 'Dec 2014',
                 company: 'Freelancer',
-                position: 'Software Developer & Consultant',
+                positions: ['Misc Software Engineering & Consultancy gigs'],
                 keywords: [
                     '12 Factor Apps',
                     'Web Development',
@@ -338,11 +351,11 @@ export const cvData: CVData = {
                     'Continuous Integration',
                 ],
                 description: [
-                    'Some companies I have consulted for:',
                     'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to web platform. Tech, tools and paradigms shift.',
                     'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
                     'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
                 ],
+                shortDescription: [],
             },
         ],
         instructorOrSpeaker: [
@@ -486,6 +499,13 @@ export const cvData: CVData = {
             },
         ],
         volunteer: [
+            {
+                date: '2013 - 2016',
+                location: 'Goiânia, Brazil',
+                organization: 'GOJS User Group',
+                position: 'Cofounder',
+                keywords: ['Node', 'Javascript'],
+            },
             {
                 date: '2014; 2015',
                 location: 'Goiânia, Brazil',
