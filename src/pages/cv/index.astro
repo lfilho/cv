@@ -1,4 +1,6 @@
 ---
+import { Astro } from 'astro';
+
 import CVLayout from '@layouts/CV.astro';
 
 import Education from '@components/cv/sections/education';
@@ -9,13 +11,15 @@ import Noteworthy from '@components/cv/sections/noteworthy';
 import OffTopic from '@components/cv/sections/offtopic';
 
 import { cvData } from '@components/cv/cvData';
+
+const isVerbose = Astro.props.isVerbose || false;
 ---
 
 <CVLayout>
-    <Header data={cvData.header} />
-    <Experience data={cvData.experience} />
-    <Education data={cvData.education} />
-    <Noteworthy data={cvData.noteworthy} />
-    <Languages data={cvData.languages} />
-    <OffTopic data={cvData.offTopic} />
+    <Header data={cvData.header} isVerbose={isVerbose}/>
+    <Experience data={cvData.experience} isVerbose={isVerbose}/>
+    <Education data={cvData.education} isVerbose={isVerbose}/>
+    <Noteworthy data={cvData.noteworthy} isVerbose={isVerbose}/>
+    <Languages data={cvData.languages} isVerbose={isVerbose}/>
+    <OffTopic data={cvData.offTopic} isVerbose={isVerbose}/>
 </CVLayout>

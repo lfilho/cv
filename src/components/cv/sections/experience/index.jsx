@@ -21,7 +21,7 @@ export default class Experience extends Component {
                     {entry}
                 </span>
             ));
-            const description = entry.description.map(parseExperienceDescription);
+            const description = parseExperienceDescription(this.props.isVerbose ? entry.description : entry.shortDescription);
 
             return (
                 <div className='xp' key={i}>

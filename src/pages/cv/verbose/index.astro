@@ -1,0 +1,9 @@
+---
+import CV from '@pages/cv/index.astro';
+import { Astro } from 'astro';
+import isVerboseMode from '@lib/is-verbose-mode';
+
+const isVerbose = isVerboseMode(Astro.request.url);
+---
+
+<CV isVerbose={isVerbose} />

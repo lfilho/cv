@@ -46,8 +46,14 @@ export const cvData: CVData = {
                 startDate: 'Feb 2021',
                 endDate: 'present',
                 company: 'Coursera',
-                position: 'Senior Software Development Manager',
+                position: 'Senior Software Engineering Manager',
                 keywords: ['edTech', 'education', 'aws'],
+                shortDescription: [
+                    `Cultivated talent: managed severalt teams and charters, promoted several engineers to Senior, Staff and Manager`,
+                    `Drove Enterprise growth: led key Enterprise initiatives and products, unlocking several millions of dollars in revenue`,
+                    `Enhanced organizational efficiency: conceptualized, implemented and improved several team and org-wide processes, resulting in improved metrics and accountability, reduced touchpoints and better-informed leadership decision-making`,
+                    `Championed DE&I and well-being: authored and drove different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
+                ],
                 description: [
                     `Managed several teams and charters in the Enterprise org:`,
                     [
@@ -73,7 +79,7 @@ export const cvData: CVData = {
                 startDate: 'Sep 2017',
                 endDate: 'Dec 2020',
                 company: 'Amazon / AWS',
-                position: 'Software Development Manager III',
+                position: 'Software Engineering Manager III',
                 keywords: [
                     'Payment Services',
                     'AWS',
@@ -87,8 +93,8 @@ export const cvData: CVData = {
                     [
                         `Proposed and implemented an engineering-wide "Going off-call" policy, increasing inclusiveness and belonging`,
                         `Became a certified Cultural Competences for Teams instructor, increasing inclusiveness and diversity awareness to the many hundreds of employees that took the training.`,
-                        `Part of the Software Development Manager Peer Advisory board, helping new managers onboard and be successful in the company`,
-                        `Promoted to Software Development Manager III`,
+                        `Part of the Software Engineering Manager Peer Advisory board, helping new managers onboard and be successful in the company`,
+                        `Promoted to Software Engineering Manager III`,
                     ],
                     `Amazon Payments`,
                     [
@@ -105,12 +111,18 @@ export const cvData: CVData = {
                         `Improved Route53 org's sourcing efficiency by ~32% and our candidate diversity by ~11%.`,
                     ],
                 ],
+                shortDescription: [
+                    `**At Amazon Payments**: led a multi-year payments integrations effort involving international and cross-department collaboration to launch Amazon in Turkey; drove early adoption of PSD2 regulations, ensuring European market compliance ahead of competitors; owned Payment on Delivery for the Indian market`,
+                    `**At AWS Route53**: Hired and grew a team from scratch; measurabely improved operational efficiency, accessibility, and usability across five different products; owned multiple product roadmaps and delivered two global product launches, expanding AWS Route53's presence into new markets and regions`,
+                    `**Drove organizational change and fostered inclusion:** Improved our sourcing effiency by ~32% and our pipeline's diversity by ~11%; championed an engineering-wide policy to promote inclusion and belonging; became a certified Cultural Competences for Teams instructor, training hundreds of leaders and engineers around diversity and inclusion`,
+                    `**Mentored and supported other managers:** Served on the Software Engineering Manager Peer Advisory board, providing guidance and support to peers`,
+                ],
             },
             {
                 startDate: 'Apr 2016',
                 endDate: 'Feb 2017',
                 company: 'Brandwatch',
-                position: 'Team Lead & Senior Developer',
+                position: 'Team Lead & Senior Engineer',
                 keywords: [
                     'Node',
                     'Javascript',
@@ -140,22 +152,27 @@ export const cvData: CVData = {
                         `Having local, more frequent 1-1s with the team`,
                     ],
                 ],
+                shortDescription: [
+                    `**As the Frontend team lead:** helped the PM with agile ceremonies and backlog prioritization; liason with the team manager in the UK headquarters`,
+                    `**As a Senior Frontend Engineer**: worked existing and new feature development on Brandwatch's main product (Analytics); refactored thousands of files o0 a 5-year-old jQuery codebase, improving bundle size, patching security vulnerabilities, and enabling new features to be used`,
+                ],
             },
             {
                 startDate: 'Apr 2015',
                 endDate: 'Apr 2015',
                 company: 'X-Team (Remote)',
-                position: 'Full stack developer',
+                position: 'Full stack engineer',
                 keywords: ['Node', 'Javascript', 'React', 'Flux', 'LevelDB', 'Tape', 'Highcharts', 'jQuery', 'BPM'],
                 description: [
                     'Hired by the awesome remote company X-Team to help researching, planning and developing the next phase of X-Labs (their open source initiative) and other internal projects involving IndexedDB. Great team, expert people, cool tech and tools.',
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Jun 2014',
                 endDate: 'Mar 2016',
                 company: 'DataEasy',
-                position: 'Software Development Manager',
+                position: 'Software Engineering Manager',
                 keywords: [
                     'Scrum',
                     'XP',
@@ -199,6 +216,7 @@ export const cvData: CVData = {
                         `Helped choose a new ticketing system for the company`,
                     ],
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Nov 2013',
@@ -215,6 +233,7 @@ export const cvData: CVData = {
                         `Website creation and maintenance,`,
                     ],
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'May 2014',
@@ -223,14 +242,15 @@ export const cvData: CVData = {
                 position: 'Consultant',
                 keywords: ['Node', 'Javascript'],
                 description: [
-                    `SENAC is the largest agency for professional education in Brazil, present in more than 1800 cities. This was a short job as a consultant on new web technologies and architectures to aid their team and organization towards a more robust and modern system architecture, developer happiness and productivity.`,
+                    `SENAC is the largest agency for professional education in Brazil, present in more than 1800 cities. This was a short job as a consultant on new web technologies and architectures to aid their team and organization towards a more robust and modern system architecture, engineer happiness and productivity.`,
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Apr 2013',
                 endDate: 'Nov 2013',
                 company: 'Brandwatch',
-                position: 'Senior Developer',
+                position: 'Senior Engineer',
                 keywords: [
                     'Node',
                     'Javascript',
@@ -253,12 +273,13 @@ export const cvData: CVData = {
                 description: [
                     `Worked on existing and new features on their main product (Analytics). Wrote a simple codemod to organize and format files, reducing future diff sizes and improving readability of the entire codebase.`,
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Apr 2012',
                 endDate: 'Mar 2013',
                 company: 'Content Fleet',
-                position: 'Team Lead & Senior Developer',
+                position: 'Team Lead & Senior Engineer',
                 keywords: [
                     'Node',
                     'MongoDB',
@@ -290,12 +311,13 @@ export const cvData: CVData = {
                         `Responsible for training team members and new hires.`,
                     ],
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Fev 2007',
                 endDate: 'Mar 2012',
                 company: 'Goiás State Government',
-                position: 'Full Stack Developer',
+                position: 'Full Stack Engineer',
                 keywords: ['Java EE', 'Velocity', 'SQL', 'HTML', 'Javascript', 'jQuery', 'CSS 3', 'SVN', 'UX'],
                 description: [
                     [
@@ -304,12 +326,13 @@ export const cvData: CVData = {
                         `Became a Certified Java Programmer`,
                     ],
                 ],
+                shortDescription: [],
             },
             {
                 startDate: '2004',
                 endDate: '2005',
                 company: 'DR Sistemas & Interagi',
-                position: 'Trainee Developer',
+                position: 'Junior Engineer',
                 keywords: ['Java EE', 'Struts', 'Hibernate', 'SQL', 'JSP', 'PHP', 'MySQL', 'HTML', 'CSS', 'SVN', 'CVS'],
                 description: [
                     'Interagi and DR were where I had my internships - 6 months each.',
@@ -318,12 +341,13 @@ export const cvData: CVData = {
                         'At DR Sistemas, I developed an application for the public law sector. Responsible for collecting specs from Business and implementing them in Java',
                     ],
                 ],
+                shortDescription: [],
             },
             {
                 startDate: 'Jan 2003',
                 endDate: 'Dec 2014',
                 company: 'Freelancer',
-                position: 'Software Developer & Consultant',
+                position: 'Software Engineer & Consultant',
                 keywords: [
                     '12 Factor Apps',
                     'Web Development',
@@ -343,6 +367,7 @@ export const cvData: CVData = {
                     'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
                     'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
                 ],
+                shortDescription: [],
             },
         ],
         instructorOrSpeaker: [

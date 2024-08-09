@@ -36,6 +36,7 @@ interface ProfessionalXp {
     company: string;
     position: string;
     keywords: string[];
+    shortDescription: (string | string[])[];
     description: (string | string[])[];
 }
 
