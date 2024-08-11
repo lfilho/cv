@@ -571,7 +571,7 @@ export const cvData: CVData = {
                 date: '2010/1',
                 school: `Saint Mary's University`,
                 location: 'Canada',
-                info: ['2nd round on Trumped Competition', 'Emerging Leaders of America Scholarship'],
+                info: ['Emerging Leaders of America Scholarship', '2nd round on Trumped Competition'],
             },
         ],
         relevantCourses: [

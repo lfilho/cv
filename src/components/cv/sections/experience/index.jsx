@@ -4,14 +4,14 @@ import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faBuilding, faCalendarAlt as faCalendar, faClock } from '@fortawesome/free-regular-svg-icons';
-import { faMicrophone, faHashtag, faTicketAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faHashtag, faTicketAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import AnchoredHeader from '@lib/anchored-header.jsx';
 import parseExperienceDescription from '@lib/array-to-html-list';
 
 import './style.css';
 
-fontAwesomeLibrary.add(faHashtag, faUsers, faUser, faBuilding, faClock, faTicketAlt, faCalendar, faMicrophone);
+fontAwesomeLibrary.add(faHashtag, faUser, faBuilding, faClock, faTicketAlt, faCalendar, faMicrophone);
 
 export default class Experience extends Component {
     render() {
@@ -58,71 +58,85 @@ export default class Experience extends Component {
             );
         });
 
-        const instructorOrSpeakerXps = this.props.data.instructorOrSpeaker.map((entry, i) => {
-            let titles = [].concat(entry.title).map((entry, i) => (
-                <div className='title icon-grid-container' key={i}>
-                    <FontAwesomeIcon icon={faMicrophone} fixedWidth />
-                    <span>{entry}</span>
-                </div>
-            ));
+        let instructorOrSpeakerXps, volunteerXps, otherXps;
+        if (!isVerbose) {
+            instructorOrSpeakerXps = this.props.data.instructorOrSpeaker.length;
+            volunteerXps = this.props.data.volunteer.length;
 
-            return (
-                <article className='talk' key={i}>
-                    <div className='period icon-grid-container'>
-                        <FontAwesomeIcon icon={faCalendar} fixedWidth />
-                        <span>
-                            {entry.date} – {entry.location}
-                        </span>
+            otherXps = (
+                <>
+                    <AnchoredHeader level='3' id='other-xps'>
+                        Other
+                    </AnchoredHeader>
+
+                    <div>
+                        Over {instructorOrSpeakerXps} experiences as an instructor or speaker and {volunteerXps} volunteer
+                        positions around leadership, web development, community and the arts. See more details at{' '}
+                        <a href='/cv/verbose#speaking-or-teaching'>luiz.dev/cv/verbose</a>.
                     </div>
-                    <div className='event icon-grid-container'>
-                        <FontAwesomeIcon icon={faTicketAlt} fixedWidth />
-                        <span>{entry.venue}</span>
-                    </div>
-                    {titles}
-                </article>
+                </>
             );
-        });
+        } else {
+            instructorOrSpeakerXps = this.props.data.instructorOrSpeaker.map((entry, i) => {
+                let titles = [].concat(entry.title).map((entry, i) => (
+                    <div className='title icon-grid-container' key={i}>
+                        <FontAwesomeIcon icon={faMicrophone} fixedWidth />
+                        <span>{entry}</span>
+                    </div>
+                ));
 
-        const volunteerXps = this.props.data.volunteer.map((entry, i) => {
-            const keywords = entry.keywords.map((entry, i) => (
-                <span className='keyword' key={i}>
-                    {entry}
-                </span>
-            ));
-
-            return (
-                <div className='volunteer xp' key={i}>
-                    <div className='job-data'>
+                return (
+                    <article className='talk' key={i}>
                         <div className='period icon-grid-container'>
-                            <FontAwesomeIcon icon={faClock} fixedWidth />
+                            <FontAwesomeIcon icon={faCalendar} fixedWidth />
                             <span>
                                 {entry.date} – {entry.location}
                             </span>
                         </div>
-                        <div className='company icon-grid-container'>
-                            <FontAwesomeIcon icon={faBuilding} fixedWidth />
-                            <span className='org'>{entry.organization}</span>
+                        <div className='event icon-grid-container'>
+                            <FontAwesomeIcon icon={faTicketAlt} fixedWidth />
+                            <span>{entry.venue}</span>
                         </div>
-                        <div className='position icon-grid-container'>
-                            <FontAwesomeIcon icon={faUser} fixedWidth />
-                            <span>{entry.position}</span>
+                        {titles}
+                    </article>
+                );
+            });
+
+            volunteerXps = this.props.data.volunteer.map((entry, i) => {
+                const keywords = entry.keywords.map((entry, i) => (
+                    <span className='keyword' key={i}>
+                        {entry}
+                    </span>
+                ));
+
+                return (
+                    <div className='volunteer xp' key={i}>
+                        <div className='job-data'>
+                            <div className='period icon-grid-container'>
+                                <FontAwesomeIcon icon={faClock} fixedWidth />
+                                <span>
+                                    {entry.date} – {entry.location}
+                                </span>
+                            </div>
+                            <div className='company icon-grid-container'>
+                                <FontAwesomeIcon icon={faBuilding} fixedWidth />
+                                <span className='org'>{entry.organization}</span>
+                            </div>
+                            <div className='position icon-grid-container'>
+                                <FontAwesomeIcon icon={faUser} fixedWidth />
+                                <span>{entry.position}</span>
+                            </div>
+                        </div>
+                        <div className='job-keywords icon-grid-container'>
+                            <FontAwesomeIcon icon={faHashtag} fixedWidth />
+                            <div>{keywords}</div>
                         </div>
                     </div>
-                    <div className='job-keywords icon-grid-container'>
-                        <FontAwesomeIcon icon={faHashtag} fixedWidth />
-                        <div>{keywords}</div>
-                    </div>
-                </div>
-            );
-        });
+                );
+            });
 
-        return (
-            <section>
-                <AnchoredHeader level='2'>Experience</AnchoredHeader>
-
-                <div>
-                    {softwareEngineeringXps}
-
+            otherXps = (
+                <>
                     <AnchoredHeader level='3' id='speaking-or-teaching'>
                         As a speaker or instructor
                     </AnchoredHeader>
@@ -146,7 +160,17 @@ export default class Experience extends Component {
                     </p>
 
                     <div className='grid-container'>{volunteerXps}</div>
-                </div>
+                </>
+            );
+        }
+
+        return (
+            <section>
+                <AnchoredHeader level='2'>Experience</AnchoredHeader>
+
+                <div>{softwareEngineeringXps}</div>
+
+                {otherXps}
             </section>
         );
     }
