@@ -3,20 +3,54 @@
     border-top: 1px solid #ccc;
 }
 
+.xp aside {
+    color: var(--highlight-black);
+    font-weight: bold;
+}
+.xp .grid-container {
+    grid-template-columns: auto 12rem;
+    grid-gap: 1rem;
+}
+
+.xp article {
+    margin: 0.5rem auto;
+}
+
 .xp:first-child {
     border-top: none;
     padding: 0 0 1em 0;
 }
 
-.xp .description strong {
+.description strong {
     color: #111;
     font-weight: normal;
+}
+
+.job-data .at {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.xp .period {
+    text-align: right;
+}
+
+.job-keywords {
+    text-align: right;
+}
+.job-keywords .fa-fw {
+    vertical-align: middle;
+    margin: 0;
 }
 
 .volunteer.xp {
     padding: 0;
     border: none;
     text-indent: 0;
+}
+
+.volunteer .job-keywords {
+    text-align: left;
 }
 
 .promotion-signal {
@@ -36,6 +70,6 @@
     margin-right: 1px;
     padding: 0.2rem 0.4rem 0.2rem;
     font-size: 0.7rem;
-    color: var(--primary-black);
-    border: 1px solid var(--primary-black);
+    color: var(--primary-gray);
+    border: 1px solid var(--primary-gray);
 }

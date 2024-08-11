@@ -1,6 +1,8 @@
 :root {
     --primary-blue: #008cba;
     --primary-black: #666;
+    --highlight-black: #333;
+    --primary-gray: #999;
 }
 * {
     -webkit-font-smoothing: antialiased;
@@ -55,7 +57,7 @@ h2 {
 
 h1 {
     font-size: 2rem;
-    color: #333;
+    color: var(--highlight-black);
     border-bottom: 0.2rem solid #008cba;
     padding-bottom: 1rem;
     font-weight: bold;

@@ -4,14 +4,14 @@ import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faBuilding, faCalendarAlt as faCalendar, faClock } from '@fortawesome/free-regular-svg-icons';
-import { faMicrophone, faTags, faTicketAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faHashtag, faTicketAlt, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 import AnchoredHeader from '@lib/anchored-header.jsx';
 import parseExperienceDescription from '@lib/array-to-html-list';
 
 import './style.css';
 
-fontAwesomeLibrary.add(faTags, faUsers, faUser, faBuilding, faClock, faTicketAlt, faCalendar, faMicrophone);
+fontAwesomeLibrary.add(faHashtag, faUsers, faUser, faBuilding, faClock, faTicketAlt, faCalendar, faMicrophone);
 
 export default class Experience extends Component {
     render() {
@@ -34,24 +34,26 @@ export default class Experience extends Component {
             return (
                 <div className='xp' key={i}>
                     <aside className='grid-container'>
-                        <div className='job-data icon-grid-container'>
+                        <div className='job-data'>
+                            <FontAwesomeIcon icon={faBuilding} fixedWidth />
+                            <span dangerouslySetInnerHTML={{ __html: positions }} />
+                            <span className='at'> @ </span>
+                            <span className='org'>{entry.company}</span>
+                        </div>
+                        <div className='period'>
                             <FontAwesomeIcon icon={faClock} fixedWidth />
                             <span>
                                 {entry.startDate} – {entry.endDate}
                             </span>
-                            <FontAwesomeIcon icon={faBuilding} fixedWidth />
-                            <span className='org'>{entry.company}</span>
-                            <FontAwesomeIcon icon={faUsers} fixedWidth />
-                            <span dangerouslySetInnerHTML={{ __html: positions }} />
-                        </div>
-                        <div className='job-keywords icon-grid-container'>
-                            <FontAwesomeIcon icon={faTags} fixedWidth />
-                            <span>{keywords}</span>
                         </div>
                     </aside>
                     <article>
                         <div className='description'>{description}</div>
                     </article>
+                    <div className='job-keywords'>
+                        <FontAwesomeIcon icon={faHashtag} fixedWidth />
+                        <span>{keywords}</span>
+                    </div>
                 </div>
             );
         });
@@ -107,7 +109,7 @@ export default class Experience extends Component {
                         </div>
                     </div>
                     <div className='job-keywords icon-grid-container'>
-                        <FontAwesomeIcon icon={faTags} fixedWidth />
+                        <FontAwesomeIcon icon={faHashtag} fixedWidth />
                         <div>{keywords}</div>
                     </div>
                 </div>
