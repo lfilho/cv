@@ -16,26 +16,34 @@ export default class Education extends Component {
         const isVerbose = this.props.isVerbose;
         const education = this.props.data;
 
-        const academyCourses = education.academyCourses.map((entry, i) => (
-            <div className='academy-course icon-grid-container' key={i}>
-                <FontAwesomeIcon icon={faGraduationCap} fixedWidth />
-                <span>{entry.title}</span>
+        const academyCourses = education.academyCourses.map((entry, i) => {
+            const date = isVerbose ? (
+                <>
+                    <FontAwesomeIcon icon={faCalendar} fixedWidth />
+                    <span>{entry.date}</span>
+                </>
+            ) : null;
+            return (
+                <div className='academy-course icon-grid-container' key={i}>
+                    <FontAwesomeIcon icon={faGraduationCap} fixedWidth />
+                    <span>{entry.title}</span>
 
-                <FontAwesomeIcon icon={faCalendar} fixedWidth />
-                <span>{entry.date}</span>
-                <FontAwesomeIcon icon={faUniversity} fixedWidth />
-                <span>
-                    {entry.school} – {entry.location}
-                </span>
+                    <FontAwesomeIcon icon={faUniversity} fixedWidth />
+                    <span>
+                        {entry.school}–{entry.location}
+                    </span>
 
-                {entry.info.map((info, i) => (
-                    <React.Fragment key={i}>
-                        <FontAwesomeIcon icon={faInfo} fixedWidth />
-                        <span>{info}</span>
-                    </React.Fragment>
-                ))}
-            </div>
-        ));
+                    {date}
+
+                    {entry.info.map((info, i) => (
+                        <React.Fragment key={i}>
+                            <FontAwesomeIcon icon={faInfo} fixedWidth />
+                            <span>{info}</span>
+                        </React.Fragment>
+                    ))}
+                </div>
+            );
+        });
 
         const languages = this.props.languageData.map((entry, i) => (
             <div key={i}>
