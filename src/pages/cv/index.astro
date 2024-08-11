@@ -18,8 +18,7 @@ const isVerbose = Astro.props.isVerbose || false;
 <CVLayout>
     <Header data={cvData.header} isVerbose={isVerbose}/>
     <Experience data={cvData.experience} isVerbose={isVerbose}/>
-    <Education data={cvData.education} isVerbose={isVerbose}/>
+    <Education data={cvData.education} languageData={cvData.languages} isVerbose={isVerbose}/>
     <Noteworthy data={cvData.noteworthy} isVerbose={isVerbose}/>
-    <Languages data={cvData.languages} isVerbose={isVerbose}/>
     <OffTopic data={cvData.offTopic} isVerbose={isVerbose}/>
 </CVLayout>

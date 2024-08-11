@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { faCalendarAlt as faCalendar, faCommentDots } from '@fortawesome/free-regular-svg-icons';
-import { faCaretRight, faGraduationCap, faInfo, faUniversity } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight, faGraduationCap, faInfo, faUniversity, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import AnchoredHeader from '@lib/anchored-header.jsx';
 
 import './style.css';
 
-fontAwesomeLibrary.add(faGraduationCap, faCalendar, faUniversity, faInfo, faCaretRight, faCommentDots);
+fontAwesomeLibrary.add(faGraduationCap, faCalendar, faUniversity, faInfo, faCaretRight, faCommentDots, faLanguage);
 
 export default class Education extends Component {
     render() {
@@ -37,6 +37,15 @@ export default class Education extends Component {
             </div>
         ));
 
+        const languages = this.props.languageData.map((entry, i) => (
+            <div key={i}>
+                <FontAwesomeIcon icon={faLanguage} />
+                <span>
+                    {entry.name} — {entry.level}
+                </span>
+            </div>
+        ));
+
         let otherEducation;
         const relevantCoursesTotalDuration = Math.round(
             education.relevantCourses.reduce((sum, entry) => sum + entry.duration, 0),
@@ -51,7 +60,7 @@ export default class Education extends Component {
                     <div>
                         Over {education.relevantCourses.length} courses taken and {education.relevantEvents.length} events
                         attended on software, entrepreneurship, leadership and self development. See more details at{' '}
-                        <a href=' /cv/verbose##relevant-courses'>luiz.dev/cv/verbose</a>.
+                        <a href=' /cv/verbose#relevant-courses'>luiz.dev/cv/verbose</a>.
                     </div>
                 </>
             );
@@ -108,6 +117,9 @@ export default class Education extends Component {
             <section>
                 <AnchoredHeader level='2'>Education</AnchoredHeader>
                 <div className='academy-courses grid-container'>{academyCourses}</div>
+
+                <AnchoredHeader level='3'>Languages</AnchoredHeader>
+                <div className='languages grid-container'>{languages}</div>
 
                 {otherEducation}
             </section>
