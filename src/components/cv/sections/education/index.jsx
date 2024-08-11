@@ -13,7 +13,9 @@ fontAwesomeLibrary.add(faGraduationCap, faCalendar, faUniversity, faInfo, faCare
 
 export default class Education extends Component {
     render() {
+        const isVerbose = this.props.isVerbose;
         const education = this.props.data;
+
         const academyCourses = education.academyCourses.map((entry, i) => (
             <div className='academy-course icon-grid-container' key={i}>
                 <FontAwesomeIcon icon={faGraduationCap} fixedWidth />
@@ -35,57 +37,79 @@ export default class Education extends Component {
             </div>
         ));
 
-        const relevantCourses = education.relevantCourses.map((entry, i) => (
-            <div className='course icon-grid-container' key={i}>
-                <FontAwesomeIcon icon={faCaretRight} />
-                <span>{entry.title}</span>
-                <br />
-                <small>
-                    {entry.school}; {entry.duration}h — {entry.date}
-                </small>
-            </div>
-        ));
-
+        let otherEducation;
         const relevantCoursesTotalDuration = Math.round(
             education.relevantCourses.reduce((sum, entry) => sum + entry.duration, 0),
         );
 
-        const relevantEvents = education.relevantEvents.map((entry, i) => (
-            <div className='event icon-grid-container' key={i}>
-                <FontAwesomeIcon icon={faCaretRight} />
-                <span>{entry.title}</span>
-                <br />
-                <small>
-                    {entry.location}; {entry.date}
-                </small>
-            </div>
-        ));
+        if (!isVerbose) {
+            otherEducation = (
+                <>
+                    <AnchoredHeader level='3' id='other-education'>
+                        Other
+                    </AnchoredHeader>
+                    <div>
+                        Over {education.relevantCourses.length} courses taken and {education.relevantEvents.length} events
+                        attended on software, entrepreneurship, leadership and self development. See more details at{' '}
+                        <a href=' /cv/verbose##relevant-courses'>luiz.dev/cv/verbose</a>.
+                    </div>
+                </>
+            );
+        } else {
+            const relevantCourses = education.relevantCourses.map((entry, i) => (
+                <div className='course icon-grid-container' key={i}>
+                    <FontAwesomeIcon icon={faCaretRight} />
+                    <span>{entry.title}</span>
+                    <br />
+                    <small>
+                        {entry.school}; {entry.duration}h — {entry.date}
+                    </small>
+                </div>
+            ));
+
+            const relevantEvents = education.relevantEvents.map((entry, i) => (
+                <div className='event icon-grid-container' key={i}>
+                    <FontAwesomeIcon icon={faCaretRight} />
+                    <span>{entry.title}</span>
+                    <br />
+                    <small>
+                        {entry.location}; {entry.date}
+                    </small>
+                </div>
+            ));
+
+            otherEducation = (
+                <>
+                    <AnchoredHeader level='3' id='relevant-courses'>
+                        Relevant courses or specializations taken
+                        <small>
+                            <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+                            {education.relevantCourses.length} courses on software, entrepreneurship, leadership and self
+                            development with a total of ~{relevantCoursesTotalDuration} hours
+                        </small>
+                    </AnchoredHeader>
+
+                    <div className='courses grid-container'>{relevantCourses}</div>
+
+                    <AnchoredHeader level='3' id='relevant-events'>
+                        Relevant events attended
+                        <small>
+                            <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+                            {relevantEvents.length} events on technology and leadership in different cities and countries
+                        </small>
+                    </AnchoredHeader>
+
+                    <div className='events grid-container'>{relevantEvents}</div>
+                </>
+            );
+        }
 
         return (
             <section>
                 <AnchoredHeader level='2'>Education</AnchoredHeader>
-
                 <div className='academy-courses grid-container'>{academyCourses}</div>
-                <AnchoredHeader level='3' id='relevant-courses'>
-                    Relevant courses or specializations taken
-                    <small>
-                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
-                        {relevantCourses.length} courses on software, entrepreneurship, leadership and self development with a
-                        total of ~{relevantCoursesTotalDuration} hours
-                    </small>
-                </AnchoredHeader>
 
-                <div className='courses grid-container'>{relevantCourses}</div>
-
-                <AnchoredHeader level='3' id='relevant-events'>
-                    Relevant events attended
-                    <small>
-                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
-                        {relevantEvents.length} events on technology and entrepreneurship in different cities and countries
-                    </small>
-                </AnchoredHeader>
-
-                <div className='events grid-container'>{relevantEvents}</div>
+                {otherEducation}
             </section>
         );
     }
