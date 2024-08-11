@@ -770,6 +770,21 @@ export const cvData: CVData = {
         ],
         relevantEvents: [
             {
+                title: 'Engineering Leadership Community Annual 2024',
+                location: 'San Francisco, USA',
+                date: '27-28 Aug 2024',
+            },
+            {
+                title: 'ELC Match & Learn: increasing velocity without losing quality',
+                location: 'Virtual',
+                date: '25 Apr 2024',
+            },
+            {
+                title: 'Engineering Leadership Community Annual 2023',
+                location: 'San Francisco, USA',
+                date: '30-31 Aug 2023',
+            },
+            {
                 title: 'WebDevCon',
                 location: 'Seattle, USA',
                 date: '16-19 Apr 2019',
@@ -986,6 +1001,11 @@ export const cvData: CVData = {
                 { title: 'Java: How to Program', author: 'Deitel' },
             ],
             softSkills: [
+                {
+                    title: 'Conscious Business',
+                    subtitle: 'How to build value through values',
+                    author: 'Fred Kofman',
+                },
                 {
                     title: 'Team Topologies: ',
                     subtitle: 'Organizing Business and Technology Teams for Fast Flow',
