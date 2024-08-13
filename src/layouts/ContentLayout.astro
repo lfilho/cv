@@ -7,8 +7,6 @@
 import "../styles/global.css";
 import "../styles/markdown.css";
 
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Favicon from "./Favicon.astro";
 
 export interface Props {
@@ -36,7 +34,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
   </head>
 
   <body class="text-text-body bg-bg-body max-w-3xl mx-auto px-4 sm:px-8">
-    <Header />
     <main id="main">
       <section class="blog-post">
         <h1 class="title">{title}</h1>
@@ -44,7 +41,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         <slot name="content" />
       </section>
     </main>
-    <Footer />
   </body>
 
   <style>

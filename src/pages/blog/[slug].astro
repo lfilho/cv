@@ -1,9 +1,9 @@
 ---
-import { readOne, readAll } from "../../lib/markdoc/read";
-import { blog } from "../../lib/markdoc/frontmatter.schema";
-import Renderer from "../../components/Renderer.astro";
-import BlogPostMeta from "../../components/BlogPostMeta.astro";
-import ContentLayout from "../../layouts/ContentLayout.astro";
+import { readOne, readAll } from "@lib/markdoc/read";
+import { blog } from "@lib/markdoc/frontmatter.schema";
+import Renderer from "@components/Renderer.astro";
+import BlogPostMeta from "@components/BlogPostMeta.astro";
+import ContentLayout from "@layouts/ContentLayout.astro";
 import { SITE_URL } from "../../config";
 
 export async function getStaticPaths() {
