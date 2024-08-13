@@ -1,27 +1,16 @@
-import React, { Component } from 'react';
-
-import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Component } from 'react';
 
 import AnchoredHeader from '@lib/anchored-header.jsx';
 
-fontAwesomeLibrary.add(faCaretRight);
-
 export default class Noteworthy extends Component {
     render() {
-        const entries = this.props.data.map((entry, i) => (
-            <React.Fragment key={i}>
-                <FontAwesomeIcon icon={faCaretRight} />
-                <span>{entry}</span>
-            </React.Fragment>
-        ));
+        const entries = this.props.data.map(entry => <li>{entry}</li>);
 
         return (
             <section>
                 <AnchoredHeader level='2'>Other noteworthy achievements</AnchoredHeader>
 
-                <div className='noteworthy icon-grid-container'>{entries}</div>
+                <ul className='noteworthy'>{entries}</ul>
             </section>
         );
     }

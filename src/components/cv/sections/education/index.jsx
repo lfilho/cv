@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { faCalendarAlt as faCalendar, faCommentDots } from '@fortawesome/free-regular-svg-icons';
-import { faCaretRight, faGraduationCap, faInfo, faUniversity, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faInfo, faUniversity, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Books from '@components/cv/sections/offtopic';
@@ -11,7 +11,7 @@ import AnchoredHeader from '@lib/anchored-header.jsx';
 
 import './style.css';
 
-fontAwesomeLibrary.add(faGraduationCap, faCalendar, faUniversity, faInfo, faCaretRight, faCommentDots, faLanguage);
+fontAwesomeLibrary.add(faGraduationCap, faCalendar, faUniversity, faInfo, faCommentDots, faLanguage);
 
 export default class Education extends Component {
     render() {
@@ -40,10 +40,10 @@ export default class Education extends Component {
                     {date}
 
                     {entry.info.map((info, i) => (
-                        <React.Fragment key={i}>
+                        <>
                             <FontAwesomeIcon icon={faInfo} fixedWidth />
                             <span>{info}</span>
-                        </React.Fragment>
+                        </>
                     ))}
                 </div>
             );
@@ -83,25 +83,23 @@ export default class Education extends Component {
             );
         } else {
             const relevantCourses = education.relevantCourses.map((entry, i) => (
-                <div className='course icon-grid-container' key={i}>
-                    <FontAwesomeIcon icon={faCaretRight} />
+                <li className='course' key={i}>
                     <span>{entry.title}</span>
                     <br />
                     <small>
                         {entry.school}; {entry.duration}h — {entry.date}
                     </small>
-                </div>
+                </li>
             ));
 
             const relevantEvents = education.relevantEvents.map((entry, i) => (
-                <div className='event icon-grid-container' key={i}>
-                    <FontAwesomeIcon icon={faCaretRight} />
+                <li className='event' key={i}>
                     <span>{entry.title}</span>
                     <br />
                     <small>
                         {entry.location}; {entry.date}
                     </small>
-                </div>
+                </li>
             ));
 
             otherEducation = (
@@ -115,7 +113,7 @@ export default class Education extends Component {
                         </small>
                     </AnchoredHeader>
 
-                    <div className='courses grid-container'>{relevantCourses}</div>
+                    <ul className='courses grid-container'>{relevantCourses}</ul>
 
                     <AnchoredHeader level='3' id='relevant-events'>
                         Relevant events attended
@@ -125,7 +123,7 @@ export default class Education extends Component {
                         </small>
                     </AnchoredHeader>
 
-                    <div className='events grid-container'>{relevantEvents}</div>
+                    <ul className='events grid-container'>{relevantEvents}</ul>
 
                     <Books data={booksData} />
 

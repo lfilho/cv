@@ -1,12 +1,16 @@
-.books em { font-size: 80%; }
-.books small { display: block; }
+.books em {
+    font-size: 80%;
+}
+.books small {
+    display: block;
+}
 
 p.first {
     margin-top: 0;
     text-indent: 0;
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
     p.first {
         clear: both;
     }
