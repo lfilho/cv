@@ -936,229 +936,226 @@ export const cvData: CVData = {
         'TOEFL (Test of English as a Foreign Language), 108 points in 2011 (90%); 103 points in 2009 (86%)',
         'Sun Certified Java Programmer (SCJP) for the Java 5 Platform; 2008',
     ],
-    offTopic: {
-        books: {
-            software: [
-                { title: 'Shape Up: ', subtitle: 'Stop Running in Circles and Ship Work that Matters', author: 'Ryan Singer' },
-                { title: 'Mastering Vim', author: 'Jovica Ilic' },
-                { title: 'The End of Privacy', author: 'B.J. Mendelson' },
-                {
-                    title: 'The Tao of Tmux and Terminal Tricks',
-                    author: 'Tony Narlock',
-                },
-                {
-                    title: 'InnerSource: ',
-                    subtitle: 'Keys to collaboration and productivity inside your company',
-                    author: 'Andy Oram',
-                },
-                {
-                    title: 'Webpack from apprentice to master',
-                    author: 'Juno Vepsäläinen',
-                },
-                { title: 'Clean Code', author: 'Robert C. Martin' },
-                {
-                    title: 'Getting Started with Meteor.js',
-                    author: 'Isaac Strack',
-                },
-                { title: 'Practical VIM', author: 'Drew Neil' },
-                { title: 'Pro Git', author: 'Scott Chacon' },
-                {
-                    title: 'Developing Backbone Applications',
-                    author: 'Addy Osmani',
-                },
-                {
-                    title: 'Javascript - The Good Parts',
-                    author: 'Douglas Crockford',
-                },
-                { title: 'Code Simplicity', author: 'Max Kanata-Alexander' },
-                { title: 'The Node Beginner Book', author: 'Manuel Kiessling' },
-                { title: 'Learn Rails 3 by example', author: 'Michael Hartl' },
-                {
-                    title: 'Agile web development with Rails 2',
-                    author: 'Dave Thomas, David Heinemeier Hanson',
-                },
-                {
-                    title: 'Rework',
-                    author: 'Jason Fried, David Heinemeier Hanson',
-                },
-                {
-                    title: 'Rails for Java Developers',
-                    author: 'Stuart Halloway, Justin Gehtlan',
-                },
-                { title: 'Getting Real', author: '37 Signals' },
-                {
-                    title: 'Head First: Servlets & JSP',
-                    author: 'Kathy Sierra, Bryan Basham, Bert Bates',
-                },
-                {
-                    title: 'Head First: Design Patterns',
-                    author: 'E. Freeman, E. Robson, B. Bates, K. Sierra',
-                },
-                {
-                    title: 'Regular Expressions',
-                    author: 'Aurélio Marinho Vargas',
-                },
-                { title: 'Java: How to Program', author: 'Deitel' },
-            ],
-            softSkills: [
-                {
-                    title: 'Conscious Business',
-                    subtitle: 'How to build value through values',
-                    author: 'Fred Kofman',
-                },
-                {
-                    title: 'Team Topologies: ',
-                    subtitle: 'Organizing Business and Technology Teams for Fast Flow',
-                    author: 'Matthew Skelton, Manuel Pais',
-                },
-                {
-                    title: 'Atomic Habits: ',
-                    subtitle: 'An Easy & Proven Way to Build Good Habits & Break Bad Ones',
-                    author: 'James Clear',
-                },
-                {
-                    title: 'Find Your Why: ',
-                    subtitle: 'A Practical Guide to Discovering Purpose for You and Your Team',
-                    author: 'Simon Sinek, David Mead & Peter Docker',
-                },
-                { title: 'The Infinite Game', author: 'Simon Sinek' },
-                {
-                    title: `Man's Search for Meaning`,
-                    author: 'Viktor E. Frankl',
-                },
-                { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
-                {
-                    title: 'The Subtle Art of Not Giving a F*ck: ',
-                    subtitle: 'A Counterintuitive Approach to Living a Good Life',
-                    author: 'Mark Manson',
-                },
-                {
-                    title: "It Doesn't have to be Crazy at Work",
-                    author: 'Jason Fried, David Heinemeier Hansson',
-                },
-                {
-                    title: 'The First 90 Days: ',
-                    subtitle: 'Critical Success Strategies for New Leaders at All Levels',
-                    author: 'Michael D. Watkins',
-                },
-                {
-                    title: 'Dare to Lead: ',
-                    subtitle: 'Brave work. Tough conversations. Whole hearts.',
-                    author: 'Brené Brown',
-                },
-                {
-                    title: 'The Coaching Habit: ',
-                    subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever',
-                    author: 'Michael Bungay Stanier',
-                },
-                {
-                    title: 'The First 90 Days: ',
-                    subtitle: 'Critical Success Strategies for New Leaders at All Levels',
-                    author: 'Michael D. Watkins',
-                },
-                {
-                    title: 'Collective Intelligence: ',
-                    subtitle: `Mankind's Emerging World in Cyberspace`,
-                    author: 'Pierre Lévy',
-                },
-                {
-                    title: 'The Checklist Manifesto: ',
-                    subtitle: 'How to get things right',
-                    author: 'Atul Gawande',
-                },
-                {
-                    title: 'Start With Why: ',
-                    subtitle: 'How great leaders inspire everyone to take action',
-                    author: 'Simon Sinek',
-                },
-                {
-                    title: 'Moral Tribes: ',
-                    subtitle: 'Emotion, reason and the gap between us and them',
-                    author: 'Joshua Greene',
-                },
-                {
-                    title: 'Drive: ',
-                    subtitle: 'The surprising truth about what motivates us',
-                    author: 'Daniel H. Pink',
-                },
-                { title: 'The Power of Habit', author: 'Charles Duhigg' },
-                {
-                    title: 'Difficult Conversations',
-                    author: 'Douglas Stone, Sheila Heen, Bruce Patton',
-                },
-                {
-                    title: 'Leading Snowflakes: ',
-                    subtitle: 'The Engineering Manager Handbook',
-                    author: 'Oren Ellenbogen',
-                },
-                { title: 'Managing Oneself', author: 'Peter Drucker' },
-                { title: 'The soul of leadership', author: 'Deepak Chopra' },
-                { title: 'Managing Humans', author: 'Michael Lopp' },
-                { title: 'The Purpose Economy', author: 'Aaron Hurst' },
-                {
-                    title: '7 Spiritual Laws of Success',
-                    author: 'Deepak Chopra',
-                },
-                {
-                    title: 'Leading with Cultural Intelligence',
-                    author: 'David Livermore, PhD',
-                },
-                { title: `Times' Triad`, author: 'Christian Barbosa' },
-                {
-                    title: 'The Power of Vulnerability',
-                    author: 'Brené Brown, PhD',
-                },
-                { title: `A Leader's Diary`, author: 'Luciano Pires' },
-                { title: 'Disguised Opportunities', author: 'Carlos Domingos' },
-                {
-                    title: 'Leader with a Master Mind',
-                    author: 'Jamil Albuquerque',
-                },
-                {
-                    title: 'The Icarus Deception: ',
-                    subtitle: 'How High Will You Fly',
-                    author: 'Seth Godin',
-                },
-                {
-                    title: 'Tribes: ',
-                    subtitle: 'We need you to guide us',
-                    author: 'Seth Godin',
-                },
-                { title: 'Startup', author: 'Jessica Livingston' },
-                { title: 'Do The Work', author: 'Steven Pressfield' },
-                { title: 'The Dip', author: 'Seth Godin' },
-                {
-                    title: 'V is for Vulnerable: ',
-                    subtitle: 'Life outside the comfort zone',
-                    author: 'Seth Godin',
-                },
-                { title: 'Anything You Want', author: 'Derek Sivers' },
-                {
-                    title: 'What is Your Legacy? ',
-                    subtitle: 'Provocative Thoughts About Ethics, Leadership and Management',
-                    author: 'Mario Sergio Cortella',
-                },
-                {
-                    title: `The Entrepreneur's Guide to Customer Development`,
-                    author: 'Brant Cooper',
-                },
-                {
-                    title: 'The Monk and the Executive',
-                    author: 'James C. Hunter',
-                },
-                {
-                    title: `The Triumph's Law for the 21st century`,
-                    author: 'Napoleon Hill, Jamil Albuquerque',
-                },
-                {
-                    title: 'The Art of Dealing With People',
-                    author: 'Jamil Albuquerque',
-                },
-                { title: 'How to Grow a Business', author: 'Eric Crowell' },
-                { title: 'Getting Things Done', author: 'David Allen' },
-            ],
-        },
-        freeTime: [`I'm launching a nonprofit & open source initiative with a friend: https://konsilos.com`],
+    books: {
+        software: [
+            { title: 'Shape Up: ', subtitle: 'Stop Running in Circles and Ship Work that Matters', author: 'Ryan Singer' },
+            { title: 'Mastering Vim', author: 'Jovica Ilic' },
+            { title: 'The End of Privacy', author: 'B.J. Mendelson' },
+            {
+                title: 'The Tao of Tmux and Terminal Tricks',
+                author: 'Tony Narlock',
+            },
+            {
+                title: 'InnerSource: ',
+                subtitle: 'Keys to collaboration and productivity inside your company',
+                author: 'Andy Oram',
+            },
+            {
+                title: 'Webpack from apprentice to master',
+                author: 'Juno Vepsäläinen',
+            },
+            { title: 'Clean Code', author: 'Robert C. Martin' },
+            {
+                title: 'Getting Started with Meteor.js',
+                author: 'Isaac Strack',
+            },
+            { title: 'Practical VIM', author: 'Drew Neil' },
+            { title: 'Pro Git', author: 'Scott Chacon' },
+            {
+                title: 'Developing Backbone Applications',
+                author: 'Addy Osmani',
+            },
+            {
+                title: 'Javascript - The Good Parts',
+                author: 'Douglas Crockford',
+            },
+            { title: 'Code Simplicity', author: 'Max Kanata-Alexander' },
+            { title: 'The Node Beginner Book', author: 'Manuel Kiessling' },
+            { title: 'Learn Rails 3 by example', author: 'Michael Hartl' },
+            {
+                title: 'Agile web development with Rails 2',
+                author: 'Dave Thomas, David Heinemeier Hanson',
+            },
+            {
+                title: 'Rework',
+                author: 'Jason Fried, David Heinemeier Hanson',
+            },
+            {
+                title: 'Rails for Java Developers',
+                author: 'Stuart Halloway, Justin Gehtlan',
+            },
+            { title: 'Getting Real', author: '37 Signals' },
+            {
+                title: 'Head First: Servlets & JSP',
+                author: 'Kathy Sierra, Bryan Basham, Bert Bates',
+            },
+            {
+                title: 'Head First: Design Patterns',
+                author: 'E. Freeman, E. Robson, B. Bates, K. Sierra',
+            },
+            {
+                title: 'Regular Expressions',
+                author: 'Aurélio Marinho Vargas',
+            },
+            { title: 'Java: How to Program', author: 'Deitel' },
+        ],
+        softSkills: [
+            {
+                title: 'Conscious Business',
+                subtitle: 'How to build value through values',
+                author: 'Fred Kofman',
+            },
+            {
+                title: 'Team Topologies: ',
+                subtitle: 'Organizing Business and Technology Teams for Fast Flow',
+                author: 'Matthew Skelton, Manuel Pais',
+            },
+            {
+                title: 'Atomic Habits: ',
+                subtitle: 'An Easy & Proven Way to Build Good Habits & Break Bad Ones',
+                author: 'James Clear',
+            },
+            {
+                title: 'Find Your Why: ',
+                subtitle: 'A Practical Guide to Discovering Purpose for You and Your Team',
+                author: 'Simon Sinek, David Mead & Peter Docker',
+            },
+            { title: 'The Infinite Game', author: 'Simon Sinek' },
+            {
+                title: `Man's Search for Meaning`,
+                author: 'Viktor E. Frankl',
+            },
+            { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
+            {
+                title: 'The Subtle Art of Not Giving a F*ck: ',
+                subtitle: 'A Counterintuitive Approach to Living a Good Life',
+                author: 'Mark Manson',
+            },
+            {
+                title: "It Doesn't have to be Crazy at Work",
+                author: 'Jason Fried, David Heinemeier Hansson',
+            },
+            {
+                title: 'The First 90 Days: ',
+                subtitle: 'Critical Success Strategies for New Leaders at All Levels',
+                author: 'Michael D. Watkins',
+            },
+            {
+                title: 'Dare to Lead: ',
+                subtitle: 'Brave work. Tough conversations. Whole hearts.',
+                author: 'Brené Brown',
+            },
+            {
+                title: 'The Coaching Habit: ',
+                subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever',
+                author: 'Michael Bungay Stanier',
+            },
+            {
+                title: 'The First 90 Days: ',
+                subtitle: 'Critical Success Strategies for New Leaders at All Levels',
+                author: 'Michael D. Watkins',
+            },
+            {
+                title: 'Collective Intelligence: ',
+                subtitle: `Mankind's Emerging World in Cyberspace`,
+                author: 'Pierre Lévy',
+            },
+            {
+                title: 'The Checklist Manifesto: ',
+                subtitle: 'How to get things right',
+                author: 'Atul Gawande',
+            },
+            {
+                title: 'Start With Why: ',
+                subtitle: 'How great leaders inspire everyone to take action',
+                author: 'Simon Sinek',
+            },
+            {
+                title: 'Moral Tribes: ',
+                subtitle: 'Emotion, reason and the gap between us and them',
+                author: 'Joshua Greene',
+            },
+            {
+                title: 'Drive: ',
+                subtitle: 'The surprising truth about what motivates us',
+                author: 'Daniel H. Pink',
+            },
+            { title: 'The Power of Habit', author: 'Charles Duhigg' },
+            {
+                title: 'Difficult Conversations',
+                author: 'Douglas Stone, Sheila Heen, Bruce Patton',
+            },
+            {
+                title: 'Leading Snowflakes: ',
+                subtitle: 'The Engineering Manager Handbook',
+                author: 'Oren Ellenbogen',
+            },
+            { title: 'Managing Oneself', author: 'Peter Drucker' },
+            { title: 'The soul of leadership', author: 'Deepak Chopra' },
+            { title: 'Managing Humans', author: 'Michael Lopp' },
+            { title: 'The Purpose Economy', author: 'Aaron Hurst' },
+            {
+                title: '7 Spiritual Laws of Success',
+                author: 'Deepak Chopra',
+            },
+            {
+                title: 'Leading with Cultural Intelligence',
+                author: 'David Livermore, PhD',
+            },
+            { title: `Times' Triad`, author: 'Christian Barbosa' },
+            {
+                title: 'The Power of Vulnerability',
+                author: 'Brené Brown, PhD',
+            },
+            { title: `A Leader's Diary`, author: 'Luciano Pires' },
+            { title: 'Disguised Opportunities', author: 'Carlos Domingos' },
+            {
+                title: 'Leader with a Master Mind',
+                author: 'Jamil Albuquerque',
+            },
+            {
+                title: 'The Icarus Deception: ',
+                subtitle: 'How High Will You Fly',
+                author: 'Seth Godin',
+            },
+            {
+                title: 'Tribes: ',
+                subtitle: 'We need you to guide us',
+                author: 'Seth Godin',
+            },
+            { title: 'Startup', author: 'Jessica Livingston' },
+            { title: 'Do The Work', author: 'Steven Pressfield' },
+            { title: 'The Dip', author: 'Seth Godin' },
+            {
+                title: 'V is for Vulnerable: ',
+                subtitle: 'Life outside the comfort zone',
+                author: 'Seth Godin',
+            },
+            { title: 'Anything You Want', author: 'Derek Sivers' },
+            {
+                title: 'What is Your Legacy? ',
+                subtitle: 'Provocative Thoughts About Ethics, Leadership and Management',
+                author: 'Mario Sergio Cortella',
+            },
+            {
+                title: `The Entrepreneur's Guide to Customer Development`,
+                author: 'Brant Cooper',
+            },
+            {
+                title: 'The Monk and the Executive',
+                author: 'James C. Hunter',
+            },
+            {
+                title: `The Triumph's Law for the 21st century`,
+                author: 'Napoleon Hill, Jamil Albuquerque',
+            },
+            {
+                title: 'The Art of Dealing With People',
+                author: 'Jamil Albuquerque',
+            },
+            { title: 'How to Grow a Business', author: 'Eric Crowell' },
+            { title: 'Getting Things Done', author: 'David Allen' },
+        ],
     },
 };
 

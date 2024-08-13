@@ -5,6 +5,7 @@ import { faCalendarAlt as faCalendar, faCommentDots } from '@fortawesome/free-re
 import { faCaretRight, faGraduationCap, faInfo, faUniversity, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import Books from '@components/cv/sections/offtopic';
 import AnchoredHeader from '@lib/anchored-header.jsx';
 
 import './style.css';
@@ -15,6 +16,7 @@ export default class Education extends Component {
     render() {
         const isVerbose = this.props.isVerbose;
         const education = this.props.data;
+        const booksData = this.props.booksData;
 
         const academyCourses = education.academyCourses.map((entry, i) => {
             const date = isVerbose ? (
@@ -60,14 +62,18 @@ export default class Education extends Component {
         );
 
         if (!isVerbose) {
+            const bookCount = booksData.software.length + booksData.softSkills.length;
+            const courseCount = education.relevantCourses.length;
+            const eventCount = education.relevantEvents.length;
+
             otherEducation = (
                 <>
                     <AnchoredHeader level='3' id='other-education'>
                         Other
                     </AnchoredHeader>
                     <div>
-                        Over {education.relevantCourses.length} courses taken and {education.relevantEvents.length} events
-                        attended on software, entrepreneurship, leadership and self development. See all of them at{' '}
+                        Over {courseCount} courses and specializations taken, {bookCount} books read and {eventCount} events
+                        attended on software engineering, entrepreneurship, leadership and self development. See all of them at{' '}
                         <a href=' /cv/verbose#relevant-courses'>luiz.dev/cv/verbose</a>.
                     </div>
                 </>
@@ -117,6 +123,8 @@ export default class Education extends Component {
                     </AnchoredHeader>
 
                     <div className='events grid-container'>{relevantEvents}</div>
+
+                    <Books data={booksData} />
                 </>
             );
         }

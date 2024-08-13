@@ -1,5 +1,5 @@
+import type CVData from '@components/cv/cvData.d';
 import { Component } from 'react';
-import ReactAutoLink from 'react-autolink';
 
 import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +13,7 @@ import './style.css';
 
 fontAwesomeLibrary.add(faCaretRight, faBook, faCommentDots);
 
-const createBookEntry = (entry, i) => (
+const createBookEntry = (entry: any, i: number) => (
     <div className='book icon-grid-container' key={i}>
         <FontAwesomeIcon icon={faCaretRight} />
         <span>
@@ -25,31 +25,15 @@ const createBookEntry = (entry, i) => (
     </div>
 );
 
-export default class OffTopic extends Component {
+export default class Books extends Component<{ data: CVData['books'] }> {
     render() {
-        const books = this.props.data.books;
+        const books = this.props.data;
         const softwareBooks = books.software.map(createBookEntry);
         const softSkillsBooks = books.softSkills.map(createBookEntry);
-        const freeTime = this.props.data.freeTime.map((entry, i) => (
-            <p key={i} className='first'>
-                {ReactAutoLink.autolink(entry, {
-                    target: '_blank',
-                    key: `link${i}`,
-                })}
-            </p>
-        ));
 
         return (
             <section>
-                <AnchoredHeader level='2' id='not-so-off-topics'>
-                    <span>(The not so)</span> Off topics
-                    <small>
-                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
-                        Some other things that help shaping the professional I am
-                    </small>
-                </AnchoredHeader>
-
-                <AnchoredHeader level='3'>Relevant content</AnchoredHeader>
+                <AnchoredHeader level='3'>Relevant books read</AnchoredHeader>
 
                 <AnchoredHeader level='4' id='relevant-content-software-development'>
                     <FontAwesomeIcon icon={faBook} />
@@ -64,7 +48,7 @@ export default class OffTopic extends Component {
 
                 <AnchoredHeader level='4' id='relevant-content-entrepreneurship'>
                     <FontAwesomeIcon icon={faBook} />
-                    Soft Skills
+                    <em>Hard</em> Skills
                     <small>
                         <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
                         {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
@@ -72,10 +56,6 @@ export default class OffTopic extends Component {
                 </AnchoredHeader>
 
                 <div className='books grid-container'>{softSkillsBooks}</div>
-
-                {/* <AnchoredHeader level='3'>Free time</AnchoredHeader> */}
-
-                {/* {freeTime} */}
             </section>
         );
     }

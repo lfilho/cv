@@ -72,7 +72,7 @@ interface Language {
     level: string;
 }
 
-interface Book {
+export interface Book {
     title: string;
     subtitle?: string;
     author: string;
@@ -98,11 +98,8 @@ export default interface CVData {
     };
     languages: Language[];
     noteworthy: string[];
-    offTopic: {
-        books: {
-            software: Book[];
-            softSkills: Book[];
-        };
-        freeTime: string[];
+    books: {
+        software: Book[];
+        softSkills: Book[];
     };
 }
