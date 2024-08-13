@@ -18,9 +18,13 @@ export default class Experience extends Component {
         const isVerbose = this.props.isVerbose;
         const softwareEngineeringXps = this.props.data.softwareEngineering.map((entry, i) => {
             const keywords = entry.keywords.map((entry, i) => (
-                <span className='keyword' key={i}>
-                    {entry}
-                </span>
+                <>
+                    <span className='keyword' key={i}>
+                        <span className='hidden-hashtag'>#</span>
+                        {entry}
+                    </span>
+                    <span className='keyword-spacer'> </span>
+                </>
             ));
 
             const positions = entry.positions.join('<span class="promotion-signal"> ➜ </span>');
@@ -104,9 +108,13 @@ export default class Experience extends Component {
 
             volunteerXps = this.props.data.volunteer.map((entry, i) => {
                 const keywords = entry.keywords.map((entry, i) => (
-                    <span className='keyword' key={i}>
-                        {entry}
-                    </span>
+                    <>
+                        <span className='keyword' key={i}>
+                            <span className='hidden-hashtag'>#</span>
+                            {entry}
+                        </span>
+                        <span className='keyword-spacer'> </span>
+                    </>
                 ));
 
                 return (
