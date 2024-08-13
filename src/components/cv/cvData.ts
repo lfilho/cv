@@ -34,7 +34,7 @@ export const cvData: CVData = {
             github: { href: 'https://github.com/lfilho', display: '/lfilho' },
         },
         introduction: [
-            `A people first geek building impactful products and high performing, engaged teams for ~{{CAREER_TENURE}} years.`,
+            `A people first geek building impactful products and high-performing, engaged teams for ~{{CAREER_TENURE}} years.`,
             `I grow organizations of all sizes with efficient and low touch processes.`,
             `I grow people with empathy, trust, mentorship and accountability.`,
             `I'm continually <a href='#education'>upskilling myself</a> and love <a href='#speaking-or-teaching'>sharing what I know</a>. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga' target='_blank'>Topmate</a> profiles.`,

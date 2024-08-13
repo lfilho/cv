@@ -67,7 +67,7 @@ export default class Education extends Component {
                     </AnchoredHeader>
                     <div>
                         Over {education.relevantCourses.length} courses taken and {education.relevantEvents.length} events
-                        attended on software, entrepreneurship, leadership and self development. See more details at{' '}
+                        attended on software, entrepreneurship, leadership and self development. See all of them at{' '}
                         <a href=' /cv/verbose#relevant-courses'>luiz.dev/cv/verbose</a>.
                     </div>
                 </>

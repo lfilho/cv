@@ -27,8 +27,8 @@ export default class Experience extends Component {
             let description = isVerbose
                 ? entry.description
                 : entry.shortDescription.length > 0
-                    ? entry.shortDescription
-                    : entry.description;
+                  ? entry.shortDescription
+                  : entry.description;
             description = parseExperienceDescription(description);
 
             return (
@@ -71,7 +71,7 @@ export default class Experience extends Component {
 
                     <div>
                         Over {instructorOrSpeakerXps} experiences as an instructor or speaker and {volunteerXps} volunteer
-                        positions around leadership, web development, community and the arts. See more details at{' '}
+                        positions around leadership, web development, community and the arts. See all of them at{' '}
                         <a href='/cv/verbose#speaking-or-teaching'>luiz.dev/cv/verbose</a>.
                     </div>
                 </>
