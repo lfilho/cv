@@ -30,6 +30,7 @@ export default defineConfig({
     server: { port: SERVER_PORT },
     site: BASE_URL,
     redirects: {
+        '/': '/cv',
         '/cv/pdf': pdfOutPathRelative,
     },
     integrations: [react(), sitemap()],
