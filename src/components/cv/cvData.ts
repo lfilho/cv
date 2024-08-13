@@ -153,8 +153,8 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    `<strong>As the Frontend team lead:</strong> helped the PM with agile ceremonies and backlog prioritization; liason with the team manager in the UK headquarters`,
-                    `<strong>As a Senior Frontend Engineer</strong>: worked existing and new feature development on Brandwatch's main product (Analytics); refactored thousands of files o0 a 5-year-old jQuery codebase, improving bundle size, patching security vulnerabilities, and enabling new features to be used`,
+                    `<strong>As the Frontend team lead:</strong> helped the PM with agile ceremonies and backlog prioritization; liaison with the team manager in the UK headquarters`,
+                    `<strong>As a Senior Frontend Engineer</strong>: worked existing and new feature development on Brandwatch's main product (Analytics); refactored thousands of files on a 5-year-old jQuery codebase, improving bundle size, patching security vulnerabilities, and enabling new features to be used`,
                 ],
             },
             {
@@ -328,7 +328,7 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    'At Interagi, I developed CRUD applications and did some programatic image processing',
+                    'At Interagi, I developed CRUD applications and did some programmatic image processing',
                     'At DR Sistemas, I developed a Backend application for the public law sector',
                 ],
             },
@@ -351,7 +351,7 @@ export const cvData: CVData = {
                     'Continuous Integration',
                 ],
                 description: [
-                    'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to web platform. Tech, tools and paradigms shift.',
+                    'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to a web platform. Tech, tools and paradigms shift.',
                     'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
                     'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
                 ],
