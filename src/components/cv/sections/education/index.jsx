@@ -6,6 +6,7 @@ import { faCaretRight, faGraduationCap, faInfo, faUniversity, faLanguage } from 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Books from '@components/cv/sections/offtopic';
+import Noteworthy from '@components/cv/sections/noteworthy';
 import AnchoredHeader from '@lib/anchored-header.jsx';
 
 import './style.css';
@@ -17,6 +18,7 @@ export default class Education extends Component {
         const isVerbose = this.props.isVerbose;
         const education = this.props.data;
         const booksData = this.props.booksData;
+        const noteworthyData = this.props.noteworthyData;
 
         const academyCourses = education.academyCourses.map((entry, i) => {
             const date = isVerbose ? (
@@ -32,7 +34,7 @@ export default class Education extends Component {
 
                     <FontAwesomeIcon icon={faUniversity} fixedWidth />
                     <span>
-                        {entry.school}–{entry.location}
+                        {entry.school} – {entry.location}
                     </span>
 
                     {date}
@@ -65,6 +67,7 @@ export default class Education extends Component {
             const bookCount = booksData.software.length + booksData.softSkills.length;
             const courseCount = education.relevantCourses.length;
             const eventCount = education.relevantEvents.length;
+            const noteworthyCount = noteworthyData.length;
 
             otherEducation = (
                 <>
@@ -72,9 +75,9 @@ export default class Education extends Component {
                         Other
                     </AnchoredHeader>
                     <div>
-                        Over {courseCount} courses and specializations taken, {bookCount} books read and {eventCount} events
-                        attended on software engineering, entrepreneurship, leadership and self development. See all of them at{' '}
-                        <a href=' /cv/verbose#relevant-courses'>luiz.dev/cv/verbose</a>.
+                        Over {courseCount} courses and specializations taken, {bookCount} books read, {eventCount} events attended
+                        and {noteworthyCount} achievements on software engineering, entrepreneurship, leadership and self growth.
+                        See all of them at <a href=' /cv/verbose#relevant-courses'>luiz.dev/cv/verbose</a>.
                     </div>
                 </>
             );
@@ -125,20 +128,26 @@ export default class Education extends Component {
                     <div className='events grid-container'>{relevantEvents}</div>
 
                     <Books data={booksData} />
+
+                    <Noteworthy data={noteworthyData} />
                 </>
             );
         }
 
         return (
-            <section>
-                <AnchoredHeader level='2'>Education</AnchoredHeader>
-                <div className='academy-courses grid-container'>{academyCourses}</div>
+            <>
+                <section>
+                    <AnchoredHeader level='2'>Education</AnchoredHeader>
+                    <div className='academy-courses grid-container'>{academyCourses}</div>
+                </section>
 
-                <AnchoredHeader level='3'>Languages</AnchoredHeader>
-                <div className='languages grid-container'>{languages}</div>
+                <section>
+                    <AnchoredHeader level='3'>Languages</AnchoredHeader>
+                    <div className='languages grid-container'>{languages}</div>
+                </section>
 
-                {otherEducation}
-            </section>
+                <section>{otherEducation}</section>
+            </>
         );
     }
 }

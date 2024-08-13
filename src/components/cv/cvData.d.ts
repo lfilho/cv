@@ -72,7 +72,7 @@ interface Language {
     level: string;
 }
 
-export interface Book {
+interface Book {
     title: string;
     subtitle?: string;
     author: string;
