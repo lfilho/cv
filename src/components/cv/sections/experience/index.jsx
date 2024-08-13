@@ -37,7 +37,7 @@ export default class Experience extends Component {
 
             return (
                 <div className='xp' key={i}>
-                    <aside className='grid-container'>
+                    <h3 className='grid-container'>
                         <div className='job-data'>
                             <FontAwesomeIcon icon={faBuilding} fixedWidth />
                             <span dangerouslySetInnerHTML={{ __html: positions }} />
@@ -50,7 +50,7 @@ export default class Experience extends Component {
                                 {entry.startDate} – {entry.endDate}
                             </span>
                         </div>
-                    </aside>
+                    </h3>
                     <article>
                         <div className='description'>{description}</div>
                     </article>

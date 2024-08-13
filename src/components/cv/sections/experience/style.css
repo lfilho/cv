@@ -1,11 +1,18 @@
 .xp {
-    padding: 1em 0;
     border-top: 1px solid #ccc;
+    padding: 0 0 0.5em 0;
 }
 
-.xp aside {
+.xp:first-child {
+    border-top: none;
+}
+
+.xp h3 {
     color: var(--highlight-black);
     font-weight: bold;
+    font-size: 100%;
+    border: none;
+    padding: 0;
 }
 .xp .grid-container {
     grid-template-columns: auto 12rem;
@@ -14,11 +21,6 @@
 
 .xp article {
     margin: 0.5rem auto;
-}
-
-.xp:first-child {
-    border-top: none;
-    padding: 0 0 1em 0;
 }
 
 .description strong {
