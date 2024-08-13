@@ -37,7 +37,7 @@ export const cvData: CVData = {
             `A people first geek building impactful products and high-performing, engaged teams for ~{{CAREER_TENURE}} years.`,
             `I grow organizations of all sizes with efficient and low touch processes.`,
             `I grow people with empathy, trust, mentorship and accountability.`,
-            `I'm continually <a href='#education'>upskilling myself</a> and love <a href='#speaking-or-teaching'>sharing what I know</a>. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga' target='_blank'>Topmate</a> profiles.`,
+            `I'm continually <a href='#education'>upskilling myself</a> and love <a href='#speaking-or-teaching'>sharing what I know</a>. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles.`,
         ],
     },
     experience: {
@@ -1000,6 +1000,11 @@ export const cvData: CVData = {
             { title: 'Java: How to Program', author: 'Deitel' },
         ],
         softSkills: [
+            {
+                title: 'An Elegant Puzzle',
+                subtitle: 'Systems of Engineering Management',
+                author: 'Will Larson',
+            },
             {
                 title: 'Conscious Business',
                 subtitle: 'How to build value through values',
