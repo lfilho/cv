@@ -76,12 +76,3 @@
     color: var(--primary-gray);
     border: 1px solid var(--primary-gray);
 }
-
-.hidden-hashtag {
-    color: transparent;
-    font-size: 0.1em;
-}
-
-.keyword-spacer {
-    font-size: 1px;
-}

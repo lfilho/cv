@@ -8,6 +8,7 @@ import Experience from '@components/cv/sections/experience';
 import Header from '@components/cv/sections/header';
 import Languages from '@components/cv/sections/languages';
 import Noteworthy from '@components/cv/sections/noteworthy';
+import Skills from '@components/cv/sections/skills';
 
 import { cvData, cvKeywords } from '@components/cv/cvData';
 
@@ -31,4 +32,5 @@ const keywordList = cvKeywords.join(', ');
         noteworthyData={cvData.noteworthy}
         isVerbose={isVerbose}
     />
+    <Skills data={cvKeywords} isVerbose={isVerbose} />
 </CVLayout>

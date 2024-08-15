@@ -159,3 +159,8 @@ h4,
     margin: 0.3rem 0;
     font-size: 90%;
 }
+
+.hidden-comma {
+    color: transparent;
+    font-size: 1px;
+}

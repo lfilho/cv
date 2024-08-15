@@ -20,19 +20,24 @@ export default class Experience extends Component {
             const keywords = entry.keywords.map((entry, i) => (
                 <>
                     <span className='keyword' key={i}>
-                        <span className='hidden-hashtag'>#</span>
+                        <span className='hidden-comma'>, </span>
                         {entry}
                     </span>
-                    <span className='keyword-spacer'> </span>
                 </>
             ));
+            const keywordsSection = isVerbose && (
+                <div className='job-keywords'>
+                    <FontAwesomeIcon icon={faHashtag} fixedWidth />
+                    <span>{keywords}</span>
+                </div>
+            );
 
             const positions = entry.positions.join('<span class="separator-highlight"> ➜ </span>');
             let description = isVerbose
                 ? entry.description
                 : entry.shortDescription.length > 0
-                  ? entry.shortDescription
-                  : entry.description;
+                    ? entry.shortDescription
+                    : entry.description;
             description = parseExperienceDescription(description);
 
             return (
@@ -54,10 +59,7 @@ export default class Experience extends Component {
                     <article>
                         <div className='description'>{description}</div>
                     </article>
-                    <div className='job-keywords'>
-                        <FontAwesomeIcon icon={faHashtag} fixedWidth />
-                        <span>{keywords}</span>
-                    </div>
+                    {keywordsSection}
                 </div>
             );
         });
@@ -110,10 +112,9 @@ export default class Experience extends Component {
                 const keywords = entry.keywords.map((entry, i) => (
                     <>
                         <span className='keyword' key={i}>
-                            <span className='hidden-hashtag'>#</span>
+                            <span className='hidden-comma'>, </span>
                             {entry}
                         </span>
-                        <span className='keyword-spacer'> </span>
                     </>
                 ));
 
