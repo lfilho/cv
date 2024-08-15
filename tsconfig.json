@@ -14,7 +14,7 @@
             ],
             "@lib/*": [
                 "src/lib/*"
-            ],
+            ]
         },
         "jsx": "react-jsx",
         "jsxImportSource": "react",
@@ -23,6 +23,6 @@
                 "name": "@astrojs/ts-plugin"
             }
         ],
-        "strict": true,
-    },
+        "strict": true
+    }
 }
