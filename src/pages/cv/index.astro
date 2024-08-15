@@ -9,13 +9,26 @@ import Header from '@components/cv/sections/header';
 import Languages from '@components/cv/sections/languages';
 import Noteworthy from '@components/cv/sections/noteworthy';
 
-import { cvData } from '@components/cv/cvData';
+import { cvData, cvKeywords } from '@components/cv/cvData';
 
 const isVerbose = Astro.props.isVerbose || false;
+const url = cvData.header.contact.url.href;
+const name = cvData.header.name;
+const author = `${name.first} ${name.last}, ${name.title}`;
+const pageTitle = `${author} - Software Engineering Leader`;
+const description = cvData.header.introduction.join(' ');
+
+const keywordList = cvKeywords.join(', ');
 ---
 
-<CVLayout>
-    <Header data={cvData.header} isVerbose={isVerbose}/>
-    <Experience data={cvData.experience} isVerbose={isVerbose}/>
-    <Education data={cvData.education} languageData={cvData.languages} booksData={cvData.books} noteworthyData={cvData.noteworthy} isVerbose={isVerbose}/>
+<CVLayout url={url} name={name} author={author} pageTitle={pageTitle} description={description} keywordList={keywordList}>
+    <Header data={cvData.header} isVerbose={isVerbose} />
+    <Experience data={cvData.experience} isVerbose={isVerbose} />
+    <Education
+        data={cvData.education}
+        languageData={cvData.languages}
+        booksData={cvData.books}
+        noteworthyData={cvData.noteworthy}
+        isVerbose={isVerbose}
+    />
 </CVLayout>

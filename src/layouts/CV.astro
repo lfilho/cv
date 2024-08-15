@@ -2,16 +2,9 @@
 import '@components/cv/css/base.css';
 import '@components/cv/css/normalize.css';
 import '@components/cv/css/print.css';
-import { cvData, cvKeywords } from '@components/cv/cvData';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-const url = cvData.header.contact.url.href;
-const name = cvData.header.name;
-const author = `${name.first} ${name.last}, ${name.title}`;
-const pageTitle = `${author} - Software Engineering Leader`;
-const description = cvData.header.introduction.join(' ');
-
-const keywordList = cvKeywords.join(', ');
+const { url, name, author, pageTitle, description, keywordList } = Astro.props;
 ---
 
 <!doctype html>
