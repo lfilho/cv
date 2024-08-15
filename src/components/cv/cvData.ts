@@ -35,8 +35,7 @@ export const cvData: CVData = {
         },
         introduction: [
             `A people first geek building impactful products and high-performing, engaged teams for ~{{CAREER_TENURE}} years.`,
-            `I grow organizations of all sizes with efficient and low touch processes.`,
-            `I grow people with empathy, trust, mentorship and accountability.`,
+            `I grow people with empathy, trust, mentorship and accountability and organizations of all sizes with efficient and low touch processes.`,
             `I'm continually <a href='#education'>upskilling myself</a> and love sharing what I know. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles.`,
         ],
     },
