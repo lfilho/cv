@@ -28,7 +28,7 @@
     font-weight: normal;
 }
 
-.job-data .at {
+.separator-highlight {
     color: var(--primary-blue);
     font-weight: bold;
 }
@@ -39,7 +39,9 @@
 
 .job-keywords {
     text-align: right;
+    font-size: 0.9rem;
 }
+
 .job-keywords .fa-fw {
     vertical-align: middle;
     margin: 0;
@@ -50,13 +52,12 @@
     border: none;
     text-indent: 0;
 }
-
-.volunteer .job-keywords {
+.volunteer.xp .period {
     text-align: left;
 }
 
-.promotion-signal {
-    color: var(--primary-blue);
+.volunteer .job-keywords {
+    text-align: left;
 }
 
 .keyword {

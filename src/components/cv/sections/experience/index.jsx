@@ -27,7 +27,7 @@ export default class Experience extends Component {
                 </>
             ));
 
-            const positions = entry.positions.join('<span class="promotion-signal"> ➜ </span>');
+            const positions = entry.positions.join('<span class="separator-highlight"> ➜ </span>');
             let description = isVerbose
                 ? entry.description
                 : entry.shortDescription.length > 0
@@ -41,7 +41,7 @@ export default class Experience extends Component {
                         <div className='job-data'>
                             <FontAwesomeIcon icon={faBuilding} fixedWidth />
                             <span dangerouslySetInnerHTML={{ __html: positions }} />
-                            <span className='at'> @ </span>
+                            <span className='separator-highlight'> @ </span>
                             <span className='org'>{entry.company}</span>
                         </div>
                         <div className='period'>

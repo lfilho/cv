@@ -37,7 +37,7 @@ export const cvData: CVData = {
             `A people first geek building impactful products and high-performing, engaged teams for ~{{CAREER_TENURE}} years.`,
             `I grow organizations of all sizes with efficient and low touch processes.`,
             `I grow people with empathy, trust, mentorship and accountability.`,
-            `I'm continually <a href='#education'>upskilling myself</a> and love <a href='#speaking-or-teaching'>sharing what I know</a>. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles.`,
+            `I'm continually <a href='#education'>upskilling myself</a> and love sharing what I know. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles.`,
         ],
     },
     experience: {
@@ -47,9 +47,9 @@ export const cvData: CVData = {
                 endDate: 'present',
                 company: 'Coursera',
                 positions: ['Software Engineering Manager', 'Senior Software Engineering Manager'],
-                keywords: ['edTech', 'education', 'aws'],
+                keywords: ['edTech', 'education', 'aws', 'google apps scripts'],
                 shortDescription: [
-                    `<strong>Cultivated talent</strong>: managed several teams and charters, promoted engineers to Senior, Staff and Manager`,
+                    `<strong>Cultivated talent</strong>: managed several teams and charters, hired promoted engineers to Senior, Staff and Manager`,
                     `<strong>Drove Enterprise growth</strong>: led key Enterprise initiatives and products, unlocking several millions of dollars in revenue yearly`,
                     `<strong>Enhanced organizational efficiency</strong>: conceptualized, implemented and improved several team and org-wide processes, resulting in improved metrics and accountability, reduced touchpoints and better-informed leadership decision-making`,
                     `<strong>Championed DE&I and well-being</strong>: authored and drove different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
@@ -99,8 +99,9 @@ export const cvData: CVData = {
                     `Amazon Payments`,
                     [
                         `Team owning 2 charters (International Expansion integrations and Payment on Delivery)`,
-                        `Delivered amazon.com.tr (Amazon Turkey) payments integration. This multi-year project involved weekly collaboration and coordination with different teams, roles, partners, vendors in different countries`,
+                        `Led a cross-functional team to deliver the end-to-end payments integration for Amazon Turkey (amazon.com.tr). This multi-year project involved weekly collaboration and coordination with different teams, roles, partners and vendors in different countries`,
                         `First team to start PSD2 work that enabled Amazon to stay complaint in Europe (SEPA DD)`,
+                        `Owned Payment on Delivery for India market`,
                     ],
                     `AWS Route53`,
                     [
@@ -112,7 +113,7 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    `<strong>At Amazon Payments</strong>: led a multi-year payments integrations effort involving international and cross-department collaboration to launch Amazon in Turkey; drove early adoption of PSD2 regulations, ensuring European market compliance ahead of competitors; owned Payment on Delivery for the Indian market`,
+                    `<strong>At Amazon Payments</strong>: led a cross-functional team to deliver the end-to-end payments integration for Amazon Turkey (amazon.com.tr), involving international and cross-department collaboration and materializing Amazon's expansion in Europe; drove early adoption of PSD2 regulations, ensuring European market compliance ahead of competitors; owned Payment on Delivery for India market`,
                     `<strong>At AWS Route53</strong>: hired and grew a team from scratch; measurably improved operational efficiency, accessibility, and usability across five different products; owned multiple product roadmaps and delivered two global product launches, expanding AWS Route53's presence into new markets and regions`,
                     `<strong>Drove organizational change and fostered inclusion:</strong> improved our sourcing efficiency by ~32% and our pipeline's diversity by ~11%; championed an engineering-wide policy to promote inclusion and belonging; as a certified Cultural Competences for Teams instructor, trained hundreds of leaders and engineers around diversity and inclusion`,
                     `<strong>Mentored and supported other managers:</strong> served on the Software Engineering Manager Peer Advisory board, providing guidance and support to peers`,
