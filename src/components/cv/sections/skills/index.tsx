@@ -1,10 +1,5 @@
 import { Component } from 'react';
 
-import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHashtag } from '@fortawesome/free-solid-svg-icons';
-fontAwesomeLibrary.add(faHashtag);
-
 import AnchoredHeader from '@lib/anchored-header.jsx';
 
 export default class Skills extends Component {
