@@ -4,7 +4,7 @@ import AnchoredHeader from '@lib/anchored-header.jsx';
 
 export default class Noteworthy extends Component {
     render() {
-        const entries = this.props.data.map(entry => <li>{entry}</li>);
+        const entries = this.props.data.map((entry, i) => <li key={i}>{entry}</li>);
 
         return (
             <section>
