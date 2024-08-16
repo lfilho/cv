@@ -362,9 +362,9 @@ export const cvData: CVData = {
                     'Continuous Integration',
                 ],
                 description: [
-                    'Vega Sistemas, Goiânia, Brazil — Consultancy on migrating a desktop application to a web platform. Tech, tools and paradigms shift.',
-                    'SENAC Goiás, Goiânia, Brazil — Consultancy on web development, best practices, productivity tools, agile methodologies and comparison of dynamic versus compiled languages.',
-                    'Federal University of Goiás — Development of the Public contest (Vestibular) system and website.',
+                    'Vega Sistemas, Goiânia, Brazil — High-level architecture on migrating a desktop application to a web platform',
+                    'SENAC Goiás, Goiânia, Brazil — Consultancy on web development best practices, productivity tools, agile methodologies and programming languages for their internal develoopment department',
+                    'Federal University of Goiás — Developed their public admission (Vestibular) system and website',
                 ],
                 shortDescription: [],
             },
