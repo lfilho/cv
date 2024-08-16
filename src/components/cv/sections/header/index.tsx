@@ -71,8 +71,8 @@ export default class Header extends Component {
                         <li className='contact mail'>
                             <FontAwesomeIcon icon={faEnvelope} fixedWidth />
                             <span>
-                                <a className='u-email' href={'mailto:' + contact.email}>
-                                    {contact.email}
+                                <a className='u-email' href={'mailto:' + contact.email.href}>
+                                    {contact.email.display}
                                 </a>
                             </span>
                         </li>

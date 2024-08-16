@@ -17,7 +17,7 @@ interface URL {
 interface Contact {
     phone: { raw: string; formatted: string };
     url: URL;
-    email: string;
+    email: URL;
     linkedin: URL;
     twitter?: URL;
     topmate: URL;
@@ -47,7 +47,7 @@ interface VolunteerXp {
     keywords: string[];
 }
 
-interface Experience {}
+interface Experience { }
 
 interface Degree extends Event {
     school: string;

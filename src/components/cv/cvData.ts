@@ -14,24 +14,24 @@ export const cvData: CVData = {
         contact: {
             phone: { raw: '', formatted: '' },
             url: { href: 'https://luiz.dev', display: 'www.luiz.dev' },
-            email: 'lfilho@gmail.com',
+            email: { href: 'lfilho@gmail.com', display: 'Email' },
             linkedin: {
                 href: 'https://linkedin.com/in/luizgonzaga',
-                display: 'linkedin.com/in/luizgonzaga',
+                display: 'LinkedIn',
             },
             topmate: {
                 href: 'https://topmate.io/luizgonzaga',
-                display: 'topmate.io/luizgonzaga',
+                display: 'Topmate',
             },
             // twitter: {
             //     href: 'https://twitter.com/luizmarelo',
-            //     display: 'twitter.com/luizmarelo',
+            //     display: 'Twitter',
             // },
             speakerdeck: {
                 href: 'https://speakerdeck.com/lfilho',
-                display: 'speakerdeck.com/lfilho',
+                display: 'SpeakerDeck',
             },
-            github: { href: 'https://github.com/lfilho', display: 'github.com/lfilho' },
+            github: { href: 'https://github.com/lfilho', display: 'GitHub' },
         },
         introduction: [
             `A brazillian-canadian people-first leader building impactful products and high-performing teams for ~{{CAREER_TENURE}} years.`,
