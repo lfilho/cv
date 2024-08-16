@@ -31,9 +31,15 @@
     color: var(--primary-blue);
     font-weight: bold;
 }
+.xp .job-data,
+.xp .period {
+    display: inline-block;
+}
 
 .xp .period {
+    float: right;
     text-align: right;
+    margin-left: 0.2rem;
 }
 
 .job-keywords {

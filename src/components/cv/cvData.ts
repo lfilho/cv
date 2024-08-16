@@ -59,8 +59,8 @@ export const cvData: CVData = {
                     'B2B',
                 ],
                 shortDescription: [
-                    `<strong>Cultivated talent</strong>: managed several teams and charters, hired promoted engineers to Senior, Staff and Manager`,
-                    `<strong>Drove Enterprise growth</strong>: led key Enterprise initiatives and products, unlocking several millions of dollars in revenue yearly`,
+                    `<strong>Drove Enterprise growth</strong>: led key Enterprise initiatives and products, unlocking double digits of millions of dollars in recurring revenue`,
+                    `<strong>Grew the Enterprise org</strong>: managed several teams and charters, hired and promoted engineers to Senior, Staff and Manager`,
                     `<strong>Enhanced organizational efficiency</strong>: conceptualized, implemented and improved several team and org-wide processes, resulting in improved metrics and accountability, reduced touchpoints and better-informed leadership decision-making`,
                     `<strong>Championed DE&I and well-being</strong>: authored and drove different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
                 ],
@@ -306,8 +306,9 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    `<strong>Full-stack Development:</strong> developed REST APIs and core MVC applications. Led mobile responsiveness efforts and performance optimization initiatives, significantly reducing network calls and minimizing source code for a faster UX`,
-                    `<strong>Team Leadership:</strong> Responsible for the frontend strategy, conventions, quality, performance improvements and training new team members`,
+                    `Developed REST APIs and core MVC applications during the startups growth phase`,
+                    `Led mobile responsiveness efforts and performance optimization initiatives, significantly reducing network calls and minimizing source code for a faster UX, especially on mobile devices`,
+                    `Responsible for the frontend strategy, conventions, quality, performance improvements and training new team members`,
                 ],
             },
             {
@@ -323,7 +324,7 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    `Worked as a full-stack engineer on the Government's Human Capital Management (HCM) system, supporting payroll and other features for over 200k people`,
+                    `Maintained the State's payroll and other Human Capital Management (HCM) systems for over 200k employees and citizens`,
                     `Led several performance, usability and accessibility improvements`,
                 ],
             },
@@ -341,8 +342,8 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    'At Interagi, I developed CRUD applications and did some programmatic image processing',
-                    'At DR Sistemas, I developed a Backend application for the public law sector',
+                    '<strong>Interagi:</strong> developed CRUD applications and did some programmatic image processing',
+                    '<strong>DR Sistemas:</strong> developed a Backend application for the public law sector',
                 ],
             },
             {
@@ -362,9 +363,9 @@ export const cvData: CVData = {
                     'Continuous Integration',
                 ],
                 description: [
-                    'Vega Sistemas, Goiânia, Brazil — High-level architecture on migrating a desktop application to a web platform',
-                    'SENAC Goiás, Goiânia, Brazil — Consultancy on web development best practices, productivity tools, agile methodologies and programming languages for their internal develoopment department',
-                    'Federal University of Goiás — Developed their public admission (Vestibular) system and website',
+                    '<strong>Vega Sistemas, Brazil:</strong> High-level architecture on migrating a desktop application to a web platform',
+                    '<strong>SENAC Goiás, Brazil:</strong> Consultancy on web development best practices, productivity tools, agile methodologies and programming languages for their internal develoopment department',
+                    '<strong>Federal University of Goiás, Brazil:</strong> Developed their public admission (Vestibular) system and website',
                 ],
                 shortDescription: [],
             },

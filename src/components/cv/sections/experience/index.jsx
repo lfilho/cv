@@ -42,7 +42,7 @@ export default class Experience extends Component {
 
             return (
                 <div className='xp' key={i}>
-                    <h3 className='grid-container'>
+                    <h3>
                         <div className='job-data'>
                             <FontAwesomeIcon icon={faBuilding} fixedWidth />
                             <span dangerouslySetInnerHTML={{ __html: positions }} />
