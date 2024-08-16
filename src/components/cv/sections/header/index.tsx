@@ -44,73 +44,73 @@ export default class Header extends Component {
                     <span className='p-family-name'>{name.last}</span>
                     <span className='p-honorific-suffix'>, {name.title}</span>
                 </h1>
-
-                <main>
-                    <aside>
-                        <section className='contacts'>
-                            <div className='contact adr'>
-                                <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
-                                <span className='p-locality'>{location.city}</span>
-                                <span>, </span>
-                                <span className='p-country-name'>{location.country}</span>
-                            </div>
-                            {/*
-                            <div className='contact phone'>
+                <aside>
+                    <ul className='contacts'>
+                        <li className='contact adr'>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
+                            <span className='p-locality'>{location.city}</span>
+                            <span>, </span>
+                            <span className='p-country-name'>{location.country}</span>
+                        </li>
+                        {/*
+                            <li className='contact phone'>
                                 <i className='fa fa-fw fa-mobile'></i>
                                 <span>
                                     <a className='p-tel' href={'tel:+' + phone.raw}>{phone.formatted}</a>
                                 </span>
-                            </div>
+                            </li>
                             */}
-                            <div className='contact website'>
-                                <FontAwesomeIcon icon={faHome} fixedWidth />
-                                <span>
-                                    <a className='u-url' href={contact.url.href}>
-                                        {contact.url.display}
-                                    </a>
-                                </span>
-                            </div>
-                            <div className='contact mail'>
-                                <FontAwesomeIcon icon={faEnvelope} fixedWidth />
-                                <span>
-                                    <a className='u-email' href={'mailto:' + contact.email}>
-                                        {contact.email}
-                                    </a>
-                                </span>
-                            </div>
-                            <div className='linkedin'>
-                                <FontAwesomeIcon icon={faLinkedin} fixedWidth />
-                                <a className='url' href={contact.linkedin.href}>
-                                    {contact.linkedin.display}
+                        <li className='contact website'>
+                            <FontAwesomeIcon icon={faHome} fixedWidth />
+                            <span>
+                                <a className='u-url' href={contact.url.href}>
+                                    {contact.url.display}
                                 </a>
-                            </div>
-                            <div className='topmate'>
-                                <FontAwesomeIcon icon={faHandshake} fixedWidth />
-                                <a className='url' href={contact.topmate.href}>
-                                    {contact.topmate.display}
+                            </span>
+                        </li>
+                        <li className='contact mail'>
+                            <FontAwesomeIcon icon={faEnvelope} fixedWidth />
+                            <span>
+                                <a className='u-email' href={'mailto:' + contact.email}>
+                                    {contact.email}
                                 </a>
-                            </div>
+                            </span>
+                        </li>
+                        <li className='linkedin'>
+                            <FontAwesomeIcon icon={faLinkedin} fixedWidth />
+                            <a className='url' href={contact.linkedin.href}>
+                                {contact.linkedin.display}
+                            </a>
+                        </li>
+                        <li className='topmate'>
+                            <FontAwesomeIcon icon={faHandshake} fixedWidth />
+                            <a className='url' href={contact.topmate.href}>
+                                {contact.topmate.display}
+                            </a>
+                        </li>
 
-                            {/* <div className='twitter'>
+                        {/* <li className='twitter'>
                                 <FontAwesomeIcon icon={faTwitter} fixedWidth />
                                 <a className='url' href={contact.twitter.href}>
                                     {contact.twitter.display}
                                 </a>
-                            </div> */}
-                            <div className='speakerdeck'>
-                                <FontAwesomeIcon icon={faChalkboardTeacher} fixedWidth />
-                                <a className='url' href={contact.speakerdeck.href}>
-                                    {contact.speakerdeck.display}
-                                </a>
-                            </div>
-                            <div className='github'>
-                                <FontAwesomeIcon icon={faGithub} fixedWidth />
-                                <a className='url' href={contact.github.href}>
-                                    {contact.github.display}
-                                </a>
-                            </div>
-                        </section>
-                    </aside>
+                            </li> */}
+                        <li className='speakerdeck'>
+                            <FontAwesomeIcon icon={faChalkboardTeacher} fixedWidth />
+                            <a className='url' href={contact.speakerdeck.href}>
+                                {contact.speakerdeck.display}
+                            </a>
+                        </li>
+                        <li className='github'>
+                            <FontAwesomeIcon icon={faGithub} fixedWidth />
+                            <a className='url' href={contact.github.href}>
+                                {contact.github.display}
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <main>
                     {introParagraphs}
                     {linkToAlternateVersion}
                 </main>

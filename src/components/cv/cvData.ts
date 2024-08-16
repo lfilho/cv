@@ -17,21 +17,21 @@ export const cvData: CVData = {
             email: 'lfilho@gmail.com',
             linkedin: {
                 href: 'https://linkedin.com/in/luizgonzaga',
-                display: '/luizgonzaga',
+                display: 'linkedin.com/in/luizgonzaga',
             },
             topmate: {
                 href: 'https://topmate.io/luizgonzaga',
-                display: '/luizgonzaga',
+                display: 'topmate.io/luizgonzaga',
             },
             // twitter: {
             //     href: 'https://twitter.com/luizmarelo',
-            //     display: '/luizmarelo',
+            //     display: 'twitter.com/luizmarelo',
             // },
             speakerdeck: {
                 href: 'https://speakerdeck.com/lfilho',
-                display: '/lfilho',
+                display: 'speakerdeck.com/lfilho',
             },
-            github: { href: 'https://github.com/lfilho', display: '/lfilho' },
+            github: { href: 'https://github.com/lfilho', display: 'github.com/lfilho' },
         },
         introduction: [
             `A brazillian-canadian people-first leader building impactful products and high-performing teams for ~{{CAREER_TENURE}} years.`,

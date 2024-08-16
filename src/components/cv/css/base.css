@@ -60,17 +60,6 @@ h2 {
     line-height: 1.3rem;
 }
 
-h1 {
-    font-size: 2rem;
-    color: var(--highlight-black);
-    border-bottom: 0.2rem solid #008cba;
-    padding-bottom: 1rem;
-    font-weight: bold;
-    letter-spacing: -0.15rem;
-    font-variant-ligatures: common-ligatures;
-    line-height: 1em;
-}
-
 h2 {
     border-bottom: 0.15rem solid #008cba;
     margin: 1.3rem 0;
@@ -112,10 +101,6 @@ h4,
 h5,
 h6 {
     position: relative;
-}
-
-header {
-    min-height: 14em;
 }
 
 .header-link {

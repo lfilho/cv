@@ -1,5 +1,31 @@
-.vcard aside {
-    float: left;
-    margin: 0 2rem 1.5rem 0;
+h1 {
+    font-size: 2rem;
     color: var(--highlight-black);
+    /* padding-bottom: 1rem; */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: -0.15rem;
+    font-variant-ligatures: common-ligatures;
+    line-height: 1em;
+}
+
+.vcard aside {
+    margin: 0.5rem auto 0.9rem auto;
+    padding: 0 0 0.5rem 0;
+    color: var(--highlight-black);
+    border-bottom: 0.2rem solid #008cba;
+}
+.vcard ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vcard li {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    padding: 0;
+    font-size: 0.85rem;
+}
+header main {
 }
