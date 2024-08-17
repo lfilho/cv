@@ -576,14 +576,14 @@ export const cvData: CVData = {
                 date: 'Jun 2011',
                 school: 'Federal University of Goiás',
                 location: 'Brazil',
-                info: ['Extra studies on Software Engineering', 'Relative average grade: 85%'],
+                info: ['Relative average grade: 85%'],
             },
             {
                 title: 'Computer Science, Visiting Student',
                 date: '2010/1',
                 school: `Saint Mary's University`,
                 location: 'Canada',
-                info: ['Emerging Leaders of America Scholarship', '2nd round on Trumped Competition'],
+                info: ['Won the Emerging Leaders of America Scholarship'],
             },
         ],
         relevantCourses: [

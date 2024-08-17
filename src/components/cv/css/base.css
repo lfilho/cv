@@ -61,6 +61,7 @@ h2 {
 }
 
 h2 {
+    color: var(--primary-blue);
     border-bottom: 0.15rem solid #008cba;
     margin: 1.3rem 0;
 }

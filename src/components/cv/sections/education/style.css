@@ -1,3 +1,14 @@
-.academy-courses.grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+h2#education {
+    margin-bottom: 0;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.education section {
+    flex: 1 0 auto;
+}
+.education section:last-child {
+    flex-basis: 25%;
 }
