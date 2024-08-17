@@ -4,24 +4,14 @@ import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faBuilding, faCalendarAlt as faCalendar, faClock } from '@fortawesome/free-regular-svg-icons';
-import { faBusinessTime, faLaptopCode, faMicrophone, faHashtag, faTicketAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faMicrophone, faHashtag, faTicketAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import AnchoredHeader from '@lib/anchored-header.jsx';
 import parseExperienceDescription from '@lib/array-to-html-list';
 
 import './style.css';
 
-fontAwesomeLibrary.add(
-    faHashtag,
-    faUser,
-    faBuilding,
-    faClock,
-    faTicketAlt,
-    faCalendar,
-    faMicrophone,
-    faLaptopCode,
-    faBusinessTime,
-);
+fontAwesomeLibrary.add(faHashtag, faUser, faBuilding, faClock, faTicketAlt, faCalendar, faMicrophone, faLaptopCode);
 
 export default class Experience extends Component {
     render() {
@@ -186,8 +176,7 @@ export default class Experience extends Component {
         return (
             <section>
                 <AnchoredHeader level='2' id='Experience'>
-                    <FontAwesomeIcon icon={faBusinessTime} fixedWidth />
-                    &nbsp;Experience
+                    Experience
                 </AnchoredHeader>
 
                 <div>{softwareEngineeringXps}</div>
