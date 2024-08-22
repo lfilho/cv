@@ -30,6 +30,7 @@
 .separator-highlight {
     color: var(--primary-blue);
     font-weight: bold;
+    margin: 0 0.3rem;
 }
 .xp .job-data,
 .xp .period {
