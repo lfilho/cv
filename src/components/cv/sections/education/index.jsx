@@ -23,10 +23,10 @@ export default class Education extends Component {
         const academyCourses = education.academyCourses.map((entry, i) => {
             const info = isVerbose
                 ? entry.info.map((info, i) => (
-                    <>
-                        <span> {info}</span>
-                    </>
-                ))
+                      <>
+                          <span> {info}</span>
+                      </>
+                  ))
                 : null;
 
             const date = isVerbose ? (
@@ -40,7 +40,7 @@ export default class Education extends Component {
                 <li className='academy-course' key={i}>
                     <span>{entry.title}</span>
 
-                    <span className='separator-highlight'> @ </span>
+                    <span className='separator-highlight'> @&nbsp;</span>
                     <span>
                         {entry.school} – {entry.location}
                     </span>

@@ -42,11 +42,11 @@ export default class Experience extends Component {
 
             return (
                 <div className='xp' key={i}>
-                    <h3>
+                    <h3 className='grid-container'>
                         <div className='job-data'>
                             <FontAwesomeIcon icon={faLaptopCode} fixedWidth />
                             <span dangerouslySetInnerHTML={{ __html: positions }} />
-                            <span className='separator-highlight'> @ </span>
+                            <span className='separator-highlight'> @&nbsp;</span>
                             <span className='org'>{entry.company}</span>
                         </div>
                         <div className='period'>

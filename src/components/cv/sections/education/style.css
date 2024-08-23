@@ -4,11 +4,11 @@ h2#education {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 .education section {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
 }
 .education section:last-child {
-    flex-basis: 25%;
+    flex-basis: 33%;
 }
