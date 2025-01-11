@@ -35,7 +35,7 @@ export const cvData: CVData = {
         },
         introduction: [
             `A people-first leader building high-performing teams and scaling organizations for ~{{CAREER_TENURE}} years.`,
-            `I'm continually <a href='#education'>upskilling myself</a> and love sharing what I know. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles.`,
+            `I'm continually <a href='#education'>upskilling myself</a> and love sharing what I know. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles (where I've been recognized as a top 1% mentor globally and top 100 in Canada).`,
         ],
     },
     experience: {
