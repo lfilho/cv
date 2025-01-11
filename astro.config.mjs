@@ -32,6 +32,7 @@ export default defineConfig({
     redirects: {
         '/': '/cv',
         '/cv/pdf': pdfOutPathRelative,
+        '/book-me': 'https://topmate.io/luizgonzaga',
     },
     integrations: [react(), sitemap()],
 });
