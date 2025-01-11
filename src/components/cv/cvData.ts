@@ -58,10 +58,10 @@ export const cvData: CVData = {
                     'B2B',
                 ],
                 shortDescription: [
-                    `<strong>Drove Enterprise growth</strong>: led key Enterprise initiatives and products, unlocking double digits of millions of dollars in recurring revenue`,
+                    `<strong>Drove Enterprise growth</strong>: by leading key Enterprise initiatives, unlocking 7 figures of dollars in recurring revenue`,
                     `<strong>Grew the Enterprise org</strong>: managed several teams and charters, hired and promoted engineers to Senior, Staff and Manager`,
-                    `<strong>Enhanced organizational efficiency</strong>: conceptualized, implemented and improved several team and org-wide processes, resulting in improved metrics and accountability, reduced touchpoints and better-informed leadership decision-making`,
-                    `<strong>Championed DE&I and well-being</strong>: authored and drove different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
+                    `<strong>Enhanced organizational efficiency</strong> with org-wide processes, improving metrics and accountability, reducing touchpoints, improving leadership decision-making and recouping 6 figures of dollars per quarter`,
+                    `<strong>Championed DE&I and well-being</strong> by authoring and driving different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
                 ],
                 description: [
                     `Managed several teams and charters in the Enterprise org:`,
