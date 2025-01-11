@@ -34,8 +34,7 @@ export const cvData: CVData = {
             github: { href: 'https://github.com/lfilho', display: 'GitHub' },
         },
         introduction: [
-            `A brazillian-canadian people-first leader building impactful products and high-performing teams for ~{{CAREER_TENURE}} years.`,
-            `I grow people with empathy, trust and accountability and organizations of all sizes with efficient and low-touch processes.`,
+            `A people-first leader building high-performing teams and scaling organizations for ~{{CAREER_TENURE}} years.`,
             `I'm continually <a href='#education'>upskilling myself</a> and love sharing what I know. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles.`,
         ],
     },
@@ -118,9 +117,9 @@ export const cvData: CVData = {
                     ],
                     `AWS Route53`,
                     [
-                        `Started a team from scratch, hiring 7 engineers`,
+                        `Hired a specialized team from scratch, creating interfaces with other teams in the org`,
                         `Responsible for maintaining existing and building new generations of different Route53's User Experience (Consoles) with measurable operational, accessibility and usability improvements`,
-                        `Owned 5 different products in 2 different tech stacks, serving different sub- orgs with different stakeholders`,
+                        `Owned 5 different products in 2 different tech stacks, serving different sub-orgs with different stakeholders`,
                         `Launched two world-wide projects and expanded our presence to multiple new partitions and regions`,
                         `Improved Route53's sourcing efficiency by ~32% and our candidate diversity by ~11%`,
                     ],
@@ -211,8 +210,7 @@ export const cvData: CVData = {
                     `DataEasy provides different solutions for end-to-end electronic document process management and automation. It has Brazil's biggest private and government organizations as their clients.`,
                     `Technical contributions:`,
                     [
-                        `Managed 5 teams and 4 charters (all their products)`,
-                        `Hired for a new team from scratch (5 engineers and 1 Business Analyst)`,
+                        `Doubled the Engineering org to 5 teams and 4 charters (all their products), hiring teams from scratch, creating new roles and interfaces`,
                         `Migrated the company's infrastructure to Git and Github`,
                         `Implement Semantic Versioning to all products in the company`,
                         `Implemented the company's first automated release script`,
