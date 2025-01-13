@@ -1,0 +1,117 @@
+---
+import Layout from '@layouts/BookMeLayout.astro';
+import { getCareerTenure } from '@lib/shared/career-tenure';
+
+const experience = getCareerTenure();
+const checkmarkPathElement = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+</svg>`;
+---
+
+<Layout title="Book a Mentoring Session">
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">Book a Mentoring Session</h1>
+      <p class="text-xl text-gray-600">Take your skills to the next level and expand your network</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      {/* Left column - Benefits */}
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold mb-6">Why Book a Session?</h2>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <Fragment set:html={checkmarkPathElement} />
+            <div>
+              <h3 class="font-medium">Personalized Guidance</h3>
+              <p class="text-gray-600">Get tailored advice specific to your goals and challenges</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <Fragment set:html={checkmarkPathElement} />
+            <div>
+              <h3 class="font-medium">Nothing beats experience</h3>
+              <p class="text-gray-600">I offer {experience}+ years of experience. Learn industry best practices and avoid common pitfalls</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <Fragment set:html={checkmarkPathElement} />
+            <div>
+              <h3 class="font-medium">Affordable pricing</h3>
+              <p class="text-gray-600">I already have a full-time job 😉. I'm happy to share what I know and I'll be honing my communication and mentoring skills while at it. I'm also happy to provide a discount for URG (ping me <a href="https://www.linkedin.com/in/luizgonzaga/" class="text-blue-600 hover:text-blue-800 underline" target="_blank">on LinkedIn</a> first) and adjust pricing to your local currency.</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <Fragment set:html={checkmarkPathElement} />
+            <div>
+              <h3 class="font-medium">Session or Sessão?</h3>
+              <p class="text-gray-600">Sessions in English or Portuguese 🙌</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right column - Booking Calendar */}
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-2xl font-semibold mb-6">Schedule Your Session</h2>
+        {/* Replace with your preferred booking widget */}
+        <div class="bg-white p-4 rounded shadow-sm">
+          <p class="text-gray-600 mb-4">I use the Topmate platform to schedule sessions. Click the button below to view available times.</p>
+          {/* Add your booking widget embed code here */}
+          <a 
+            href="https://topmate.io/luizgonzaga" 
+            class="block w-full bg-blue-600 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
+          >
+            Open my profile on Topmate
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Testimonials Section */}
+    <div class="mt-16">
+      <h2 class="text-2xl font-semibold mb-8 text-center">What Others Say</h2>
+      <p class="text-gray-600 mb-4">Here's some feedback received. Feel free to check more testimonials and recommendations on my <a href="https://www.linkedin.com/in/luizgonzaga/#recommendations" class="text-blue-600 hover:text-blue-800 underline" target="_blank">LinkedIn</a> and <a href="https://topmate.io/luizgonzaga#testimonials" class="text-blue-600 hover:text-blue-800 underline" target="_blank">Topmate</a> profiles.</p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <q class="text-gray-600 italic mb-4 block">Luiz have offered me a personalized approach. He took the time to understand my background, skills, and career goals. He skillfully highlighted my achievements and skills while providing valuable feedback on structure and clarity. He encouraged my input and feedback throughout, making me feel like a valued partner in the resume improvement process. He efficiently delivered a polished resume within the promised timeframe, which was crucial for my job applications. In short, his personalized, detail-oriented, collaborative, and timely approach made my CV much much better.</q>
+          <p class="font-medium">— Leandro Moreira (Senior Software Engineer)</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <q class="text-gray-600 italic mb-4 block">I recently completed a series of five mentorship sessions with Luiz and the experience has been transformative for my professional development. [...] After gradually incorporating his feedback on my methods I could say I am a better engineer now, more connected with the required mindset the tech industry demands when it comes to focusing on impact and providing business value. Proof of this is that while we were working together, I was immersed in multiple job interview processes and I ended up with two offers in my inbox. Implementing his advice made me get a raise of 10% in my salary and get additional perks not in the original offer.</q>
+          <p class="font-medium">— Bernardo Garcia (Senior SRE)</p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <q class="text-gray-600 italic mb-4 block">Luiz helped me review my resumé, showing me with great care how to communicate professionally, explaining why I should make each change, how this information reaches recruiters, and how to connect my skills with business interests. As a result, I got hired by a great company. Highly recommend!</q>
+          <p class="font-medium">— Enio Amarantes (Software Engineer)</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <q class="text-gray-600 italic mb-4 block">Luiz is not only an experienced professional, but also very friendly and attentive to detail! He knows what companies are looking for in a candidate and helped me restructure my CV, besides giving me insightful career advice. I can totally recommend!</q>
+          <p class="font-medium">— Filipe Mendonça (Software Engineer)</p>
+        </div>
+      </div>
+    
+      <div class="mt-8 flex justify-center gap-4">
+        <a 
+          href="https://www.linkedin.com/in/luizgonzaga/#recommendations" 
+          class="inline-block px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition duration-200"
+          target="_blank"
+        >
+          See more testimonials on LinkedIn
+        </a>
+        <a 
+          href="https://topmate.io/luizgonzaga#testimonials" 
+          class="inline-block px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition duration-200"
+          target="_blank"
+        >
+          See more testimonials on Topmate
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+

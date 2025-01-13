@@ -4,16 +4,9 @@ import { faHandshake } from '@fortawesome/free-regular-svg-icons';
 import { faChalkboardTeacher, faEnvelope, faHome, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Component } from 'react';
+import { getCareerTenure } from '../../../../lib/shared/career-tenure';
 
 import './style.css';
-
-const CAREER_START_YEAR: 2003 = 2003;
-const today: Date = new Date();
-const currentYear: number = today.getFullYear();
-const currentMonth: number = today.getMonth() + 1;
-const fractionalYear: number = currentMonth > 6 ? 0.5 : 0;
-
-const CAREER_TENURE: number = currentYear + fractionalYear - CAREER_START_YEAR;
 
 fontAwesomeLibrary.add(faMapMarkerAlt, faHome, faGithub, faLinkedin, faTwitter, faHandshake, faEnvelope);
 
@@ -22,7 +15,7 @@ export default class Header extends Component {
         const isVerbose = this.props.isVerbose;
         const { name, location, contact } = this.props.data;
         const introduction = this.props.data.introduction;
-        introduction[0] = introduction[0].replace(`{{CAREER_TENURE}}`, `${CAREER_TENURE}`);
+        introduction[0] = introduction[0].replace(`{{CAREER_TENURE}}`, `${getCareerTenure()}`);
         const introParagraphs: JSX.Element[] = introduction.map((entry: string, i: number) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: entry }} />
         ));

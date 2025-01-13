@@ -2,6 +2,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import { pdfOutPathRelative } from '/src/lib/pdf-details.js';
+import tailwind from '@astrojs/tailwind';
 
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
@@ -32,7 +33,6 @@ export default defineConfig({
     redirects: {
         '/': '/cv',
         '/cv/pdf': pdfOutPathRelative,
-        '/book-me': 'https://topmate.io/luizgonzaga',
     },
-    integrations: [react(), sitemap()],
+    integrations: [react(), sitemap(), tailwind()],
 });
