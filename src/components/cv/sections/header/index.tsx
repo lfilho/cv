@@ -4,7 +4,7 @@ import { faHandshake } from '@fortawesome/free-regular-svg-icons';
 import { faChalkboardTeacher, faEnvelope, faHome, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Component } from 'react';
-import { getCareerTenure } from '../../../../lib/shared/career-tenure';
+import { getCareerTenure } from '../../../../lib/career-tenure';
 
 import './style.css';
 

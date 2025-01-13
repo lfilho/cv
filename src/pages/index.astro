@@ -1,15 +1,105 @@
 ---
-import Intro from '@components/Intro.astro';
-import PageMeta from '@components/PageMeta.astro';
-import { SITE_TITLE } from '../config';
-import PageLayout from '@layouts/PageLayout.astro';
+import Layout from '@layouts/BookMeLayout.astro';
+import { cvData } from '@components/cv/cvData';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faHandshake } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faGlobe, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHandshake);
 ---
 
-<PageLayout>
-    <PageMeta title={`${SITE_TITLE}`} slot='meta' />
-    <Fragment slot='main'>
-        <Intro />
-    </Fragment>
-</PageLayout>
+<Layout title="Luiz Gonzaga">
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">Hi, I'm Luiz Gonzaga</h1>
+      <p class="text-xl text-gray-600"><em>I like software and people :)</em></p>
+    </div>
 
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <h2 class="text-2xl font-semibold mb-4">View My CV</h2>
+        <p class="text-gray-600 mb-6">Explore my professional experience, skills, and achievements in tech and leadership.</p>
+        <div class="space-y-3">
+          <a 
+            href="/cv" 
+            class="inline-block w-full bg-blue-600 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
+          >
+            View CV
+          </a>
+          <a 
+            href="/cv/pdf" 
+            class="inline-block w-full border-2 border-blue-600 text-blue-600 text-center py-3 px-4 rounded-lg hover:bg-blue-50 transition duration-200"
+          >
+            Download PDF Version
+          </a>
+        </div>
+      </div>
 
+      <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <h2 class="text-2xl font-semibold mb-4">Book a Session</h2>
+        <p class="text-gray-600 mb-6">Schedule a mentoring session for personalized guidance on your tech career.</p>
+        <a 
+          href="/book-me" 
+          class="inline-block w-full bg-blue-600 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
+        >
+          Book Now
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="max-w-4xl mx-auto px-4 py-8 border-t">
+    <div class="flex justify-center gap-6">
+      <a 
+        href={cvData.header.contact.linkedin.href}
+        class="text-gray-600 hover:text-blue-600 relative group"
+        target="_blank"
+        title="See my profile on LinkedIn"
+      >
+        <FontAwesomeIcon icon={faLinkedin} className="text-2xl" client:load />
+        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">
+          See my profile on LinkedIn
+        </span>
+      </a>
+
+      <a 
+        href={cvData.header.contact.github.href}
+        class="text-gray-600 hover:text-gray-900 relative group"
+        target="_blank"
+        title="See my profile on GitHub"
+      >
+        <FontAwesomeIcon icon={faGithub} className="text-2xl" />
+        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">
+          See my profile on GitHub
+        </span>
+      </a>
+
+      <a 
+        href={cvData.header.contact.speakerdeck.href}
+        class="text-gray-600 hover:text-orange-600 relative group"
+        target="_blank"
+        title="See my presentations on SpeakerDeck"
+      >
+        <FontAwesomeIcon icon={faChalkboardTeacher} className="text-2xl" />
+        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">
+          See my presentations on SpeakerDeck
+        </span>
+      </a>
+
+      <a 
+        href={cvData.header.contact.topmate.href}
+        class="text-gray-600 hover:text-green-600 relative group"
+        target="_blank"
+        title="Book a mentoring session on Topmate"
+      >
+        <FontAwesomeIcon icon={faHandshake} className="text-2xl" client:load />
+        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">
+          Book a mentoring session on Topmate
+        </span>
+      </a>
+    </div>
+  </footer>
+</Layout>
