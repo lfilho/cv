@@ -41,6 +41,18 @@ export const cvData: CVData = {
     experience: {
         softwareEngineering: [
             {
+                startDate: 'Oct 2023',
+                endDate: 'present',
+                company: 'Topmate.io',
+                positions: ['Mentor'],
+                keywords: ['Mentorship'],
+                shortDescription: [
+                    `Awarded <strong>top 1% mentors globally</strong> and <strong>top 100 mentors in Canada</strong>`,
+                ],
+                description: [`Awarded <strong>top 1% mentors globally</strong> and <strong>top 100 mentors in Canada</strong>`],
+            },
+
+            {
                 startDate: 'Feb 2021',
                 endDate: 'present',
                 company: 'Coursera',
