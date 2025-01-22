@@ -46,9 +46,7 @@ export const cvData: CVData = {
                 company: 'Topmate.io',
                 positions: ['Mentor'],
                 keywords: ['Mentorship'],
-                shortDescription: [
-                    `Awarded <strong>top 1% mentors globally</strong> and <strong>top 100 mentors in Canada</strong>`,
-                ],
+                shortDescription: [`Awarded <strong>top 1%</strong> globally and <strong>top 100</strong> in Canada`],
                 description: [`Awarded <strong>top 1% mentors globally</strong> and <strong>top 100 mentors in Canada</strong>`],
             },
 
