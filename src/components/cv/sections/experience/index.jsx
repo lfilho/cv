@@ -36,8 +36,8 @@ export default class Experience extends Component {
             let description = isVerbose
                 ? entry.description
                 : entry.shortDescription.length > 0
-                    ? entry.shortDescription
-                    : entry.description;
+                  ? entry.shortDescription
+                  : entry.description;
             description = parseExperienceDescription(description);
 
             return (
@@ -121,17 +121,17 @@ export default class Experience extends Component {
                 return (
                     <div className='volunteer xp' key={i}>
                         <div className='job-data'>
-                            <div className='period icon-grid-container'>
+                            <div className='period'>
                                 <FontAwesomeIcon icon={faClock} fixedWidth />
                                 <span>
                                     {entry.date} – {entry.location}
                                 </span>
                             </div>
-                            <div className='company icon-grid-container'>
+                            <div className='company'>
                                 <FontAwesomeIcon icon={faBuilding} fixedWidth />
                                 <span className='org'>{entry.organization}</span>
                             </div>
-                            <div className='position icon-grid-container'>
+                            <div className='position'>
                                 <FontAwesomeIcon icon={faUser} fixedWidth />
                                 <span>{entry.position}</span>
                             </div>
