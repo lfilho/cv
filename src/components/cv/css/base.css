@@ -102,6 +102,7 @@ h4,
 h5,
 h6 {
     position: relative;
+    font-weight: bold;
 }
 
 .header-link {
