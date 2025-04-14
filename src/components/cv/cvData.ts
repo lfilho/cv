@@ -596,6 +596,12 @@ export const cvData: CVData = {
         ],
         relevantCourses: [
             {
+                title: 'Agentic AI and AI Agents: A Primer for Leaders',
+                school: 'Vanderbilt University',
+                date: 'Apr 2025',
+                duration: 12,
+            },
+            {
                 title: 'Foundations of Cybersecurity',
                 school: 'Google',
                 date: 'Feb 2024',
