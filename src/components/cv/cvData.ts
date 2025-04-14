@@ -1027,12 +1027,12 @@ export const cvData: CVData = {
         ],
         softSkills: [
             {
-                title: 'An Elegant Puzzle',
+                title: 'An Elegant Puzzle: ',
                 subtitle: 'Systems of Engineering Management',
                 author: 'Will Larson',
             },
             {
-                title: 'Conscious Business',
+                title: 'Conscious Business: ',
                 subtitle: 'How to build value through values',
                 author: 'Fred Kofman',
             },
