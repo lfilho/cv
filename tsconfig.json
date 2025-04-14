@@ -24,5 +24,8 @@
             }
         ],
         "strict": true
-    }
+    },
+    "include": [
+        "src/**/*",
+    ],
 }
