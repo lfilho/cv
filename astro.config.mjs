@@ -33,9 +33,7 @@ export default defineConfig({
     site: BASE_URL,
 
     redirects: {
-        // FIXME: wainting on https://github.com/withastro/astro/issues/13607
-        // '/cv/pdf': pdfOutPathRelative,
-        '/cv/pdf': 'https://luiz.dev/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf',
+        '/cv/pdf': pdfOutPathRelative,
     },
 
     integrations: [react(), sitemap()],
