@@ -46,7 +46,7 @@
         "express": "^5.1.0",
         "globby": "^14.1.0",
         "gray-matter": "^4.0.3",
-        "playwright": "^1.51.1",
+        "playwright": "^1.55.1",
         "react": "^19.1.0",
         "react-autolink": "^0.2.1",
         "react-dom": "^19.1.0",
