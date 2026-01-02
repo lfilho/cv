@@ -6,17 +6,6 @@ import { chromium } from 'playwright';
 
 import { buildDir, pdfOutPath } from './pdf-details.js';
 
-import fs from 'fs';
-console.log(`############# Reading built files from ${buildDir}`);
-console.log('#############################################');
-console.log('#############################################');
-console.log('#############################################');
-console.log(fs.readdirSync(buildDir, { withFileTypes: true }));
-console.log('#############################################');
-console.log('#############################################');
-console.log('#############################################');
-console.log('#############################################');
-
 const app = express();
 app.use(express.static(buildDir));
 const server = http.createServer(app);

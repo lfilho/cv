@@ -1,6 +1,7 @@
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
+import { pdfOutPath } from '/src/lib/pdf-details.js';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -32,7 +33,7 @@ export default defineConfig({
     site: BASE_URL,
 
     redirects: {
-        '/cv/pdf': '/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf',
+        '/cv/pdf': pdfOutPath,
     },
 
     integrations: [react(), sitemap()],
