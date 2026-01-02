@@ -6,6 +6,17 @@ import { chromium } from 'playwright';
 
 import { buildDir, pdfOutPath } from './pdf-details.js';
 
+import fs from 'fs';
+console.log(`############# Reading built files from ${buildDir}`);
+console.log('#############################################');
+console.log('#############################################');
+console.log('#############################################');
+console.log(fs.readdirSync(buildDir, { withFileTypes: true }));
+console.log('#############################################');
+console.log('#############################################');
+console.log('#############################################');
+console.log('#############################################');
+
 const app = express();
 app.use(express.static(buildDir));
 const server = http.createServer(app);
@@ -17,9 +28,8 @@ console.log(`Server listening on http://localhost:${port}`);
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto(`http://localhost:${port}/cv`);
 console.log(`Generating PDF from http://localhost:${port}/cv`);
-await page.waitForLoadState('networkidle');
+await page.goto(`http://localhost:${port}/cv`, { waitUntil: 'networkidle', timeout: 60000 });
 console.log(`Exporting PDF`);
 await page.pdf({ path: pdfOutPath });
 console.log(`PDF exported to ${pdfOutPath}`);
