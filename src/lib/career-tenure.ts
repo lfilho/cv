@@ -6,4 +6,4 @@ export function getCareerTenure(): number {
     const fractionalYear: number = currentMonth > 6 ? 0.5 : 0;
 
     return currentYear + fractionalYear - CAREER_START_YEAR;
-} 
+}

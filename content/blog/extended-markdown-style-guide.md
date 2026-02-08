@@ -1,7 +1,7 @@
 ---
 external: false
-title: "Extended markdown style guide"
-description: "In addition to supporting all basic Markdoc syntax, this template also supports extended markdown syntax to render custom components."
+title: 'Extended markdown style guide'
+description: 'In addition to supporting all basic Markdoc syntax, this template also supports extended markdown syntax to render custom components.'
 date: 2022-11-01
 ---
 

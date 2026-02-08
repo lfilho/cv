@@ -192,6 +192,7 @@ This is a professional resume website built with modern web technologies, featur
 ```
 
 **Legend:**
+
 - ⚠️ = Critical file - read before modifying
 - Lines of code estimates provided where relevant
 
@@ -263,6 +264,7 @@ node src/lib/pdf-generator.js
 ```
 
 **How it works:**
+
 1. Starts Express server on ephemeral port
 2. Serves the built site from `dist/`
 3. Uses Playwright/Chromium to render `/cv` page
@@ -288,12 +290,13 @@ Serves the production build locally for testing before deployment.
 - Use TypeScript for all new files (`.ts`, `.tsx`, `.astro`)
 - Prefer interfaces over types for object shapes
 - Use path aliases for imports:
-  - `@pages/*` → `src/pages/*`
-  - `@components/*` → `src/components/*`
-  - `@layouts/*` → `src/layouts/*`
-  - `@lib/*` → `src/lib/*`
+    - `@pages/*` → `src/pages/*`
+    - `@components/*` → `src/components/*`
+    - `@layouts/*` → `src/layouts/*`
+    - `@lib/*` → `src/lib/*`
 
 **Example:**
+
 ```typescript
 // Good
 import PageLayout from '@layouts/PageLayout.astro';
@@ -344,6 +347,7 @@ export default function Counter() {
 ```
 
 **In Astro file:**
+
 ```astro
 ---
 import Counter from '@components/InteractiveCounter.tsx';
@@ -353,6 +357,7 @@ import Counter from '@components/InteractiveCounter.tsx';
 ```
 
 **Island directives:**
+
 - `client:load` - Load immediately
 - `client:idle` - Load when browser idle
 - `client:visible` - Load when visible in viewport
@@ -366,13 +371,16 @@ import Counter from '@components/InteractiveCounter.tsx';
 4. **CSS Variables:** Define in `:root` for theme consistency
 
 **Example:**
+
 ```astro
 ---
 import './MyComponent.css'; // Component-scoped styles
 ---
 
-<div class="flex items-center gap-4 text-primary"> <!-- Tailwind utilities -->
-    <span class="custom-badge">Badge</span> <!-- Custom CSS class -->
+<div class='flex items-center gap-4 text-primary'>
+    <!-- Tailwind utilities -->
+    <span class='custom-badge'>Badge</span>
+    <!-- Custom CSS class -->
 </div>
 
 <style>
@@ -387,6 +395,7 @@ import './MyComponent.css'; // Component-scoped styles
 ### Code Formatting
 
 **Prettier configuration (`.prettierrc.mjs`):**
+
 - **Tab width:** 4 spaces
 - **Line width:** 130 characters
 - **Quotes:** Single quotes (including JSX)
@@ -394,6 +403,7 @@ import './MyComponent.css'; // Component-scoped styles
 - **HTML whitespace:** Ignore for cleaner formatting
 
 **ESLint configuration (`.eslintrc.cjs`):**
+
 - Astro recommended rules
 - TypeScript parser
 - JSX A11y accessibility checks
@@ -405,15 +415,15 @@ import './MyComponent.css'; // Component-scoped styles
 Location: `content/blog/*.md`
 
 **Frontmatter schema:**
+
 ```yaml
 ---
-title: "Post Title"
-description: "Short description for SEO"
+title: 'Post Title'
+description: 'Short description for SEO'
 publishedDate: 2026-02-08
-tags: ["javascript", "react"]
-draft: false  # Set to true to hide from production
+tags: ['javascript', 'react']
+draft: false # Set to true to hide from production
 ---
-
 # Markdown content here
 ```
 
@@ -422,13 +432,13 @@ draft: false  # Set to true to hide from production
 Location: `content/projects/*.md`
 
 **Frontmatter schema:**
+
 ```yaml
 ---
-title: "Project Name"
-description: "Project description"
-url: "https://example.com"
+title: 'Project Name'
+description: 'Project description'
+url: 'https://example.com'
 ---
-
 # Project details in Markdown
 ```
 
@@ -458,6 +468,7 @@ Configuration: `src/lib/markdoc/markdoc.config.ts`
 4. Add meta tags with `<PageMeta />` component
 
 **Example:**
+
 ```astro
 ---
 // src/pages/about.astro
@@ -466,7 +477,7 @@ import PageMeta from '@components/PageMeta.astro';
 ---
 
 <PageLayout>
-    <PageMeta slot="meta" title="About" description="About this site" />
+    <PageMeta slot='meta' title='About' description='About this site' />
     <h1>About</h1>
     <p>Content here</p>
 </PageLayout>
@@ -483,12 +494,13 @@ Route: `https://luiz.dev/about`
 5. Build to see it in blog list
 
 **Example:**
+
 ```markdown
 ---
-title: "My New Post"
-description: "A great article about something"
+title: 'My New Post'
+description: 'A great article about something'
 publishedDate: 2026-02-08
-tags: ["tutorial", "astro"]
+tags: ['tutorial', 'astro']
 draft: false
 ---
 
@@ -505,15 +517,24 @@ This file contains all CV content as structured TypeScript data:
 
 ```typescript
 export const cvData = {
-    personalInfo: { /* ... */ },
-    experience: [/* ... */],
-    education: [/* ... */],
-    skills: [/* ... */],
+    personalInfo: {
+        /* ... */
+    },
+    experience: [
+        /* ... */
+    ],
+    education: [
+        /* ... */
+    ],
+    skills: [
+        /* ... */
+    ],
     // etc.
 };
 ```
 
 **Steps:**
+
 1. Read `src/components/cv/cvData.ts` to understand structure
 2. Read `src/components/cv/cvData.d.ts` for type definitions
 3. Modify data in `cvData.ts`
@@ -557,14 +578,12 @@ File-based routing in `src/pages/`:
 - `pages/api/data.json.ts` → `/api/data.json` (endpoint)
 
 **Dynamic routes:**
+
 ```astro
 ---
 // pages/blog/[slug].astro
 export async function getStaticPaths() {
-    return [
-        { params: { slug: 'post-1' } },
-        { params: { slug: 'post-2' } },
-    ];
+    return [{ params: { slug: 'post-1' } }, { params: { slug: 'post-2' } }];
 }
 
 const { slug } = Astro.params;
@@ -580,10 +599,12 @@ const { slug } = Astro.params;
 **File:** `.github/workflows/deploy.yml`
 
 **Trigger:**
+
 - Push to `main` branch
 - Manual workflow dispatch
 
 **Process:**
+
 1. Checkout repository
 2. Install dependencies with `@astrojs/action@v4`
 3. Build site (`npm run build`)
@@ -592,6 +613,7 @@ const { slug } = Astro.params;
 6. Deploy to GitHub Pages (`actions/deploy-pages@v4`)
 
 **Permissions required:**
+
 - `contents: write` (commit PDF)
 - `pages: write` (deploy to Pages)
 - `id-token: write` (OIDC authentication)
@@ -603,6 +625,7 @@ const { slug } = Astro.params;
 **File:** `.github/workflows/codeql-analysis.yml`
 
 **Trigger:**
+
 - Push to `main`
 - Pull requests
 - Weekly schedule (Fridays at 19:45 UTC)
@@ -622,10 +645,12 @@ npm run build
 ### Environment Variables
 
 **Build-time:**
+
 - `npm_lifecycle_script` - Used to detect build vs. dev mode
 - `BASE_URL` - Derived from build context (localhost or production)
 
 **GitHub Secrets (for Actions):**
+
 - `GH_TOKEN` - Required for committing PDF changes
 
 ### Custom Domain
@@ -640,42 +665,42 @@ This file ensures GitHub Pages uses the custom domain.
 
 ### Configuration Files
 
-| File | Purpose | Modify When |
-|------|---------|-------------|
-| `astro.config.mjs` | Astro build config, port, integrations, redirects | Adding integrations, changing server port, modifying redirects |
-| `tsconfig.json` | TypeScript config, path aliases, strict mode | Adding path aliases, adjusting type checking |
-| `tailwind.config.js` | Tailwind theme, plugins, content paths | Customizing design tokens, adding plugins |
-| `package.json` | Dependencies, scripts, project metadata | Adding dependencies, modifying scripts |
-| `.eslintrc.cjs` | Linting rules | Adjusting code quality standards |
-| `.prettierrc.mjs` | Code formatting rules | Changing formatting preferences |
-| `src/config.ts` | Site metadata (title, URL, social links) | Updating site information |
+| File                 | Purpose                                           | Modify When                                                    |
+| -------------------- | ------------------------------------------------- | -------------------------------------------------------------- |
+| `astro.config.mjs`   | Astro build config, port, integrations, redirects | Adding integrations, changing server port, modifying redirects |
+| `tsconfig.json`      | TypeScript config, path aliases, strict mode      | Adding path aliases, adjusting type checking                   |
+| `tailwind.config.js` | Tailwind theme, plugins, content paths            | Customizing design tokens, adding plugins                      |
+| `package.json`       | Dependencies, scripts, project metadata           | Adding dependencies, modifying scripts                         |
+| `.eslintrc.cjs`      | Linting rules                                     | Adjusting code quality standards                               |
+| `.prettierrc.mjs`    | Code formatting rules                             | Changing formatting preferences                                |
+| `src/config.ts`      | Site metadata (title, URL, social links)          | Updating site information                                      |
 
 ### Data Files
 
-| File | Purpose | Modify When |
-|------|---------|-------------|
-| `src/components/cv/cvData.ts` | **PRIMARY CV DATA SOURCE** - All resume content | Updating CV information, work history, skills |
-| `src/components/cv/cvData.d.ts` | TypeScript types for CV data | Adding new CV fields or sections |
-| `content/blog/*.md` | Blog post content | Publishing new articles |
-| `content/projects/*.md` | Project showcase content | Adding portfolio items |
+| File                            | Purpose                                         | Modify When                                   |
+| ------------------------------- | ----------------------------------------------- | --------------------------------------------- |
+| `src/components/cv/cvData.ts`   | **PRIMARY CV DATA SOURCE** - All resume content | Updating CV information, work history, skills |
+| `src/components/cv/cvData.d.ts` | TypeScript types for CV data                    | Adding new CV fields or sections              |
+| `content/blog/*.md`             | Blog post content                               | Publishing new articles                       |
+| `content/projects/*.md`         | Project showcase content                        | Adding portfolio items                        |
 
 ### Build Scripts
 
-| File | Purpose | Modify When |
-|------|---------|-------------|
-| `src/lib/pdf-generator.js` | PDF generation after build | Changing PDF output path, styling, or options |
-| `src/lib/pdf-details.js` | PDF path configuration | Changing PDF filename or location |
-| `post-install.js` | Post-install patch for dependencies | Fixing dependency issues |
+| File                       | Purpose                             | Modify When                                   |
+| -------------------------- | ----------------------------------- | --------------------------------------------- |
+| `src/lib/pdf-generator.js` | PDF generation after build          | Changing PDF output path, styling, or options |
+| `src/lib/pdf-details.js`   | PDF path configuration              | Changing PDF filename or location             |
+| `post-install.js`          | Post-install patch for dependencies | Fixing dependency issues                      |
 
 ### Layout & Components
 
-| File | Purpose | Use When |
-|------|---------|----------|
-| `src/layouts/CV.astro` | CV page layout with print styles | Creating CV pages |
-| `src/layouts/PageLayout.astro` | Standard page wrapper | Creating static pages |
-| `src/layouts/ContentLayout.astro` | Blog/content layout | Creating blog-style pages |
-| `src/components/PageMeta.astro` | SEO meta tags | Adding meta tags to pages |
-| `src/components/BlogPostMeta.astro` | Blog-specific meta tags | Blog posts with Open Graph |
+| File                                | Purpose                          | Use When                   |
+| ----------------------------------- | -------------------------------- | -------------------------- |
+| `src/layouts/CV.astro`              | CV page layout with print styles | Creating CV pages          |
+| `src/layouts/PageLayout.astro`      | Standard page wrapper            | Creating static pages      |
+| `src/layouts/ContentLayout.astro`   | Blog/content layout              | Creating blog-style pages  |
+| `src/components/PageMeta.astro`     | SEO meta tags                    | Adding meta tags to pages  |
+| `src/components/BlogPostMeta.astro` | Blog-specific meta tags          | Blog posts with Open Graph |
 
 ## Things to Watch Out For
 
@@ -712,12 +737,14 @@ import { cvData } from '../../../components/cv/cvData';
 #### 3. Astro vs React Components
 
 **Use Astro (`.astro`) for:**
+
 - Static content
 - Server-side rendering
 - Layouts and pages
 - SEO-critical content
 
 **Use React (`.tsx`) for:**
+
 - Interactive features (forms, toggles, animations)
 - Client-side state management
 - Real-time updates
@@ -730,11 +757,11 @@ All blog posts and projects require valid frontmatter:
 
 ```yaml
 ---
-title: "Required"
-description: "Required for SEO"
-publishedDate: 2026-02-08  # Required for blog posts
-tags: ["optional"]
-draft: false  # Optional, defaults to false
+title: 'Required'
+description: 'Required for SEO'
+publishedDate: 2026-02-08 # Required for blog posts
+tags: ['optional']
+draft: false # Optional, defaults to false
 ---
 ```
 
@@ -758,6 +785,7 @@ CV components include print-specific CSS:
 ```
 
 When modifying CV layout, test PDF output:
+
 ```bash
 npm run build
 open public/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf
@@ -792,11 +820,7 @@ import PageMeta from '@components/PageMeta.astro';
 ---
 
 <Layout>
-    <PageMeta
-        slot="meta"
-        title="Page Title"
-        description="Page description for search engines"
-    />
+    <PageMeta slot='meta' title='Page Title' description='Page description for search engines' />
     <!-- page content -->
 </Layout>
 ```
@@ -827,8 +851,9 @@ public/img/photo.jpg    → /img/photo.jpg
 ```
 
 Reference in code:
+
 ```astro
-<img src="/img/photo.jpg" alt="Photo" />
+<img src='/img/photo.jpg' alt='Photo' />
 ```
 
 #### 10. Post-Install Script
@@ -871,14 +896,15 @@ import Layout from '@layouts/PageLayout.astro';
 
 ```yaml
 ---
-title: "Work in Progress"
-draft: true  # ⚠️ Set to false when ready to publish
+title: 'Work in Progress'
+draft: true # ⚠️ Set to false when ready to publish
 ---
 ```
 
 #### ❌ Not Testing Print Styles
 
 Always test PDF output after modifying CV components:
+
 ```bash
 npm run build
 open public/cv/pdf/*.pdf
@@ -894,7 +920,7 @@ open public/cv/pdf/*.pdf
 
 <!-- Correct -->
 <Layout>
-    <PageMeta slot="meta" title="My Page" description="Description" />
+    <PageMeta slot='meta' title='My Page' description='Description' />
     <h1>My Page</h1>
 </Layout>
 ```

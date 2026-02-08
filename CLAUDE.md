@@ -7,6 +7,7 @@ This repository includes comprehensive documentation for AI assistants.
 **See [AGENTS.md](./AGENTS.md)** for the complete development guide.
 
 AGENTS.md contains:
+
 - Project overview and purpose
 - Technology stack and architecture
 - Directory structure and organization
@@ -23,10 +24,10 @@ AGENTS.md contains:
 1. **Read [AGENTS.md](./AGENTS.md)** - Comprehensive guide with everything you need
 2. **Check [README.md](./README.md)** - Project overview
 3. **Review key files:**
-   - `src/components/cv/cvData.ts` - Primary CV data source
-   - `astro.config.mjs` - Build configuration
-   - `package.json` - Scripts and dependencies
-   - `tsconfig.json` - TypeScript paths and settings
+    - `src/components/cv/cvData.ts` - Primary CV data source
+    - `astro.config.mjs` - Build configuration
+    - `package.json` - Scripts and dependencies
+    - `tsconfig.json` - TypeScript paths and settings
 
 ## Development Commands
 

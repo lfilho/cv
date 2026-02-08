@@ -1,22 +1,22 @@
 ---
 interface Props {
-  title: string;
+    title: string;
 }
 
-import "../styles/main-page.css";
+import '../styles/main-page.css';
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-    <meta name="description" content="Book a mentoring session with me" />
-  </head>
-  <body>
-    <slot />
-  </body>
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width' />
+        <title>{title}</title>
+        <meta name='description' content='Book a mentoring session with me' />
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>

@@ -47,7 +47,7 @@ interface VolunteerXp {
     keywords: string[];
 }
 
-interface Experience { }
+interface Experience {}
 
 interface Degree extends Event {
     school: string;
