@@ -1027,6 +1027,11 @@ export const cvData: CVData = {
         ],
         softSkills: [
             {
+                title: 'Radical Candor: ',
+                subtitle: 'Be a Kick-Ass Boss Without Losing Your Humanity',
+                author: 'Kim Malone Scott',
+            },
+            {
                 title: 'An Elegant Puzzle: ',
                 subtitle: 'Systems of Engineering Management',
                 author: 'Will Larson',
