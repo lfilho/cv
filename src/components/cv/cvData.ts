@@ -1027,6 +1027,11 @@ export const cvData: CVData = {
         ],
         softSkills: [
             {
+                title: 'Dopamine Nation: ',
+                subtitle: 'Finding Balance in the Age of Indulgence',
+                author: 'Anna Lembke',
+            },
+            {
                 title: 'Radical Candor: ',
                 subtitle: 'Be a Kick-Ass Boss Without Losing Your Humanity',
                 author: 'Kim Malone Scott',
