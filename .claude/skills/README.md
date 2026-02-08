@@ -9,6 +9,7 @@ This directory contains custom skills for managing the CV project.
 Intelligently add books to your CV with automatic validation, categorization, and formatting.
 
 **Features:**
+
 - Web search for accurate book information
 - Screenshot parsing for book details
 - URL fetching from book websites
@@ -20,11 +21,13 @@ Intelligently add books to your CV with automatic validation, categorization, an
 - Optional push to remote
 
 **Usage:**
+
 ```bash
 /add-book <book title | URL | screenshot path | ISBN>
 ```
 
 **Examples:**
+
 ```bash
 /add-book Atomic Habits
 /add-book https://www.amazon.com/dp/0132350882
