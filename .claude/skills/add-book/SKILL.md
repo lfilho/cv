@@ -1,3 +1,8 @@
+---
+name: add-book
+description: Add a book to your CV's reading list with intelligent categorization, validation, and automatic commit generation
+---
+
 # Add Book to CV
 
 Add a book to your CV's reading list with intelligent categorization and validation.
