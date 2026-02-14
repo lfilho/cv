@@ -796,6 +796,11 @@ export const cvData: CVData = {
         ],
         relevantEvents: [
             {
+                title: 'Web Summit Vancouver',
+                location: 'Vancouver, Canada',
+                date: '27-30 May 2025',
+            },
+            {
                 title: 'Engineering Leadership Community Annual 2024',
                 location: 'San Francisco, USA',
                 date: '27-28 Aug 2024',
