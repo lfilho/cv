@@ -60,7 +60,7 @@
         "eslint": "^9.24.0",
         "eslint-plugin-astro": "^0.31.3",
         "eslint-plugin-jsx-a11y": "^6.10.2",
-        "postcss": "^8.4.49",
+        "postcss": "^8.5.10",
         "prettier": "^3.5.3",
         "prettier-config-standard": "^7.0.0",
         "prettier-plugin-astro": "^0.14.1",
