@@ -49,7 +49,6 @@ export const cvData: CVData = {
                 shortDescription: [`Awarded <strong>top 1%</strong> globally and <strong>top 100</strong> in Canada`],
                 description: [`Awarded <strong>top 1% mentors globally</strong> and <strong>top 100 mentors in Canada</strong>`],
             },
-
             {
                 startDate: 'Feb 2021',
                 endDate: 'present',
@@ -68,16 +67,18 @@ export const cvData: CVData = {
                     'B2B',
                 ],
                 shortDescription: [
-                    `<strong>Drove Enterprise growth</strong>: by leading key Enterprise initiatives, unlocking 7 figures of dollars in recurring revenue`,
-                    `<strong>Grew the Enterprise org</strong>: managed several teams and charters, hired and promoted engineers to Senior, Staff and Manager`,
-                    `<strong>Enhanced organizational efficiency</strong> with org-wide processes, improving metrics and accountability, reducing touchpoints, improving leadership decision-making and recouping 6 figures of dollars per quarter`,
-                    `<strong>Championed DE&I and well-being</strong> by authoring and driving different org-wide policies around DE&I, measurably increased our hiring pipeline's diversity and maintained highest team retention in the org`,
+                    `<strong>Headed the AI Engineering transformation</strong>: measurably increasing productivity, while maintaining quality and stability`,
+                    `<strong>Drove Enterprise growth initiatives</strong>: unlocking 7 figures of dollars in recurring revenue`,
+                    `<strong>Organizational growth</strong>: lead several teams and charters, hired and promoted engineers to Senior, Staff, Sr. Staff and Manager`,
+                    `<strong>Measurably improved organizational efficiency</strong> with org-wide processes, improving metrics and accountability, reducing touchpoints, improving leadership decision-making and recouping 6 figures of dollars per quarter`,
+                    `<strong>Championed strong team culture and well-being</strong> by authoring and driving different org-wide policies around DE&I, measurably increasing our hiring pipeline's diversity and maintaining highest team retention in the org`,
                 ],
                 description: [
-                    `Managed several teams and charters in the Enterprise org:`,
+                    `Managed several teams and charters in both the Enterprise and Infra org:`,
                     [
+                        `Responsible for Developer Experience & Quality, coming up and executing an AI roadmap for Engineering, measurably increasing adoption, fluency and productivity`,
                         `Responsible for key Enterprise metrics and projects, unlocking millions of dollars in revenue`,
-                        `Responsible for key products like SkillSets, Employability and Admin experience`,
+                        `Responsible for key products like SkillSets, Employability, Careers and Admin experience`,
                         `Highest retention rate in the org`,
                         `Improved team's processes for better remote-first practices and more efficient collaboration with other teams and stakeholders`,
                     ],
