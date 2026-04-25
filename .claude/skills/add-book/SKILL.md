@@ -73,7 +73,7 @@ When invoked, this skill will:
     - Display the complete diff showing:
         - Which category the book will be added to
         - The formatted book entry
-        - Where it will be inserted in the list (at the end of the category by default)
+        - Where it will be inserted in the list (at the beginning of the category)
     - Show the line numbers for context
 
 6. **Request User Approval**
@@ -110,7 +110,7 @@ When invoked, this skill will:
 - **Formatting Rules**:
     - Titles with subtitles should have the main title end with `: ` (colon + space)
     - Multiple authors should be comma-separated: `'Author1, Author2, Author3'`
-    - Maintain alphabetical or chronological order if specified
+    - Always insert at the **first position** of the category list (newest additions appear first)
 - **Linting**: Always run `npm run lint` before committing to maintain code quality
 - **PDF Generation**: Remind user they may want to rebuild the CV PDF with `npm run build`
 
@@ -144,4 +144,4 @@ Default behavior can be customized:
 - **Auto-push**: Set to `true` to automatically push after commit (default: `false`)
 - **Auto-approve**: Set to `true` to skip approval step (default: `false`, not recommended)
 - **Default category**: Set default category when ambiguous (default: `null`, always ask)
-- **Sort order**: Keep insertion at end or sort alphabetically (default: `end`)
+- **Sort order**: Always insert at first position of the category list (default: `first`)

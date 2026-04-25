@@ -26,95 +26,98 @@ When invoked, this skill will:
 
 ### 1. **Extract Event Information**
 
-   - If a URL is provided: Fetch and parse the page for title, location, and date
-   - If a screenshot is provided: Parse the image using vision capabilities to extract event details
-   - If a title is provided: Search the web for the event to get accurate location and date
-   - If empty: Prompt user for title, location, and date manually
+- If a URL is provided: Fetch and parse the page for title, location, and date
+- If a screenshot is provided: Parse the image using vision capabilities to extract event details
+- If a title is provided: Search the web for the event to get accurate location and date
+- If empty: Prompt user for title, location, and date manually
 
 ### 2. **Validate the Event**
 
-   - Confirm the event exists and information is accurate
-   - Check for duplicates in the existing `relevantEvents` array
-   - Alert if the event is already present
-   - Validate date and location formats
+- Confirm the event exists and information is accurate
+- Check for duplicates in the existing `relevantEvents` array
+- Alert if the event is already present
+- Validate date and location formats
 
 ### 3. **Format the Entry**
 
-   Properly format the event entry following existing conventions:
+Properly format the event entry following existing conventions:
 
-   - **Location format**: "City, Country" or "Virtual"
-     - Examples: "San Francisco, USA", "Berlin, Germany", "Virtual"
-     - Standardize country names (USA not US, etc.)
-   
-   - **Date format**:
-     - Single day: "DD MMM YYYY" (e.g., "21 Oct 2015")
-     - Multi-day same month: "DD-DD MMM YYYY" (e.g., "27-28 Aug 2024")
-     - Multi-day cross-month: "DD MMM - DD MMM YYYY" (e.g., "30 Jan - 2 Feb 2024")
-   
-   - **Title**: Use official event name, preserve capitalization and special characters
+- **Location format**: "City, Country" or "Virtual"
 
-   Example formats:
+    - Examples: "San Francisco, USA", "Berlin, Germany", "Virtual"
+    - Standardize country names (USA not US, etc.)
 
-   ```typescript
-   {
-       title: 'Engineering Leadership Community Annual 2024',
-       location: 'San Francisco, USA',
-       date: '27-28 Aug 2024',
-   }
+- **Date format**:
 
-   {
-       title: 'TEDx Goiânia',
-       location: 'Goiânia, Brazil',
-       date: '21 Oct 2015',
-   }
+    - Single day: "DD MMM YYYY" (e.g., "21 Oct 2015")
+    - Multi-day same month: "DD-DD MMM YYYY" (e.g., "27-28 Aug 2024")
+    - Multi-day cross-month: "DD MMM - DD MMM YYYY" (e.g., "30 Jan - 2 Feb 2024")
 
-   {
-       title: 'ELC Match & Learn: increasing velocity without losing quality',
-       location: 'Virtual',
-       date: '25 Apr 2024',
-   }
-   ```
+- **Title**: Use official event name, preserve capitalization and special characters
+
+Example formats:
+
+```typescript
+{
+    title: 'Engineering Leadership Community Annual 2024',
+    location: 'San Francisco, USA',
+    date: '27-28 Aug 2024',
+}
+
+{
+    title: 'TEDx Goiânia',
+    location: 'Goiânia, Brazil',
+    date: '21 Oct 2015',
+}
+
+{
+    title: 'ELC Match & Learn: increasing velocity without losing quality',
+    location: 'Virtual',
+    date: '25 Apr 2024',
+}
+```
 
 ### 4. **Determine Insertion Position**
 
-   - Parse existing event dates to determine chronological position
-   - Events are sorted newest first (reverse chronological order)
-   - Insert in the correct position to maintain order
-   - Show where in the list it will be inserted
+- Parse existing event dates to determine chronological position
+- Events are sorted newest first (reverse chronological order)
+- Insert in the correct position to maintain order
+- Show where in the list it will be inserted
 
 ### 5. **Show Proposed Changes**
 
-   - Display the complete diff showing:
-     - The formatted event entry
-     - Its position in the list (with before/after context)
-     - Line numbers for reference
-   - Highlight that events are in reverse chronological order
+- Display the complete diff showing:
+    - The formatted event entry
+    - Its position in the list (with before/after context)
+    - Line numbers for reference
+- Highlight that events are in reverse chronological order
 
 ### 6. **Request User Approval**
 
-   - Present the changes and ask for explicit confirmation
-   - Options: "approve", "edit", "cancel"
-   - If "edit" is selected, allow user to modify title, location, or date
+- Present the changes and ask for explicit confirmation
+- Options: "approve", "edit", "cancel"
+- If "edit" is selected, allow user to modify title, location, or date
 
 ### 7. **Commit Changes**
 
-   - If approved, use the Edit tool to add the event to `src/components/cv/cvData.ts`
-   - Create a descriptive commit message:
+- If approved, use the Edit tool to add the event to `src/components/cv/cvData.ts`
+- Create a descriptive commit message:
 
-     ```
-     Add event to CV: [Event Title]
+    ```
+    Add event to CV: [Event Title]
 
-     Location: [Location]
-     Date: [Date]
+    Location: [Location]
+    Date: [Date]
 
-     Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
-     ```
+    Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+    ```
 
-   - Run `npm run lint` to ensure code formatting is correct
+- Run `npm run lint` to ensure code formatting is correct
 
 ### 8. **Offer to Push**
-   - After successful commit, ask if the user wants to push to the remote branch
-   - If yes, execute: `git push -u origin <branch-name>`
+
+- After successful commit, ask if the user wants to push to the remote branch
+- If yes, execute: `git push -u origin <branch-name>`
 
 ## Important Notes
 
@@ -122,13 +125,13 @@ When invoked, this skill will:
 - **Structure**: Single array at `cvData.relevantEvents[]` (around lines 797-850)
 - **Ordering**: Events MUST be in reverse chronological order (newest first)
 - **Date Parsing**:
-  - Accept various input formats (MM/DD/YYYY, DD-MM-YYYY, "Month DD, YYYY", etc.)
-  - Always convert to CV format: "DD MMM YYYY" or "DD-DD MMM YYYY"
-  - Use 3-letter month abbreviations (Jan, Feb, Mar, etc.)
+    - Accept various input formats (MM/DD/YYYY, DD-MM-YYYY, "Month DD, YYYY", etc.)
+    - Always convert to CV format: "DD MMM YYYY" or "DD-DD MMM YYYY"
+    - Use 3-letter month abbreviations (Jan, Feb, Mar, etc.)
 - **Location Standardization**:
-  - Always use full country names: "USA" not "US"
-  - Format: "City, Country" - capitalize appropriately
-  - Use "Virtual" for online-only events (not "Online", "Remote", etc.)
+    - Always use full country names: "USA" not "US"
+    - Format: "City, Country" - capitalize appropriately
+    - Use "Virtual" for online-only events (not "Online", "Remote", etc.)
 - **Linting**: Always run `npm run lint` before committing to maintain code quality
 - **PDF Generation**: Remind user they may want to rebuild the CV PDF with `npm run build`
 
@@ -173,6 +176,7 @@ The skill can parse event information from:
 ## Date Format Examples
 
 Input formats accepted:
+
 - "August 27-28, 2024"
 - "27-28 Aug 2024"
 - "2024-08-27 to 2024-08-28"
@@ -180,6 +184,7 @@ Input formats accepted:
 - "Aug 27, 2024"
 
 Output formats (standardized):
+
 - Single day: "21 Oct 2015"
 - Multi-day (same month): "27-28 Aug 2024"
 - Multi-day (cross month): "30 Jan - 2 Feb 2024"
@@ -211,15 +216,19 @@ Default behavior can be customized:
 ## Troubleshooting
 
 **Problem**: Date format not recognized
+
 - **Solution**: Provide date in "DD MMM YYYY" format directly or let the skill prompt for clarification
 
 **Problem**: Event marked as duplicate but seems different
+
 - **Solution**: Check if the event title is slightly different (e.g., year included or not)
 
 **Problem**: Location format incorrect
+
 - **Solution**: Use "City, Country" format exactly, or "Virtual" for online events
 
 **Problem**: Commit fails
+
 - **Solution**: Check that you're on a clean branch and have no uncommitted changes
 
 ## Testing Checklist
