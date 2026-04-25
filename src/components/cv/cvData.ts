@@ -34,8 +34,8 @@ export const cvData: CVData = {
             github: { href: 'https://github.com/lfilho', display: 'GitHub' },
         },
         introduction: [
-            `A people-first leader building high-performing teams and scaling organizations for ~{{CAREER_TENURE}} years.`,
-            `I'm continually <a href='#education'>upskilling myself</a> and love sharing what I know. Feel free to check some of my testimonials and recommendations on my <a href='https://www.linkedin.com/in/luizgonzaga/' target='_blank'>LinkedIn</a> and <a href='https://topmate.io/luizgonzaga#testimonials' target='_blank'>Topmate</a> profiles (where I've been recognized as a top 1% mentor globally and top 100 in Canada).`,
+            `People-centric engineering leader with ~{{CAREER_TENURE}} years scaling teams and orgs across Coursera, AWS, startups and government; currently leading the Developer Experience and the AI transformation for Coursera.`,
+            `A <a href='#education'>life-long learner</a> and teacher, <a href="https://www.linkedin.com/in/luizgonzaga/details/recommendations/">humbled by the people I've met along the way</a>.`,
         ],
     },
     experience: {
@@ -46,8 +46,8 @@ export const cvData: CVData = {
                 company: 'Topmate.io',
                 positions: ['Mentor'],
                 keywords: ['Mentorship'],
-                shortDescription: [`Awarded <strong>top 1%</strong> globally and <strong>top 100</strong> in Canada`],
-                description: [`Awarded <strong>top 1% mentors globally</strong> and <strong>top 100 mentors in Canada</strong>`],
+                shortDescription: [`<strong>Top 1% mentor globally</strong> and <strong>top 100 in Canada</strong>`],
+                description: [`<strong>Top 1% mentor globally</strong> and <strong>top 100 in Canada</strong>`],
             },
             {
                 startDate: 'Feb 2021',
@@ -67,18 +67,18 @@ export const cvData: CVData = {
                     'B2B',
                 ],
                 shortDescription: [
-                    `<strong>Headed the AI Engineering transformation</strong>: measurably increasing productivity, while maintaining quality and stability`,
-                    `<strong>Drove Enterprise growth initiatives</strong>: unlocking 7 figures of dollars in recurring revenue`,
-                    `<strong>Organizational growth</strong>: lead several teams and charters, hired and promoted engineers to Senior, Staff, Sr. Staff and Manager`,
-                    `<strong>Measurably improved organizational efficiency</strong> with org-wide processes, improving metrics and accountability, reducing touchpoints, improving leadership decision-making and recouping 6 figures of dollars per quarter`,
-                    `<strong>Championed strong team culture and well-being</strong> by authoring and driving different org-wide policies around DE&I, measurably increasing our hiring pipeline's diversity and maintaining highest team retention in the org`,
+                    `<strong>Headed the AI Engineering transformation with positive ROI</strong>: from adoption, to fluency, to increasing productivity, while maintaining quality and stability`,
+                    `<strong>Timely delivered Enterprise growth initiatives</strong>: unlocking millions of dollars in recurring revenue with no additional headcount`,
+                    `<strong>Saved hundreds of thousands of dollars per quarter with improved organizational efficiency</strong> with org-wide processes, improving metrics and accountability, reducing touchpoints, improving executive decision-making, increasing hiring throughput, etc`,
+                    `<strong>Organizational growth</strong>: led several teams and charters, hired and promoted engineers to Senior, Staff, Sr. Staff and Manager`,
+                    `<strong>Championed strong team culture and well-being</strong> by authoring and driving different org-wide policies around DE&I, increasing our hiring pipeline's diversity by ~10% and maintaining highest team retention in the org`,
                 ],
                 description: [
                     `Managed several teams and charters in both the Enterprise and Infra org:`,
                     [
-                        `Responsible for Developer Experience & Quality, coming up and executing an AI roadmap for Engineering, measurably increasing adoption, fluency and productivity`,
-                        `Responsible for key Enterprise metrics and projects, unlocking millions of dollars in revenue`,
-                        `Responsible for key products like SkillSets, Employability, Careers and Admin experience`,
+                        `Owned Developer Experience & Quality, developing and executing an AI roadmap for Engineering, measurably increasing adoption, fluency and productivity`,
+                        `Drove key Enterprise metrics and projects, unlocking millions of dollars in revenue`,
+                        `Led key products like SkillSets, Employability, Careers and Admin experience`,
                         `Highest retention rate in the org`,
                         `Improved team's processes for better remote-first practices and more efficient collaboration with other teams and stakeholders`,
                     ],
@@ -90,7 +90,7 @@ export const cvData: CVData = {
                         `Transitioned a Senior Engineer towards becoming an Engineering Manager`,
                         `Volunteered in the DE&I squad, helping come up and drive many of the org-wide goals taken in the area`,
                         `Improved our Postmortem process, automating and reducing high touch-points, enabling better accountability, metrics and easier knowledge sharing within the company`,
-                        `Reduced context switching, improved documentation and efficiency for cross functional collaboration in Enterprise org's biggest cross-functional internal forum`,
+                        `Improved velocity by reducing toil, improved documentation and efficiency for cross functional collaboration in Enterprise org's biggest cross-functional internal forum`,
                         `Proposed measurable improvements for other orgs (Recruiting and IT), increasing the hiring pipeline throughput and diversity`,
                     ],
                 ],
@@ -115,22 +115,22 @@ export const cvData: CVData = {
                 description: [
                     [
                         `Proposed and implemented an engineering-wide "Going off-call" policy, increasing inclusiveness and belonging`,
-                        `As a certified Cultural Competences for Teams instructor, increased inclusiveness and diversity awareness to the many hundreds of employees that took the training`,
+                        `As a certified Cultural Competences for Teams instructor, increased inclusiveness and diversity awareness to the 300+ employees that took the training`,
                         `Part of the Software Engineering Manager Peer Advisory board, helping new managers onboard and be successful in the company`,
                         `Promoted to Software Engineering Manager III`,
                     ],
                     `Amazon Payments`,
                     [
                         `Team owning 2 charters (International Expansion integrations and Payment on Delivery)`,
-                        `Led a cross-functional team to deliver the end-to-end payments integration for Amazon Turkey (amazon.com.tr). This multi-year project involved weekly collaboration and coordination with different teams, roles, partners and vendors in different countries`,
-                        `First team to start PSD2 work that enabled Amazon to stay complaint in Europe (SEPA DD)`,
+                        `Led a cross-functional team to deliver the end-to-end payments integration for Amazon Turkey (amazon.com.tr). This multi-year project involved weekly collaboration and coordination with teams, roles, partners and vendors across multiple countries`,
+                        `First team to start PSD2 work that enabled Amazon to stay compliant in Europe (SEPA DD)`,
                         `Owned Payment on Delivery for India market`,
                     ],
                     `AWS Route53`,
                     [
                         `Hired a specialized team from scratch, creating interfaces with other teams in the org`,
                         `Responsible for maintaining existing and building new generations of different Route53's User Experience (Consoles) with measurable operational, accessibility and usability improvements`,
-                        `Owned 5 different products in 2 different tech stacks, serving different sub-orgs with different stakeholders`,
+                        `Owned 5 products across 2 tech stacks, serving multiple sub-orgs and stakeholder groups`,
                         `Launched two world-wide projects and expanded our presence to multiple new partitions and regions`,
                         `Improved Route53's sourcing efficiency by ~32% and our candidate diversity by ~11%`,
                     ],
@@ -167,13 +167,13 @@ export const cvData: CVData = {
                     'JIRA',
                 ],
                 description: [
-                    `Moved back to Germany and Brandwatch. After 8 months, I have become the team lead.`,
+                    `Moved back to Germany and Brandwatch. After 8 months, became the team lead.`,
                     [
                         `Worked on existing and new features on their main product (Analytics)`,
                         `Wrote a script to perform a massive refactor (thousands of files) to update a ~5 year old jQuery codebase (with several breaking changes) to the latest version, improving bundle size, patching security vulnerabilities, improving performance on some DOM operations and enabling new jQuery features for the team to use`,
-                        `Tracking overall progress of the team and removing blockers`,
-                        `Helping the PM with Scrum ceremonies and prioritization`,
-                        `Having local, more frequent 1-1s with the team`,
+                        `Tracked overall progress of the team and removed blockers`,
+                        `Helped the PM with Scrum ceremonies and prioritization`,
+                        `Held local, more frequent 1-1s with the team`,
                     ],
                 ],
                 shortDescription: [
@@ -223,17 +223,17 @@ export const cvData: CVData = {
                     [
                         `Doubled the Engineering org to 5 teams and 4 charters (all their products), hiring teams from scratch, creating new roles and interfaces`,
                         `Migrated the company's infrastructure to Git and Github`,
-                        `Implement Semantic Versioning to all products in the company`,
+                        `Implemented Semantic Versioning to all products in the company`,
                         `Implemented the company's first automated release script`,
-                        `Create their first CI pipeline with Jenkins and Github`,
-                        `Introduced Slack to the company and create a set of ChatOps commands to manage releases`,
+                        `Created their first CI pipeline with Jenkins and Github`,
+                        `Introduced Slack to the company and created a set of ChatOps commands to manage releases`,
                         `The points above enabled me to introduce the concept of "DevOps" in the company, enabling engineers to prep releases on their own with confidence and efficiency, enabling IT department (previously preparing the releases) to stay small and lean`,
                         `Introduced advanced monitoring in our applications (New Relic)`,
                     ],
                     `Organizational contributions:`,
                     [
                         `Created "Funky Fridays": bi-weekly innovation/learning days where employees could experiment with new technologies and solutions, prepare a tech talk for the company, etc`,
-                        `Documented all process in the engineering department in BPMN and presented to all employees. That tacit knowledge was now documented and allowed us to identify rooms for improvement, enabling employees to also think about improvements and to better understand the organization in general, facilitating career growth and hence retention`,
+                        `Mapped all engineering processes in BPMN from scratch — eliminating single points of failure, reducing onboarding friction, and giving every team member a foundation and agency to improve processes`,
                         `Collaborated with local University and had a few senior engineers join me in automated tests course provided by top professors. This combined with the above allowed us to streamline our testing cycles, reducing a big bottleneck in our release cycle`,
                         `Helped choose a new ticketing system for the company`,
                     ],
@@ -270,12 +270,12 @@ export const cvData: CVData = {
                     'JIRA',
                 ],
                 description: [
-                    `Developed their main product line: brand Analytics`,
-                    `Wrote codemods to refactor thousands of files, defining conventions for several teams, reducing future diff sizes and improving code reviewing times`,
+                    `Worked on their main product line: Brand Analytics`,
+                    `In addition to feature work, defined conventions and wrote codemods to refactor thousands of files across a dozen teams, reducing diff sizes and code reviewing times`,
                 ],
                 shortDescription: [
-                    `Developed their main product line: brand Analytics`,
-                    `Wrote codemods to refactor thousands of files, defining conventions for all frontend, reducing code review length and improving time to merge`,
+                    `Worked on their main product line: Brand Analytics`,
+                    `In addition to feature work, defined conventions and wrote codemods to refactor thousands of files across a dozen teams, reducing diff sizes and code reviewing times`,
                 ],
             },
             {
@@ -301,10 +301,10 @@ export const cvData: CVData = {
                     'Pivotal Tracker',
                 ],
                 description: [
-                    `Worked as frontend-focused full-stack engineer.`,
+                    `Worked as a frontend-focused full-stack engineer.`,
                     [
                         `Developed RESTful APIs, and their main MVC application`,
-                        `Created the company's first automated deploy script`,
+                        `Created the company's first automated build and deploy script`,
                         `Sped up the app's performance by minimizing the amount of network calls, introducing tools to minimize source code, removing dead code, downsampling raster images, etc`,
                         `Improved the app's UX and performance in high resolution displays by drawing icons in pure CSS, converting images to vectors (SVG), etc`,
                     ],
@@ -315,26 +315,26 @@ export const cvData: CVData = {
                     ],
                 ],
                 shortDescription: [
-                    `Developed REST APIs and core MVC applications during the startups growth phase`,
-                    `Led mobile responsiveness efforts and performance optimization initiatives, significantly reducing network calls and minimizing source code for a faster UX, especially on mobile devices`,
+                    `Worked on their main Analytics application during the startup's growth phase`,
+                    `While keeping crucial time-to-market velocity, led mobile responsiveness efforts and performance optimization initiatives, significantly reducing network calls and minimizing source code for a faster UX, especially on mobile devices, going from yellow to green on Lighthouse`,
                     `Responsible for the frontend strategy, conventions, quality, performance improvements and training new team members`,
                 ],
             },
             {
-                startDate: 'Fev 2007',
+                startDate: 'Feb 2007',
                 endDate: 'Mar 2012',
                 company: 'Goiás State Government',
                 positions: ['Full-stack Engineer'],
                 keywords: ['Java EE', 'Velocity', 'SQL', 'HTML', 'Javascript', 'jQuery', 'CSS', 'SVN', 'User Experience'],
                 description: [
                     [
-                        `Worked as a full-stack engineer on the Government's Human Capital Management (HCM) system, supporting payroll and other features for over 200k people`,
-                        `Led several performance, usability and accessibility improvements`,
+                        `Worked as a full-stack java engineer on the Government's Human Capital Management (HCM) system, supporting payroll and other features for 200k+ people`,
+                        `Led several performance, usability and accessibility improvements around page load reductions, ease of use, decrease of time to action and others`,
                     ],
                 ],
                 shortDescription: [
-                    `Maintained the State's payroll and other Human Capital Management (HCM) systems for over 200k employees and citizens`,
-                    `Led several performance, usability and accessibility improvements`,
+                    `Worked as a full-stack java engineer on the Government's Human Capital Management (HCM) system, supporting payroll and other features for 200k+ people`,
+                    `Led several performance, usability and accessibility improvements around page load reductions, ease of use, decrease of time to action and others`,
                 ],
             },
             {
@@ -373,7 +373,7 @@ export const cvData: CVData = {
                 ],
                 description: [
                     '<strong>Vega Sistemas, Brazil:</strong> High-level architecture on migrating a desktop application to a web platform',
-                    '<strong>SENAC Goiás, Brazil:</strong> Consultancy on web development best practices, productivity tools, agile methodologies and programming languages for their internal develoopment department',
+                    '<strong>SENAC Goiás, Brazil:</strong> Consultancy on web development best practices, productivity tools, agile methodologies and programming languages for their internal development department',
                     '<strong>Federal University of Goiás, Brazil:</strong> Developed their public admission (Vestibular) system and website',
                 ],
                 shortDescription: [],
@@ -447,7 +447,7 @@ export const cvData: CVData = {
                 title: '"Developing a career"',
             },
             {
-                date: '14 Ago 2015',
+                date: '14 Aug 2015',
                 location: 'Goiânia, Brazil',
                 venue: 'Pontifical Catholic University of Goiás',
                 title: '"Developing Peopleware"',
@@ -501,13 +501,13 @@ export const cvData: CVData = {
                 title: '"Entrepreneurship with free software"',
             },
             {
-                date: 'Ago 2011',
+                date: 'Aug 2011',
                 location: 'Goiânia, Brazil',
                 venue: 'Computer, Electrical and Civil Engineering graduation',
                 title: 'Graduation Ceremony Speech',
             },
             {
-                date: 'Ago 2009',
+                date: 'Aug 2009',
                 location: 'Goiânia, Brazil',
                 venue: 'VI Goiás Forum of Free Software (FGSL)',
                 title: '"Introduction to Ruby Language"',
@@ -546,14 +546,14 @@ export const cvData: CVData = {
                 location: 'Goiânia, Brazil',
                 organization: 'Grupo Arte Nascente (GAN)',
                 position: 'Actor & Web Developer',
-                keywords: ['PHP', 'NGO', 'Art', 'Theater', 'Communication', 'Non-for profit'],
+                keywords: ['PHP', 'NGO', 'Art', 'Theater', 'Communication', 'Non-profit'],
             },
             {
                 date: '2006 – 2015',
                 location: 'Goiânia, Brazil',
                 organization: 'Zapt Arteatral',
                 position: 'Actor, Web Developer, President, Artistic Director & Communication Coordinator',
-                keywords: ['PHP', 'Art', 'Theater', 'Communication', 'Non-for profit'],
+                keywords: ['PHP', 'Art', 'Theater', 'Communication', 'Non-profit'],
             },
             {
                 date: '2007 – 2009',
@@ -864,7 +864,7 @@ export const cvData: CVData = {
             {
                 title: '3rd Join Community',
                 location: 'Goiânia, Brazil',
-                date: '30-31 Mai 2014',
+                date: '30-31 May 2014',
             },
             {
                 title: 'Analyzing network vulnerabilities',
@@ -894,7 +894,7 @@ export const cvData: CVData = {
             {
                 title: 'International Conf of Innovative Cities',
                 location: 'Curitiba, Brazil',
-                date: '17-20 Mai 2011',
+                date: '17-20 May 2011',
             },
             {
                 title: 'I LatAm Free Software Installation Festival',
@@ -1106,11 +1106,6 @@ export const cvData: CVData = {
                 title: 'The Coaching Habit: ',
                 subtitle: 'Say Less, Ask More & Change the Way Your Lead Forever',
                 author: 'Michael Bungay Stanier',
-            },
-            {
-                title: 'The First 90 Days: ',
-                subtitle: 'Critical Success Strategies for New Leaders at All Levels',
-                author: 'Michael D. Watkins',
             },
             {
                 title: 'Collective Intelligence: ',
