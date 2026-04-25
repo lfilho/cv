@@ -43,12 +43,10 @@ When invoked, this skill will:
 Properly format the event entry following existing conventions:
 
 - **Location format**: "City, Country" or "Virtual"
-
     - Examples: "San Francisco, USA", "Berlin, Germany", "Virtual"
     - Standardize country names (USA not US, etc.)
 
 - **Date format**:
-
     - Single day: "DD MMM YYYY" (e.g., "21 Oct 2015")
     - Multi-day same month: "DD-DD MMM YYYY" (e.g., "27-28 Aug 2024")
     - Multi-day cross-month: "DD MMM - DD MMM YYYY" (e.g., "30 Jan - 2 Feb 2024")
