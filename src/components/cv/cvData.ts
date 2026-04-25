@@ -796,6 +796,11 @@ export const cvData: CVData = {
         ],
         relevantEvents: [
             {
+                title: 'DX Annual 2026',
+                location: 'San Francisco, USA',
+                date: '16 Apr 2026',
+            },
+            {
                 title: 'Web Summit Vancouver',
                 location: 'Vancouver, Canada',
                 date: '27-30 May 2025',
