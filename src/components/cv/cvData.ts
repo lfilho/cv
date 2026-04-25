@@ -1037,6 +1037,11 @@ export const cvData: CVData = {
         ],
         softSkills: [
             {
+                title: 'Give and Take: ',
+                subtitle: 'Why Helping Others Drives Our Success',
+                author: 'Adam Grant',
+            },
+            {
                 title: 'Dopamine Nation: ',
                 subtitle: 'Finding Balance in the Age of Indulgence',
                 author: 'Anna Lembke',
