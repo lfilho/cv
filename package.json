@@ -19,7 +19,7 @@
         "url": "https://github.com/lfilho/cv/issues"
     },
     "scripts": {
-        "postinstall": "npx playwright install && node post-install.js",
+        "postinstall": "npx playwright install",
         "dev": "astro dev",
         "lint": "prettier --write  \"**/*.{js,mjs,cjs,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,mjs,cjs,ts,jsx,tsx,astro}\"",
         "start": "astro dev",

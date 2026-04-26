@@ -182,7 +182,6 @@ This is a professional resume website built with modern web technologies, featur
 │   ├── .gitignore            # Git ignore patterns
 │   ├── package.json          # ⚠️ Dependencies and npm scripts
 │   ├── package-lock.json     # Locked dependency versions
-│   ├── post-install.js       # Post-install patch script
 │   └── README.md             # Project documentation
 ```
 
@@ -685,7 +684,6 @@ This file ensures GitHub Pages uses the custom domain.
 | -------------------------- | ----------------------------------- | --------------------------------------------- |
 | `src/lib/pdf-generator.js` | PDF generation after build          | Changing PDF output path, styling, or options |
 | `src/lib/pdf-details.js`   | PDF path configuration              | Changing PDF filename or location             |
-| `post-install.js`          | Post-install patch for dependencies | Fixing dependency issues                      |
 
 ### Layout & Components
 
@@ -850,18 +848,6 @@ Reference in code:
 ```astro
 <img src='/img/photo.jpg' alt='Photo' />
 ```
-
-#### 10. Post-Install Script
-
-`post-install.js` patches the `unicorn-magic` module for ES module compatibility:
-
-```javascript
-// post-install.js
-// Patches node_modules/unicorn-magic/package.json
-// Adds "type": "module" to fix import issues
-```
-
-**Don't delete this file** - it prevents build errors.
 
 ### Common Pitfalls
 
