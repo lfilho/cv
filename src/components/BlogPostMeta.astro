@@ -3,31 +3,31 @@ import { getBlogPostMeta } from '@lib/seo';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, TWITTER_HANDLE, MY_NAME } from '../config';
 
 export interface Props {
-    title?: string;
-    description?: string;
-    publishDate: string;
-    pagePath?: string;
-    ogImageAbsoluteUrl?: string;
-    ogImageAltText?: string;
-    ogImageWidth?: number;
-    ogImageHeight?: number;
+  title?: string;
+  description?: string;
+  publishDate: string;
+  pagePath?: string;
+  ogImageAbsoluteUrl?: string;
+  ogImageAltText?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
 }
 
 const { title, description, publishDate, pagePath, ogImageAbsoluteUrl, ogImageAltText, ogImageWidth, ogImageHeight } =
-    Astro.props;
+  Astro.props;
 
 const { meta, og, twitter } = getBlogPostMeta({
-    title: title || SITE_TITLE,
-    description: description || SITE_DESCRIPTION,
-    pageUrl: pagePath ? new URL(pagePath, SITE_URL).toString() : undefined,
-    authorName: MY_NAME,
-    publishDate,
-    ogImageAbsoluteUrl,
-    ogImageAltText,
-    ogImageWidth,
-    ogImageHeight,
-    siteOwnerTwitterHandle: TWITTER_HANDLE,
-    contentAuthorTwitterHandle: TWITTER_HANDLE,
+  title: title || SITE_TITLE,
+  description: description || SITE_DESCRIPTION,
+  pageUrl: pagePath ? new URL(pagePath, SITE_URL).toString() : undefined,
+  authorName: MY_NAME,
+  publishDate,
+  ogImageAbsoluteUrl,
+  ogImageAltText,
+  ogImageWidth,
+  ogImageHeight,
+  siteOwnerTwitterHandle: TWITTER_HANDLE,
+  contentAuthorTwitterHandle: TWITTER_HANDLE,
 });
 ---
 

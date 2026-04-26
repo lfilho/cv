@@ -14,13 +14,13 @@ An example `HTML` code block.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Example HTML5 Document</title>
-    </head>
-    <body>
-        <p>Test</p>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
 </html>
 ```
 
@@ -30,8 +30,8 @@ An example `jsx` code block.
 
 ```jsx
 const Greet = () => {
-    const message = `Hello World!`;
-    return <div>{message}</div>;
+  const message = `Hello World!`;
+  return <div>{message}</div>;
 };
 ```
 
@@ -41,8 +41,8 @@ An example `css` code block.
 
 ```css
 .layout {
-    display: grid;
-    grid-template-columns: 5rem minmax(0, 1fr) 4rem;
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr) 4rem;
 }
 ```
 

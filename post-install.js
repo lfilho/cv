@@ -8,8 +8,8 @@ export function toPath(urlOrPath) {
 ${text}`;
 
 if (text.indexOf('toPath(') === -1) {
-    console.log('Fixing unicorn-magic script...');
-    fs.writeFileSync('./node_modules/unicorn-magic/default.js', newScript, 'utf8');
+  console.log('Fixing unicorn-magic script...');
+  fs.writeFileSync('./node_modules/unicorn-magic/default.js', newScript, 'utf8');
 } else {
-    console.log('Skip fix unicorn-magic script.');
+  console.log('Skip fix unicorn-magic script.');
 }

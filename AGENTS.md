@@ -290,10 +290,10 @@ Serves the production build locally for testing before deployment.
 - Use TypeScript for all new files (`.ts`, `.tsx`, `.astro`)
 - Prefer interfaces over types for object shapes
 - Use path aliases for imports:
-    - `@pages/*` → `src/pages/*`
-    - `@components/*` → `src/components/*`
-    - `@layouts/*` → `src/layouts/*`
-    - `@lib/*` → `src/lib/*`
+  - `@pages/*` → `src/pages/*`
+  - `@components/*` → `src/components/*`
+  - `@layouts/*` → `src/layouts/*`
+  - `@lib/*` → `src/lib/*`
 
 **Example:**
 
@@ -327,8 +327,8 @@ const title = 'My Page';
 ---
 
 <Layout title={title}>
-    <h1>{title}</h1>
-    <p>Static content rendered at build time.</p>
+  <h1>{title}</h1>
+  <p>Static content rendered at build time.</p>
 </Layout>
 ```
 
@@ -341,8 +341,8 @@ Use for interactive, client-side features:
 import { useState } from 'react';
 
 export default function Counter() {
-    const [count, setCount] = useState(0);
-    return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
 }
 ```
 
@@ -378,17 +378,17 @@ import './MyComponent.css'; // Component-scoped styles
 ---
 
 <div class='flex items-center gap-4 text-primary'>
-    <!-- Tailwind utilities -->
-    <span class='custom-badge'>Badge</span>
-    <!-- Custom CSS class -->
+  <!-- Tailwind utilities -->
+  <span class='custom-badge'>Badge</span>
+  <!-- Custom CSS class -->
 </div>
 
 <style>
-    /* Astro scoped styles (auto-scoped to component) */
-    .custom-badge {
-        padding: 0.5rem 1rem;
-        background: var(--color-accent);
-    }
+  /* Astro scoped styles (auto-scoped to component) */
+  .custom-badge {
+    padding: 0.5rem 1rem;
+    background: var(--color-accent);
+  }
 </style>
 ```
 
@@ -477,9 +477,9 @@ import PageMeta from '@components/PageMeta.astro';
 ---
 
 <PageLayout>
-    <PageMeta slot='meta' title='About' description='About this site' />
-    <h1>About</h1>
-    <p>Content here</p>
+  <PageMeta slot='meta' title='About' description='About this site' />
+  <h1>About</h1>
+  <p>Content here</p>
 </PageLayout>
 ```
 
@@ -517,19 +517,19 @@ This file contains all CV content as structured TypeScript data:
 
 ```typescript
 export const cvData = {
-    personalInfo: {
-        /* ... */
-    },
-    experience: [
-        /* ... */
-    ],
-    education: [
-        /* ... */
-    ],
-    skills: [
-        /* ... */
-    ],
-    // etc.
+  personalInfo: {
+    /* ... */
+  },
+  experience: [
+    /* ... */
+  ],
+  education: [
+    /* ... */
+  ],
+  skills: [
+    /* ... */
+  ],
+  // etc.
 };
 ```
 
@@ -583,7 +583,7 @@ File-based routing in `src/pages/`:
 ---
 // pages/blog/[slug].astro
 export async function getStaticPaths() {
-    return [{ params: { slug: 'post-1' } }, { params: { slug: 'post-2' } }];
+  return [{ params: { slug: 'post-1' } }, { params: { slug: 'post-2' } }];
 }
 
 const { slug } = Astro.params;
@@ -774,13 +774,13 @@ CV components include print-specific CSS:
 ```css
 /* src/components/cv/css/print.css */
 @media print {
-    .no-print {
-        display: none;
-    }
-    /* Page break controls */
-    .page-break-after {
-        page-break-after: always;
-    }
+  .no-print {
+    display: none;
+  }
+  /* Page break controls */
+  .page-break-after {
+    page-break-after: always;
+  }
 }
 ```
 
@@ -798,13 +798,13 @@ The site supports system preference detection:
 ```css
 /* src/styles/global.css */
 :root {
-    --color-primary: #333;
+  --color-primary: #333;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --color-primary: #fff;
-    }
+  :root {
+    --color-primary: #fff;
+  }
 }
 ```
 
@@ -820,8 +820,8 @@ import PageMeta from '@components/PageMeta.astro';
 ---
 
 <Layout>
-    <PageMeta slot='meta' title='Page Title' description='Page description for search engines' />
-    <!-- page content -->
+  <PageMeta slot='meta' title='Page Title' description='Page description for search engines' />
+  <!-- page content -->
 </Layout>
 ```
 
@@ -915,13 +915,13 @@ open public/cv/pdf/*.pdf
 ```astro
 <!-- Wrong - no SEO meta tags -->
 <Layout>
-    <h1>My Page</h1>
+  <h1>My Page</h1>
 </Layout>
 
 <!-- Correct -->
 <Layout>
-    <PageMeta slot='meta' title='My Page' description='Description' />
-    <h1>My Page</h1>
+  <PageMeta slot='meta' title='My Page' description='Description' />
+  <h1>My Page</h1>
 </Layout>
 ```
 

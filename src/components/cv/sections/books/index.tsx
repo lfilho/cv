@@ -14,48 +14,48 @@ import './style.css';
 fontAwesomeLibrary.add(faBook, faCommentDots);
 
 const createBookEntry = (entry: any, i: number) => (
-    <li className='book' key={i}>
-        <span>
-            {entry.title}
-            <em>{entry.subtitle}</em>
-        </span>
-        <br />
-        <small>{entry.author}</small>
-    </li>
+  <li className='book' key={i}>
+    <span>
+      {entry.title}
+      <em>{entry.subtitle}</em>
+    </span>
+    <br />
+    <small>{entry.author}</small>
+  </li>
 );
 
 export default class Books extends Component<{ data: CVData['books'] }> {
-    render() {
-        const books = this.props.data;
-        const softwareBooks = books.software.map(createBookEntry);
-        const softSkillsBooks = books.softSkills.map(createBookEntry);
+  render() {
+    const books = this.props.data;
+    const softwareBooks = books.software.map(createBookEntry);
+    const softSkillsBooks = books.softSkills.map(createBookEntry);
 
-        return (
-            <section>
-                <AnchoredHeader level='3'>Relevant books read</AnchoredHeader>
+    return (
+      <section>
+        <AnchoredHeader level='3'>Relevant books read</AnchoredHeader>
 
-                <AnchoredHeader level='4' id='relevant-content-software-development'>
-                    <FontAwesomeIcon icon={faBook} />
-                    Software Development
-                    <small>
-                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
-                        {softwareBooks.length} books on programming languages, techniques and tools
-                    </small>
-                </AnchoredHeader>
+        <AnchoredHeader level='4' id='relevant-content-software-development'>
+          <FontAwesomeIcon icon={faBook} />
+          Software Development
+          <small>
+            <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+            {softwareBooks.length} books on programming languages, techniques and tools
+          </small>
+        </AnchoredHeader>
 
-                <ul className='books grid-container'>{softwareBooks}</ul>
+        <ul className='books grid-container'>{softwareBooks}</ul>
 
-                <AnchoredHeader level='4' id='relevant-content-entrepreneurship'>
-                    <FontAwesomeIcon icon={faBook} />
-                    <em>Hard</em> Skills
-                    <small>
-                        <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
-                        {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
-                    </small>
-                </AnchoredHeader>
+        <AnchoredHeader level='4' id='relevant-content-entrepreneurship'>
+          <FontAwesomeIcon icon={faBook} />
+          <em>Hard</em> Skills
+          <small>
+            <FontAwesomeIcon icon={faCommentDots} flip='horizontal' />
+            {softSkillsBooks.length} books on leadership, culture, productivity, entrepreneurship and management
+          </small>
+        </AnchoredHeader>
 
-                <ul className='books grid-container'>{softSkillsBooks}</ul>
-            </section>
-        );
-    }
+        <ul className='books grid-container'>{softSkillsBooks}</ul>
+      </section>
+    );
+  }
 }

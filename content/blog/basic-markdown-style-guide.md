@@ -66,12 +66,12 @@ Paragraphs can be multiline too when they constitute words that make up more tha
 ### Nested list
 
 - Fruit
-    - Apple
-    - Orange
-    - Banana
+  - Apple
+  - Orange
+  - Banana
 - Dairy
-    - Milk
-    - Cheese
+  - Milk
+  - Cheese
 
 ## Code Blocks
 
@@ -80,13 +80,13 @@ Syntax highlighting is done using [Prism.js](https://github.com/PrismJS/prism). 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Example HTML5 Document</title>
-    </head>
-    <body>
-        <p>Test</p>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
 </html>
 ```
 

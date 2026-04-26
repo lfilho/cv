@@ -26,19 +26,19 @@ const isBuild = SCRIPT.includes('astro build');
 let BASE_URL = LOCALHOST_URL;
 // When building the site in local or in CI, you could just set your URL manually
 if (isBuild) {
-    BASE_URL = LIVE_URL;
+  BASE_URL = LIVE_URL;
 }
 export default defineConfig({
-    server: { port: SERVER_PORT },
-    site: BASE_URL,
+  server: { port: SERVER_PORT },
+  site: BASE_URL,
 
-    redirects: {
-        '/cv/pdf': pdfOutPathLocal,
-    },
+  redirects: {
+    '/cv/pdf': pdfOutPathLocal,
+  },
 
-    integrations: [react(), sitemap()],
+  integrations: [react(), sitemap()],
 
-    vite: {
-        plugins: [tailwindcss()],
-    },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
