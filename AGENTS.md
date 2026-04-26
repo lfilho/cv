@@ -137,31 +137,26 @@ This is a professional resume website built with modern web technologies, featur
 │   │   ├── book-me/           # Booking page (/book-me)
 │   │   └── rss.xml.ts         # RSS feed generation
 │   │
-│   ├── lib/                   # Utility functions (~285 lines)
+│   ├── lib/                   # Utility functions
 │   │   ├── seo.ts             # SEO meta tag generation
 │   │   ├── career-tenure.ts   # Calculate years in career
 │   │   ├── is-verbose-mode.ts # Detect verbose CV mode from URL
 │   │   ├── pdf-details.js     # PDF output path configuration
 │   │   ├── pdf-generator.js   # ⚠️ PDF generation script (postbuild)
 │   │   ├── array-to-html-list.jsx # Convert arrays to HTML lists
-│   │   ├── anchored-header.jsx# Headers with anchor links
-│   │   └── markdoc/           # Markdoc configuration
-│   │       ├── markdoc.config.ts  # Custom tags & transformations
-│   │       ├── read.ts            # File reading utilities
-│   │       └── frontmatter.schema.ts # Zod schemas for content validation
+│   │   └── anchored-header.jsx# Headers with anchor links
+│   │
+│   ├── content/               # Astro content collections
+│   │   ├── blog/              # Blog posts (*.mdoc, Markdoc)
+│   │   └── projects/          # Project showcases (*.mdoc, Markdoc)
 │   │
 │   ├── styles/                # Global stylesheets
 │   │   ├── global.css         # Global theme, CSS variables, dark mode
 │   │   ├── markdown.css       # Markdown element styling
 │   │   └── main-page.css      # Homepage-specific styles
 │   │
+│   ├── content.config.ts      # ⚠️ Content collection schemas (blog, projects)
 │   └── config.ts              # ⚠️ Site configuration (title, URL, social)
-
-├── content/                   # Content files (Markdown with frontmatter)
-│   ├── blog/                  # Blog posts (5 files)
-│   │   └── *.md               # Posts with YAML frontmatter
-│   └── projects/              # Project showcases (3 files)
-│       └── *.md               # Projects with metadata
 
 ├── public/                    # Static assets (copied to dist/)
 │   ├── cv/pdf/               # ⚠️ Generated PDF files (git-tracked)
@@ -310,7 +305,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 
 - **Components:** PascalCase (e.g., `PageLayout.astro`, `CodeBlock.astro`)
 - **Utilities:** camelCase (e.g., `career-tenure.ts`, `pdf-generator.js`)
-- **Content:** kebab-case (e.g., `hello-world.md`, `extended-markdown-style-guide.md`)
+- **Content:** kebab-case (e.g., `hello-world.mdoc`, `extended-markdown-style-guide.mdoc`)
 - **Types:** `.d.ts` for type declarations (e.g., `cvData.d.ts`)
 
 ### Component Architecture
@@ -412,7 +407,7 @@ import './MyComponent.css'; // Component-scoped styles
 
 #### Blog Posts
 
-Location: `content/blog/*.md`
+Location: `src/content/blog/*.mdoc`
 
 **Frontmatter schema:**
 
@@ -429,7 +424,7 @@ draft: false # Set to true to hide from production
 
 #### Projects
 
-Location: `content/projects/*.md`
+Location: `src/content/projects/*.mdoc`
 
 **Frontmatter schema:**
 
@@ -456,7 +451,7 @@ Use custom tags for rich embeds:
 {% githubgist id="abc123..." /%}
 ```
 
-Configuration: `src/lib/markdoc/markdoc.config.ts`
+Configuration: `markdoc.config.mjs` (project root). Powered by the `@astrojs/markdoc` integration; content is loaded via Astro content collections defined in `src/content.config.ts`.
 
 ## Common Tasks
 
@@ -487,7 +482,7 @@ Route: `https://luiz.dev/about`
 
 ### Adding a New Blog Post
 
-1. Create `content/blog/my-new-post.md`
+1. Create `src/content/blog/my-new-post.mdoc`
 2. Add frontmatter (title, description, date, tags)
 3. Write content in Markdown
 4. Set `draft: false` when ready to publish
@@ -681,8 +676,8 @@ This file ensures GitHub Pages uses the custom domain.
 | ------------------------------- | ----------------------------------------------- | --------------------------------------------- |
 | `src/components/cv/cvData.ts`   | **PRIMARY CV DATA SOURCE** - All resume content | Updating CV information, work history, skills |
 | `src/components/cv/cvData.d.ts` | TypeScript types for CV data                    | Adding new CV fields or sections              |
-| `content/blog/*.md`             | Blog post content                               | Publishing new articles                       |
-| `content/projects/*.md`         | Project showcase content                        | Adding portfolio items                        |
+| `src/content/blog/*.mdoc`       | Blog post content (Markdoc)                     | Publishing new articles                       |
+| `src/content/projects/*.mdoc`   | Project showcase content (Markdoc)              | Adding portfolio items                        |
 
 ### Build Scripts
 
@@ -765,7 +760,7 @@ draft: false # Optional, defaults to false
 ---
 ```
 
-**Validation:** Zod schemas in `src/lib/markdoc/frontmatter.schema.ts`
+**Validation:** Zod schemas in `src/content.config.ts` (Astro content collections)
 
 #### 5. Print Styles for PDF
 

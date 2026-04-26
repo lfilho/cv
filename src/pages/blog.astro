@@ -1,19 +1,13 @@
 ---
-import { readAll } from '../lib/markdoc/read';
-import { blog } from '../lib/markdoc/frontmatter.schema';
+import { getCollection } from 'astro:content';
 import PageLayout from '../layouts/PageLayout.astro';
 import PageMeta from '../components/PageMeta.astro';
 import ExternalLinkIcon from '../components/ui/icons/external-link.astro';
 import { SITE_TITLE } from '../config';
 
-const posts = await readAll({
-  directory: 'blog',
-  frontmatterSchema: blog,
-});
+const posts = await getCollection('blog', ({ data }) => !data.draft);
 
-const sortedPosts = posts
-  .filter(p => p.frontmatter.draft !== true)
-  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <PageLayout>
@@ -22,7 +16,7 @@ const sortedPosts = posts
     <ul>
       {
         sortedPosts.map(post => {
-          const formattedDate = new Date(post.frontmatter.date).toLocaleDateString('en-us', {
+          const formattedDate = post.data.date.toLocaleDateString('en-us', {
             year: 'numeric',
             month: 'short',
             day: 'numeric',
@@ -30,17 +24,17 @@ const sortedPosts = posts
           return (
             <li class='post'>
               <div class='title'>
-                {post.frontmatter.external ? (
-                  <a href={post.frontmatter.url} target='_blank'>
-                    <span>{post.frontmatter.title}</span>
+                {post.data.external ? (
+                  <a href={post.data.url} target='_blank'>
+                    <span>{post.data.title}</span>
                     <ExternalLinkIcon class='icon-realign' title='Link to external post' height={16} width={16} />
                   </a>
                 ) : (
-                  <a href={`/blog/${post.slug}`}>{post.frontmatter.title}</a>
+                  <a href={`/blog/${post.id}`}>{post.data.title}</a>
                 )}
               </div>
               <div class='publish-date'>
-                <time datetime={post.frontmatter.date.toISOString()}>{formattedDate}</time>
+                <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
               </div>
             </li>
           );

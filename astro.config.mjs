@@ -1,3 +1,4 @@
+import markdoc from '@astrojs/markdoc';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
@@ -36,7 +37,7 @@ export default defineConfig({
     '/cv/pdf': pdfOutPathLocal,
   },
 
-  integrations: [react(), sitemap()],
+  integrations: [react(), sitemap(), markdoc()],
 
   vite: {
     plugins: [tailwindcss()],

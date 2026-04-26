@@ -1,19 +1,13 @@
 ---
-import { readAll } from '../lib/markdoc/read';
-import { project } from '../lib/markdoc/frontmatter.schema';
+import { getCollection } from 'astro:content';
 import PageLayout from '../layouts/PageLayout.astro';
 import PageMeta from '../components/PageMeta.astro';
 import ExternalLinkIcon from '../components/ui/icons/external-link.astro';
 import { SITE_TITLE } from '../config';
 
-const projects = await readAll({
-  directory: 'projects',
-  frontmatterSchema: project,
-});
+const projects = await getCollection('projects', ({ data }) => !data.draft);
 
-const sortedProjects = projects
-  .filter(p => p.frontmatter.draft !== true)
-  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+const sortedProjects = projects.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <PageLayout>
@@ -22,7 +16,7 @@ const sortedProjects = projects
     <ul>
       {
         sortedProjects.map(project => {
-          const formattedDate = new Date(project.frontmatter.date).toLocaleDateString('en-us', {
+          const formattedDate = project.data.date.toLocaleDateString('en-us', {
             year: 'numeric',
             month: 'short',
             day: 'numeric',
@@ -30,13 +24,13 @@ const sortedProjects = projects
           return (
             <li class='project'>
               <div class='title'>
-                <a href={project.frontmatter.url} target='_blank'>
-                  <span>{project.frontmatter.title}</span>
+                <a href={project.data.url} target='_blank'>
+                  <span>{project.data.title}</span>
                   <ExternalLinkIcon class='icon-realign' title='Link to project' height={16} width={16} />
                 </a>
               </div>
               <div class='publish-date'>
-                <time datetime={project.frontmatter.date.toISOString()}>{formattedDate}</time>
+                <time datetime={project.data.date.toISOString()}>{formattedDate}</time>
               </div>
             </li>
           );
