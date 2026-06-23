@@ -67,14 +67,15 @@ export const cvData: CVData = {
           'B2B',
         ],
         shortDescription: [
-          `<strong>Headed the AI Engineering transformation with positive ROI</strong>: from adoption, to fluency, to increasing productivity, while maintaining quality and stability`,
+          `<strong>Led key new initiative post Coursera-Udemy merge</strong>: the combined company's biggest bet.`,
+          `<strong>Headed the AI Engineering transformation with positive ROI</strong>: increasing productivity and stable quality`,
           `<strong>Timely delivered Enterprise growth initiatives</strong>: unlocking millions of dollars in recurring revenue with no additional headcount`,
-          `<strong>Saved hundreds of thousands of dollars per quarter with improved organizational efficiency</strong> with org-wide processes, improving metrics and accountability, reducing touchpoints, improving executive decision-making, increasing hiring throughput, etc`,
+          `<strong>Saved $XXX,XXX per quarter with improved cross-dept processes</strong>, metrics and accountability, improving executive decision-making, increasing hiring throughput, etc`,
           `<strong>Organizational growth</strong>: led several teams and charters, hired and promoted engineers to Senior, Staff, Sr. Staff and Manager`,
           `<strong>Championed strong team culture and well-being</strong> by authoring and driving different org-wide policies around DE&I, increasing our hiring pipeline's diversity by ~10% and maintaining highest team retention in the org`,
         ],
         description: [
-          `Managed several teams and charters in both the Enterprise and Infra org:`,
+          `Managed several teams and charters in both the Enterprise and Platform org:`,
           [
             `Owned Developer Experience & Quality, developing and executing an AI roadmap for Engineering, measurably increasing adoption, fluency and productivity`,
             `Drove key Enterprise metrics and projects, unlocking millions of dollars in revenue`,
