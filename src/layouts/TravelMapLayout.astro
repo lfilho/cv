@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+import Favicon from './Favicon.astro';
+---
+
+<!doctype html>
+<html class='theme-sleek' lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='robots' content='follow, index' />
+    <Favicon />
+    <slot name='meta' />
+    <style is:global>
+      /* Full-bleed map: override global.css body constraints. */
+      body.travel-map-body {
+        padding: 0;
+        margin: 0;
+        max-width: none;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class='travel-map-body'>
+    <slot />
+  </body>
+</html>

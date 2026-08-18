@@ -1,0 +1,18 @@
+---
+import Layout from '@layouts/TravelMapLayout.astro';
+import PageMeta from '@components/PageMeta.astro';
+import TravelMap from '@components/travel-map/TravelMap.tsx';
+import { travelPlaces } from '@components/travel-map/travelData';
+import { buildTravelTree } from '@components/travel-map/build-tree';
+
+const tree = buildTravelTree(travelPlaces);
+---
+
+<Layout>
+  <PageMeta
+    slot='meta'
+    title='Travel Map - Luiz Gonzaga'
+    description='Places I have traveled to and lived in, plotted on a map.'
+  />
+  <TravelMap client:only='react' places={travelPlaces} tree={tree} />
+</Layout>
