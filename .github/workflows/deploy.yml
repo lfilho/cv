@@ -1,10 +1,19 @@
 name: Deploy to GitHub Pages
 
 on:
-    # Trigger the workflow every time you push to the `main` branch
-    # Using a different branch name? Replace `main` with your branch’s name
     push:
         branches: [main]
+        paths:
+            - 'src/pages/cv/**'
+            - 'src/components/cv/**'
+            - 'src/layouts/CV.astro'
+            - 'src/lib/anchored-header.jsx'
+            - 'src/lib/array-to-html-list.jsx'
+            - 'src/lib/career-tenure.ts'
+            - 'src/lib/pdf-*.js'
+            - 'astro.config.mjs'
+            - 'postcss.config.cjs'
+            - 'tailwind.config.js'
     # Allows you to run this workflow manually from the Actions tab on GitHub.
     workflow_dispatch:
 
