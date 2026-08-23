@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+- [Quick Start for AI Assistants](#quick-start-for-ai-assistants)
 - [Project Overview](#project-overview)
 - [Technology Stack](#technology-stack)
 - [Directory Structure](#directory-structure)
@@ -13,6 +14,33 @@
 - [Build & Deployment](#build--deployment)
 - [Important Files](#important-files)
 - [Things to Watch Out For](#things-to-watch-out-for)
+
+## Quick Start for AI Assistants
+
+1. **Read this guide first** — it contains project overview, workflows, conventions, and pitfalls.
+2. **Check [README.md](./README.md)** for a high-level project overview.
+3. **Review key files before changing CV/content:**
+   - `src/components/cv/cvData.ts` — primary CV data source
+   - `astro.config.mjs` — build configuration
+   - `package.json` — scripts and dependencies
+   - `tsconfig.json` — TypeScript paths and settings
+
+### Essential Commands
+
+```bash
+npm run dev       # Start development server on port 9000
+npm run build     # Build for production and generate PDF
+npm run preview   # Preview the production build
+npm run lint      # Format and lint code (run before committing)
+```
+
+### Golden Rules
+
+- Always run `npm run lint` before committing.
+- Test PDF generation after modifying any CV component or data.
+- Use TypeScript path aliases (`@components/*`, `@layouts/*`, `@lib/*`, etc.).
+- Follow Astro island architecture patterns.
+- See [Things to Watch Out For](#things-to-watch-out-for) for common pitfalls.
 
 ## Project Overview
 
@@ -680,10 +708,10 @@ This file ensures GitHub Pages uses the custom domain.
 
 ### Build Scripts
 
-| File                       | Purpose                             | Modify When                                   |
-| -------------------------- | ----------------------------------- | --------------------------------------------- |
-| `src/lib/pdf-generator.js` | PDF generation after build          | Changing PDF output path, styling, or options |
-| `src/lib/pdf-details.js`   | PDF path configuration              | Changing PDF filename or location             |
+| File                       | Purpose                    | Modify When                                   |
+| -------------------------- | -------------------------- | --------------------------------------------- |
+| `src/lib/pdf-generator.js` | PDF generation after build | Changing PDF output path, styling, or options |
+| `src/lib/pdf-details.js`   | PDF path configuration     | Changing PDF filename or location             |
 
 ### Layout & Components
 
