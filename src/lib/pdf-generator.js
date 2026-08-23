@@ -18,6 +18,7 @@ console.log(`Server listening on http://localhost:${port}`);
 const browser = await chromium.launch();
 const page = await browser.newPage();
 console.log(`Generating PDF from http://localhost:${port}/cv`);
+await page.emulateMedia({ colorScheme: 'light' });
 await page.goto(`http://localhost:${port}/cv`, { waitUntil: 'networkidle', timeout: 60000 });
 console.log(`Exporting PDF`);
 await page.pdf({ path: pdfOutPath });

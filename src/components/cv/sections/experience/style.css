@@ -38,8 +38,7 @@
     margin: 0.5rem auto;
 }
 
-.description strong {
-    color: #111;
+.description strong {    color: var(--highlight-black);
     font-weight: normal;
 }
 

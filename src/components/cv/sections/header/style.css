@@ -12,8 +12,7 @@ h1 {
 .vcard aside {
     margin: 0.5rem auto 0.9rem auto;
     padding: 0 0 0.5rem 0;
-    color: var(--highlight-black);
-    border-bottom: 0.2rem solid #008cba;
+    color: var(--highlight-black);    border-bottom: 0.2rem solid var(--primary-blue);
 }
 .vcard ul {
     list-style-type: none;
