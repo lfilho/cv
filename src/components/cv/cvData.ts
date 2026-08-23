@@ -1039,6 +1039,11 @@ export const cvData: CVData = {
     ],
     softSkills: [
       {
+        title: "The Engineering Executive's Primer: ",
+        subtitle: 'Impactful Technical Leadership',
+        author: 'Will Larson',
+      },
+      {
         title: 'Give and Take: ',
         subtitle: 'Why Helping Others Drives Our Success',
         author: 'Adam Grant',
