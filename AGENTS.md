@@ -10,6 +10,7 @@
 - [Directory Structure](#directory-structure)
 - [Development Workflows](#development-workflows)
 - [Code Conventions](#code-conventions)
+- [Commit Message Conventions](#commit-message-conventions)
 - [Common Tasks](#common-tasks)
 - [Build & Deployment](#build--deployment)
 - [Important Files](#important-files)
@@ -479,6 +480,53 @@ Use custom tags for rich embeds:
 ```
 
 Configuration: `markdoc.config.mjs` (project root). Powered by the `@astrojs/markdoc` integration; content is loaded via Astro content collections defined in `src/content.config.ts`.
+
+## Commit Message Conventions
+
+This repository follows [Conventional Commits](https://www.conventionalcommits.org/). A local git hook validates every commit message before it is created.
+
+### Format
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Allowed types
+
+| Type       | Use for                                                            |
+| ---------- | ------------------------------------------------------------------ |
+| `feat`     | New features or capabilities                                       |
+| `fix`      | Bug fixes                                                          |
+| `docs`     | Documentation changes only                                         |
+| `style`    | Formatting, whitespace, semicolons; no logic change                |
+| `refactor` | Code changes that neither fix a bug nor add a feature              |
+| `perf`     | Performance improvements                                           |
+| `test`     | Adding or correcting tests                                         |
+| `build`    | Build system, dependencies, or tooling changes                     |
+| `ci`       | CI/CD configuration or scripts                                     |
+| `chore`    | Maintenance tasks that do not fit above (e.g., dependency updates) |
+| `revert`   | Reverting a previous commit                                        |
+
+### Examples
+
+```bash
+feat(cv): add books reading section
+fix(header): correct mobile navigation alignment
+docs: update README with local setup instructions
+chore: update PDF from CI
+build(deps): bump astro to v7.2
+refactor: simplify career tenure calculation
+```
+
+### Enforcement
+
+- **Local hook:** `commitlint` runs automatically via the Husky `commit-msg` hook in `.husky/commit-msg`.
+- **Configuration:** `.commitlintrc.json` extends `@commitlint/config-conventional` and defines the allowed type enum.
+- **Bypass:** Avoid `git commit --no-verify`; the rule exists to keep history readable.
 
 ## Common Tasks
 
