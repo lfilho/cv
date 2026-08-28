@@ -152,11 +152,11 @@ Example formats:
 
 Use this mapping to infer continent from country:
 
-| Continent | Countries |
-|---|---|
-| Europe | Italy, Germany, France, Spain, Portugal, Greece, Hungary, Austria, Czech Republic, Netherlands, UK, Vatican City |
-| Americas | USA, Canada, Brazil, Chile, Argentina, Panama, Mexico, Cuba |
-| Asia | Japan, Thailand, India, China, South Korea, Singapore, Vietnam |
+| Continent | Countries                                                                                                        |
+| --------- | ---------------------------------------------------------------------------------------------------------------- |
+| Europe    | Italy, Germany, France, Spain, Portugal, Greece, Hungary, Austria, Czech Republic, Netherlands, UK, Vatican City |
+| Americas  | USA, Canada, Brazil, Chile, Argentina, Panama, Mexico, Cuba                                                      |
+| Asia      | Japan, Thailand, India, China, South Korea, Singapore, Vietnam                                                   |
 
 If a country is not in this table, ask the user which continent it belongs to.
 

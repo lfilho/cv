@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "include": ["/*"],
+    "exclude": [
+        "/_astro/*",
+        "/img/*",
+        "/favicon.*",
+        "/robots.txt",
+        "/llms.txt",
+        "/*.xml",
+        "/cv/pdf/*"
+    ]
+}

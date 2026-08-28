@@ -39,7 +39,7 @@ How it works:
 5. Saves to `public/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf`.
 6. Closes the server.
 
-**Important:** the PDF is committed to git and deployed to GitHub Pages. Always run `npm run build` after CV changes.
+**Important:** the PDF is committed to git and deployed to Cloudflare Pages. Always run `npm run build` after CV changes.
 
 ## Preview Production Build
 
@@ -55,7 +55,7 @@ Serves the production build locally for testing before deployment.
 
 **Triggers:**
 
-- Push to `main` that changes CV-related files
+- Push to `main` that changes site-related files
 - Manual workflow dispatch
 
 **Process:**
@@ -64,14 +64,12 @@ Serves the production build locally for testing before deployment.
 2. Install dependencies with `@astrojs/action@v4`.
 3. Build the site (`npm run build`).
 4. Run the postbuild PDF generation hook.
-5. Commit the updated PDF to the repository (requires `GH_TOKEN`).
-6. Deploy to GitHub Pages with `actions/deploy-pages@v4`.
+5. Deploy to Cloudflare Pages with `cloudflare/pages-action@v1`.
+6. Commit the updated PDF to the repository (requires `GH_TOKEN`).
 
 **Required permissions:**
 
 - `contents: write` — to commit the PDF
-- `pages: write` — to deploy to Pages
-- `id-token: write` — for OIDC authentication
 
 **Concurrency:** only one deployment runs at a time.
 
@@ -89,7 +87,7 @@ Serves the production build locally for testing before deployment.
 npm run build
 ```
 
-GitHub Pages handles deployment automatically after the workflow pushes the PDF.
+The GitHub Actions workflow deploys automatically after the workflow pushes the PDF.
 
 ## Environment Variables
 
@@ -101,14 +99,13 @@ GitHub Pages handles deployment automatically after the workflow pushes the PDF.
 ## GitHub Secrets
 
 - `GH_TOKEN` — required for committing PDF changes from Actions.
+- `CLOUDFLARE_API_TOKEN` — required for deploying to Cloudflare Pages.
+- `CLOUDFLARE_ACCOUNT_ID` — required for deploying to Cloudflare Pages.
+- `CLOUDFLARE_PAGES_PROJECT_NAME` — the Cloudflare Pages project name.
 
 ## Custom Domain
 
-**File:** `public/CNAME`
-
-Contains: `luiz.dev`
-
-This file ensures GitHub Pages uses the custom domain.
+The custom domain `luiz.dev` is configured in the Cloudflare Pages dashboard. The `public/CNAME` file is left in place for backwards compatibility but is no longer required.
 
 ## Performance Considerations
 
@@ -123,5 +120,5 @@ This file ensures GitHub Pages uses the custom domain.
 - ✅ CodeQL security scanning enabled.
 - ✅ Dependencies updated regularly (Dependabot recommended).
 - ✅ No sensitive data in the repository.
-- ✅ HTTPS enforced via GitHub Pages + custom domain.
+- ✅ HTTPS enforced via Cloudflare + custom domain.
 - ⚠️ Review third-party embeds (YouTube, Twitter, etc.).

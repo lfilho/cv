@@ -52,6 +52,7 @@ type BlogPostTwitterMeta = {
 export function getPageMeta({
   title: pageTitle,
   description,
+  canonicalUrl,
   baseUrl,
   ogImageAbsoluteUrl,
   ogImageAltText,
@@ -62,6 +63,7 @@ export function getPageMeta({
 }: {
   title: string;
   description: string;
+  canonicalUrl?: string;
   baseUrl?: string;
   ogImageAbsoluteUrl?: string; // should always be absolute
   ogImageAltText?: string;
@@ -79,7 +81,7 @@ export function getPageMeta({
     // ogImageHeight = !ogImageHeight ? 627 : ogImageHeight;
   }
 
-  const meta: PageMeta = { title: pageTitle, description: description };
+  const meta: PageMeta = { title: pageTitle, description: description, canonicalUrl };
 
   const og: PageOgMeta = {
     title: pageTitle,

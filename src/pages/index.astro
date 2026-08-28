@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/BookMeLayout.astro';
 import { cvData } from '@components/cv/cvData';
+import { getCareerTenure } from '@lib/career-tenure';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faHandshake } from '@fortawesome/free-regular-svg-icons';
@@ -16,6 +17,12 @@ library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHa
     <div class='text-center mb-12'>
       <h1 class='text-4xl font-bold mb-4'>Hi, I'm Luiz</h1>
       <p class='text-xl text-gray-600 dark:text-gray-300'><em>I like software and people :)</em></p>
+      <p class='max-w-2xl mx-auto mt-6 text-lg text-gray-700 dark:text-gray-200'>
+        I'm a people-centric engineering leader with ~{getCareerTenure()} years scaling teams and orgs across Coursera, AWS, startups,
+        and government; currently leading Developer Experience and the AI transformation at Coursera. I mentor engineering leaders and
+        help teams adopt AI, improve developer experience, and deliver high-impact products. Explore my CV, book a mentorship session
+        or connect with me on LinkedIn.
+      </p>
     </div>
 
     <div class='grid md:grid-cols-2 gap-12'>
@@ -112,6 +119,13 @@ library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHa
           Book a mentoring session on Topmate
         </span>
       </a>
+    </div>
+    <div class='mt-6 flex justify-center gap-4 text-sm text-gray-600 dark:text-gray-300'>
+      <a href='/about' class='hover:text-blue-600 dark:hover:text-blue-400'>About</a>
+      <span aria-hidden='true'>·</span>
+      <a href='/contact' class='hover:text-blue-600 dark:hover:text-blue-400'>Contact</a>
+      <span aria-hidden='true'>·</span>
+      <a href='/privacy' class='hover:text-blue-600 dark:hover:text-blue-400'>Privacy</a>
     </div>
   </footer>
 </Layout>

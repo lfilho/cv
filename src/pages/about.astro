@@ -1,0 +1,51 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import PageMeta from '@components/PageMeta.astro';
+import { SITE_URL } from '../config';
+
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+---
+
+<PageLayout>
+  <PageMeta
+    slot='meta'
+    title='About me'
+    description='Luiz Gonzaga is a people-centric software engineering leader focused on developer experience, AI adoption, and building high-performing teams.'
+    canonicalUrl={canonicalUrl}
+  />
+  <Fragment slot='main'>
+    <h1 class='text-3xl font-bold mb-6'>About me</h1>
+
+    <p class='mb-4'>
+      I'm Luiz Gonzaga dos Santos Filho, a software engineering leader based in Vancouver area, Canada. Over the decades I've
+      built and scaled engineering teams across big-tech, startups, government and everything in-between.
+    </p>
+
+    <p class='mb-4'>
+      Today I lead Platform efforts and the AI transformation at Coursera, where I focus on making engineers more productive
+      through agentic platforms, tools, practices, and AI fluency and effiency. I believe the best engineering organizations are
+      built on trust, psychological safety, and a relentless focus on developer experience and business impact.
+    </p>
+
+    <p class='mb-4'>
+      My leadership style is people-first. I mentor engineers and engineering leaders, help teams adopt AI in pragmatic ways, and
+      work to create environments where engineers can do their best work. I'm equally comfortable discussing system architecture,
+      org design, hiring strategy, or the human side of modern work environments.
+    </p>
+
+    <p class='mb-4'>
+      Outside of my day job, I offer mentorship, speak at engineering leadership events, and provide technical consultation to
+      other companies, research groups or investment firms. I'm a lifelong learner, and someone who genuinely enjoys connecting
+      with people and improving things around me.
+    </p>
+
+    <p class='mb-4'>
+      Explore my <a href='/cv' class='text-blue-600 dark:text-blue-400 hover:underline'>CV</a>, or <a
+        href='/book-me'
+        class='text-blue-600 dark:text-blue-400 hover:underline'
+      >
+        book a mentorship session
+      </a> or <a href='/contact' class='text-blue-600 dark:text-blue-400 hover:underline'>get in touch</a>.
+    </p>
+  </Fragment>
+</PageLayout>

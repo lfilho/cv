@@ -1,0 +1,26 @@
+---
+import Layout from '@layouts/BookMeLayout.astro';
+---
+
+<Layout title='Page not found'>
+  <main class='max-w-4xl mx-auto px-4 py-12 text-center'>
+    <h1 class='text-4xl font-bold mb-4'>Page not found</h1>
+    <p class='text-xl text-gray-600 dark:text-gray-300 mb-8'>
+      The page you're looking for doesn't exist or has moved. Here are some useful links to get back on track.
+    </p>
+
+    <nav aria-label='Useful links'>
+      <ul class='inline-flex flex-wrap justify-center gap-4 text-blue-600 dark:text-blue-400'>
+        <li><a href='/' class='hover:underline'>Home</a></li>
+        <li><a href='/cv' class='hover:underline'>CV</a></li>
+        <li><a href='/cv.md' class='hover:underline'>CV (Markdown)</a></li>
+        <li><a href='/book-me' class='hover:underline'>Book a session</a></li>
+        <li><a href='/about' class='hover:underline'>About</a></li>
+        <li><a href='/contact' class='hover:underline'>Contact</a></li>
+        <li><a href='/privacy' class='hover:underline'>Privacy</a></li>
+        <li><a href='/llms.txt' class='hover:underline'>llms.txt</a></li>
+        <li><a href='/sitemap-index.xml' class='hover:underline'>Sitemap</a></li>
+      </ul>
+    </nav>
+  </main>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import { cvData, cvKeywords } from '@components/cv/cvData';
+import { SITE_URL } from '../config';
+import { getCareerTenure } from '@lib/career-tenure';
+
+const { header } = cvData;
+const name = `${header.name.first} ${header.name.last}, ${header.name.title}`;
+const plainDescription = header.introduction
+  .join(' ')
+  .replace(/<strong>(.*?)<\/strong>/gi, '$1')
+  .replace(/<a\s+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '$2')
+  .replace(/<[^>]+>/g, '')
+  .replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure()));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name,
+  description: plainDescription,
+  url: SITE_URL,
+  email: `mailto:${header.contact.email.href}`,
+  jobTitle: 'Software Engineering Leader',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Coursera',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: header.location.city,
+    addressCountry: header.location.country,
+  },
+  sameAs: [
+    header.contact.linkedin.href,
+    header.contact.github.href,
+    header.contact.speakerdeck.href,
+    header.contact.topmate.href,
+  ],
+  knowsAbout: cvKeywords.slice(0, 20),
+};
+---
+
+<script type='application/ld+json' set:html={JSON.stringify(schema)} />

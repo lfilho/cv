@@ -1,0 +1,56 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import PageMeta from '@components/PageMeta.astro';
+import { cvData } from '@components/cv/cvData';
+import { SITE_URL } from '../config';
+
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const contact = cvData.header.contact;
+---
+
+<PageLayout>
+  <PageMeta
+    slot='meta'
+    title='Privacy'
+    description='Privacy policy for luiz.dev: no personal information is collected through forms, logins, or cookies. Page views are measured using TinyAnalytics in aggregate, anonymized form.'
+    canonicalUrl={canonicalUrl}
+  />
+  <Fragment slot='main'>
+    <h1 class='text-3xl font-bold mb-6'>Privacy</h1>
+
+    <p class='mb-4'>
+      This is a personal website. I don't collect personal information through forms, logins, accounts, or cookies. You can browse
+      every page without providing any identifying information.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Analytics</h2>
+    <p class='mb-4'>
+      I use <a href='https://tinyanalytics.io' class='text-blue-600 dark:text-blue-400 hover:underline' target='_blank'>
+        TinyAnalytics
+      </a> to understand aggregate, anonymized page-view data. It does not use cookies and does not track you across the web. The goal
+      is simply to see which pages are useful and how the site is discovered.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Third-party links</h2>
+    <p class='mb-4'>
+      This site links to third-party platforms such as LinkedIn, GitHub, Topmate, and SpeakerDeck. Those services have their own
+      privacy policies and data practices, which apply once you leave this site.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Hosting</h2>
+    <p class='mb-4'>
+      The site is hosted on GitHub Pages. GitHub may collect technical information, such as IP addresses and access logs, as part
+      of providing hosting services. I don't have access to individual visitor logs.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Changes and questions</h2>
+    <p>
+      If I change how data is handled on this site, I'll update this page. If you have any privacy questions, reach me at <a
+        href={`mailto:${contact.email.href}`}
+        class='text-blue-600 dark:text-blue-400 hover:underline'
+      >
+        {contact.email.href}
+      </a>.
+    </p>
+  </Fragment>
+</PageLayout>

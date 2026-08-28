@@ -1,0 +1,57 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import PageMeta from '@components/PageMeta.astro';
+import { cvData } from '@components/cv/cvData';
+import { SITE_URL } from '../config';
+
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const contact = cvData.header.contact;
+---
+
+<PageLayout>
+  <PageMeta
+    slot='meta'
+    title='Contact'
+    description='Best channels to reach Luiz Gonzaga: Topmate for mentorship, LinkedIn for everything else. Expected response time within the same week.'
+    canonicalUrl={canonicalUrl}
+  />
+  <Fragment slot='main'>
+    <h1 class='text-3xl font-bold mb-6'>Contact</h1>
+
+    <p class='mb-4'>
+      The best way to reach me depends on what you need. I read every message and aim to respond within the same week.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Mentorship and career conversations</h2>
+    <p class='mb-4'>
+      If you're looking for mentorship, resume review or career advice, please use <a
+        href={contact.topmate.href}
+        class='text-blue-600 dark:text-blue-400 hover:underline'
+        target='_blank'
+      >
+        Topmate
+      </a> platform.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Everything else</h2>
+    <p class='mb-4'>
+      For professional opportunities, speaking invitations, partnerships, fractional leadership work, technical consultations, or
+      just to say hello, <a href={contact.linkedin.href} class='text-blue-600 dark:text-blue-400 hover:underline' target='_blank'>
+        LinkedIn
+      </a> is the best place to reach me.
+    </p>
+
+    <h2 class='text-2xl font-semibold mb-3'>Other places to find me</h2>
+    <ul class='list-disc pl-6 mb-4 space-y-2'>
+      <li>
+        <a href={contact.github.href} class='text-blue-600 dark:text-blue-400 hover:underline' target='_blank'>GitHub</a> for open-source
+        work and side projects
+      </li>
+      <li>
+        <a href={contact.speakerdeck.href} class='text-blue-600 dark:text-blue-400 hover:underline' target='_blank'>
+          SpeakerDeck
+        </a> for past presentations and talks
+      </li>
+    </ul>
+  </Fragment>
+</PageLayout>

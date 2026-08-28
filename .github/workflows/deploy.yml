@@ -1,45 +1,46 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 on:
     push:
         branches: [main]
         paths:
-            - 'src/pages/cv/**'
-            - 'src/components/cv/**'
-            - 'src/layouts/CV.astro'
-            - 'src/lib/anchored-header.jsx'
-            - 'src/lib/array-to-html-list.jsx'
-            - 'src/lib/career-tenure.ts'
-            - 'src/lib/pdf-*.js'
+            - 'src/**'
+            - 'public/**'
+            - 'functions/**'
+            - 'public/_routes.json'
             - 'astro.config.mjs'
-            - 'postcss.config.cjs'
-            - 'tailwind.config.js'
-    # Allows you to run this workflow manually from the Actions tab on GitHub.
+            - 'package.json'
+            - 'package-lock.json'
+            - '.github/workflows/deploy.yml'
     workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
     contents: write
-    pages: write
-    id-token: write
 
 concurrency:
     group: 'pages'
     cancel-in-progress: false
 
 jobs:
-    build:
+    build-and-deploy:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout your repository using git
               uses: actions/checkout@v4
-            - name: Install, build, and upload your site
+
+            - name: Install and build
               uses: withastro/action@v4
-              # with:
-              # path: . # The root location of your Astro project inside the repository. (optional)
-              # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
-              # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
-            - name: Commit and push changes
+
+            - name: Deploy to Cloudflare Pages
+              uses: cloudflare/pages-action@v1
+              with:
+                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                  projectName: ${{ secrets.CLOUDFLARE_PAGES_PROJECT_NAME }}
+                  directory: dist
+                  gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Commit and push PDF changes
               run: |
                   git config --global user.email "github-actions@github.com"
                   git config --global user.name "github-actions"
@@ -49,14 +50,3 @@ jobs:
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        steps:
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v4

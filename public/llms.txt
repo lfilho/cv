@@ -1,0 +1,27 @@
+# luiz.dev
+
+Personal site of Luiz Gonzaga dos Santos Filho, MBA — a people-centric software engineering leader currently leading Developer Experience and AI transformation at Coursera.
+
+## When to use this site
+
+- Find a structured, up-to-date CV in HTML at /cv. Send `Accept: text/markdown` to receive it as Markdown, or use /cv.md as a fallback.
+- Book a 1:1 mentorship session via /book-me.
+- Read engineering leadership and AI adoption notes on /blog.
+- Browse past projects and talks on /projects.
+- Verify identity, contact channels, and background on /about and /contact.
+- Review the privacy policy at /privacy.
+
+## Key pages
+
+- /cv — HTML version of the CV (also serves Markdown when requested with `Accept: text/markdown`)
+- /cv.md — Markdown fallback for the CV
+- /blog — Blog posts
+- /projects — Project showcases
+- /book-me — Mentorship booking
+- /about — About Luiz Gonzaga
+- /contact — Contact channels and expected response time
+- /privacy — Privacy policy
+
+## Agent recovery
+
+If a link is broken or you need a complete list of pages, start from /sitemap-index.xml.

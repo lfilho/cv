@@ -1,11 +1,23 @@
 ---
 interface Props {
   title: string;
+  description?: string;
 }
 
 import '../styles/main-page.css';
+import PageMeta from '@components/PageMeta.astro';
+import PersonSchema from '@components/PersonSchema.astro';
+import { getCareerTenure } from '@lib/career-tenure';
+import { SITE_URL, SITE_DESCRIPTION } from '../config';
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const plainDescription =
+  description ||
+  SITE_DESCRIPTION.replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure()))
+    .replace(/<strong>(.*?)<\/strong>/gi, '$1')
+    .replace(/<a\s+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '$2')
+    .replace(/<[^>]+>/g, '');
 ---
 
 <!doctype html>
@@ -13,8 +25,8 @@ const { title } = Astro.props;
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
-    <title>{title}</title>
-    <meta name='description' content='Book a mentoring session with me' />
+    <PageMeta title={title} description={plainDescription} canonicalUrl={canonicalUrl} />
+    <PersonSchema />
   </head>
   <body class='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen'>
     <slot />

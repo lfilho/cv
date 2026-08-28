@@ -5,16 +5,18 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, TWITTER_HANDLE } from '../confi
 export interface Props {
   title?: string;
   description?: string;
+  canonicalUrl?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, canonicalUrl } = Astro.props;
 
 const { meta, og, twitter } = getPageMeta({
   title: title || SITE_TITLE,
   description: description || SITE_DESCRIPTION,
+  canonicalUrl,
   baseUrl: SITE_URL,
   ogImageAbsoluteUrl: `${SITE_URL}/images/og.png`,
-  ogImageAltText: 'My fancy website',
+  ogImageAltText: title || SITE_TITLE,
   ogImageWidth: 1200,
   ogImageHeight: 630,
   siteOwnerTwitterHandle: TWITTER_HANDLE,
@@ -26,6 +28,7 @@ const { meta, og, twitter } = getPageMeta({
 <title>{meta.title}</title>
 <meta name='title' content={meta.title} />
 {meta.description && <meta name='description' content={meta.description} />}
+{meta.canonicalUrl && <link rel='canonical' href={meta.canonicalUrl} />}
 
 <!-- Open Graph / Facebook -->
 {og.title && <meta property='og:title' content={og.title} />}
