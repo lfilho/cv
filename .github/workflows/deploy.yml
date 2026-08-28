@@ -16,6 +16,7 @@ on:
 
 permissions:
     contents: write
+    deployments: write
 
 concurrency:
     group: 'pages'
