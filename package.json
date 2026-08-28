@@ -46,7 +46,6 @@
         "express": "^5.2.1",
         "leaflet": "^1.9.4",
         "playwright": "^1.59.1",
-        "leaflet": "^1.9.4",
         "react": "^19.2.5",
         "react-autolink": "^0.2.1",
         "react-dom": "^19.2.5",
