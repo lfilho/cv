@@ -1,0 +1,221 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "luiz.dev Public API",
+    "description": "Machine-readable, read-only endpoints for discovering Luiz Gonzaga dos Santos Filho's CV, recruiting preferences, and agent capabilities. No authentication required.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Luiz Gonzaga dos Santos Filho",
+      "url": "https://luiz.dev/contact",
+      "email": "lfilho@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://luiz.dev",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/resume.json": {
+      "get": {
+        "operationId": "getStructuredResume",
+        "summary": "Structured resume in JSON Resume schema",
+        "description": "Returns Luiz Gonzaga's full resume in JSON Resume format, including work history, education, skills, languages, and recruiting preferences.",
+        "responses": {
+          "200": {
+            "description": "JSON Resume document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/cv/for-recruiters.md": {
+      "get": {
+        "operationId": "getRecruiterSummary",
+        "summary": "Recruiter-oriented summary",
+        "description": "Returns a concise recruiter summary: current role, target roles, industries, locations, and contact information.",
+        "responses": {
+          "200": {
+            "description": "Markdown recruiter summary",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/.well-known/ai-catalog.json": {
+      "get": {
+        "operationId": "getAgenticResourceCatalog",
+        "summary": "Agentic Resource Discovery (ARD) catalog",
+        "description": "Machine-readable catalog of capabilities exposed by luiz.dev, including MCP server card, API catalog, agent skills, auth policy, and structured resume.",
+        "responses": {
+          "200": {
+            "description": "ARD catalog",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/.well-known/agent-skills/index.json": {
+      "get": {
+        "operationId": "getAgentSkillsIndex",
+        "summary": "Agent Skills Discovery index",
+        "description": "Index of agent skills published for luiz.dev, with names, descriptions, URLs, and SHA-256 digests.",
+        "responses": {
+          "200": {
+            "description": "Agent skills index",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/.well-known/oauth-protected-resource": {
+      "get": {
+        "operationId": "getOAuthProtectedResourceMetadata",
+        "summary": "OAuth 2.0 Protected Resource Metadata",
+        "description": "Metadata describing the luiz.dev resource and how agents may authenticate. The site is public and read-only; no authentication is enforced.",
+        "responses": {
+          "200": {
+            "description": "OAuth Protected Resource Metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/.well-known/oauth-authorization-server": {
+      "get": {
+        "operationId": "getOAuthAuthorizationServerMetadata",
+        "summary": "OAuth 2.0 Authorization Server Metadata",
+        "description": "Authorization server metadata for luiz.dev. Anonymous access is supported; no credentials are issued.",
+        "responses": {
+          "200": {
+            "description": "OAuth Authorization Server Metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/{page}": {
+      "get": {
+        "operationId": "getPageAsMarkdown",
+        "summary": "Get any page as Markdown via content negotiation",
+        "description": "Request any page with Accept: text/markdown to receive a Markdown representation. Useful for agents that prefer plain text over HTML.",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Page slug (e.g., cv, about, contact, projects)."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Markdown representation of the page",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "responses": {
+      "NotFound": {
+        "description": "The requested endpoint was not found.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "example": "not_found"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer",
+                  "example": 404
+                },
+                "documentation": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "sitemap": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

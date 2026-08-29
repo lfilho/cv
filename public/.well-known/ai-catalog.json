@@ -26,6 +26,16 @@
             ]
         },
         {
+            "identifier": "urn:air:luiz.dev:openapi",
+            "displayName": "luiz.dev OpenAPI Specification",
+            "type": "application/vnd.oai.openapi+json",
+            "url": "https://luiz.dev/openapi.json",
+            "representativeQueries": [
+                "What endpoints does luiz.dev expose?",
+                "Where is the OpenAPI spec for luiz.dev?"
+            ]
+        },
+        {
             "identifier": "urn:air:luiz.dev:skills:index",
             "displayName": "luiz.dev Agent Skills Index",
             "type": "application/json",

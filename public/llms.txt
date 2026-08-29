@@ -24,6 +24,18 @@ Personal site of Luiz Gonzaga dos Santos Filho, MBA — a people-centric softwar
 
 If a link is broken or you need a complete list of pages, start from /sitemap-index.xml.
 
+## Developer and agent resources
+
+- OpenAPI specification: /openapi.json
+- Structured resume (JSON Resume): /resume.json
+- Agentic Resource Discovery manifest: /.well-known/ai-catalog.json
+- Agent skills index: /.well-known/agent-skills/index.json
+- MCP server card: /.well-known/mcp/server-card.json
+- Auth policy: /auth.md
+- OAuth Authorization Server metadata: /.well-known/oauth-authorization-server
+- OAuth Protected Resource metadata: /.well-known/oauth-protected-resource
+- API catalog: /.well-known/api-catalog
+
 ## For recruiters, ATS, and HRIS agents
 
 - Structured resume (JSON Resume schema): /resume.json

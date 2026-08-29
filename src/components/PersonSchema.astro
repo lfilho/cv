@@ -82,3 +82,26 @@ const schema = {
 ---
 
 <script type='application/ld+json' set:html={JSON.stringify(schema)} />
+
+<script
+  type='application/ld+json'
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'luiz.dev',
+    url: SITE_URL,
+    logo: `${SITE_URL}/favicon.svg`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: header.contact.email.href,
+      contactType: 'Recruiting and professional inquiries',
+      availableLanguage: ['English', 'Portuguese'],
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: header.location.city,
+      addressCountry: header.location.country,
+    },
+    sameAs: [header.contact.linkedin.href, header.contact.github.href, header.contact.speakerdeck.href],
+  })}
+/>

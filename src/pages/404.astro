@@ -3,11 +3,14 @@ import Layout from '@layouts/BookMeLayout.astro';
 import { NAV_LINKS } from '@lib/routes';
 ---
 
-<Layout title='Page not found'>
+<Layout title='Page not found' description='The requested page was not found on luiz.dev.'>
   <main class='max-w-4xl mx-auto px-4 py-12 text-center'>
     <h1 class='text-4xl font-bold mb-4'>Page not found</h1>
-    <p class='text-xl text-gray-600 dark:text-gray-300 mb-8'>
-      The page you're looking for doesn't exist or has moved. Here are some useful links to get back on track.
+    <p class='text-xl text-gray-600 dark:text-gray-300 mb-4'>The page you're looking for doesn't exist or has moved.</p>
+    <p class='mb-8 text-gray-600 dark:text-gray-300'>
+      Agents: see <a href='/llms.txt' class='text-blue-600 dark:text-blue-400 hover:underline'>llms.txt</a>,{' '}
+      <a href='/sitemap-index.xml' class='text-blue-600 dark:text-blue-400 hover:underline'>sitemap</a>, or{' '}
+      <a href='/openapi.json' class='text-blue-600 dark:text-blue-400 hover:underline'>openapi.json</a> for a complete index.
     </p>
 
     <nav aria-label='Useful links'>

@@ -36,3 +36,7 @@
 /resume.json
   Content-Type: application/json
   Access-Control-Allow-Origin: *
+
+/openapi.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *

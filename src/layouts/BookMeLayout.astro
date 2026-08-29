@@ -10,6 +10,8 @@ import PersonSchema from '@components/PersonSchema.astro';
 import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
 import WebMCP from '@components/WebMCP.astro';
 import { SITE_URL, SITE_DESCRIPTION } from '@config';
+
+import Favicon from './Favicon.astro';
 import { stripHtml } from '@lib/strip-html';
 
 const { title, description } = Astro.props;
@@ -23,7 +25,10 @@ const plainDescription = description || stripHtml(SITE_DESCRIPTION, { replaceCar
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <PageMeta title={title} description={plainDescription} canonicalUrl={canonicalUrl} />
+
+    <Favicon />
     <PersonSchema />
+
     <AgentDiscoveryLinks />
     <WebMCP />
   </head>
