@@ -1,0 +1,45 @@
+{
+    "name": "luiz.dev",
+    "description": "Personal website and CV of Luiz Gonzaga dos Santos Filho, MBA — a people-centric software engineering leader. Provides structured resume data, recruiter summary, and agent skills for HRIS and recruiting agents.",
+    "version": "1.0.0",
+    "documentationUrl": "https://luiz.dev/llms.txt",
+    "supportedInterfaces": [
+        {
+            "url": "https://luiz.dev/",
+            "protocolBinding": "https://luiz.dev/.well-known/agent-skills/"
+        }
+    ],
+    "capabilities": {
+        "streaming": false,
+        "pushNotifications": false,
+        "extendedAgentCard": false
+    },
+    "defaultInputModes": ["text/plain"],
+    "defaultOutputModes": ["text/plain", "application/json"],
+    "skills": [
+        {
+            "id": "site-overview",
+            "name": "Site Overview",
+            "description": "Provides AI agents with a structured overview of luiz.dev, including available routes, resources, and authentication policy.",
+            "tags": ["overview", "discovery", "site"]
+        },
+        {
+            "id": "match-candidate-to-role",
+            "name": "Match Candidate to Role",
+            "description": "Given a job description, returns a fit assessment for Luiz Gonzaga dos Santos Filho as a candidate, including an overall score, relevant experience, matched skills, and honest concerns.",
+            "tags": ["recruiting", "matching", "roles"]
+        },
+        {
+            "id": "get-structured-resume",
+            "name": "Get Structured Resume",
+            "description": "Returns Luiz Gonzaga dos Santos Filho's resume in JSON Resume format from /resume.json.",
+            "tags": ["resume", "cv", "json"]
+        },
+        {
+            "id": "get-recruiter-summary",
+            "name": "Get Recruiter Summary",
+            "description": "Returns a concise recruiter-oriented summary of Luiz Gonzaga dos Santos Filho: current role, target roles, industries, locations, and contact information.",
+            "tags": ["recruiting", "summary", "contact"]
+        }
+    ]
+}

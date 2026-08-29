@@ -46,6 +46,16 @@
             ]
         },
         {
+            "identifier": "urn:air:luiz.dev:a2a:agent-card",
+            "displayName": "luiz.dev A2A Agent Card",
+            "type": "application/json",
+            "url": "https://luiz.dev/.well-known/agent-card.json",
+            "representativeQueries": [
+                "What A2A capabilities does luiz.dev advertise?",
+                "Discover the luiz.dev agent card"
+            ]
+        },
+        {
             "identifier": "urn:air:luiz.dev:auth:policy",
             "displayName": "luiz.dev Auth.md Policy",
             "type": "text/markdown",

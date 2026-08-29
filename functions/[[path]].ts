@@ -6,6 +6,7 @@ interface FunctionContext {
 
 const PDF_PATH = '/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf';
 const PDF_FILENAME = 'Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf';
+const MARKDOWN_CONTENT_TYPE = 'text/markdown; charset=utf-8';
 
 function isApiPath(pathname: string): boolean {
   return (
