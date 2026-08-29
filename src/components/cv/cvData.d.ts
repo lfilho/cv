@@ -78,6 +78,17 @@ interface Book {
   author: string;
 }
 
+interface Recruiting {
+  openToOpportunities: boolean;
+  currentTitleSnapshot: string;
+  targetRoles: string[];
+  preferredIndustries: string[];
+  preferredLocations: string[];
+  seniorityTarget: string;
+  availabilityNote: string;
+  notLookingFor: string[];
+}
+
 export default interface CVData {
   [key: string];
   header: {
@@ -86,6 +97,7 @@ export default interface CVData {
     contact: Contact;
     introduction: string[];
   };
+  recruiting: Recruiting;
   experience: {
     softwareEngineering: ProfessionalXp[];
     instructorOrSpeaker: SpeakingXp[];

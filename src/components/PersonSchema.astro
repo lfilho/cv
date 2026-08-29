@@ -1,16 +1,31 @@
 ---
 import { cvData, cvKeywords } from '@components/cv/cvData';
 import { SITE_URL } from '@config';
-import { getCareerTenure } from '@lib/career-tenure';
+import { parseCvDate } from '@lib/parse-cv-dates';
+import { stripHtml } from '@lib/strip-html';
 
-const { header } = cvData;
+const { header, recruiting } = cvData;
 const name = `${header.name.first} ${header.name.last}, ${header.name.title}`;
-const plainDescription = header.introduction
-  .join(' ')
-  .replace(/<strong>(.*?)<\/strong>/gi, '$1')
-  .replace(/<a\s+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '$2')
-  .replace(/<[^>]+>/g, '')
-  .replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure()));
+const plainDescription = stripHtml(header.introduction.join(' '), { replaceCareerTenure: true });
+
+const worksForHistory = cvData.experience.softwareEngineering.map(job => {
+  const latestTitle = job.positions[job.positions.length - 1] || 'Engineering Leader';
+  return {
+    '@type': 'OrganizationRole',
+    roleName: latestTitle,
+    worksFor: {
+      '@type': 'Organization',
+      name: job.company,
+    },
+    startDate: parseCvDate(job.startDate),
+    endDate: job.endDate.toLowerCase() === 'present' ? undefined : parseCvDate(job.endDate, { lastDayOfMonth: true }),
+  };
+});
+
+const alumniOf = cvData.education.academyCourses.map(degree => ({
+  '@type': 'EducationalOrganization',
+  name: degree.school,
+}));
 
 const schema = {
   '@context': 'https://schema.org',
@@ -19,11 +34,9 @@ const schema = {
   description: plainDescription,
   url: SITE_URL,
   email: `mailto:${header.contact.email.href}`,
-  jobTitle: 'Software Engineering Leader',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Coursera',
-  },
+  jobTitle: 'Engineering Leader',
+  worksFor: worksForHistory,
+  alumniOf,
   address: {
     '@type': 'PostalAddress',
     addressLocality: header.location.city,
@@ -35,7 +48,36 @@ const schema = {
     header.contact.speakerdeck.href,
     header.contact.topmate.href,
   ],
-  knowsAbout: cvKeywords.slice(0, 20),
+  knowsAbout: cvKeywords.slice(0, 30),
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Engineering Leader',
+    description: 'Engineering leader targeting director/VP-level scope in next role',
+    skills: cvKeywords.slice(0, 20),
+  },
+  subjectOf: [
+    {
+      '@type': 'WebPage',
+      url: `${SITE_URL}/resume.json`,
+      name: 'Structured Resume (JSON Resume)',
+    },
+    {
+      '@type': 'WebPage',
+      url: `${SITE_URL}/cv/for-recruiters.md`,
+      name: 'For Recruiters',
+    },
+  ],
+  // Recruiting intent expressed as a custom property (ignored by Schema.org validators but useful for agents).
+  seeks: {
+    '@type': 'JobPosting',
+    title: recruiting.seniorityTarget,
+    description: recruiting.availabilityNote,
+    industry: recruiting.preferredIndustries,
+    jobLocation: recruiting.preferredLocations.map(loc => ({
+      '@type': 'Place',
+      name: loc,
+    })),
+  },
 };
 ---
 

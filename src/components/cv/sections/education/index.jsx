@@ -37,11 +37,11 @@ export default class Education extends Component {
         </>
       ) : null;
       return (
-        <li className='academy-course' key={i}>
-          <span>{entry.title}</span>
+        <li className='academy-course education vevent' key={i}>
+          <span className='summary'>{entry.title}</span>
 
           <span className='separator-highlight'> @&nbsp;</span>
-          <span>
+          <span className='org'>
             {entry.school} – {entry.location}
           </span>
 

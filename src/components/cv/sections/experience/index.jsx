@@ -41,19 +41,19 @@ export default class Experience extends Component {
       description = parseExperienceDescription(description);
 
       return (
-        <div className='xp' key={i}>
+        <div className='xp experience vevent' key={i}>
           <h3 className='grid-container'>
             <div className='job-data'>
               <FontAwesomeIcon icon={faLaptopCode} fixedWidth />
-              <span dangerouslySetInnerHTML={{ __html: positions }} />
+              <span className='summary title' dangerouslySetInnerHTML={{ __html: positions }} />
               <span className='separator-highlight'> @&nbsp;</span>
               <span className='org'>{entry.company}</span>
             </div>
             <div className='period'>
               <FontAwesomeIcon icon={faClock} fixedWidth />
-              <span>
-                {entry.startDate} – {entry.endDate}
-              </span>
+              <span className='dtstart'>{entry.startDate}</span>
+              <span> – </span>
+              <span className={entry.endDate.toLowerCase() === 'present' ? 'dtend present' : 'dtend'}>{entry.endDate}</span>
             </div>
           </h3>
           <article>

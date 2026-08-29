@@ -19,7 +19,7 @@ const keywordList = cvKeywords.join(', ');
 ---
 
 <CVLayout url={url} name={name} author={author} pageTitle={pageTitle} description={description} keywordList={keywordList}>
-  <main id='main'>
+  <main id='main' class='hresume'>
     <Header data={cvData.header} isVerbose={isVerbose} />
     <Experience data={cvData.experience} isVerbose={isVerbose} />
     <Education

@@ -1,15 +1,12 @@
 import { cvData, cvKeywords } from '../components/cv/cvData.ts';
-import { getCareerTenure } from './career-tenure.ts';
-
-function stripHtml(html: string): string {
-  return html
-    .replace(/<strong>(.*?)<\/strong>/gi, '**$1**')
-    .replace(/<a\s+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)')
-    .replace(/<[^>]+>/g, '');
-}
+import { stripHtml } from './strip-html.ts';
 
 function processText(text: string): string {
-  return stripHtml(text.replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure())));
+  return stripHtml(text, {
+    keepMarkdownBold: true,
+    keepMarkdownLinks: true,
+    replaceCareerTenure: true,
+  });
 }
 
 function flattenDescription(items: (string | string[])[], depth = 0): string[] {

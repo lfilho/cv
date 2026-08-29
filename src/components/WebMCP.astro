@@ -4,11 +4,21 @@
 
 import { MY_NAME, SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from '@config';
 import { cvData } from '@components/cv/cvData';
-import { getCareerTenure } from '@lib/career-tenure';
 import { ROUTES } from '@lib/routes';
+import { stripHtml } from '@lib/strip-html';
 
 const contact = cvData.header.contact;
-const plainDescription = SITE_DESCRIPTION.replace(/<[^>]+>/g, '').replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure()));
+const plainDescription = stripHtml(SITE_DESCRIPTION, { replaceCareerTenure: true });
+
+const recruiting = cvData.recruiting;
+const experiences = cvData.experience.softwareEngineering.map(job => ({
+  company: job.company,
+  title: job.positions[job.positions.length - 1] || 'Engineering Leader',
+  startDate: job.startDate,
+  endDate: job.endDate,
+  keywords: job.keywords,
+  summary: stripHtml(job.shortDescription.join(' ')),
+}));
 
 const siteInfo = {
   name: MY_NAME,
@@ -23,6 +33,8 @@ const siteInfo = {
     topmate: contact.topmate.href,
   },
   routes: ROUTES,
+  recruiting,
+  experiences,
 };
 
 const siteInfoJson = JSON.stringify(siteInfo);
@@ -95,6 +107,152 @@ const siteInfoJson = JSON.stringify(siteInfo);
         window.location.href = target;
         return JSON.stringify({ navigatedTo: target });
       },
+    });
+
+    const tokenize = text =>
+      String(text)
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 2);
+
+    const scoreExperience = jobDescription => {
+      const queryTokens = tokenize(jobDescription);
+      return siteInfo.experiences.map(exp => {
+        const expText = `${exp.company} ${exp.title} ${exp.keywords.join(' ')} ${exp.summary}`;
+        const expTokens = new Set(tokenize(expText));
+        const matched = queryTokens.filter(t => expTokens.has(t));
+        return { ...exp, matchedTokens: matched, score: matched.length };
+      });
+    };
+
+    register({
+      name: 'match_role',
+      title: 'Match candidate to a role',
+      description:
+        'Given a job description, returns an overall fit score, relevant experience, matched skills, and honest concerns for Luiz Gonzaga as a candidate.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          jobDescription: {
+            type: 'string',
+            description: 'Full job description or role requirements to match against.',
+          },
+        },
+        required: ['jobDescription'],
+      },
+      execute: async input => {
+        const args = typeof input === 'string' ? JSON.parse(input) : input;
+        const description = args.jobDescription || '';
+        const scored = scoreExperience(description).sort((a, b) => b.score - a.score);
+        const top = scored.filter(e => e.score > 0).slice(0, 3);
+        const queryTokens = tokenize(description);
+        const allKeywords = new Set(siteInfo.experiences.flatMap(e => e.keywords));
+        const matchedSkills = queryTokens.filter(t => allKeywords.has(t));
+        const concerns = [];
+        if (!description.toLowerCase().includes('director') && !description.toLowerCase().includes('vp')) {
+          concerns.push('Role does not explicitly mention director/VP scope; clarify expected scope.');
+        }
+        if (!top.some(e => e.title.toLowerCase().includes('director') || e.title.toLowerCase().includes('vp'))) {
+          concerns.push('No prior director/VP title in work history; candidate is targeting that scope next.');
+        }
+        const overallFit = Math.min(10, Math.max(4, 6 + top.length + Math.min(3, matchedSkills.length)));
+        return JSON.stringify({
+          overallFit,
+          relevantExperience: top,
+          matchedSkills,
+          concerns,
+        });
+      },
+    });
+
+    register({
+      name: 'get_relevant_experience',
+      title: 'Get relevant experience',
+      description: 'Returns the most relevant work experiences for a given set of keywords.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          keywords: {
+            type: 'array',
+            items: { type: 'string' },
+            description: 'Keywords to match against experience (e.g. ["ai", "developer experience", "enterprise"]).',
+          },
+          limit: {
+            type: 'number',
+            description: 'Maximum number of experiences to return.',
+          },
+        },
+        required: ['keywords'],
+      },
+      execute: async input => {
+        const args = typeof input === 'string' ? JSON.parse(input) : input;
+        const keywords = (args.keywords || []).map(k => k.toLowerCase());
+        const limit = args.limit || 3;
+        const scored = siteInfo.experiences
+          .map(exp => {
+            const text = `${exp.company} ${exp.title} ${exp.keywords.join(' ')} ${exp.summary}`.toLowerCase();
+            const score = keywords.filter(k => text.includes(k)).length;
+            return { ...exp, score };
+          })
+          .sort((a, b) => b.score - a.score)
+          .filter(e => e.score > 0)
+          .slice(0, limit);
+        return JSON.stringify(scored);
+      },
+    });
+
+    register({
+      name: 'get_availability_status',
+      title: 'Get availability status',
+      description: 'Returns whether Luiz is open to opportunities, current title, preferred arrangements, and a note.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
+      execute: async () =>
+        JSON.stringify({
+          openToOpportunities: siteInfo.recruiting.openToOpportunities,
+          currentTitle: siteInfo.recruiting.currentTitleSnapshot,
+          preferredArrangements: siteInfo.recruiting.preferredLocations,
+          note: siteInfo.recruiting.availabilityNote,
+        }),
+    });
+
+    register({
+      name: 'get_preferred_roles',
+      title: 'Get preferred roles',
+      description: 'Returns the roles, industries, locations, and seniority Luiz is targeting, plus his current title.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
+      execute: async () =>
+        JSON.stringify({
+          currentTitle: siteInfo.recruiting.currentTitleSnapshot,
+          targetRoles: siteInfo.recruiting.targetRoles,
+          industries: siteInfo.recruiting.preferredIndustries,
+          locations: siteInfo.recruiting.preferredLocations,
+          seniorityTarget: siteInfo.recruiting.seniorityTarget,
+          note: siteInfo.recruiting.availabilityNote,
+        }),
+    });
+
+    register({
+      name: 'get_contact_for_opportunities',
+      title: 'Get contact for opportunities',
+      description: 'Returns contact channels and booking link for recruiting opportunities.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
+      execute: async () =>
+        JSON.stringify({
+          email: siteInfo.contact.email,
+          linkedin: siteInfo.contact.linkedin,
+          bookingUrl: siteInfo.contact.topmate,
+          note: 'Prefer LinkedIn or email for initial outreach; book via Topmate for calls.',
+        }),
     });
 
     window.addEventListener('beforeunload', () => controller.abort());

@@ -4,6 +4,8 @@ export const ROUTES = {
   verboseCv: '/cv/verbose',
   cvMarkdown: '/cv/md',
   cvPdf: '/cv/pdf',
+  resumeJson: '/resume.json',
+  forRecruiters: '/cv/for-recruiters.md',
   about: '/about',
   contact: '/contact',
   projects: '/projects',

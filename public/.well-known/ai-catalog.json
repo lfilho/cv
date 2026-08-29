@@ -44,6 +44,26 @@
                 "Does luiz.dev require authentication?",
                 "What is the auth policy for luiz.dev agents?"
             ]
+        },
+        {
+            "identifier": "urn:air:luiz.dev:resume:json",
+            "displayName": "luiz.dev Structured Resume (JSON Resume)",
+            "type": "application/json",
+            "url": "https://luiz.dev/resume.json",
+            "representativeQueries": [
+                "Get Luiz Gonzaga's structured resume as JSON",
+                "What is Luiz Gonzaga's work history?"
+            ]
+        },
+        {
+            "identifier": "urn:air:luiz.dev:recruiters:summary",
+            "displayName": "luiz.dev For Recruiters Summary",
+            "type": "text/markdown",
+            "url": "https://luiz.dev/cv/for-recruiters.md",
+            "representativeQueries": [
+                "What roles is Luiz Gonzaga open to?",
+                "Is Luiz Gonzaga a fit for a Director of Engineering role?"
+            ]
         }
     ]
 }

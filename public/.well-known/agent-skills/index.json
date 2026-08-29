@@ -6,7 +6,28 @@
             "type": "skill-md",
             "description": "Provides AI agents with a structured overview of luiz.dev, including available routes, resources, and authentication policy.",
             "url": "https://luiz.dev/.well-known/agent-skills/site-overview.md",
-            "digest": "sha256:6eee6e1deb998cb9e3081aba1b50751bded86036a16f4330fec0e410842cfa00"
+            "digest": "sha256:9265bbda010bc4337d3ad27384e7414102fe9c2365d3b2e3265dbccb5d2c0e3b"
+        },
+        {
+            "name": "match-candidate-to-role",
+            "type": "skill-md",
+            "description": "Given a job description, returns a fit assessment for Luiz Gonzaga dos Santos Filho as a candidate, including an overall score, relevant experience, matched skills, and honest concerns.",
+            "url": "https://luiz.dev/.well-known/agent-skills/match-candidate-to-role.md",
+            "digest": "sha256:fcd6b74354858815e55c9bbd2735f5ff7d578e8cea59e506399cac87a1db2f78"
+        },
+        {
+            "name": "get-structured-resume",
+            "type": "skill-md",
+            "description": "Returns Luiz Gonzaga dos Santos Filho's resume in JSON Resume format from /resume.json.",
+            "url": "https://luiz.dev/.well-known/agent-skills/get-structured-resume.md",
+            "digest": "sha256:f9195fbdddb0c6a82990d1a63a6926e72966207a936e9eeca759e075f1a11e8f"
+        },
+        {
+            "name": "get-recruiter-summary",
+            "type": "skill-md",
+            "description": "Returns a concise recruiter-oriented summary of Luiz Gonzaga dos Santos Filho: current role, target roles, industries, locations, and contact information.",
+            "url": "https://luiz.dev/.well-known/agent-skills/get-recruiter-summary.md",
+            "digest": "sha256:5132ccc777a663de9a2eba63be1a0d2db79fa9bf3e7d5b939471c982910ecd04"
         }
     ]
 }

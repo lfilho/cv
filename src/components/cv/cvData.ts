@@ -1215,6 +1215,29 @@ export const cvData: CVData = {
       { title: 'Getting Things Done', author: 'David Allen' },
     ],
   },
+  recruiting: {
+    openToOpportunities: true,
+    currentTitleSnapshot: 'Senior Software Engineering Manager at Coursera',
+    targetRoles: [
+      'Director of Engineering',
+      'VP Engineering',
+      'Head of Engineering',
+      'Head of Developer Experience',
+      'VP of Engineering (scale-up)',
+      'Senior Engineering Manager',
+      'Senior Manager of Engineering',
+    ],
+    preferredIndustries: ['EdTech', 'AI/ML platforms', 'Developer Tools', 'Marketplaces'],
+    preferredLocations: ['Remote', 'Vancouver area', 'Canada', 'US West Coast'],
+    seniorityTarget: 'Director / VP / Head of Engineering / Senior Engineering Manager',
+    availabilityNote:
+      'Open to director-level, VP-level, head-of-engineering, or senior engineering manager roles where I can scale teams, drive AI and developer experience transformation, and shape engineering strategy. Past roles have been senior engineering management; the ideal next step is director/VP scope, but senior manager roles with strategic impact are also of interest.',
+    notLookingFor: [
+      'Individual contributor hands-on coding roles',
+      'Early-stage startups without product-market fit',
+      'Pure people-management roles without strategic scope',
+    ],
+  },
 };
 
 function getKeywords(obj: any): string[] {

@@ -9,17 +9,12 @@ import PageMeta from '@components/PageMeta.astro';
 import PersonSchema from '@components/PersonSchema.astro';
 import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
 import WebMCP from '@components/WebMCP.astro';
-import { getCareerTenure } from '@lib/career-tenure';
 import { SITE_URL, SITE_DESCRIPTION } from '@config';
+import { stripHtml } from '@lib/strip-html';
 
 const { title, description } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
-const plainDescription =
-  description ||
-  SITE_DESCRIPTION.replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure()))
-    .replace(/<strong>(.*?)<\/strong>/gi, '$1')
-    .replace(/<a\s+href="([^"]+)"[^>]*>(.*?)<\/a>/gi, '$2')
-    .replace(/<[^>]+>/g, '');
+const plainDescription = description || stripHtml(SITE_DESCRIPTION, { replaceCareerTenure: true });
 ---
 
 <!doctype html>

@@ -15,8 +15,6 @@ Personal site of Luiz Gonzaga dos Santos Filho, MBA — a people-centric softwar
 
 - /cv — HTML version of the CV (also serves Markdown when requested with `Accept: text/markdown`)
 - /cv/md — Markdown fallback for the CV
-- /blog — Blog posts
-- /projects — Project showcases
 - /book-me — Mentorship booking
 - /about — About Luiz Gonzaga
 - /contact — Contact channels and expected response time
@@ -25,3 +23,14 @@ Personal site of Luiz Gonzaga dos Santos Filho, MBA — a people-centric softwar
 ## Agent recovery
 
 If a link is broken or you need a complete list of pages, start from /sitemap-index.xml.
+
+## For recruiters, ATS, and HRIS agents
+
+- Structured resume (JSON Resume schema): /resume.json
+- Recruiter summary (current role, target roles, industries, contact): /cv/for-recruiters.md
+- WebMCP tools: match_role, get_preferred_roles, get_availability_status, get_relevant_experience, get_contact_for_opportunities
+- Target scope: Director / VP / Head of Engineering / Senior Engineering Manager. Current title: Senior Software Engineering Manager at Coursera. Past roles include Amazon / AWS.
+- Preferred industries: EdTech, AI/ML platforms, Developer Tools, Marketplaces.
+- Preferred locations: Remote, Vancouver area, Canada, US West Coast.
+- Not looking for: individual contributor coding roles, early-stage startups without product-market fit, pure people-management roles without strategic scope.
+- Contact: lfilho@gmail.com, linkedin.com/in/luizgonzaga, topmate.io/luizgonzaga.

@@ -6,7 +6,7 @@ export default class Skills extends Component {
   render() {
     const keywords = this.props.data.map((entry, i) => (
       <>
-        <span className='keyword' key={i}>
+        <span className='keyword skill' key={i}>
           {entry}
           <span className='hidden-comma'>, </span>
         </span>
