@@ -9,6 +9,7 @@ import PageMeta from '@components/PageMeta.astro';
 import PersonSchema from '@components/PersonSchema.astro';
 import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
 import WebMCP from '@components/WebMCP.astro';
+import Footer from '@components/Footer.astro';
 import { SITE_URL, SITE_DESCRIPTION } from '@config';
 
 import Favicon from './Favicon.astro';
@@ -34,5 +35,6 @@ const plainDescription = description || stripHtml(SITE_DESCRIPTION, { replaceCar
   </head>
   <body class='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen'>
     <slot />
+    <Footer />
   </body>
 </html>

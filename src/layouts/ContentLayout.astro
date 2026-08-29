@@ -10,6 +10,7 @@ import '../styles/markdown.css';
 import Favicon from './Favicon.astro';
 import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
 import WebMCP from '@components/WebMCP.astro';
+import Footer from '@components/Footer.astro';
 
 export interface Props {
   title: string;
@@ -45,6 +46,9 @@ const formattedDate = new Date(date).toLocaleDateString('en-us', {
         <slot name='content' />
       </section>
     </main>
+    <div class='page-footer'>
+      <Footer />
+    </div>
   </body><style>
     body {
       display: grid;
@@ -53,11 +57,14 @@ const formattedDate = new Date(date).toLocaleDateString('en-us', {
         'header'
         'main'
         'footer';
-      grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+      grid-template-rows: 5rem minmax(auto, 1fr) auto;
       grid-template-columns: minmax(0, 1fr);
     }
     main {
       grid-area: main;
+    }
+    .page-footer {
+      grid-area: footer;
     }
   </style>
 </html>

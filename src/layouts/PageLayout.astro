@@ -12,6 +12,7 @@ import '../styles/global.css';
 import Favicon from './Favicon.astro';
 import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
 import WebMCP from '@components/WebMCP.astro';
+import Footer from '@components/Footer.astro';
 ---
 
 <!doctype html>
@@ -32,6 +33,9 @@ import WebMCP from '@components/WebMCP.astro';
     <main id='main'>
       <slot name='main' />
     </main>
+    <div class='page-footer'>
+      <Footer />
+    </div>
     <style>
       body {
         display: grid;
@@ -40,11 +44,14 @@ import WebMCP from '@components/WebMCP.astro';
           'header'
           'main'
           'footer';
-        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+        grid-template-rows: 5rem minmax(auto, 1fr) auto;
         grid-template-columns: minmax(0, 1fr);
       }
       main {
         grid-area: main;
+      }
+      .page-footer {
+        grid-area: footer;
       }
     </style>
   </body>
