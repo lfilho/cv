@@ -1,7 +1,7 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
 import PageMeta from '@components/PageMeta.astro';
-import { SITE_URL } from '../config';
+import { SITE_URL } from '@config';
 
 const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
 ---

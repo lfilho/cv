@@ -8,7 +8,7 @@ import '../styles/main-page.css';
 import PageMeta from '@components/PageMeta.astro';
 import PersonSchema from '@components/PersonSchema.astro';
 import { getCareerTenure } from '@lib/career-tenure';
-import { SITE_URL, SITE_DESCRIPTION } from '../config';
+import { SITE_URL, SITE_DESCRIPTION } from '@config';
 
 const { title, description } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;

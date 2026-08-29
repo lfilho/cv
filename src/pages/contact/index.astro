@@ -2,7 +2,7 @@
 import PageLayout from '@layouts/PageLayout.astro';
 import PageMeta from '@components/PageMeta.astro';
 import { cvData } from '@components/cv/cvData';
-import { SITE_URL } from '../config';
+import { SITE_URL } from '@config';
 
 const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
 const contact = cvData.header.contact;

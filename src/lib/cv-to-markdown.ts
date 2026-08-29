@@ -1,5 +1,5 @@
-import { cvData, cvKeywords } from '@components/cv/cvData';
-import { getCareerTenure } from '@lib/career-tenure';
+import { cvData, cvKeywords } from '../components/cv/cvData.ts';
+import { getCareerTenure } from './career-tenure.ts';
 
 function stripHtml(html: string): string {
   return html
