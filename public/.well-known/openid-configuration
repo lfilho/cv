@@ -1,0 +1,26 @@
+{
+    "issuer": "https://luiz.dev",
+    "authorization_endpoint": "https://luiz.dev/auth.md",
+    "token_endpoint": "https://luiz.dev/auth.md",
+    "jwks_uri": "https://luiz.dev/auth.md",
+    "registration_endpoint": "https://luiz.dev/auth.md",
+    "grant_types_supported": [],
+    "response_types_supported": [],
+    "scopes_supported": [],
+    "token_endpoint_auth_methods_supported": ["none"],
+    "subject_types_supported": ["public"],
+    "id_token_signing_alg_values_supported": ["none"],
+    "agent_auth": {
+        "skill": "https://isitagentready.com/.well-known/agent-skills/auth-md/SKILL.md",
+        "register_uri": "https://luiz.dev/auth.md",
+        "methods": [
+            {
+                "identity_types_supported": ["anonymous"],
+                "anonymous": {
+                    "credential_types_supported": ["none"],
+                    "claim_uri": "https://luiz.dev/auth.md"
+                }
+            }
+        ]
+    }
+}

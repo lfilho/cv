@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import Favicon from './Favicon.astro';
+import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
+import WebMCP from '@components/WebMCP.astro';
 ---
 
 <!doctype html>
@@ -11,6 +13,8 @@ import Favicon from './Favicon.astro';
     <meta name='robots' content='follow, index' />
     <Favicon />
     <slot name='meta' />
+    <AgentDiscoveryLinks />
+    <WebMCP />
     <style is:global>
       /* Full-bleed map: override global.css body constraints. */
       body.travel-map-body {

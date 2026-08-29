@@ -8,6 +8,8 @@ import '../styles/global.css';
 import '../styles/markdown.css';
 
 import Favicon from './Favicon.astro';
+import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
+import WebMCP from '@components/WebMCP.astro';
 
 export interface Props {
   title: string;
@@ -31,6 +33,8 @@ const formattedDate = new Date(date).toLocaleDateString('en-us', {
     <meta name='generator' content='Blogster' />
     <Favicon />
     <slot name='meta' />
+    <AgentDiscoveryLinks />
+    <WebMCP />
   </head>
 
   <body class='text-text-body bg-bg-body max-w-3xl mx-auto px-4 sm:px-8'>

@@ -1,0 +1,49 @@
+{
+    "specVersion": "1.0",
+    "host": {
+        "displayName": "Luiz Gonzaga dos Santos Filho",
+        "identifier": "did:web:luiz.dev"
+    },
+    "entries": [
+        {
+            "identifier": "urn:air:luiz.dev:server:main",
+            "displayName": "luiz.dev MCP Server Card",
+            "type": "application/mcp-server-card+json",
+            "url": "https://luiz.dev/.well-known/mcp/server-card.json",
+            "representativeQueries": [
+                "What MCP capabilities does luiz.dev advertise?",
+                "Where is the MCP server endpoint for luiz.dev?"
+            ]
+        },
+        {
+            "identifier": "urn:air:luiz.dev:catalog:api",
+            "displayName": "luiz.dev API Catalog",
+            "type": "application/linkset+json",
+            "url": "https://luiz.dev/.well-known/api-catalog",
+            "representativeQueries": [
+                "What APIs are catalogued on luiz.dev?",
+                "Where can I find the service description for luiz.dev?"
+            ]
+        },
+        {
+            "identifier": "urn:air:luiz.dev:skills:index",
+            "displayName": "luiz.dev Agent Skills Index",
+            "type": "application/json",
+            "url": "https://luiz.dev/.well-known/agent-skills/index.json",
+            "representativeQueries": [
+                "What agent skills does luiz.dev publish?",
+                "How do I discover skills for luiz.dev?"
+            ]
+        },
+        {
+            "identifier": "urn:air:luiz.dev:auth:policy",
+            "displayName": "luiz.dev Auth.md Policy",
+            "type": "text/markdown",
+            "url": "https://luiz.dev/auth.md",
+            "representativeQueries": [
+                "Does luiz.dev require authentication?",
+                "What is the auth policy for luiz.dev agents?"
+            ]
+        }
+    ]
+}

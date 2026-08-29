@@ -1,0 +1,7 @@
+{
+    "resource": "https://luiz.dev/",
+    "authorization_servers": [],
+    "scopes_supported": [],
+    "bearer_methods_supported": ["header"],
+    "resource_documentation": "https://luiz.dev/auth.md"
+}

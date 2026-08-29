@@ -8,6 +8,7 @@ import { faHandshake } from '@fortawesome/free-regular-svg-icons';
 import { faEnvelope, faGlobe, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { ROUTES } from '@lib/routes';
 
 library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHandshake);
 ---
@@ -33,13 +34,13 @@ library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHa
         </p>
         <div class='space-y-3'>
           <a
-            href='/cv'
+            href={ROUTES.cv}
             class='inline-block w-full bg-blue-600 dark:bg-blue-700 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-200'
           >
             View CV
           </a>
           <a
-            href='/cv/pdf'
+            href={ROUTES.cvPdf}
             class='inline-block w-full border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 text-center py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 transition duration-200'
           >
             Download PDF Version
@@ -53,7 +54,7 @@ library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHa
           Schedule a mentoring session for personalized guidance on your tech career.
         </p>
         <a
-          href='/book-me'
+          href={ROUTES.bookMe}
           class='inline-block w-full bg-blue-600 dark:bg-blue-700 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-200'
         >
           Book Now
@@ -121,11 +122,11 @@ library.add(faGithub, faLinkedin, faEnvelope, faGlobe, faChalkboardTeacher, faHa
       </a>
     </div>
     <div class='mt-6 flex justify-center gap-4 text-sm text-gray-600 dark:text-gray-300'>
-      <a href='/about' class='hover:text-blue-600 dark:hover:text-blue-400'>About</a>
+      <a href={ROUTES.about} class='hover:text-blue-600 dark:hover:text-blue-400'>About</a>
       <span aria-hidden='true'>·</span>
-      <a href='/contact' class='hover:text-blue-600 dark:hover:text-blue-400'>Contact</a>
+      <a href={ROUTES.contact} class='hover:text-blue-600 dark:hover:text-blue-400'>Contact</a>
       <span aria-hidden='true'>·</span>
-      <a href='/privacy' class='hover:text-blue-600 dark:hover:text-blue-400'>Privacy</a>
+      <a href={ROUTES.privacy} class='hover:text-blue-600 dark:hover:text-blue-400'>Privacy</a>
     </div>
   </footer>
 </Layout>

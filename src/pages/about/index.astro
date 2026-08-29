@@ -2,6 +2,7 @@
 import PageLayout from '@layouts/PageLayout.astro';
 import PageMeta from '@components/PageMeta.astro';
 import { SITE_URL } from '@config';
+import { ROUTES } from '@lib/routes';
 
 const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
 ---
@@ -40,12 +41,12 @@ const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
     </p>
 
     <p class='mb-4'>
-      Explore my <a href='/cv' class='text-blue-600 dark:text-blue-400 hover:underline'>CV</a>, or <a
-        href='/book-me'
+      Explore my <a href={ROUTES.cv} class='text-blue-600 dark:text-blue-400 hover:underline'>CV</a>, or <a
+        href={ROUTES.bookMe}
         class='text-blue-600 dark:text-blue-400 hover:underline'
       >
         book a mentorship session
-      </a> or <a href='/contact' class='text-blue-600 dark:text-blue-400 hover:underline'>get in touch</a>.
+      </a> or <a href={ROUTES.contact} class='text-blue-600 dark:text-blue-400 hover:underline'>get in touch</a>.
     </p>
   </Fragment>
 </PageLayout>

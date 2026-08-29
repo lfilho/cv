@@ -1,0 +1,28 @@
+{
+    "linkset": [
+        {
+            "anchor": "https://luiz.dev/",
+            "service-desc": [
+                {
+                    "href": "https://luiz.dev/.well-known/ai-catalog.json",
+                    "type": "application/json",
+                    "title": "Agentic Resource Discovery manifest"
+                }
+            ],
+            "service-doc": [
+                {
+                    "href": "https://luiz.dev/about",
+                    "type": "text/html",
+                    "title": "About this site"
+                }
+            ],
+            "status": [
+                {
+                    "href": "https://luiz.dev/",
+                    "type": "text/html",
+                    "title": "Site homepage (liveness)"
+                }
+            ]
+        }
+    ]
+}

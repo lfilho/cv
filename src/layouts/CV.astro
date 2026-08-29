@@ -4,6 +4,8 @@ import '@components/cv/css/normalize.css';
 import '@components/cv/css/print.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import PersonSchema from '@components/PersonSchema.astro';
+import AgentDiscoveryLinks from '@components/AgentDiscoveryLinks.astro';
+import WebMCP from '@components/WebMCP.astro';
 
 const { url, author, pageTitle, description, keywordList } = Astro.props;
 ---
@@ -39,6 +41,8 @@ const { url, author, pageTitle, description, keywordList } = Astro.props;
     <!-- <meta property="twitter:image" content={image} /> -->
     <link rel='alternate' type='text/markdown' href='/cv/md' title='Markdown version of this CV' />
     <PersonSchema />
+    <AgentDiscoveryLinks />
+    <WebMCP />
     <script defer src='https://app.tinyanalytics.io/pixel/OcEmQ4KSdVvYpK8O'></script>
   </head>
   <body>

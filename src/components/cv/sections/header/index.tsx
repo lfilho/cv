@@ -5,6 +5,7 @@ import { faChalkboardTeacher, faEnvelope, faHome, faMapMarkerAlt } from '@fortaw
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Component } from 'react';
 import { getCareerTenure } from '../../../../lib/career-tenure';
+import { ROUTES } from '../../../../lib/routes';
 
 import './style.css';
 
@@ -21,11 +22,11 @@ export default class Header extends Component {
     ));
     const linkToAlternateVersion = isVerbose ? (
       <p>
-        You're looking at the verbose version of my resumé, for the regular version, visit <a href='/cv'>luiz.dev/cv</a>.
+        You're looking at the verbose version of my resumé, for the regular version, visit <a href={ROUTES.cv}>luiz.dev/cv</a>.
       </p>
     ) : (
       <p>
-        For a more verbose version of my resumé, visit <a href='/cv/verbose'>luiz.dev/cv/verbose</a>.
+        For a more verbose version of my resumé, visit <a href={ROUTES.verboseCv}>luiz.dev/cv/verbose</a>.
       </p>
     );
 

@@ -1,0 +1,22 @@
+{
+    "serverInfo": {
+        "name": "luiz.dev",
+        "version": "1.0.0"
+    },
+    "endpoint": {
+        "type": "streamable-http",
+        "url": "https://luiz.dev/mcp"
+    },
+    "capabilities": {
+        "tools": {
+            "listChanged": false
+        },
+        "resources": {
+            "subscribe": false,
+            "listChanged": false
+        },
+        "prompts": {
+            "listChanged": false
+        }
+    }
+}

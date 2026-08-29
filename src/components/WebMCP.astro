@@ -1,0 +1,102 @@
+---
+// Exposes a small set of read-only site tools via the WebMCP imperative API.
+// Site metadata is pulled from the existing config and CV data so this file stays DRY.
+
+import { MY_NAME, SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from '@config';
+import { cvData } from '@components/cv/cvData';
+import { getCareerTenure } from '@lib/career-tenure';
+import { ROUTES } from '@lib/routes';
+
+const contact = cvData.header.contact;
+const plainDescription = SITE_DESCRIPTION.replace(/<[^>]+>/g, '').replace(/\{\{CAREER_TENURE\}\}/g, String(getCareerTenure()));
+
+const siteInfo = {
+  name: MY_NAME,
+  title: SITE_TITLE,
+  url: SITE_URL,
+  description: plainDescription,
+  contact: {
+    email: contact.email.href,
+    linkedin: contact.linkedin.href,
+    github: contact.github.href,
+    speakerdeck: contact.speakerdeck.href,
+    topmate: contact.topmate.href,
+  },
+  routes: ROUTES,
+};
+
+const siteInfoJson = JSON.stringify(siteInfo);
+---
+
+<script is:inline data-site-info={siteInfoJson}>
+  (function () {
+    const modelContext =
+      (typeof navigator !== 'undefined' && navigator.modelContext) || (typeof document !== 'undefined' && document.modelContext);
+
+    if (!modelContext || typeof modelContext.registerTool !== 'function') {
+      return;
+    }
+
+    const siteInfo = JSON.parse(document.currentScript.dataset.siteInfo);
+    const controller = new AbortController();
+
+    const register = tool => {
+      try {
+        const registration = modelContext.registerTool(tool);
+        if (registration && typeof registration.then === 'function') {
+          registration.catch(() => {});
+        }
+      } catch {
+        // Ignore environments that do not support WebMCP.
+      }
+    };
+
+    register({
+      name: 'get_site_info',
+      title: 'Get site information',
+      description:
+        'Returns high-level information about luiz.dev, including the author name, title, description, contact links, and available routes.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
+      execute: async () => JSON.stringify(siteInfo),
+    });
+
+    register({
+      name: 'get_contact_info',
+      title: 'Get contact information',
+      description: `Returns contact links and email for ${siteInfo.name}.`,
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
+      execute: async () => JSON.stringify(siteInfo.contact),
+    });
+
+    register({
+      name: 'navigate_to',
+      title: 'Navigate to a page',
+      description:
+        'Navigates the browser to a known route on luiz.dev. Use one of the route keys from get_site_info.routes, or provide a full path.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          path: {
+            type: 'string',
+            description: 'Route key (e.g. "cv", "contact", "projects") or absolute path (e.g. "/cv").',
+          },
+        },
+        required: ['path'],
+      },
+      execute: async input => {
+        const args = typeof input === 'string' ? JSON.parse(input) : input;
+        const target = siteInfo.routes[args.path] || (args.path.startsWith('/') ? args.path : '/' + args.path);
+        window.location.href = target;
+        return JSON.stringify({ navigatedTo: target });
+      },
+    });
+
+    window.addEventListener('beforeunload', () => controller.abort());
+  })();
+</script>

@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+    "skills": [
+        {
+            "name": "luiz-dev-site-overview",
+            "type": "skill-md",
+            "description": "Provides AI agents with a structured overview of luiz.dev, including available routes, resources, and authentication policy.",
+            "url": "https://luiz.dev/.well-known/agent-skills/site-overview.md",
+            "digest": "sha256:6eee6e1deb998cb9e3081aba1b50751bded86036a16f4330fec0e410842cfa00"
+        }
+    ]
+}

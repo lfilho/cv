@@ -1,0 +1,28 @@
+export const ROUTES = {
+  home: '/',
+  cv: '/cv',
+  verboseCv: '/cv/verbose',
+  cvMarkdown: '/cv/md',
+  cvPdf: '/cv/pdf',
+  about: '/about',
+  contact: '/contact',
+  projects: '/projects',
+  blog: '/blog',
+  bookMe: '/book-me',
+  travelMap: '/travel-map',
+  privacy: '/privacy',
+  llmsTxt: '/llms.txt',
+  sitemap: '/sitemap-index.xml',
+} as const;
+
+export const NAV_LINKS = [
+  { label: 'Home', href: ROUTES.home },
+  { label: 'CV', href: ROUTES.cv },
+  { label: 'CV (Markdown)', href: ROUTES.cvMarkdown },
+  { label: 'Book a session', href: ROUTES.bookMe },
+  { label: 'About', href: ROUTES.about },
+  { label: 'Contact', href: ROUTES.contact },
+  { label: 'Privacy', href: ROUTES.privacy },
+  { label: 'llms.txt', href: ROUTES.llmsTxt },
+  { label: 'Sitemap', href: ROUTES.sitemap },
+];

@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
 
+Agentmap: https://luiz.dev/.well-known/ai-catalog.json
 Sitemap: https://luiz.dev/sitemap-index.xml
