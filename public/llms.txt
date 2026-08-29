@@ -4,7 +4,7 @@ Personal site of Luiz Gonzaga dos Santos Filho, MBA — a people-centric softwar
 
 ## When to use this site
 
-- Find a structured, up-to-date CV in HTML at /cv. Send `Accept: text/markdown` to receive it as Markdown, or use /cv.md as a fallback.
+- Find a structured, up-to-date CV in HTML at /cv. Send `Accept: text/markdown` to receive it as Markdown, or use /cv/md as a fallback.
 - Book a 1:1 mentorship session via /book-me.
 - Read engineering leadership and AI adoption notes on /blog.
 - Browse past projects and talks on /projects.
@@ -14,7 +14,7 @@ Personal site of Luiz Gonzaga dos Santos Filho, MBA — a people-centric softwar
 ## Key pages
 
 - /cv — HTML version of the CV (also serves Markdown when requested with `Accept: text/markdown`)
-- /cv.md — Markdown fallback for the CV
+- /cv/md — Markdown fallback for the CV
 - /blog — Blog posts
 - /projects — Project showcases
 - /book-me — Mentorship booking

@@ -22,7 +22,7 @@ Golden rules:
 ## Project
 
 Astro + React + TypeScript + Tailwind static site.
-Routes: `/cv`, `/cv/verbose`, `/blog`, `/projects`, `/book-me`, `/cv/pdf`.
+Routes: `/cv`, `/cv/verbose`, `/cv/md`, `/blog`, `/projects`, `/book-me`, `/cv/pdf`.
 PDF generated automatically during `npm run build`.
 
 ## Critical Files

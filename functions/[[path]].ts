@@ -25,11 +25,15 @@ export const onRequest = async (context: FunctionContext): Promise<Response> => 
     return next();
   }
 
-  let mdPath = url.pathname;
-  if (mdPath.endsWith('/')) {
-    mdPath = mdPath.slice(0, -1) || '/index';
+  const pagePath = url.pathname.replace(/\/$/, '') || '/';
+
+  let mdPath: string;
+  if (pagePath === '/') {
+    mdPath = '/md/index.md';
+  } else {
+    const slug = pagePath.slice(1);
+    mdPath = `/${slug}/md/${slug}.md`;
   }
-  mdPath = `${mdPath}.md`;
 
   const mdUrl = new URL(mdPath, request.url);
   const mdResponse = await env.ASSETS.fetch(new Request(mdUrl, request));

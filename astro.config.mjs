@@ -6,6 +6,15 @@ import { pdfOutPathLocal } from '/src/lib/pdf-details.js';
 
 import tailwindcss from '@tailwindcss/vite';
 
+const mdPages = [
+  { route: '/md', file: '/md/index.md' },
+  { route: '/cv/md', file: '/cv/md/cv.md' },
+  { route: '/about/md', file: '/about/md/about.md' },
+  { route: '/contact/md', file: '/contact/md/contact.md' },
+  { route: '/book-me/md', file: '/book-me/md/book-me.md' },
+  { route: '/privacy/md', file: '/privacy/md/privacy.md' },
+];
+
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
   In local development, your SEO meta tags will have localhost URL.
@@ -35,6 +44,7 @@ export default defineConfig({
 
   redirects: {
     '/cv/pdf': pdfOutPathLocal,
+    ...Object.fromEntries(mdPages.map(({ route, file }) => [route, file])),
   },
 
   integrations: [react(), sitemap(), markdoc()],

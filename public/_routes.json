@@ -8,6 +8,12 @@
         "/robots.txt",
         "/llms.txt",
         "/*.xml",
-        "/cv/pdf/*"
+        "/cv/pdf/*",
+        "/md/*",
+        "/cv/md/*",
+        "/about/md/*",
+        "/contact/md/*",
+        "/book-me/md/*",
+        "/privacy/md/*"
     ]
 }
