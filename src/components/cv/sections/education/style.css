@@ -12,3 +12,9 @@ h2#education {
 .education section:last-child {
     flex-basis: 33%;
 }
+.education.flex-container.verbose section {
+    flex-basis: calc(50% - 0.5rem);
+}
+.education.flex-container.verbose section:last-child {
+    flex-basis: 100%;
+}

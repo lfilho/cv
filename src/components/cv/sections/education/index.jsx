@@ -137,7 +137,7 @@ export default class Education extends Component {
         <AnchoredHeader level='2' id='education'>
           Education
         </AnchoredHeader>
-        <section className='education flex-container'>
+        <section className={`education flex-container${isVerbose ? ' verbose' : ''}`}>
           <section>
             <AnchoredHeader level='3' id='degrees'>
               <FontAwesomeIcon icon={faGraduationCap} fixedWidth />
