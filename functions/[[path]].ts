@@ -4,7 +4,8 @@ interface FunctionContext {
   next: () => Promise<Response>;
 }
 
-const MARKDOWN_CONTENT_TYPE = 'text/markdown; charset=utf-8';
+const PDF_PATH = '/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf';
+const PDF_FILENAME = 'Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf';
 
 function isApiPath(pathname: string): boolean {
   return (
@@ -40,10 +41,11 @@ function jsonErrorResponse(status: number, message: string): Response {
 export const onRequest = async (context: FunctionContext): Promise<Response> => {
   const { request, env, next } = context;
 
-  if (request.method !== 'GET') {
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
     return next();
   }
 
+  const isHead = request.method === 'HEAD';
   const accept = request.headers.get('Accept') || '';
   const url = new URL(request.url);
 
@@ -54,6 +56,33 @@ export const onRequest = async (context: FunctionContext): Promise<Response> => 
       return jsonErrorResponse(404, `No API endpoint at ${url.pathname}.`);
     }
     return response;
+  }
+
+  if (url.pathname === '/cv/pdf') {
+    const pdfAssetUrl = new URL(PDF_PATH, request.url);
+    const pdfRequest = new Request(pdfAssetUrl, { method: 'GET' });
+    const pdfResponse = await env.ASSETS.fetch(pdfRequest);
+
+    if (pdfResponse.status !== 200) {
+      return next();
+    }
+
+    const headers = new Headers(pdfResponse.headers);
+    headers.set('Content-Type', 'application/pdf');
+    headers.set('Content-Disposition', `attachment; filename="${PDF_FILENAME}"`);
+    headers.set('Vary', 'Accept-Encoding');
+
+    if (isHead) {
+      return new Response(null, {
+        status: 200,
+        headers,
+      });
+    }
+
+    return new Response(pdfResponse.body, {
+      status: 200,
+      headers,
+    });
   }
 
   if (!accept.includes('text/markdown')) {
@@ -85,6 +114,13 @@ export const onRequest = async (context: FunctionContext): Promise<Response> => 
   const headers = new Headers(mdResponse.headers);
   headers.set('Content-Type', MARKDOWN_CONTENT_TYPE);
   headers.set('Vary', 'Accept, Accept-Encoding');
+
+  if (isHead) {
+    return new Response(null, {
+      status: 200,
+      headers,
+    });
+  }
 
   return new Response(mdResponse.body, {
     status: 200,

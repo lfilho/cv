@@ -8,7 +8,7 @@
         "/robots.txt",
         "/llms.txt",
         "/*.xml",
-        "/cv/pdf/*",
+        "/cv/pdf/*.pdf",
         "/md/*",
         "/cv/md/*",
         "/about/md/*",

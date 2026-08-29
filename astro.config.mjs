@@ -2,7 +2,6 @@ import markdoc from '@astrojs/markdoc';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import { pdfOutPathLocal } from '/src/lib/pdf-details.js';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -43,7 +42,6 @@ export default defineConfig({
   site: BASE_URL,
 
   redirects: {
-    '/cv/pdf': pdfOutPathLocal,
     ...Object.fromEntries(mdPages.map(({ route, file }) => [route, file])),
   },
 
