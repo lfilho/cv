@@ -240,8 +240,15 @@
   border: 1px solid var(--border);
   border-radius: 6px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  padding: 0.4rem 0.6rem;
   max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Scrolls independently so the Places | Stats switch stays visible. */
+.tm-panel-body {
+  padding: 0.4rem 0.6rem;
   overflow-y: auto;
 }
 
@@ -249,6 +256,120 @@
   margin: 0;
   padding: 0.4rem 0;
   color: var(--text-muted);
+}
+
+/* ------ View switch (Places | Stats) ------ */
+.tm-view-switch {
+  display: flex;
+  gap: 0.32rem;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tm-view-btn {
+  flex: 1;
+  padding: 0.24rem 0.5rem;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.tm-view-btn:hover {
+  color: var(--text);
+}
+
+.tm-view-btn.is-active {
+  background: var(--border);
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ------ Stats ------ */
+.tm-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+  gap: 0.32rem;
+  margin: 0 0 0.4rem;
+}
+
+.tm-stat-cell {
+  padding: 0.28rem 0.4rem;
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.tm-stat-cell dt {
+  color: var(--text-muted);
+  font-size: 0.78em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tm-stat-cell dd {
+  margin: 0.08rem 0 0;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.tm-stat-note {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.68em;
+  font-weight: 400;
+}
+
+.tm-stat-title {
+  margin: 0.6rem 0 0.24rem;
+  color: var(--text-muted);
+  font-size: 0.86em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tm-stat-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tm-stat-table th,
+.tm-stat-table td {
+  padding: 0.14rem 0;
+  font-weight: 400;
+  text-align: left;
+}
+
+.tm-stat-table thead th {
+  color: var(--text-muted);
+  font-size: 0.84em;
+}
+
+.tm-stat-table td {
+  text-align: right;
+}
+
+.tm-stat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tm-stat-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.12rem 0;
+}
+
+.tm-stat-key {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.tm-stat-value {
+  text-align: right;
 }
 
 .tm-tree,

@@ -100,6 +100,28 @@ const { slug } = Astro.params;
 <h1>Post: {slug}</h1>
 ```
 
+## Travel Map
+
+Places live in `src/components/travel-map/travelData.ts` (flat `TravelPlace[]`). The map, the
+`Places` tree and the `Stats` tab of the floating panel all derive from that array at render
+time — nothing else needs editing when a place is added.
+
+Stats shown in the `Stats` tab (places, visited/lived, continents, countries, regions,
+hemispheres, extremes, top countries, cities lived in, world coverage) come from
+`computeTravelStats()` in `src/components/travel-map/travelStats.ts`. That function is pure and
+deterministic: no dates, randomness, locale-aware sorting or I/O, so the same places always
+produce the same numbers.
+
+To print the same numbers from the terminal:
+
+```bash
+npm run travel:stats           # aligned text report
+npm run travel:stats -- --json # machine-readable
+```
+
+The report only reads; it never writes, so re-running it any number of times is safe and prints
+byte-identical output for unchanged data. There is no snapshot to regenerate or commit.
+
 ## Testing Checklist
 
 Before committing:

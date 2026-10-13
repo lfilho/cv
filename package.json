@@ -25,6 +25,7 @@
         "start": "astro dev",
         "build": "astro build",
         "postbuild": "node src/lib/pdf-generator.js && node src/lib/html-to-markdown.ts",
+        "travel:stats": "node src/lib/travel-stats.ts",
         "preview": "astro preview",
         "astro": "astro",
         "prepare": "husky"

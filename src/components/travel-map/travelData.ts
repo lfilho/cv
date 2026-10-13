@@ -3,7 +3,7 @@ export type PinShape = 'pin' | 'circle' | 'square';
 
 export interface TravelPlace {
   name: string; // location/city/landmark, e.g. "New York", "Central Park"
-  continent: string; // e.g. "North America"
+  continent: string; // 'Europe' | 'Americas' | 'Asia' (see computeTravelStats)
   country: string; // e.g. "USA"
   state?: string; // e.g. "NY"; omit when not applicable
   type: TravelType; // 'visited' = blue pin, 'lived' = red pin

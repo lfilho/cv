@@ -6,6 +6,8 @@ import type { TravelPlace } from './travelData';
 import { PIN_DEFAULTS } from './travelData';
 import type { TreeNode } from './build-tree';
 import { TravelOverlay } from './TravelOverlay';
+import { computeTravelStats } from './travelStats';
+import { formatLabel } from './placeLabel';
 import './style.css';
 
 interface Props {
@@ -20,10 +22,6 @@ const TILE_URL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const DARK_TILE_FILTER = 'invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)';
 
 const placeKey = (p: TravelPlace) => `${p.lat},${p.lng}`;
-
-export function formatLabel(p: TravelPlace): string {
-  return `${p.name}${p.state ? `, ${p.state}` : ''}, ${p.country}`;
-}
 
 /** Fits the map to all markers once on mount; world view when empty. */
 function FitBounds({ places }: { places: TravelPlace[] }) {
@@ -269,6 +267,9 @@ export default function TravelMap({ places, tree }: Props) {
     setTimeout(() => setShotStatus('idle'), 2500);
   };
 
+  // Derived, never stored: a new place in travelPlaces updates the Stats tab on its own.
+  const stats = useMemo(() => computeTravelStats(places), [places]);
+
   const markers = useMemo(
     () =>
       places.map(p => (
@@ -341,7 +342,7 @@ export default function TravelMap({ places, tree }: Props) {
         </button>
       </div>
 
-      <TravelOverlay tree={tree} count={places.length} onSelect={handleSelect} selectedKey={selectedKey} />
+      <TravelOverlay tree={tree} count={places.length} stats={stats} onSelect={handleSelect} selectedKey={selectedKey} />
     </div>
   );
 }

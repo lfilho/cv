@@ -147,6 +147,7 @@ Example formats:
 - **Coordinate Precision**: Round to 6 decimal places max
 - **Linting**: Always run `npm run lint` before committing
 - **Diacritics**: Always use correct diacritics — never ASCII-fold names
+- **Stats**: The `Stats` tab (continents, countries, regions, extremes, …) is derived from `travelPlaces` by `computeTravelStats()` — never edit stats by hand. Verify with `npm run travel:stats`, which only reads and is safe to re-run.
 
 ## Continent Mapping
 

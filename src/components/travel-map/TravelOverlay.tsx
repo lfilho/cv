@@ -1,18 +1,28 @@
 import { useState } from 'react';
 import type { TravelPlace } from './travelData';
 import type { TreeNode } from './build-tree';
+import type { TravelStats } from './travelStats';
 
 const placeKey = (p: TravelPlace) => `${p.lat},${p.lng}`;
+
+type View = 'places' | 'stats';
 
 interface Props {
   tree: TreeNode[];
   count: number;
+  stats: TravelStats;
   onSelect: (place: TravelPlace) => void;
   selectedKey: string | null;
 }
 
-export function TravelOverlay({ tree, count, onSelect, selectedKey }: Props) {
+export function TravelOverlay({ tree, count, stats, onSelect, selectedKey }: Props) {
   const [open, setOpen] = useState(false);
+  const [view, setView] = useState<View>('places');
+
+  const switchTo = (next: View) => {
+    setView(next);
+    setOpen(true);
+  };
 
   return (
     <div className={`tm-overlay ${open ? 'is-open' : ''}`} aria-label='Places overlay'>
@@ -35,24 +45,178 @@ export function TravelOverlay({ tree, count, onSelect, selectedKey }: Props) {
       </button>
 
       {open && (
-        <div id='tm-panel' className='tm-panel' role='region' aria-label='Places list'>
-          {count === 0 ? (
-            <p className='tm-empty'>No places yet.</p>
-          ) : (
-            <ul className='tm-tree'>
-              {tree.map(continent => (
-                <TreeBranch
-                  key={continent.label}
-                  node={continent}
-                  level={0}
-                  onSelect={onSelect}
-                  defaultOpen={true}
-                  selectedKey={selectedKey}
-                />
-              ))}
-            </ul>
-          )}
+        <div id='tm-panel' className='tm-panel' role='region' aria-label={view === 'places' ? 'Places list' : 'Travel stats'}>
+          <div className='tm-view-switch' role='group' aria-label='Panel view'>
+            <button
+              type='button'
+              className={`tm-view-btn ${view === 'places' ? 'is-active' : ''}`}
+              aria-pressed={view === 'places'}
+              onClick={() => switchTo('places')}
+            >
+              Places
+            </button>
+            <button
+              type='button'
+              className={`tm-view-btn ${view === 'stats' ? 'is-active' : ''}`}
+              aria-pressed={view === 'stats'}
+              onClick={() => switchTo('stats')}
+            >
+              Stats
+            </button>
+          </div>
+
+          <div className='tm-panel-body'>
+            {view === 'places' ? (
+              count === 0 ? (
+                <p className='tm-empty'>No places yet.</p>
+              ) : (
+                <ul className='tm-tree'>
+                  {tree.map(continent => (
+                    <TreeBranch
+                      key={continent.label}
+                      node={continent}
+                      level={0}
+                      onSelect={onSelect}
+                      defaultOpen={true}
+                      selectedKey={selectedKey}
+                    />
+                  ))}
+                </ul>
+              )
+            ) : (
+              <StatsView stats={stats} />
+            )}
+          </div>
         </div>
+      )}
+    </div>
+  );
+}
+
+/** Every number here is derived from `travelPlaces` by `computeTravelStats`. */
+function StatsView({ stats }: { stats: TravelStats }) {
+  if (stats.places === 0) return <p className='tm-empty'>No places yet.</p>;
+
+  return (
+    <div className='tm-stats'>
+      <dl className='tm-stat-grid'>
+        <div className='tm-stat-cell'>
+          <dt>Places</dt>
+          <dd>
+            {stats.places}
+            <span className='tm-stat-note'>
+              {stats.visited} visited · {stats.lived} lived
+            </span>
+          </dd>
+        </div>
+        <div className='tm-stat-cell'>
+          <dt>Continents</dt>
+          <dd>{stats.continents.length}</dd>
+        </div>
+        <div className='tm-stat-cell'>
+          <dt>Countries</dt>
+          <dd>{stats.countries}</dd>
+        </div>
+        <div className='tm-stat-cell'>
+          <dt>Regions</dt>
+          <dd>{stats.regions}</dd>
+        </div>
+        <div className='tm-stat-cell'>
+          <dt>World</dt>
+          <dd>
+            {stats.worldCoverage.percent.toFixed(1)}%
+            <span className='tm-stat-note'>
+              {stats.worldCoverage.countries} of {stats.worldCoverage.total} countries
+            </span>
+          </dd>
+        </div>
+      </dl>
+
+      <h3 className='tm-stat-title'>By continent</h3>
+      <table className='tm-stat-table'>
+        <thead>
+          <tr>
+            <th scope='col'>Continent</th>
+            <th scope='col'>Places</th>
+            <th scope='col'>Countries</th>
+          </tr>
+        </thead>
+        <tbody>
+          {stats.continents.map(continent => (
+            <tr key={continent.label}>
+              <th scope='row'>{continent.label}</th>
+              <td>{continent.places}</td>
+              <td>{continent.countries}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h3 className='tm-stat-title'>Geography</h3>
+      <ul className='tm-stat-list'>
+        <li>
+          <span className='tm-stat-key'>North / South</span>
+          <span className='tm-stat-value'>
+            {stats.hemispheres.north} / {stats.hemispheres.south}
+          </span>
+        </li>
+        <li>
+          <span className='tm-stat-key'>East / West</span>
+          <span className='tm-stat-value'>
+            {stats.hemispheres.east} / {stats.hemispheres.west}
+          </span>
+        </li>
+        {stats.extremes && (
+          <>
+            <li>
+              <span className='tm-stat-key'>Northernmost</span>
+              <span className='tm-stat-value'>{stats.extremes.northernmost.label}</span>
+            </li>
+            <li>
+              <span className='tm-stat-key'>Southernmost</span>
+              <span className='tm-stat-value'>{stats.extremes.southernmost.label}</span>
+            </li>
+            <li>
+              <span className='tm-stat-key'>Westernmost</span>
+              <span className='tm-stat-value'>{stats.extremes.westernmost.label}</span>
+            </li>
+            <li>
+              <span className='tm-stat-key'>Easternmost</span>
+              <span className='tm-stat-value'>{stats.extremes.easternmost.label}</span>
+            </li>
+          </>
+        )}
+      </ul>
+
+      <h3 className='tm-stat-title'>Top countries</h3>
+      <table className='tm-stat-table'>
+        <thead>
+          <tr>
+            <th scope='col'>Country</th>
+            <th scope='col'>Places</th>
+          </tr>
+        </thead>
+        <tbody>
+          {stats.topCountries.map(country => (
+            <tr key={country.label}>
+              <th scope='row'>{country.label}</th>
+              <td>{country.places}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {stats.livedCities.length > 0 && (
+        <>
+          <h3 className='tm-stat-title'>Cities lived in</h3>
+          <ul className='tm-stat-list'>
+            {stats.livedCities.map(city => (
+              <li key={city.label}>
+                <span className='tm-stat-value'>{city.label}</span>
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );
