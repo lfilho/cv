@@ -290,77 +290,123 @@
 /* ------ Stats ------ */
 .tm-stat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.32rem;
-  margin: 0 0 0.4rem;
+  margin: 0;
 }
 
 .tm-stat-cell {
-  padding: 0.28rem 0.4rem;
-  background: var(--border);
-  border-radius: 4px;
+  padding: 0.3rem 0.4rem;
+  background: var(--code-background);
+  border: 1px solid var(--border);
+  border-radius: 5px;
 }
 
 .tm-stat-cell dt {
   color: var(--text-muted);
-  font-size: 0.78em;
+  font-size: 0.74em;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .tm-stat-cell dd {
-  margin: 0.08rem 0 0;
-  font-size: 1.15em;
-  font-weight: 600;
+  margin: 0.12rem 0 0;
+  color: var(--text-heading);
+  font-size: 1.3em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
 }
 
 .tm-stat-note {
   display: block;
+  margin-top: 0.1rem;
   color: var(--text-muted);
-  font-size: 0.68em;
+  font-size: 0.62em;
   font-weight: 400;
 }
 
+/* Section heading with a rule above it, so stats blocks read as distinct groups. */
 .tm-stat-title {
-  margin: 0.6rem 0 0.24rem;
+  margin: 0.7rem 0 0.3rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 0.86em;
-  letter-spacing: 0.04em;
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .tm-stat-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .tm-stat-table th,
 .tm-stat-table td {
-  padding: 0.14rem 0;
-  font-weight: 400;
+  padding: 0.24rem 0.44rem;
+}
+
+.tm-stat-table th {
   text-align: left;
 }
 
+/* Column headers share their column's alignment, so labels sit over their numbers. */
+.tm-stat-table thead th:not(:first-child),
+.tm-stat-table td {
+  text-align: right;
+}
+
 .tm-stat-table thead th {
+  background: var(--code-background);
+  border-bottom: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 0.84em;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tm-stat-table tbody th {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.tm-stat-table tbody tr + tr th,
+.tm-stat-table tbody tr + tr td {
+  border-top: 1px solid var(--border);
 }
 
 .tm-stat-table td {
-  text-align: right;
+  color: var(--text-heading);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .tm-stat-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .tm-stat-list li {
   display: flex;
   justify-content: space-between;
   gap: 0.6rem;
-  padding: 0.12rem 0;
+  padding: 0.24rem 0.44rem;
+}
+
+.tm-stat-list li + li {
+  border-top: 1px solid var(--border);
 }
 
 .tm-stat-key {
@@ -369,6 +415,9 @@
 }
 
 .tm-stat-value {
+  color: var(--text-heading);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
   text-align: right;
 }
 
