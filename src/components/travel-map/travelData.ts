@@ -835,4 +835,15 @@ export const travelPlaces: TravelPlace[] = [
     lat: 42.441524,
     lng: 19.262108,
   },
+  { name: 'Denver', continent: 'Americas', country: 'USA', state: 'CO', type: 'visited', lat: 39.739236, lng: -104.984862 },
+  {
+    name: 'Rocky Mountain National Park',
+    continent: 'Americas',
+    country: 'USA',
+    state: 'CO',
+    type: 'visited',
+    lat: 40.355392,
+    lng: -105.717696,
+  },
+  { name: 'Fort Collins', continent: 'Americas', country: 'USA', state: 'CO', type: 'visited', lat: 40.58526, lng: -105.084423 },
 ];
