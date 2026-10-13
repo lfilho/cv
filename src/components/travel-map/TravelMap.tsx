@@ -13,10 +13,11 @@ interface Props {
   tree: TreeNode[];
 }
 
-const ATTRIBUTION =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>';
-const LIGHT_TILES = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-const DARK_TILES = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const TILE_URL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+// Light OSM tiles are inverted for dark mode. Keep in sync with `.is-dark .leaflet-tile-pane` in style.css.
+const DARK_TILE_FILTER = 'invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)';
 
 const placeKey = (p: TravelPlace) => `${p.lat},${p.lng}`;
 
@@ -192,6 +193,8 @@ export default function TravelMap({ places, tree }: Props) {
       ctx.fillRect(0, 0, rect.width, rect.height);
 
       // Draw raster tiles (crossOrigin='anonymous' prevents tainting).
+      // Mirror the dark-mode CSS filter so the capture matches what's on screen.
+      ctx.filter = isDark ? DARK_TILE_FILTER : 'none';
       const tiles = container.querySelectorAll('img.leaflet-tile');
       for (const tile of Array.from(tiles)) {
         if (tile.complete && tile.naturalWidth > 0) {
@@ -205,6 +208,7 @@ export default function TravelMap({ places, tree }: Props) {
           }
         }
       }
+      ctx.filter = 'none';
 
       // Draw pins (SVG divIcons) on top.
       const pinElements = container.querySelectorAll('.leaflet-marker-icon .tm-pin');
@@ -304,13 +308,7 @@ export default function TravelMap({ places, tree }: Props) {
         className='tm-map'
         worldCopyJump
       >
-        <TileLayer
-          key={isDark ? 'dark' : 'light'}
-          url={isDark ? DARK_TILES : LIGHT_TILES}
-          attribution={ATTRIBUTION}
-          maxZoom={19}
-          crossOrigin='anonymous'
-        />
+        <TileLayer url={TILE_URL} attribution={ATTRIBUTION} maxZoom={19} crossOrigin='anonymous' />
         {markers}
         <FitBounds places={places} />
       </MapContainer>

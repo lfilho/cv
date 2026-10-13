@@ -14,9 +14,9 @@
   background: var(--background);
 }
 
-/* Brighten CARTO Dark Matter tiles so dark mode isn't too dark. */
+/* Invert the light OpenStreetMap tiles for dark mode. Keep in sync with DARK_TILE_FILTER in TravelMap.tsx. */
 .travel-map-root.is-dark .leaflet-tile-pane {
-  filter: brightness(1.8);
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
 }
 
 /* Hide all overlays during screenshot capture. */
