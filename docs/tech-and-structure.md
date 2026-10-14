@@ -6,14 +6,14 @@ Detailed reference for the technologies and file layout used in this project.
 
 ### Core Framework
 
-- **Astro** — static site generator with island architecture
-- **React** — interactive UI components
+- **Astro** — static site generator with island architecture (v7)
+- **React** — interactive UI components (v19, via `@astrojs/react` v7)
 - **TypeScript** — strict mode enabled
 
 ### Build Tools
 
-- **Vite** — bundler (via Astro)
-- **Node.js** — ES modules runtime
+- **Vite** — bundler (via Astro); React JSX is transformed by Oxc through `@vitejs/plugin-react` v6
+- **Node.js** — ES modules runtime (≥ 22.12, as required by Astro 7)
 - **npm** — package manager
 
 ### Styling

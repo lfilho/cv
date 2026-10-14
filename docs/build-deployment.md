@@ -61,10 +61,10 @@ Serves the production build locally for testing before deployment.
 **Process:**
 
 1. Checkout repository.
-2. Install dependencies with `@astrojs/action@v4`.
+2. Install dependencies and build with `withastro/action@v6`.
 3. Build the site (`npm run build`).
 4. Run the postbuild PDF generation hook.
-5. Deploy to Cloudflare Pages with `cloudflare/pages-action@v1`.
+5. Deploy to Cloudflare Pages with `cloudflare/wrangler-action@v4`.
 6. Commit the updated PDF to the repository (requires `GH_TOKEN`).
 
 **Required permissions:**

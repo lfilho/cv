@@ -77,6 +77,31 @@ npm run preview
 
 **Important:** test PDF generation after updating Playwright or Astro.
 
+### Upgrading Astro
+
+Astro and its `@astrojs/*` integrations are released in lockstep, so upgrade them together with
+Astro's own tool instead of editing `package.json` by hand:
+
+```bash
+npx @astrojs/upgrade            # bumps astro + every @astrojs/* integration, then installs
+npx @astrojs/upgrade --dry-run  # prints what would change and installs nothing
+```
+
+It lists the packages moving and flags breaking changes — follow the changelog it links before
+landing the upgrade. Two constraints worth remembering:
+
+- Astro 7 requires Node ≥ 22.12 (and npm ≥ 9.6.5).
+- `@astrojs/react` v7 transforms JSX with Oxc and no longer accepts a `babel` option; custom Babel
+  transforms now go through `@rolldown/plugin-babel` under `vite.plugins` in `astro.config.mjs`.
+
+Then run the usual checks:
+
+```bash
+npm run lint
+npm run build     # astro build, then the PDF postbuild hook
+npm run preview   # click through /cv, /blog and /travel-map (React islands hydrate client-side)
+```
+
 ## Adding New Routes
 
 Routes are determined by file location:
@@ -107,10 +132,10 @@ Places live in `src/components/travel-map/travelData.ts` (flat `TravelPlace[]`).
 time — nothing else needs editing when a place is added.
 
 Stats shown in the `Stats` tab (places, visited/lived, continents, countries, regions,
-hemispheres, extremes, top countries, cities lived in, world coverage) come from
-`computeTravelStats()` in `src/components/travel-map/travelStats.ts`. That function is pure and
-deterministic: no dates, randomness, locale-aware sorting or I/O, so the same places always
-produce the same numbers.
+hemispheres, extremes, highest/lowest altitude, top countries, cities lived in, world coverage)
+come from `computeTravelStats()` in `src/components/travel-map/travelStats.ts`. That function is
+pure and deterministic: no dates, randomness, locale-aware sorting or I/O, so the same places
+always produce the same numbers.
 
 To print the same numbers from the terminal:
 
