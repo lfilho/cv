@@ -186,6 +186,30 @@ function StatsView({ stats }: { stats: TravelStats }) {
             </li>
           </>
         )}
+        {stats.altitude && (
+          <>
+            <li>
+              <span className='tm-stat-key'>Highest altitude</span>
+              <span className='tm-stat-value'>
+                {stats.altitude.highest.label} ({stats.altitude.highest.altitude} m)
+              </span>
+            </li>
+            <li>
+              <span className='tm-stat-key'>Lowest altitude</span>
+              <span className='tm-stat-value'>
+                {stats.altitude.lowest.label} ({stats.altitude.lowest.altitude} m)
+              </span>
+            </li>
+            {stats.altitude.covered < stats.places && (
+              <li>
+                <span className='tm-stat-key'>Altitude coverage</span>
+                <span className='tm-stat-value'>
+                  {stats.altitude.covered} of {stats.places} places
+                </span>
+              </li>
+            )}
+          </>
+        )}
       </ul>
 
       <h3 className='tm-stat-title'>Top countries</h3>

@@ -56,6 +56,17 @@ function renderStats(stats: TravelStats): string[] {
     );
   }
 
+  if (stats.altitude) {
+    const { lowest, highest } = stats.altitude;
+    lines.push(
+      '',
+      'Altitude',
+      `  ${'highest'.padEnd(13)}${highest.label}  (${highest.altitude} m)`,
+      `  ${'lowest'.padEnd(13)}${lowest.label}  (${lowest.altitude} m)`,
+      `  over ${stats.altitude.covered} of ${stats.places} places`,
+    );
+  }
+
   lines.push(
     '',
     'Top countries',

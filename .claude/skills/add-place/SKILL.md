@@ -1,11 +1,11 @@
 ---
 name: add-place
-description: Add a travel place to the travel map with intelligent coordinate lookup, validation, and automatic commit generation
+description: Add a travel place to the travel map with intelligent coordinate and altitude lookup, validation, and automatic commit generation
 ---
 
 # Add Place to Travel Map
 
-Add a place to the interactive travel map at `/travel-map` with intelligent data extraction, coordinate lookup, validation, and commit generation.
+Add a place to the interactive travel map at `/travel-map` with intelligent data extraction, coordinate and altitude lookup, validation, and commit generation.
 
 ## Usage
 
@@ -39,6 +39,9 @@ Use web search to fill in gaps:
 - **Country**: Infer from city if unambiguous (e.g., Tokyo → Japan); ask if ambiguous (e.g., "Springfield" exists in many states)
 - **State/Province**: Infer if the city is well-known (e.g., Banff → AB, Canada); ask if ambiguous or if the country doesn't use states
 - **Coordinates (lat/lng)**: Look up via web search (e.g., "Tokyo coordinates" → 35.6762, 139.6503). Always verify — never guess
+- **Altitude**: Metres above sea level at the pin, from the Copernicus DEM elevation API:
+  `https://api.open-meteo.com/v1/elevation?latitude=<lat>&longitude=<lng>` → `{"elevation":[123.0]}`
+  Batch up to 100 coordinates per call (comma-separated `latitude` and `longitude` lists, answers in the same order). Round to the nearest metre. Never guess an altitude, and take it at the pin's coordinates — not the landmark's headline figure when the pin sits elsewhere (e.g. a summit pin gets the summit, a base-town pin does not)
 - **Type**: Default to `'visited'`; ask if the user lived there
 
 ### 3. **Validate the Entry**
@@ -46,9 +49,11 @@ Use web search to fill in gaps:
 - Confirm coordinates are reasonable for the stated country (e.g., Brazil should have negative lat, USA should have negative lng)
 - Check for duplicates: same `name` + same `country` already exists in `travelPlaces`
 - Alert if duplicate is found and ask if user wants to continue
-- Validate required fields are present: `name`, `continent`, `country`, `type`, `lat`, `lng`
+- Validate required fields are present: `name`, `continent`, `country`, `type`, `lat`, `lng`; `altitude` is expected on every new entry — omit it only if no elevation source can be reached
 - Validate `type` is `'visited'` or `'lived'`
 - Validate `lat` is between -90 and 90, `lng` is between -180 and 180
+- Validate `altitude` is a whole number of metres between -430 (Dead Sea shore) and 8850 (Everest summit)
+- Sanity-check `altitude` against the place: a coastal or island pin should come back within a few metres of 0, a mountain pin in the right thousands. A wild value means the pin or the lookup is wrong — re-check before persisting
 - If `pinColor` is provided, validate it's a valid hex color (`#RRGGBB`)
 
 ### 4. **Format the Entry**
@@ -62,37 +67,52 @@ Format following existing conventions in `travelData.ts`:
   - Brazil: 2-letter state codes (SP, GO, RJ, MG, PR, PE, SC, DF, ES)
   - Other countries: full state/province/region name (e.g., Tuscany, Bavaria, Brandenburg)
 - Omit `state` field entirely for city-states where state = city name (e.g., Hamburg, Berlin, Bangkok, Budapest, Vatican City)
-- Single-line format for short entries, multi-line for entries with `pinColor` or `note`
+- Field order: `name`, `continent`, `country`, `state?`, `type`, `lat`, `lng`, `altitude`, then `pinColor?` / `pinShape?` / `note?`
+- Single line only when the whole entry fits in 130 columns — in practice just city-states that carry no `state`; otherwise multi-line. Let `npm run lint` (Prettier) decide
 - Escape single quotes in names (e.g., `Casca D'Anta waterfall` → `Casca D\'Anta waterfall`)
 
 Example formats:
 
 ```typescript
-// Simple entry (short, single line)
-{ name: 'Volterra', continent: 'Europe', country: 'Italy', state: 'Tuscany', type: 'visited', lat: 43.399548, lng: 10.861094 },
+// City-state: no `state` field, short enough to stay on one line
+{ name: 'Bangkok', continent: 'Asia', country: 'Thailand', type: 'visited', lat: 13.745595, lng: 100.53466, altitude: 7 },
 
-// Lived entry with custom pin color (multi-line)
+// Typical entry (multi-line)
 {
-    name: 'Goiânia',
-    continent: 'Americas',
-    country: 'Brazil',
-    state: 'GO',
-    type: 'lived',
-    lat: -16.680723,
-    lng: -49.256596,
-    pinColor: '#E65100',
+  name: 'Volterra',
+  continent: 'Europe',
+  country: 'Italy',
+  state: 'Tuscany',
+  type: 'visited',
+  lat: 43.399548,
+  lng: 10.861094,
+  altitude: 538,
 },
 
-// Entry with note (multi-line)
+// Lived entry with custom pin color
 {
-    name: 'Paris',
-    continent: 'Europe',
-    country: 'France',
-    state: 'Île-de-France',
-    type: 'visited',
-    lat: 48.8566,
-    lng: 2.3522,
-    note: 'City of Light',
+  name: 'Goiânia',
+  continent: 'Americas',
+  country: 'Brazil',
+  state: 'GO',
+  type: 'lived',
+  lat: -16.680723,
+  lng: -49.256596,
+  altitude: 765,
+  pinColor: '#E65100',
+},
+
+// Entry with note
+{
+  name: 'Paris',
+  continent: 'Europe',
+  country: 'France',
+  state: 'Île-de-France',
+  type: 'visited',
+  lat: 48.857037,
+  lng: 2.349401,
+  altitude: 43,
+  note: 'City of Light',
 },
 ```
 
@@ -108,7 +128,7 @@ Example formats:
 
 - Present the diff and ask for explicit confirmation
 - Options: "approve", "edit", "cancel"
-- If "edit" is selected, allow user to modify any field (name, state, country, type, lat, lng, pinColor, note)
+- If "edit" is selected, allow user to modify any field (name, state, country, type, lat, lng, altitude, pinColor, note)
 
 ### 7. **Persist and Lint**
 
@@ -125,6 +145,7 @@ Example formats:
 
   Type: [visited|lived]
   Coordinates: [lat], [lng]
+  Altitude: [n] m
   ```
 
 - Amend/fixup into the main travel-map commit if working on the same session's squashed commit (ask user)
@@ -139,15 +160,16 @@ Example formats:
 ## Important Notes
 
 - **File Location**: Places are stored in `src/components/travel-map/travelData.ts`
-- **Structure**: Single flat array `travelPlaces: TravelPlace[]` (lines ~23-806)
+- **Structure**: Single flat array `travelPlaces: TravelPlace[]` (from line ~23 to the closing `];`)
 - **Insertion Point**: Always at the **end** of the array (before closing `];`)
 - **Continent Values**: Only three are used: `'Europe'`, `'Americas'`, `'Asia'`
 - **Country Names**: Match existing conventions in the file (e.g., `'USA'` not `'United States'`, `'UK'` not `'United Kingdom'`)
 - **State Conventions**: Check existing entries for the same country to match style (abbreviations vs full names)
 - **Coordinate Precision**: Round to 6 decimal places max
+- **Altitude**: Whole metres above sea level at the pin, looked up from the Copernicus DEM (Open-Meteo elevation API, see step 2) and stored as `altitude` right after `lng`. Never guessed, never rounded to a "nice" number
 - **Linting**: Always run `npm run lint` before committing
 - **Diacritics**: Always use correct diacritics — never ASCII-fold names
-- **Stats**: The `Stats` tab (continents, countries, regions, extremes, …) is derived from `travelPlaces` by `computeTravelStats()` — never edit stats by hand. Verify with `npm run travel:stats`, which only reads and is safe to re-run.
+- **Stats**: The `Stats` tab (continents, countries, regions, extremes, highest/lowest altitude, …) is derived from `travelPlaces` by `computeTravelStats()` — never edit stats by hand. Altitude rows cover only places that carry an `altitude`, and the tab says so when the two counts differ. Verify with `npm run travel:stats`, which only reads and is safe to re-run.
 
 ## Continent Mapping
 
@@ -188,6 +210,7 @@ Ask the user when:
 
 - If coordinates cannot be found via web search, ask user to provide them manually
 - If coordinates don't match the country's hemisphere (e.g., positive lat for Brazil), warn and ask to confirm
+- If the elevation API is unreachable, say so and either ask the user for the altitude or omit the field — never invent a value
 - If duplicate is detected, inform user and ask if they want to continue anyway
 - If web search fails, fall back to manual entry mode
 - If `npm run lint` fails, fix formatting issues and re-run before committing
@@ -221,6 +244,7 @@ Ask the user when:
 3. **Diacritics**: Always verify correct spelling with diacritics (Goiânia, São Paulo, Viña del Mar, Málaga, etc.)
 4. **Coordinate Verification**: Sanity-check that lat/lng match the country's geographic position before persisting
 5. **State Matching**: Before assigning a state value, check how other entries for the same country format their states
+6. **Altitude Lookup**: The elevation API takes up to 100 coordinates per call — batch when adding several places (that is how the existing entries were filled in)
 
 ## Related Commands
 
@@ -240,6 +264,8 @@ Before considering the skill complete, verify:
 - [ ] Can add place lived in (type: 'lived')
 - [ ] Duplicate detection works (same name + same country)
 - [ ] Coordinate validation catches hemisphere errors
+- [ ] Altitude is looked up from the elevation API (never guessed) and lands in the right order of magnitude for the place
+- [ ] Altitude is stored as whole metres right after `lng`, and the Stats tab's highest/lowest rows update from it
 - [ ] Diacritics are correct in persisted entry
 - [ ] State format matches existing entries for the same country
 - [ ] City-states correctly omit the state field

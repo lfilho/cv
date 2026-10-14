@@ -15,6 +15,18 @@ export interface PlaceRef {
   lng: number;
 }
 
+/** `PlaceRef` plus the altitude, as shown by the highest/lowest stats. */
+export interface PlaceElevation extends PlaceRef {
+  altitude: number;
+}
+
+export interface AltitudeStats {
+  /** Places carrying an `altitude` — `lowest` and `highest` only consider these. */
+  covered: number;
+  lowest: PlaceElevation;
+  highest: PlaceElevation;
+}
+
 export interface StatRow {
   label: string;
   places: number;
@@ -42,6 +54,8 @@ export interface TravelStats {
   hemispheres: { north: number; south: number; east: number; west: number };
   /** `null` when there are no places to compare. */
   extremes: Extremes | null;
+  /** `null` when no place carries an `altitude`. */
+  altitude: AltitudeStats | null;
   /** Countries with the most places, most first (at most `TOP_COUNTRIES`). */
   topCountries: StatRow[];
   livedCities: PlaceRef[];
@@ -54,14 +68,24 @@ function compareLabels(a: string, b: string): number {
 }
 
 /** Place with the highest (or lowest) `value`, ties broken by label. */
-function extremeBy(places: TravelPlace[], value: (p: TravelPlace) => number, mode: 'max' | 'min'): PlaceRef {
+function extremeBy(places: TravelPlace[], value: (p: TravelPlace) => number, mode: 'max' | 'min'): TravelPlace {
   let best = places[0];
   for (const place of places) {
     const delta = value(place) - value(best);
     if (mode === 'max' ? delta > 0 : delta < 0) best = place;
     else if (delta === 0 && compareLabels(formatLabel(place), formatLabel(best)) < 0) best = place;
   }
-  return { label: formatLabel(best), lat: best.lat, lng: best.lng };
+  return best;
+}
+
+/** How a place is named and located in the extremes above and below. */
+function ref(place: TravelPlace): PlaceRef {
+  return { label: formatLabel(place), lat: place.lat, lng: place.lng };
+}
+
+/** `ref` plus the altitude, for the places the altitude stats rank. */
+function elevationRef(place: TravelPlace & { altitude: number }): PlaceElevation {
+  return { ...ref(place), altitude: place.altitude };
 }
 
 /**
@@ -115,6 +139,7 @@ export function computeTravelStats(places: TravelPlace[]): TravelStats {
 
   const countries = countryCounts.size;
   const percent = WORLD_COUNTRIES > 0 ? Math.round((countries / WORLD_COUNTRIES) * 1000) / 10 : 0;
+  const withAltitude = places.filter((p): p is TravelPlace & { altitude: number } => typeof p.altitude === 'number');
 
   return {
     places: places.length,
@@ -128,10 +153,18 @@ export function computeTravelStats(places: TravelPlace[]): TravelStats {
       places.length === 0
         ? null
         : {
-            northernmost: extremeBy(places, p => p.lat, 'max'),
-            southernmost: extremeBy(places, p => p.lat, 'min'),
-            westernmost: extremeBy(places, p => p.lng, 'min'),
-            easternmost: extremeBy(places, p => p.lng, 'max'),
+            northernmost: ref(extremeBy(places, p => p.lat, 'max')),
+            southernmost: ref(extremeBy(places, p => p.lat, 'min')),
+            westernmost: ref(extremeBy(places, p => p.lng, 'min')),
+            easternmost: ref(extremeBy(places, p => p.lng, 'max')),
+          },
+    altitude:
+      withAltitude.length === 0
+        ? null
+        : {
+            covered: withAltitude.length,
+            lowest: elevationRef(extremeBy(withAltitude, p => p.altitude, 'min')),
+            highest: elevationRef(extremeBy(withAltitude, p => p.altitude, 'max')),
           },
     topCountries: [...countryCounts]
       .map(([label, count]) => ({ label, places: count }))
