@@ -12,6 +12,9 @@ on:
             - 'package.json'
             - 'package-lock.json'
             - '.github/workflows/deploy.yml'
+    # Regenerate and commit the CV PDF monthly, independent of code changes.
+    schedule:
+        - cron: '0 5 1 * *'
     workflow_dispatch:
 
 permissions:

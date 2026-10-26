@@ -56,6 +56,7 @@ Serves the production build locally for testing before deployment.
 **Triggers:**
 
 - Push to `main` that changes site-related files
+- Monthly schedule (1st of each month at 05:00 UTC) to regenerate the PDF
 - Manual workflow dispatch
 
 **Process:**
