@@ -5,6 +5,8 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import { LIVE_URL, LOCALHOST_URL, SERVER_PORT } from './src/lib/site-config.js';
+
 const mdPages = [
   { route: '/md', file: '/md/index.md' },
   { route: '/cv/md', file: '/cv/md/cv.md' },
@@ -24,11 +26,6 @@ const mdPages = [
   and leave it empty or use localhost URL. It won't break anything.
 */
 
-const SERVER_PORT = 9000;
-// the url to access your blog during local development
-const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
-// the url to access your blog after deploying it somewhere (Eg. Netlify)
-const LIVE_URL = 'https://luiz.dev';
 // this is the astro command your npm script runs
 const SCRIPT = process.env.npm_lifecycle_script || '';
 const isBuild = SCRIPT.includes('astro build');
