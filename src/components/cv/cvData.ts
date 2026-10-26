@@ -798,6 +798,11 @@ export const cvData: CVData = {
     ],
     relevantEvents: [
       {
+        title: 'GitHub Universe 2026',
+        location: 'San Francisco, USA',
+        date: '28-29 Oct 2026',
+      },
+      {
         title: 'DX Annual 2026',
         location: 'San Francisco, USA',
         date: '16 Apr 2026',
