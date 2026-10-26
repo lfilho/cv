@@ -1809,4 +1809,14 @@ export const travelPlaces: TravelPlace[] = [
     lng: -105.084423,
     altitude: 1528,
   },
+  {
+    name: 'Ostrog Monastery',
+    continent: 'Europe',
+    country: 'Montenegro',
+    state: 'Danilovgrad',
+    type: 'visited',
+    lat: 42.675,
+    lng: 19.029167,
+    altitude: 844,
+  },
 ];
