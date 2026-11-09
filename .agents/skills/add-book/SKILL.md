@@ -1,19 +1,19 @@
 ---
 name: add-book
-description: Add a book to your CV's reading list with intelligent categorization, validation, and automatic commit generation
+description: Add a book to the CV reading list in src/components/cv/cvData.ts with category detection, duplicate checks, formatting, and commit generation. Use when asked to add, log, or include a book in the CV, reading list, or books section.
 ---
 
 # Add Book to CV
 
-Add a book to your CV's reading list with intelligent categorization and validation.
+Add a book to the CV reading list with intelligent categorization and validation.
+
+## When to use
+
+Invoke this skill when the user asks to add, log, or include a book in the CV reading list.
 
 ## Usage
 
-```
-/add-book <book identifier>
-```
-
-Where `<book identifier>` can be:
+The user supplies a book identifier, which can be:
 
 - Book title (e.g., "Clean Code")
 - URL to book page (Amazon, Goodreads, etc.)
@@ -77,15 +77,13 @@ When invoked, this skill will:
    - If "edit" is selected, allow user to modify category, title, subtitle, or author
 
 7. **Commit Changes**
-   - If approved, use the Edit tool to add the book to `src/components/cv/cvData.ts`
-   - Create a descriptive commit message:
+   - If approved, edit `src/components/cv/cvData.ts` to add the book
+   - Create a Conventional Commit message:
 
      ```
-     Add book to CV: [Title] by [Author]
+     feat(cv): add book "<Title>" by <Author>
 
-     Category: [software|softSkills]
-
-     https://claude.ai/code/session_[SESSION_ID]
+     Category: <software|softSkills>
      ```
 
    - Run `npm run lint` to ensure code formatting is correct
@@ -116,19 +114,10 @@ When invoked, this skill will:
 
 ## Examples
 
-```bash
-# Add by title
-/add-book Atomic Habits
-
-# Add by URL
-/add-book https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
-
-# Add by screenshot
-/add-book /path/to/screenshot.png
-
-# Add by ISBN
-/add-book 9780132350884
-```
+- "Add Atomic Habits to my reading list" (title)
+- "Add https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" (URL)
+- "Add the book in /path/to/screenshot.png" (screenshot)
+- "Add book 9780132350884" (ISBN)
 
 ## Configuration
 

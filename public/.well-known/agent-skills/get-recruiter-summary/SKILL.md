@@ -1,6 +1,9 @@
-# Skill: Get recruiter summary
+---
+name: get-recruiter-summary
+description: 'Returns a concise recruiter-oriented summary of Luiz Gonzaga dos Santos Filho: current role, target roles, industries, locations, and contact information. Use when an agent needs a quick candidate overview for recruiting.'
+---
 
-## Description
+# Get recruiter summary
 
 Returns a concise recruiter-oriented summary of Luiz Gonzaga dos Santos Filho: current role, target roles, industries, locations, and contact information.
 

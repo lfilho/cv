@@ -3,6 +3,7 @@
   Link: </.well-known/ai-catalog.json>; rel="service-desc"
   Link: </auth.md>; rel="service-doc"
   Link: </.well-known/ai-catalog.json>; rel="describedby"
+  Link: </.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"
   Link: </resume.json>; rel="alternate"; type="application/json"
 
 /.well-known/api-catalog
@@ -31,6 +32,22 @@
 
 /.well-known/agent-skills/index.json
   Content-Type: application/json
+  Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/luiz-dev-site-overview/SKILL.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/match-candidate-to-role/SKILL.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/get-structured-resume/SKILL.md
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/get-recruiter-summary/SKILL.md
+  Content-Type: text/markdown; charset=utf-8
   Access-Control-Allow-Origin: *
 
 /.well-known/agent-card.json

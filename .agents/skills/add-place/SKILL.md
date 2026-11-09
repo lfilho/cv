@@ -1,19 +1,19 @@
 ---
 name: add-place
-description: Add a travel place to the travel map with intelligent coordinate and altitude lookup, validation, and automatic commit generation
+description: Add a place to the travel map in src/components/travel-map/travelData.ts with coordinate and altitude lookup, validation, and commit generation. Use when asked to add a city, landmark, or visited/lived place to the travel map.
 ---
 
 # Add Place to Travel Map
 
 Add a place to the interactive travel map at `/travel-map` with intelligent data extraction, coordinate and altitude lookup, validation, and commit generation.
 
+## When to use
+
+Invoke this skill when the user asks to add a city, landmark, or visited/lived place to the travel map.
+
 ## Usage
 
-```
-/add-place <place identifier>
-```
-
-Where `<place identifier>` can be:
+The user supplies a place identifier, which can be:
 
 - City name (e.g., "Tokyo")
 - City + country (e.g., "Porto, Portugal")
@@ -132,20 +132,20 @@ Example formats:
 
 ### 7. **Persist and Lint**
 
-- If approved, use the Edit tool to insert the entry into `src/components/travel-map/travelData.ts`
+- If approved, edit `src/components/travel-map/travelData.ts` to insert the entry
 - Insert at the end of the `travelPlaces` array (before the closing `];`)
 - Run `npm run lint` to ensure code formatting is correct (Prettier + ESLint)
 
 ### 8. **Commit**
 
-- Create a descriptive commit message:
+- Create a Conventional Commit message:
 
   ```
-  Add travel place: [Name], [Country]
+  feat(travel-map): add place "<Name>, <Country>"
 
-  Type: [visited|lived]
-  Coordinates: [lat], [lng]
-  Altitude: [n] m
+  Type: <visited|lived>
+  Coordinates: <lat>, <lng>
+  Altitude: <n> m
   ```
 
 - Amend/fixup into the main travel-map commit if working on the same session's squashed commit (ask user)
@@ -217,25 +217,12 @@ Ask the user when:
 
 ## Examples
 
-```bash
-# Add by city name (will search for country, coordinates, state)
-/add-place Tokyo
-
-# Add by city + country
-/add-place "Porto, Portugal"
-
-# Add by city + state + country
-/add-place "Banff, AB, Canada"
-
-# Add a landmark
-/add-place "Grand Canyon"
-
-# Add a place you lived
-/add-place "Hamburg" --lived
-
-# Manual mode (prompts for all fields)
-/add-place
-```
+- "Add Tokyo to the travel map" (city; searches for country, coordinates, state)
+- "Add Porto, Portugal" (city + country)
+- "Add Banff, AB, Canada" (city + state + country)
+- "Add Grand Canyon" (landmark)
+- "Add Hamburg, I lived there" (lived place)
+- "Add a place" with no details (manual mode prompts for all fields)
 
 ## Workflow Tips
 

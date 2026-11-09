@@ -4,30 +4,30 @@
         {
             "name": "luiz-dev-site-overview",
             "type": "skill-md",
-            "description": "Provides AI agents with a structured overview of luiz.dev, including available routes, resources, and authentication policy.",
-            "url": "https://luiz.dev/.well-known/agent-skills/site-overview.md",
-            "digest": "sha256:9265bbda010bc4337d3ad27384e7414102fe9c2365d3b2e3265dbccb5d2c0e3b"
+            "description": "Provides AI agents with a structured overview of luiz.dev, including available routes, resources, and authentication policy. Use when an agent needs to navigate or summarize the luiz.dev site.",
+            "url": "https://luiz.dev/.well-known/agent-skills/luiz-dev-site-overview/SKILL.md",
+            "digest": "sha256:88478bf3f1b97131e12b285a419d86d2cbefb3af89166bd646dda5a4987fd569"
         },
         {
             "name": "match-candidate-to-role",
             "type": "skill-md",
-            "description": "Given a job description, returns a fit assessment for Luiz Gonzaga dos Santos Filho as a candidate, including an overall score, relevant experience, matched skills, and honest concerns.",
-            "url": "https://luiz.dev/.well-known/agent-skills/match-candidate-to-role.md",
-            "digest": "sha256:fcd6b74354858815e55c9bbd2735f5ff7d578e8cea59e506399cac87a1db2f78"
+            "description": "Given a job description, returns a fit assessment for Luiz Gonzaga dos Santos Filho as a candidate, including an overall score, relevant experience, matched skills, and honest concerns. Use when evaluating the candidate against a role or job description.",
+            "url": "https://luiz.dev/.well-known/agent-skills/match-candidate-to-role/SKILL.md",
+            "digest": "sha256:65f18bf1c9148bbdb1656e2bc499b13bb28c058f3238935d0a8478382308f4c0"
         },
         {
             "name": "get-structured-resume",
             "type": "skill-md",
-            "description": "Returns Luiz Gonzaga dos Santos Filho's resume in JSON Resume format from /resume.json.",
-            "url": "https://luiz.dev/.well-known/agent-skills/get-structured-resume.md",
-            "digest": "sha256:f9195fbdddb0c6a82990d1a63a6926e72966207a936e9eeca759e075f1a11e8f"
+            "description": "Returns Luiz Gonzaga dos Santos Filho's resume in JSON Resume format from /resume.json. Use when an agent needs structured candidate data such as work history, education, or skills.",
+            "url": "https://luiz.dev/.well-known/agent-skills/get-structured-resume/SKILL.md",
+            "digest": "sha256:b7303196b3836ff333a840828d09656ba9df325f84bbdb0ab582dfa3429adbf4"
         },
         {
             "name": "get-recruiter-summary",
             "type": "skill-md",
-            "description": "Returns a concise recruiter-oriented summary of Luiz Gonzaga dos Santos Filho: current role, target roles, industries, locations, and contact information.",
-            "url": "https://luiz.dev/.well-known/agent-skills/get-recruiter-summary.md",
-            "digest": "sha256:5132ccc777a663de9a2eba63be1a0d2db79fa9bf3e7d5b939471c982910ecd04"
+            "description": "Returns a concise recruiter-oriented summary of Luiz Gonzaga dos Santos Filho: current role, target roles, industries, locations, and contact information. Use when an agent needs a quick candidate overview for recruiting.",
+            "url": "https://luiz.dev/.well-known/agent-skills/get-recruiter-summary/SKILL.md",
+            "digest": "sha256:c747efe59ea993b6272754af80ea0f941e8781d2361ab81f406d93dbcbe34856"
         }
     ]
 }

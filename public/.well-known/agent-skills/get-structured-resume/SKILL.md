@@ -1,6 +1,9 @@
-# Skill: Get structured resume
+---
+name: get-structured-resume
+description: Returns Luiz Gonzaga dos Santos Filho's resume in JSON Resume format from /resume.json. Use when an agent needs structured candidate data such as work history, education, or skills.
+---
 
-## Description
+# Get structured resume
 
 Returns Luiz Gonzaga dos Santos Filho's resume in JSON Resume format from `/resume.json`.
 

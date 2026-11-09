@@ -1,0 +1,7 @@
+# Keep old single-file skill URLs working after the move to the
+# Agent Skills layout (/.well-known/agent-skills/<name>/SKILL.md).
+
+/.well-known/agent-skills/site-overview.md /.well-known/agent-skills/luiz-dev-site-overview/SKILL.md 301
+/.well-known/agent-skills/match-candidate-to-role.md /.well-known/agent-skills/match-candidate-to-role/SKILL.md 301
+/.well-known/agent-skills/get-structured-resume.md /.well-known/agent-skills/get-structured-resume/SKILL.md 301
+/.well-known/agent-skills/get-recruiter-summary.md /.well-known/agent-skills/get-recruiter-summary/SKILL.md 301

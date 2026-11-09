@@ -1,6 +1,9 @@
-# Skill: luiz.dev site overview
+---
+name: luiz-dev-site-overview
+description: Provides AI agents with a structured overview of luiz.dev, including available routes, resources, and authentication policy. Use when an agent needs to navigate or summarize the luiz.dev site.
+---
 
-## Description
+# luiz.dev site overview
 
 Provides AI agents with a structured overview of `luiz.dev`, a public personal CV and portfolio website for Luiz Gonzaga dos Santos Filho, MBA.
 

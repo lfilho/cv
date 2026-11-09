@@ -1,6 +1,9 @@
-# Skill: Match candidate to role
+---
+name: match-candidate-to-role
+description: Given a job description, returns a fit assessment for Luiz Gonzaga dos Santos Filho as a candidate, including an overall score, relevant experience, matched skills, and honest concerns. Use when evaluating the candidate against a role or job description.
+---
 
-## Description
+# Match candidate to role
 
 Given a job description, return a fit assessment for Luiz Gonzaga dos Santos Filho as a candidate, including an overall score, relevant experience, matched skills, and honest concerns.
 
@@ -30,4 +33,4 @@ Invoke the `match_role` tool via WebMCP with a `jobDescription` string.
 ## Notes
 
 - Fit scores are heuristic and based on keyword overlap.
-- Concerns are framed honestly;
+- Concerns are framed honestly.

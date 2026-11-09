@@ -1,19 +1,19 @@
 ---
 name: add-event
-description: Add an event/conference to your CV's relevant events list with intelligent data extraction, validation, and automatic commit generation
+description: Add an event or conference to the CV relevant events list in src/components/cv/cvData.ts with data extraction, validation, reverse-chronological placement, and commit generation. Use when asked to add a conference, talk, meetup, or event to the CV.
 ---
 
 # Add Event to CV
 
-Add an event or conference to your CV's relevant events list with intelligent data extraction and validation.
+Add an event or conference to the CV relevant events list with intelligent data extraction and validation.
+
+## When to use
+
+Invoke this skill when the user asks to add a conference, talk, meetup, or event to the CV.
 
 ## Usage
 
-```
-/add-event <event identifier>
-```
-
-Where `<event identifier>` can be:
+The user supplies an event identifier, which can be:
 
 - Event title (e.g., "AWS re:Invent 2024")
 - URL to event page (Eventbrite, Meetup, Luma, conference websites, etc.)
@@ -98,16 +98,14 @@ Example formats:
 
 ### 7. **Commit Changes**
 
-- If approved, use the Edit tool to add the event to `src/components/cv/cvData.ts`
-- Create a descriptive commit message:
+- If approved, edit `src/components/cv/cvData.ts` to add the event
+- Create a Conventional Commit message:
 
   ```
-  Add event to CV: [Event Title]
+  feat(cv): add event "<Event Title>"
 
-  Location: [Location]
-  Date: [Date]
-
-  Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+  Location: <Location>
+  Date: <Date>
   ```
 
 - Run `npm run lint` to ensure code formatting is correct
@@ -154,22 +152,11 @@ The skill can parse event information from:
 
 ## Examples
 
-```bash
-# Add by title (will search for event details)
-/add-event AWS re:Invent 2024
-
-# Add by URL
-/add-event https://www.eventbrite.com/e/example-event-tickets-123456
-
-# Add by Luma URL
-/add-event https://lu.ma/example-event
-
-# Add by screenshot
-/add-event /path/to/event-screenshot.png
-
-# Manual mode (prompts for all details)
-/add-event
-```
+- "Add AWS re:Invent 2024 to my events" (title; searches for details)
+- "Add https://www.eventbrite.com/e/example-event-tickets-123456" (URL)
+- "Add https://lu.ma/example-event" (Luma URL)
+- "Add the event in /path/to/event-screenshot.png" (screenshot)
+- "Add an event" with no details (manual mode prompts for all fields)
 
 ## Date Format Examples
 
