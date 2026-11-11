@@ -55,7 +55,7 @@ All CV content lives in `src/components/cv/cvData.ts` as structured TypeScript d
 3. Modify the data.
 4. TypeScript validates the structure.
 5. Run `npm run build` to regenerate the PDF.
-6. Check `public/cv/pdf/` for the updated PDF.
+6. Check `public/cv/pdf/` for the updated PDF. The build fails if the standard CV PDF exceeds 2 pages.
 
 ## Adding a New CV Section
 

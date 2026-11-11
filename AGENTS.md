@@ -50,6 +50,7 @@ PDF generated automatically during `npm run build`.
 
 - Build before generating PDF; Playwright needs `dist/`.
 - CV edits need `npm run build` to update `public/cv/pdf/`.
+- The standard CV PDF must stay within 2 pages; `npm run build` fails otherwise.
 - Use path aliases, not relative imports.
 - Blog/project `.mdoc` files need valid frontmatter.
 - Test print styles after CV layout changes.

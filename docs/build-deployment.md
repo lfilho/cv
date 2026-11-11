@@ -35,9 +35,12 @@ How it works:
 1. Starts an Express server on an ephemeral port.
 2. Serves the built site from `dist/`.
 3. Uses Playwright/Chromium to render the `/cv` page.
-4. Exports the page as a PDF with print styles.
-5. Saves to `public/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf`.
+4. Exports the page as a PDF with print styles to
+   `public/cv/pdf/Luiz_Filho_-_Software_Engineering_Leadership_Resume.pdf`.
+5. Counts the pages: the standard CV is capped at **2 pages**. A longer PDF fails the build.
 6. Closes the server.
+
+The page cap only applies to the standard CV export; a verbose CV export would not be limited.
 
 **Important:** the PDF is committed to git and deployed to Cloudflare Pages. Always run `npm run build` after CV changes.
 
