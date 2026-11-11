@@ -13,6 +13,7 @@
     border: none;
     padding: 0;
 }
+
 .xp .grid-container {
     grid-template-columns: auto 12rem;
     grid-gap: 1rem;
@@ -28,6 +29,7 @@
         grid-auto-flow: row;
         grid-gap: 0.1rem;
     }
+
     .xp .period {
         text-align: left;
         margin-left: 0;
@@ -38,8 +40,9 @@
     margin: 0.5rem auto;
 }
 
-.description strong {    color: var(--highlight-black);
-    font-weight: normal;
+.description strong {
+    color: var(--highlight-black);
+    font-weight: 500;
 }
 
 .separator-highlight {
@@ -47,6 +50,7 @@
     font-weight: bold;
     margin: 0 0.1rem;
 }
+
 .xp .job-data,
 .xp .period {
     display: inline-block;
@@ -59,6 +63,7 @@
     text-align: left;
     margin-left: 0;
 }
+
 .job-keywords {
     text-align: right;
     font-size: 0.9rem;
@@ -74,6 +79,7 @@
     border: none;
     text-indent: 0;
 }
+
 .volunteer.xp .period {
     text-align: left;
 }

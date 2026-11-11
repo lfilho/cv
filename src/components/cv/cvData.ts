@@ -74,7 +74,7 @@ export const cvData: CVData = {
         ],
         shortDescription: [
           `<strong>Scope:</strong> from 6 engineers to 25 engineers and 2 managers within a ~700-person engineering org at a ~2,500-employee, publicly traded company. Currently responsible for Developer Experience, AI PDLC and assisting with Chief of Staff processes`,
-          `<strong>Delivered the new agentic platform behind Helix</strong>, the company's flagship product after the Coursera-Udemy merger`,
+          `<strong>Delivered the new agentic platform behind Helix</strong>, the company's flagship product after the Coursera-Udemy merger: 15% shorter lead time and 7% more PRs/engineer`,
           `<strong>Drove the AI engineering transformation with measured ROI</strong>: 95+% adoption and +20% PR throughput in the first 6 months, with flat defect rate`,
           `<strong>Unlocked $millions in new recurring Enterprise revenue</strong> with new SKUs and features across SkillSets, Employability, Career Academy and Admin, with no added headcount`,
           `<strong>Saved $6-figures per quarter with improved cross-dept processes</strong>, real-time business metrics and accountability, improving executive decision-making quality and speed`,
@@ -84,7 +84,7 @@ export const cvData: CVData = {
         description: [
           `Owned Developer Experience & Quality, the AI PDLC and Enterprise, leading several teams and charters — from 6 engineers to 25 engineers and 2 managers within a ~700-person engineering org at a ~2,500-employee, publicly traded company:`,
           [
-            `Delivered the agentic platform behind Helix, the company's flagship product after the Coursera-Udemy merger`,
+            `<strong>Delivered the new agentic platform behind Helix</strong>, the company's flagship product after the Coursera-Udemy merger: 15% shorter lead time and 7% more PRs/engineer`,
             `Drove the AI engineering transformation with measured ROI: 95%+ adoption and +20% PR throughput in the first 6 months, with a flat defect rate`,
             `Owned Enterprise products — SkillSets, Employability, Career Academy and Admin — unlocking $millions in new recurring revenue with no added headcount`,
             `Held the highest retention rate in the org while hiring and promoting engineers into Senior, Staff, Sr. Staff and Manager roles`,
